@@ -1,0 +1,134 @@
+---
+title: "BacDive Examples"
+author: "PennCHOP Microbiome Program"
+date: \today
+geometry: margin=3cm
+output: 
+    pdf_document:
+        template: toc_after.tex
+        keep_tex: false
+        toc: true
+        toc_depth: 3
+        includes:
+            in_header: TeX_packages_commands.sty
+---
+
+![' '](logo_blk.png)\
+
+\tableofcontents
+
+```{r knitr setup, echo=FALSE}
+### ================
+###   knitr setup
+### ================
+library(knitr)
+knitr::opts_chunk$set(
+	echo = FALSE,
+	fig.width=8,
+  fig.height=8,
+	fig.align = "center",
+	message = FALSE,
+	warning = FALSE,
+	cache = FALSE,
+	dpi = 100,
+	tidy = FALSE
+)
+```
+
+```{r R packages, message=FALSE, warning=FALSE}
+### ================
+###   R packages
+### ================
+
+library(here)
+library(tidyverse)
+library(magrittr)
+library(RCurl)
+library(rjson)
+library(kableExtra)
+library(pander)
+
+```
+
+# Set URL 
+
+Use URLencode for encoding spaces in an URL
+
+You get entries only from the first page (page = '1'), to consider the other pages you have to change the parameter page
+
+```{r}
+
+page <- '1'
+
+allbacdiveIDs <- 'https://bacdive.dsmz.de/api/bacdive/bacdive_id/?page='
+url_allbacdiveIDs<- URLencode(paste0(allbacdiveIDs,page,'&format=json'))
+
+taxon <- 'https://bacdive.dsmz.de/api/bacdive/taxon/'
+searchterm_genus <- 'Bacteroides'
+url_genus <- URLencode(paste0(taxon,searchterm_genus,'/?page=',page,'&format=json'))
+
+searchterm_genus <- 'Bacteroides'
+searchterm_species <- 'xylanisolvens'
+url_species <- URLencode(paste0(taxon,searchterm_genus,'/',searchterm_species,'/?page=',page,'&format=json'))
+
+searchterm_genus <- 'Bacillus'
+searchterm_species <- 'subtilis'
+searchterm_subspecies <- 'subtilis'
+url_subspecies <- URLencode(paste0(taxon,searchterm_genus,'/',searchterm_species,'/',searchterm_subspecies,'/?page=',page,'&format=json'))
+
+
+bacdiveID <- 'https://bacdive.dsmz.de/api/bacdive/bacdive_id/'
+searchterm <- '1'
+url_bacdiveID <- URLencode(paste0(bacdiveID,searchterm,'/?format=json'))
+
+cultureno <- 'https://bacdive.dsmz.de/api/bacdive/culturecollectionno/'
+searchterm_cultureno <- 'DSM 319'
+url_cultureno <- URLencode(paste0(cultureno,searchterm_cultureno,'/?format=json'))
+
+secAccNo <- 'https://bacdive.dsmz.de/api/bacdive/sequence/'
+searchterm_secAccNo <- 'AF000162'
+url_secAccNo <- URLencode(paste0(secAccNo,searchterm_secAccNo,'/?format=json'))
+
+```
+
+# Retrieve data
+
+Get bacdive ids for Bacteroides xylanisolvens
+
+```{r}
+
+response <- getURL(url_species,userpwd="danielsg@email.chop.edu:87FeMCv4hy4q", httpauth = 1L)
+jsondata <- fromJSON(response)
+pander(jsondata)
+
+```
+
+# Get data on a strain
+
+Using the first bacdive id
+
+```{r}
+
+response <- getURL(paste0(jsondata[["results"]][[1]][["url"]],'/?format=json'), userpwd="danielsg@email.chop.edu:87FeMCv4hy4q", httpauth = 1L)
+
+jsondata <- fromJSON(response)
+
+pander(jsondata)
+
+```
+
+
+```{r Generate time stamped report, eval=FALSE, include=FALSE}
+#notes
+#neat: you can run this following command in the console to give your reports custom names (or date-stamp them)
+#rmarkdown::render('ronen_stein_Report_shotgun.Rmd',output_file = paste('CEASE.report.', Sys.Date(), '.pdf', sep=''))
+
+script_dir <- file.path("Scripts","Rmds")
+output_dir <- file.path("Output")
+
+report_fp <- here::here(script_dir, "bacdive_examples.Rmd")
+output_fp <- here::here(output_dir, paste('bacdive.examples.report.', Sys.Date(), '.pdf', sep=''))
+
+rmarkdown::render(report_fp, output_file = output_fp)
+
+```
