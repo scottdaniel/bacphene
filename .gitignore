@@ -3,5 +3,5 @@
 .RData
 .Ruserdata
 bacdive_examples.Rmd
-bacdive_credentials.txt
+bacdive_credentials*
 .DS_Store
