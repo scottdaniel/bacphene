@@ -96,7 +96,7 @@ gramStain <- function(strainData, reference=1) {
 #' @export
 #'
 #' @examples
-#' #' \dontrun{
+#' \dontrun{
 #' strain_list <- getStrains(page = 1,
 #' genus = 'Bacteroides',
 #' species = 'xylanisolvens',
@@ -123,9 +123,17 @@ oxygenTolerance <- function(strainData, reference=1) {
 #' @export
 #'
 #' @examples
+#' \dontrun{
+#' strain_list <- getStrains(page = 1,
+#' genus = 'Actibacterium',
+#' species = 'pelagium',
+#' userpassword = paste0(user,':',passwd))
+#' phenotypes_list <- getStrainData(strain_list,
+#' selection=1,
+#' userpassword = paste0(user,':',passwd))
+#' abxSensitive(phenotypes_list, abx = "vancomycin")
+#' }
 abxSensitive <- function(strainData, abx = "vancomycin") {
-
-  #TODO: start on this function next (fill in the example for this and abx_resitant)
 
   abx_list <- strainData[["morphology_physiology"]][["met_antibiotica"]]
 
@@ -156,6 +164,16 @@ abxSensitive <- function(strainData, abx = "vancomycin") {
 #' @export
 #'
 #' @examples
+#' \dontrun{
+#' strain_list <- getStrains(page = 1,
+#' genus = 'Pseudomonas',
+#' species = 'tarimensis',
+#' userpassword = paste0(user,':',passwd))
+#' phenotypes_list <- getStrainData(strain_list,
+#' selection=1,
+#' userpassword = paste0(user,':',passwd))
+#' abxResistant(phenotypes_list, abx = "gentamicin")
+#' }
 abxResistant <- function(strainData, abx = "vancomycin") {
 
   abx_list <- strainData[["morphology_physiology"]][["met_antibiotica"]]
