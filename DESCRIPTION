@@ -4,8 +4,7 @@ Title: Imports Bacterial Phenotype Data Into R
 Version: 0.1.0
 Author: Scott G. Daniel <scottdaniel25@gmail.com>
 Maintainer: Scott G. Daniel <scottdaniel25@gmail.com>
-Description: Grabs bacterial phenotype data from various sources.
-    The primary source being bacdive.org.
+Description: Grabs bacterial phenotype data from bacdive.org.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

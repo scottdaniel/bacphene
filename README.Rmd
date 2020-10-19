@@ -18,37 +18,29 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of bacphene is to ...
+The goal of bacphene is to import bacterial phenotype data from bacdive.org into R.
 
 ## Installation
 
-You can install the released version of bacphene from [CRAN](https://CRAN.R-project.org) with:
+You can install bacphene from [github](https://github.com/scottdaniel/bacphene) with:
 
 ``` r
-install.packages("bacphene")
+library(devtools)
+install_github(repo = "scottdaniel/bacphene")
 ```
+
+After this, you MUST register at bacdive.org [here](https://bacdive.dsmz.de/api/bacdive/registration/register/). Otherwise, you will not be able to access the API and get phenotype data. 
 
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
+```{r example, eval=FALSE, include=FALSE}
+
 library(bacphene)
-## basic example code
+strain_list <- getStrains(genus = 'Bacteroides', species = 'xylanisolvens', userpassword = 'me@example.com:mypassword')
+phenotype_data <- getStrainData(jsondata = strain_list, selection = 1, userpassword = 'me@example.com:mypassword')
+
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
