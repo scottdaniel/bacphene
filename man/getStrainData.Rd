@@ -4,14 +4,14 @@
 \alias{getStrainData}
 \title{Gets the phenotype data for a specific strain}
 \usage{
-getStrainData(jsondata, selection = 1, userpassword)
+getStrainData(speciesData, selection = 1, userpassword)
 }
 \arguments{
-\item{jsondata}{The list object that you got from \code{\link{getStrains}}}
-
 \item{selection}{Which strain you want from the list object}
 
 \item{userpassword}{The userpassword in the form of "user:password" that you got when you registered at bacdive.org}
+
+\item{jsondata}{The list object that you got from \code{\link{getStrains}}}
 }
 \value{
 A list of phenotype data from bacdive.org
