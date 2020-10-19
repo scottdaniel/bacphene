@@ -22,4 +22,9 @@ After this, you MUST register at bacdive.org [here](https://bacdive.dsmz.de/api/
 Example
 -------
 
-This is a basic example which shows you how to solve a common problem:
+This will only work once you have gotten an account at bacdive.org:
+
+
+    library(bacphene)
+    strain_list <- getStrains(genus = 'Bacteroides', species = 'xylanisolvens', userpassword = 'me@example.com:mypassword')
+    phenotype_data <- getStrainData(jsondata = strain_list, selection = 1, userpassword = 'me@example.com:mypassword')
