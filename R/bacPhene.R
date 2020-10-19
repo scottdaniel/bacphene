@@ -123,9 +123,9 @@ oxygenTolerance <- function(strainData, reference=1) {
 #' @export
 #'
 #' @examples
-abx_sensitive <- function(strainData, abx = "vancomycin") {
+abxSensitive <- function(strainData, abx = "vancomycin") {
 
-  #TODO: start on this function next (fill in the example for this and abx_resitant) and then write some tests
+  #TODO: start on this function next (fill in the example for this and abx_resitant)
 
   abx_list <- strainData[["morphology_physiology"]][["met_antibiotica"]]
 
@@ -156,7 +156,7 @@ abx_sensitive <- function(strainData, abx = "vancomycin") {
 #' @export
 #'
 #' @examples
-abx_resistant <- function(strainData, abx = "vancomycin") {
+abxResistant <- function(strainData, abx = "vancomycin") {
 
   abx_list <- strainData[["morphology_physiology"]][["met_antibiotica"]]
 

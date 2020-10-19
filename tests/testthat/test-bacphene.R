@@ -67,7 +67,7 @@ test_that("oxygen tolerance", {
 
 })
 
-test_that("antibiotics sensitive or resistant", {
+test_that("vancomycin sensitive", {
 
   strain_list <- getStrains(page = 1,
                             genus = 'Actibacterium',
@@ -78,6 +78,21 @@ test_that("antibiotics sensitive or resistant", {
                                    selection=1,
                                    userpassword = paste0(user,':',passwd))
 
+  expect_true(abxSensitive(phenotypes_list, abx = "vancomycin"))
 
+})
+
+test_that("gentamicin resistant", {
+
+  strain_list <- getStrains(page = 1,
+                            genus = 'Pseudomonas',
+                            species = 'tarimensis',
+                            userpassword = paste0(user,':',passwd))
+
+  phenotypes_list <- getStrainData(strain_list,
+                                   selection=1,
+                                   userpassword = paste0(user,':',passwd))
+
+  expect_true(abxResistant(phenotypes_list, abx = "gentamicin"))
 
 })
