@@ -2,13 +2,31 @@
 % Please edit documentation in R/bacPhene.R
 \name{getStrainData}
 \alias{getStrainData}
-\title{Title}
+\title{Gets the phenotype data for a specific strain}
 \usage{
 getStrainData(jsondata, selection = 1, userpassword)
 }
 \arguments{
-\item{userpassword}{}
+\item{jsondata}{The list object that you got from \code{\link{getStrains}}}
+
+\item{selection}{Which strain you want from the list object}
+
+\item{userpassword}{The userpassword in the form of "user:password" that you got when you registered at bacdive.org}
+}
+\value{
+A list of phenotype data from bacdive.org
 }
 \description{
-Title
+Gets the phenotype data for a specific strain
+}
+\examples{
+\dontrun{
+strain_list <- getStrains(page = 1,
+genus = 'Bacteroides',
+species = 'xylanisolvens',
+userpassword = paste0(user,':',passwd)))
+getStrainData(strain_list,
+selection=1,
+userpassword = paste0(user,':',passwd))
+}
 }

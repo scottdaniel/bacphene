@@ -2,3 +2,6 @@
 
 export(getStrainData)
 export(getStrains)
+importFrom(RCurl,getURL)
+importFrom(rjson,fromJSON)
+importFrom(utils,URLencode)

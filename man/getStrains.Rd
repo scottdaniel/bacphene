@@ -2,13 +2,30 @@
 % Please edit documentation in R/bacPhene.R
 \name{getStrains}
 \alias{getStrains}
-\title{Title}
+\title{Gets the strains from bacdive that belong to a supplied species}
 \usage{
-getStrains(genus, species, userpassword)
+getStrains(page, genus, species, userpassword)
 }
 \arguments{
-\item{userpassword}{}
+\item{page}{You get entries only from the first page (page = '1'), to consider the other pages you have to change the parameter page}
+
+\item{genus}{Genus of the species}
+
+\item{species}{The species}
+
+\item{userpassword}{The userpassword in the form of "user:password" that you got when you registered at bacdive.org}
+}
+\value{
+A list of strains from bacdive.org
 }
 \description{
-Title
+Gets the strains from bacdive that belong to a supplied species
+}
+\examples{
+\dontrun{
+getStrains(page = 1,
+genus = 'Bacteroides',
+species = 'xylanisolvens',
+userpassword = paste0(user,':',passwd)))
+}
 }
