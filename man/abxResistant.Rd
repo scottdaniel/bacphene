@@ -17,3 +17,15 @@ TRUE, FALSE or NULL (antibiotic info is not found)
 \description{
 Checks whether a bacteria has a specific antibiotic resistance
 }
+\examples{
+\dontrun{
+strain_list <- getStrains(page = 1,
+genus = 'Pseudomonas',
+species = 'tarimensis',
+userpassword = paste0(user,':',passwd))
+phenotypes_list <- getStrainData(strain_list,
+selection=1,
+userpassword = paste0(user,':',passwd))
+abxResistant(phenotypes_list, abx = "gentamicin")
+}
+}

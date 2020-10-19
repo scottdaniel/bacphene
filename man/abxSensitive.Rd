@@ -17,3 +17,15 @@ TRUE, FALSE or NULL (antibiotic info is not found)
 \description{
 Checks whether a bacteria has a specific antibiotic sensitivity
 }
+\examples{
+\dontrun{
+strain_list <- getStrains(page = 1,
+genus = 'Actibacterium',
+species = 'pelagium',
+userpassword = paste0(user,':',passwd))
+phenotypes_list <- getStrainData(strain_list,
+selection=1,
+userpassword = paste0(user,':',passwd))
+abxSensitive(phenotypes_list, abx = "vancomycin")
+}
+}

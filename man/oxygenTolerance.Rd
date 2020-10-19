@@ -19,7 +19,7 @@ A character string e.g. "aerobe", "anaerobe", etc.
 Gets the oxygen tolerance of the strain
 }
 \examples{
-#' \dontrun{
+\dontrun{
 strain_list <- getStrains(page = 1,
 genus = 'Bacteroides',
 species = 'xylanisolvens',
