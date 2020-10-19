@@ -38,9 +38,40 @@ This will only work once you have gotten an account at bacdive.org:
 ```
 
 library(bacphene)
-strain_list <- getStrains(genus = 'Bacteroides', species = 'xylanisolvens', userpassword = 'me@example.com:mypassword')
-phenotype_data <- getStrainData(jsondata = strain_list, selection = 1, userpassword = 'me@example.com:mypassword')
+
+user <- "usually_your_email"
+passwd <- "a_good_password"
+
+strain_list <- getStrains(page = 1, 
+  genus = 'Bacteroides', 
+  species = 'xylanisolvens', 
+  userpassword = paste0(user,':',passwd))
+  
+phenotypes_list <- getStrainData(strain_list,
+    selection=1,
+    userpassword = paste0(user,':',passwd))
 
 ```
 
+However, to facilitate demonstration, I have run the previous codeblock and written the results lists to flat files here:
+./examples/Bacteroides_xylanisolvens.RData
+
+Here we can see that there are (as of 10/19/2020) three strains in the bacdive.org database with the species designation of Bacteroides xylanisolvens:
+
+
+```{r}
+
+load("./examples/Bacteroides_xylanisolvens.RData")
+
+strain_list$results
+
+```
+
+Selecting the first strain (which you can set in [getStrainData](https://github.com/scottdaniel/bacphene/blob/master/R/bacPhene.R) with 'selection=1') we get the following information:
+
+```{r}
+
+names(phenotypes_list)
+
+```
 
