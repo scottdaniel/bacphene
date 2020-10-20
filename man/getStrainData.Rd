@@ -7,11 +7,11 @@
 getStrainData(speciesData, selection = 1, userpassword)
 }
 \arguments{
+\item{speciesData}{The list object that you got from \code{\link{getStrains}}}
+
 \item{selection}{Which strain you want from the list object}
 
 \item{userpassword}{The userpassword in the form of "user:password" that you got when you registered at bacdive.org}
-
-\item{jsondata}{The list object that you got from \code{\link{getStrains}}}
 }
 \value{
 A list of phenotype data from bacdive.org
@@ -24,7 +24,7 @@ Gets the phenotype data for a specific strain
 strain_list <- getStrains(page = 1,
 genus = 'Bacteroides',
 species = 'xylanisolvens',
-userpassword = paste0(user,':',passwd)))
+userpassword = paste0(user,':',passwd))
 getStrainData(strain_list,
 selection=1,
 userpassword = paste0(user,':',passwd))

@@ -17,7 +17,7 @@
 #' getStrains(page = 1,
 #' genus = 'Bacteroides',
 #' species = 'xylanisolvens',
-#' userpassword = paste0(user,':',passwd)))
+#' userpassword = paste0(user,':',passwd))
 #' }
 getStrains <- function(page, genus, species, userpassword) {
 
@@ -31,7 +31,7 @@ getStrains <- function(page, genus, species, userpassword) {
 
 #' Gets the phenotype data for a specific strain
 #'
-#' @param jsondata The list object that you got from \code{\link{getStrains}}
+#' @param speciesData The list object that you got from \code{\link{getStrains}}
 #' @param selection Which strain you want from the list object
 #' @param userpassword The userpassword in the form of "user:password" that you got when you registered at bacdive.org
 #'
@@ -47,7 +47,7 @@ getStrains <- function(page, genus, species, userpassword) {
 #' strain_list <- getStrains(page = 1,
 #' genus = 'Bacteroides',
 #' species = 'xylanisolvens',
-#' userpassword = paste0(user,':',passwd)))
+#' userpassword = paste0(user,':',passwd))
 #' getStrainData(strain_list,
 #' selection=1,
 #' userpassword = paste0(user,':',passwd))
@@ -74,7 +74,7 @@ getStrainData <- function(speciesData, selection=1, userpassword) {
 #' strain_list <- getStrains(page = 1,
 #' genus = 'Bacteroides',
 #' species = 'xylanisolvens',
-#' userpassword = paste0(user,':',passwd)))
+#' userpassword = paste0(user,':',passwd))
 #' phenotypes_list <- getStrainData(strain_list,
 #' selection=1,
 #' userpassword = paste0(user,':',passwd))
@@ -100,7 +100,7 @@ gramStain <- function(strainData, reference=1) {
 #' strain_list <- getStrains(page = 1,
 #' genus = 'Bacteroides',
 #' species = 'xylanisolvens',
-#' userpassword = paste0(user,':',passwd)))
+#' userpassword = paste0(user,':',passwd))
 #' phenotypes_list <- getStrainData(strain_list,
 #' selection=1,
 #' userpassword = paste0(user,':',passwd))
@@ -112,7 +112,7 @@ oxygenTolerance <- function(strainData, reference=1) {
 
 }
 
-#' Checks whether a bacteria has a specific antibiotic sensitivity
+#' Checks whether a strain has a specific antibiotic sensitivity
 #'
 #' @param strainData A list from the function \code{\link{getStrainData}}
 #' @param abx A specific antibiotic e.g. "vancomycin"
@@ -153,7 +153,7 @@ abxSensitive <- function(strainData, abx = "vancomycin") {
 
 }
 
-#' Checks whether a bacteria has a specific antibiotic resistance
+#' Checks whether a strain has a specific antibiotic resistance
 #'
 #' @param strainData A list from the function \code{\link{getStrainData}}
 #' @param abx A specific antibiotic e.g. "vancomycin"

@@ -26,6 +26,6 @@ Gets the strains from bacdive that belong to a supplied species
 getStrains(page = 1,
 genus = 'Bacteroides',
 species = 'xylanisolvens',
-userpassword = paste0(user,':',passwd)))
+userpassword = paste0(user,':',passwd))
 }
 }

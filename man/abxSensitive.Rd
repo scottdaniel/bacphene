@@ -2,7 +2,7 @@
 % Please edit documentation in R/bacPhene.R
 \name{abxSensitive}
 \alias{abxSensitive}
-\title{Checks whether a bacteria has a specific antibiotic sensitivity}
+\title{Checks whether a strain has a specific antibiotic sensitivity}
 \usage{
 abxSensitive(strainData, abx = "vancomycin")
 }
@@ -15,7 +15,7 @@ abxSensitive(strainData, abx = "vancomycin")
 TRUE, FALSE or NULL (antibiotic info is not found)
 }
 \description{
-Checks whether a bacteria has a specific antibiotic sensitivity
+Checks whether a strain has a specific antibiotic sensitivity
 }
 \examples{
 \dontrun{
