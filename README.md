@@ -5,7 +5,7 @@ bacphene
 
 <!-- badges: start -->
 <!-- badges: end -->
-The goal of bacphene is to import bacterial phenotype data from bacdive.org into R.
+The goal of bacphene is to import bacterial phenotype data from [bacdive.org](https://bacdive.dsmz.de/) into R.
 
 Installation
 ------------
@@ -19,31 +19,35 @@ install_github(repo = "scottdaniel/bacphene")
 
 After this, you MUST register at bacdive.org [here](https://bacdive.dsmz.de/api/bacdive/registration/register/). Otherwise, you will not be able to access the API and get phenotype data.
 
-Example
--------
+Examples
+--------
 
 This will only work once you have gotten an account at bacdive.org:
 
+``` r
 
-    library(bacphene)
+library(bacphene)
 
-    user <- "usually_your_email"
-    passwd <- "a_good_password"
+user <- "usually_your_email"
+passwd <- "a_good_password"
 
-    strain_list <- getStrains(page = 1, 
-      genus = 'Bacteroides', 
-      species = 'xylanisolvens', 
-      userpassword = paste0(user,':',passwd))
-      
-    phenotypes_list <- getStrainData(strain_list,
-        selection=1,
-        userpassword = paste0(user,':',passwd))
+strain_list <- getStrains(page = 1, 
+  genus = 'Bacteroides', 
+  species = 'xylanisolvens', 
+  userpassword = paste0(user,':',passwd))
+  
+phenotypes_list <- getStrainData(strain_list,
+    selection=1,
+    userpassword = paste0(user,':',passwd))
+```
 
 However, to facilitate demonstration, I have run the previous codeblock and written the results lists to flat files here: ./examples/Bacteroides\_xylanisolvens.RData
 
 Here we can see that there are (as of 10/19/2020) three strains in the bacdive.org database with the species designation of Bacteroides xylanisolvens:
 
 ``` r
+
+library(bacphene)
 
 load("./examples/Bacteroides_xylanisolvens.RData")
 
@@ -76,4 +80,41 @@ names(phenotypes_list)
 #> [6] "molecular_biology"                    
 #> [7] "strain_availability"                  
 #> [8] "references"
+```
+
+We can get the gram-stain of the strain. Note that there may be multiple references for this information.
+
+``` r
+
+gramStain(phenotypes_list, reference = 1)
+#> [1] "negative"
+```
+
+Additionally, there is a function to get the oxygen tolerance information. Again, there may be multiple references (and Caution: this data is not standardized, see below)
+
+``` r
+
+oxygenTolerance(phenotypes_list, reference = 1)
+#> [1] "anaerobe"
+
+oxygenTolerance(phenotypes_list, reference = 3)
+#> [1] "obligate anaerobe"
+```
+
+In bacdive.org there is also information on antibiotic sensistivey / resistance. We can query that with two functions. We will have to load different examples here because Bacteroides xylanisolven does not have antibiotic data.
+
+``` r
+
+load("examples/Pseudomonas_tarimensis.RData")
+
+abxResistant(phenotypes_list, abx = "gentamicin")
+#> [1] TRUE
+```
+
+``` r
+
+load("examples/Actibacterium_pelagium.RData")
+
+abxSensitive(phenotypes_list, abx = "vancomycin")
+#> [1] TRUE
 ```
