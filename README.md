@@ -101,7 +101,7 @@ oxygenTolerance(phenotypes_list, reference = 3)
 #> [1] "obligate anaerobe"
 ```
 
-In bacdive.org there is also information on antibiotic sensistivey / resistance. We can query that with two functions. We will have to load different examples here because Bacteroides xylanisolven does not have antibiotic data.
+In bacdive.org there is also information on antibiotic sensistivey / resistance. We can query that with two functions. We will have to load different examples here because Bacteroides xylanisolvens does not have antibiotic data.
 
 ``` r
 
