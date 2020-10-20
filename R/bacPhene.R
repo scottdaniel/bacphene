@@ -14,18 +14,19 @@
 #'
 #' @examples
 #' \dontrun{
-#' getStrains(page = 1,
+#' strain_list <- getStrains(page = 1,
 #' genus = 'Bacteroides',
 #' species = 'xylanisolvens',
 #' userpassword = paste0(user,':',passwd))
 #' }
 getStrains <- function(page, genus, species, userpassword) {
 
+  #for more info on api go to https://bacdive.dsmz.de/api/bacdive/example/
   api_entry <- 'https://bacdive.dsmz.de/api/bacdive/taxon/'
   url_species <- utils::URLencode(paste0(api_entry, genus, '/', species, '/?page=', page, '&format=json'))
 
-  response <- RCurl::getURL(url_species,userpwd=userpassword, httpauth = 1L)
-  jsondata <- rjson::fromJSON(response)
+  response <- RCurl::getURL(url_species,userpwd=userpassword, httpauth = 1L) #getting data as a json object
+  jsondata <- rjson::fromJSON(response) #converting the json into a R list object
 
 }
 
@@ -40,7 +41,6 @@ getStrains <- function(page, genus, species, userpassword) {
 #'
 #' @importFrom RCurl getURL
 #' @importFrom rjson fromJSON
-#' @importFrom utils URLencode
 #'
 #' @examples
 #' \dontrun{
@@ -48,15 +48,15 @@ getStrains <- function(page, genus, species, userpassword) {
 #' genus = 'Bacteroides',
 #' species = 'xylanisolvens',
 #' userpassword = paste0(user,':',passwd))
-#' getStrainData(strain_list,
+#' phenotypes_list <- getStrainData(strain_list,
 #' selection=1,
 #' userpassword = paste0(user,':',passwd))
 #' }
 getStrainData <- function(speciesData, selection=1, userpassword) {
 
-  response <- RCurl::getURL(paste0(speciesData[["results"]][[selection]][["url"]],'/?format=json'), userpwd=userpassword, httpauth = 1L)
+  response <- RCurl::getURL(paste0(speciesData[["results"]][[selection]][["url"]],'/?format=json'), userpwd=userpassword, httpauth = 1L) #getting the data as a json object
 
-  strainData <- rjson::fromJSON(response)
+  strainData <- rjson::fromJSON(response) #converting the data to a R list
 
 }
 
@@ -143,11 +143,12 @@ abxSensitive <- function(strainData, abx = "vancomycin") {
 
     specific_abx <- abx_list[[index_num]]
 
-    specific_abx$ab_sensitive
+    specific_abx$ab_sensitive #note: this will be NULL if the strain is actually
+    #resistant to this particulare antibiotic
 
   } else {
 
-    return(NULL)
+    return(NULL) #abx info not found
 
   }
 
@@ -184,11 +185,12 @@ abxResistant <- function(strainData, abx = "vancomycin") {
 
     specific_abx <- abx_list[[index_num]]
 
-    specific_abx$ab_resistant
+    specific_abx$ab_resistant #note: this will be NULL if the strain is actually
+    #sensitive to this particulare antibiotic
 
   } else {
 
-    return(NULL)
+    return(NULL) #abx info not found
 
   }
 
