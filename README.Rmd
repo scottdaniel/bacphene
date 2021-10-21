@@ -18,18 +18,22 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of bacphene is to import bacterial phenotype data from [bacdive.org](https://bacdive.dsmz.de/) into R.
+The goal of bacphene is to generate a table of phenotype characteristics about your samples. Input is a table of Samples with counts per taxa. 
+
+The package utilizes the official [BacDive R package](https://r-forge.r-project.org/R/?group_id=1573) that accesses
+bacterial phenotype data from [bacdive.org](https://bacdive.dsmz.de/).
 
 ## Installation
 
-You can install bacphene from [github](https://github.com/scottdaniel/bacphene) with:
+You can install bacphene from [github](https://github.com/scottdaniel/bacphene). You also need to install the BacDive R package.
 
 ``` r
 library(devtools)
 install_github(repo = "scottdaniel/bacphene")
+install.packages("BacDive", repos="http://R-Forge.R-project.org")
 ```
 
-After this, you MUST register at bacdive.org [here](https://bacdive.dsmz.de/api/bacdive/registration/register/). Otherwise, you will not be able to access the API and get phenotype data. 
+After this, you MUST register at bacdive.org [here](https://api.bacdive.dsmz.de/login). Otherwise, you will not be able to access the API and get phenotype data. 
 
 ## Examples
 
