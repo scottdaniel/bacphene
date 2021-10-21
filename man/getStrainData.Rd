@@ -25,7 +25,7 @@ strain_list <- getStrains(page = 1,
 genus = 'Bacteroides',
 species = 'xylanisolvens',
 userpassword = paste0(user,':',passwd))
-getStrainData(strain_list,
+phenotypes_list <- getStrainData(strain_list,
 selection=1,
 userpassword = paste0(user,':',passwd))
 }

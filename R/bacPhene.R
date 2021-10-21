@@ -19,13 +19,14 @@
 #' species = 'xylanisolvens',
 #' userpassword = paste0(user,':',passwd))
 #' }
-getStrains <- function(page, genus, species, userpassword) {
+getStrains <- function(page, genus, species, userpassword, getJSON = RCurl::getURL) {
 
   #for more info on api go to https://bacdive.dsmz.de/api/bacdive/example/
   api_entry <- 'https://bacdive.dsmz.de/api/bacdive/taxon/'
   url_species <- utils::URLencode(paste0(api_entry, genus, '/', species, '/?page=', page, '&format=json'))
 
-  response <- RCurl::getURL(url_species,userpwd=userpassword, httpauth = 1L) #getting data as a json object
+  response <- getJSON(url_species,userpwd=userpassword, httpauth = 1L) #getting data as a json object
+  #getJSON is dependency injection to allow for dummy data to write tests
   jsondata <- rjson::fromJSON(response) #converting the json into a R list object
 
 }

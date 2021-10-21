@@ -4,7 +4,7 @@
 \alias{getStrains}
 \title{Gets the strains from bacdive that belong to a supplied species}
 \usage{
-getStrains(page, genus, species, userpassword)
+getStrains(page, genus, species, userpassword, getJSON = RCurl::getURL)
 }
 \arguments{
 \item{page}{You get entries only from the first page (page = '1'), to consider the other pages you have to change the parameter page}
@@ -23,7 +23,7 @@ Gets the strains from bacdive that belong to a supplied species
 }
 \examples{
 \dontrun{
-getStrains(page = 1,
+strain_list <- getStrains(page = 1,
 genus = 'Bacteroides',
 species = 'xylanisolvens',
 userpassword = paste0(user,':',passwd))
