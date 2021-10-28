@@ -1,16 +1,14 @@
 #' Gets the strains from bacdive that belong to a supplied species
 #'
-#' @param page You get entries only from the first page (page = '1'), to consider the other pages you have to change the parameter page
-#' @param genus Genus of the species
-#' @param species The species
+#' @param credentials Your login credentials for bacdive.org. Defaults to DSMZ_API_USER and DSMZ_API_PASSWORD in your Renviron file. Supplied as a character vector c("username", "password").
+#' @param query Official Genus species taxonomic name.
+#' @param sleep A waiting period in seconds between successive API requests, if any.
 #' @param userpassword The userpassword in the form of "user:password" that you got when you registered at bacdive.org
 #'
-#' @return A list of strains from bacdive.org
+#' @return A list of strains with phenotype information from bacdive.org
 #' @export
 #'
-#' @importFrom RCurl getURL
-#' @importFrom rjson fromJSON
-#' @importFrom utils URLencode
+#' @importFrom BacDive open_bacdive, retrieve
 #'
 #' @examples
 #' \dontrun{
@@ -19,15 +17,13 @@
 #' species = 'xylanisolvens',
 #' userpassword = paste0(user,':',passwd))
 #' }
-getStrains <- function(page, genus, species, userpassword, getJSON = RCurl::getURL) {
+getStrains <- function(credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PASSWORD")),
+                       query, sleep = 0.1, handler = NULL, getList = BacDive::retrieve) {
 
-  #for more info on api go to https://bacdive.dsmz.de/api/bacdive/example/
-  api_entry <- 'https://bacdive.dsmz.de/api/bacdive/taxon/'
-  url_species <- utils::URLencode(paste0(api_entry, genus, '/', species, '/?page=', page, '&format=json'))
-
-  response <- getJSON(url_species,userpwd=userpassword, httpauth = 1L) #getting data as a json object
-  #getJSON is dependency injection to allow for dummy data to write tests
-  jsondata <- rjson::fromJSON(response) #converting the json into a R list object
+  bacdive <- open_bacdive(credentials[[1L]], credentials[[2L]])
+  bg2h <- list()
+  getList(object = bacdive, query = query, search = "taxon", sleep = sleep, handler = function(x) bg2h <<- c(bg2h, x))
+  bg2h
 
 }
 
