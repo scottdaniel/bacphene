@@ -1,0 +1,1939 @@
+"The number of entries per field is limited to 10 for this overview. If you want the whole information you can use the API or the ""Download selection"" menu on the Webpage."
+
+ID,designation_header,strain_number_header,is_type_strain_header,species,Enzyme,"Enzyme activity"
+140509,,"LMG 3411, CCUG 62454",1,"Achromobacter agilis",urease,-
+133323,,"AVA-1, LMG 29108, NBRC 111463, PCU 352, TISTR 2383",1,"Achromobacter aloeverae",urease,+
+140506,,"LMG 3458, CCUG 62433",1,"Achromobacter deleyi",urease,-
+322,"API 201-3-84","DSM 23807, CCUG 47057, LMG 6003, CIP 108202",1,"Achromobacter insolitus",urease,-
+140507,,"CCUG 62449, LMG 3441",1,"Achromobacter kerstersii",urease,-
+140508,,"LMG 3431, CCUG 61959, ATCC 15445",1,"Achromobacter pestifer",urease,-
+323,"API 198-2-84","CIP 108199, DSM 23806, CCUG 47062, LMG 5911",1,"Achromobacter spanius",urease,-
+159709,4GSKX,"CGMCC 1.15449, LMG 29213",1,"Acidicapsa dinghuensis",urease,-
+132354,DHOF10,"DSM 103429, CGMCC 1.13007, KCTC 42631",1,"Acidipila dinghuensis",urease,-
+82,TPB606,"DSM 21000, VKM B-2487",1,"Acidisoma sibiricum",urease,+
+133033,PMMR2,"DSM 27394, LMG 28340",1,"Acidobacterium ailaaui",urease,+
+23868,"NF 1078","DSM 27981, CCUG 62584, LMG 26971",1,"Acidovorax wautersii",urease,+
+141146,JN33,"CGMCC 1.16012, KCTC 52653, DSM 109121",1,"Actibacterium pelagium",urease,-
+141055,LS-811,"BCRC 80823, JCM 30681",1,"Actibacterium ureilyticum",urease,+
+17014,,"DSM 45503, BCC 28622, NBRC 104354, NRRL B-24610, GMKU 931",1,"Actinoallomurus acaciae",urease,+
+17008,TT04-09,"DSM 45450, KCTC 19542, NBRC 103688",1,"Actinoallomurus coprocola",urease,+
+17013,TTN02-22,"DSM 45451, KCTC 19540, NBRC 103686",1,"Actinoallomurus yoronensis",urease,+
+132079,FC3,"DSM 100580, CSUR P1982, FC1",1,"Actinobaculum massiliense",urease,-
+144,,"DSM 20639, ATCC 33144, CCUG 19206, CIP 105361, LMG 18291, Soltys 50052",1,"Actinobaculum suis",urease,+
+132532,3H-GS17,"DSM 100595, CGMCC 4.7282",1,"Actinocorallia lasiicapitis",urease,+
+140670,R434,"KEMB 9005-403, KACC 18904, JCM 31557",1,"Actinokineospora acnipugnans",urease,+
+16995,,"DSM 45045, CCTCC AA 206005, CIP 109812, JCM 14906, NBRC 103884, YIM 45681",1,"Actinomadura alba",urease,+
+133727,"YIM M 10931","CCTCC AA 2010009, DSM 45500",1,"Actinomadura sediminis",urease,+
+177,M1327/95/1,"DSM 15435, CCUG 37421, CIP 106647",1,"Actinomyces bowdenii",urease,-
+175,M1192/98/1,"DSM 15415, CCUG 41709, CIP 106507",1,"Actinomyces catuli",urease,-
+189,R18165,"DSM 19115, CCUG 48064, CIP 108337, R18165, KCTC 15232",1,"Actinomyces dentalis",urease,-
+140372,pika_113,"DSM 104049, CGMCC 4.7372",1,"Actinomyces gaoshouyii",urease,-
+140290,VUL4_1,"DSM 104050, CGMCC 4.7370",1,"Actinomyces liubingyangii",urease,-
+187,,"KCTC 15234, DSM 17234, CCUG 46090, CIP 107639, Hall R5292",1,"Actinomyces oricola",urease,-
+158436,VUL4_3,"DSM 103436, CGMCC 4.7369",1,"Actinomyces tangfeifanii",urease,-
+178,,"DSM 15434, CCUG 38702, CIP 106421",1,"Actinomyces urogenitalis",urease,-
+24458,MN08-A0203,"DSM 46707, NBRC 105883, VTCC D9-23",1,"Actinophytocola burenkhanensis",urease,+
+133108,11-183,"KCTC 39690, MCCC 1K02062, DSM 109075",1,"Actinophytocola xanthii",urease,-
+23114,Y16,"DSM 45850, CGMCC 4.6857, JCM 17700",1,"Actinoplanes atraurantiacus",urease,+
+7842,03-723,"DSM 45183, CCM 7526, KCTC 19460",1,"Actinoplanes sichuanensis",urease,+
+7844,"MN07-A0371, VTCC D9-10","DSM 45572, NBRC 105297",1,"Actinoplanes tereljensis",urease,+
+7845,"MN07-A0368, VTCC D9-11","DSM 45573, NBRC 105298",1,"Actinoplanes toevensis",urease,+
+7843,03-8772,"DSM 45184, CCM 7527, KCTC 19461",1,"Actinoplanes xinjiangensis",urease,+
+11161,"06-2230, I06-2230","DSM 45117, CCM 7466, KCTC 19293",1,"Actinopolymorpha cephalotaxi",urease,+
+141087,HS05-03,"BCC 51286, NBRC 109078, DSM 108651",1,"Actinopolyspora salinaria",urease,+/-
+158702,"KC 198","CCTCC AA 2015043, KCTC 39718",1,"Actinorectispora metalli",urease,+
+140636,K12-0408,"NBRC 111897, TBRC 5327, DSM 108652",1,"Actinorhabdospora filicis",urease,-
+133106,EBR-4-2,"KCTC 33604, JCM 30447",1,"Actinotalea caeni",urease,-
+158625,THG-T121,"KACC 19191, CGMCC 4.7389",1,"Actinotalea solisilvae",urease,+
+158784,17mud1-7,"KCTC 52873, NBRC 112824",1,"Adhaeribacter swui",urease,+
+140958,HY02,"KCTC 52512, JCM 31652",1,"Adhaeribacter terrae",urease,-
+133455,DNG6,"CGMCC 1.6961, NBRC 104235",1,"Adhaeribacter terreus",urease,+
+140913,,"ACCC 06485, JCM 30465, LAM 0050",1,"Advenella alkanexedens",urease,-
+383,WT001,"DSM 17095, LMG 22965, MTCC 7002",1,"Advenella kashmirensis",urease,+
+24014,,"DSM 26349, 8-1b, CGMCC 1.11023, JCM 18497",1,"Aequorivita viscosa",urease,+
+226,UW06,"DSM 15819, CCM 4911, CCUG 28831, CIP 106115, JCM 18985",1,"Aerococcus christensenii",urease,-
+224,SS-1647,"DSM 15633, CCUG 43001, CDC 348-00, CIP 106533, JCM 11549, ATCC BAA 465",1,"Aerococcus sanguinicola",urease,-
+223,E2,"DSM 7446, ATCC 51268, JCM 18986, NCFB 2893, NCTC 12142",1,"Aerococcus urinae",urease,-
+225,,"CCUG 42038 B, CCM 7338, DSM 15634, ATCC BAA 464, CCUG 42038b, CIP 106675, JCM 18987",1,"Aerococcus urinaehominis",urease,-
+221,M1,"DSM 20340, ATCC 11563, CCM 1914, IAM 13649, JCM 20461, NCDO 1225, NCTC 8251, WDCM 00061, CCUG 4311",1,"Aerococcus viridans",urease,-
+133328,,"9H-4, ZIM B1021, LMG 29165, CCM 8650",1,"Aeromicrobium choanae",urease,-
+11064,TYLN1,"DSM 19355, CCTCC AB 206046, JCM 16538",1,"Aeromicrobium flavum",urease,+
+283,717,"DSM 23621, CECT 7401, LMG 24681",1,"Aeromonas fluvialis",urease,-
+279,,"CCUG 39350, ATCC BAA 243, NCIMB 13618, DSM 19604, CCM 4708, CECT 5176, CIP 105493, LMG 17541",1,"Aeromonas popoffii",urease,-
+437,JC2043,"DSM 15266, KCTC 12043",1,"Aestuariibacter halophilus",urease,-
+438,JC2042,"DSM 15300, KCTC 12042",1,"Aestuariibacter salexigens",urease,-
+133791,,"KACC 16186, JCM 17789, SC 17",1,"Aestuariibaculum suncheonense",urease,+
+158420,D6,"DSM 105824, KCTC 39995",1,"Aestuariimicrobium soli",urease,-
+1782,34632,"DSM 17499, CCUG 43108, CIP 106344",1,"Afipia birgiae",urease,+
+1781,34633,"DSM 17498, CCUG 45153, CIP 107022",1,"Afipia massiliensis",urease,+
+159752,2p52,"KCTC 52473, MCCC 1H00151",1,"Agaribacter flavus",urease,-
+141009,feces2,"MCCC 1A11450, KCTC 52708",1,"Agaribacterium haliotis",urease,+/-
+141010,17,"KCTC 42584, MCCC 1H00123",1,"Agarilytica rhodophyticola",urease,-
+132395,"JK 623","DSM 29029, LMG 28559",1,"Agathobacter ruminis",urease,-
+132534,"OAct-353, OAct353","DSM 28305, CGMCC 4.7180, NRRL B-59115",1,"Agromyces binzhouensis",urease,-
+141074,"CFH S0483","KCTC 39117, CCTCC AB 2014301",1,"Agromyces insulae",urease,-
+7273,"108989, 20-5","DSM 16198, HKI 0320",1,"Agromyces salentinus",urease,+
+6086,,"DSM 19219, CCTCC AB 207002, KCTC 12885, YIM 90637",1,"Aidingimonas halophila",urease,+
+132956,Pyt,"DSM 100705, CIP 110913",1,"Akkermansia glycaniphila",urease,-
+13652,YBY-7,"DSM 24422, CGMCC 1.10789, LMG 26247, MCCC 1A06317",1,"Meinhardsimonia xiamenensis",urease,+
+13844,DS2,"DSM 17890, KCTC 12586",1,"Albimonas donghaensis",urease,+
+133384,AER10,"DSM 100498, AER 10, KCTC 42688",1,"Alcaligenes endophyticus",urease,-
+159770,SW127,"CGMCC 1.16233, KCTC 62652",1,"Alcanivorax indicus",urease,-
+158801,MT13131,"MCCC 1A11581, KCTC 52985",1,"Alcanivorax mobilis",urease,-
+140512,19-m-6,"MCCC 1A05629, KCTC 52137",1,"Alcanivorax nanhaiticus",urease,-
+11043,,"DSM 45001, KCTC 19149, YIM 45607",1,"Aldersonia kunmingensis",urease,+
+133393,S2-A1,"KACC 18987, JCM 31546",1,"Algoriphagus aestuariicola",urease,-
+133329,S61,"DSM 102044, CCTCC AB 2015446",1,"Algoriphagus iocasae",urease,-
+140525,am2,"KCTC 52549, MCCC 1H00178",1,"Algoriphagus marinus",urease,+
+140228,W29,"DSM 100160, KCTC 42940, MCC 2876",1,"Algoriphagus roseus",urease,-
+133375,Y4G10-17,"CGMCC 1.15759, KCTC 52381",1,"Aliidiomarina soli",urease,+
+24787,"YIM D15","DSM 21986, ACCC 10715, KCTC 23442",1,"Aliifodinibius roseus",urease,+
+24788,"YIM J21","DSM 21194, ACCC 10714",1,"Aliifodinibius sediminis",urease,+
+133419,E3,"CGMCC 1.7001, JCM 15139",1,"Aliiglaciecola lipolytica",urease,+
+17254,"CMJ 11.1","DSM 23419, CECT 7228, LMG 23869",1,"Aliivibrio finisterrensis",urease,+
+440,,"DSM 16032, ATCC BAA 284, CCUG 30811, CIP 106648",1,"Alishewanella fetalis",urease,-
+22907,RCRI4,"DSM 27060, JCM 17275, KCTC 23723, LMG 26473",1,"Alishewanella tabrizica",urease,+
+132683,"SYSU 10HL1970","DSM 101835, KCTC 42969",1,"Allofrancisella frigidaquae",urease,-
+132684,08HL01032,"DSM 102975, ATCC BAA 2361, CCUG 60119, NCTC 13503",1,"Allofrancisella guangzhouensis",urease,-
+132682,"SYSU YG23","DSM 101834, KCTC 42968",1,"Allofrancisella inopinata",urease,-
+140855,MWE-A11,"JCM 19371, KCTC 29232",1,"Allohumibacter endophyticus",urease,-
+11192,I10A-01259,"DSM 45601, CPCC 203428, KCTC 19844",1,"Allonocardiopsis opalescens",urease,+
+134338,505,"LMG 24253, CGMCC 1.7048",1,"Allorhizobium oryzae",urease,+
+133062,,"DSM 42178, CGMCC 4.7247, YIM DR4008",1,"Allostreptomyces psammosilenae",urease,-
+159775,SH9,"JCM 32501, CCTCC AB 2017284",1,"Alsobacter soli",urease,+
+133228,,"100921-2, CFCC 14287, KCTC 42844",1,"Altererythrobacter aerius",urease,-
+140745,THG-S3,"KACC 19190, CGMCC 1.15959",1,"Altererythrobacter deserti",urease,+
+158660,S-54,"KEMB 9005-542, KACC 19119, NBRC 112676",1,"Altererythrobacter fulvus",urease,-
+140987,CPA5,"CECT 9130, LMG 29519",1,"Altererythrobacter halimionae",urease,-
+450,,"DSM 23844, CCUG 55340, LMG 24078",1,"Alteromonas genovensis",urease,-
+133345,,"JW12, CGMCC 1.15735, KCTC 52408, MCCC 1K03175",1,"Alteromonas lipolytica",urease,-
+140746,5.12,"LMG 29661, MCC 3250",1,"Alteromonas pelagimontana",urease,+
+17874,"YIM D10","DSM 21202, CCTCC AA 208035",1,"Amorphus orientalis",urease,+
+24748,YC6899,"DSM 23349, KACC 14912, NBRC 107845",1,"Amorphus suaedae",urease,+
+1406,Shu-P-Ggiii25-2,"DSM 21624, IAM 15428, JCM 23213, KCTC 13120, MBIC 08269, NBRC 103570",1,"Amphibacillus sediminis",urease,+
+11296,M41,"DSM 18887, LMG 24143",1,"Amphritea atlantica",urease,+
+133131,,"WP1, KCTC 39642, MCCC 1A10745",1,"Amycolatopsis albispora",urease,+
+13516,RA45,"DSM 45648, CGMCC 4.5579, JCM 16584",1,"Amycolatopsis arida",urease,+
+24444,BNT52,"DSM 45679, JCM 31029, KCTC 29065, NRRL B-24886",1,"Amycolatopsis cihanbeyliensis",urease,+
+13252,"FH 1845","DSM 44594, JCM 12669, NRRL B-24209",1,"Amycolatopsis decaplanina",urease,+
+13286,,"DSM 45426, CCTCC AA 2011016, JCM 18054, YIM 75904",0,"Amycolatopsis dongchuanensis",urease,+
+13265,LC2,"DSM 45164, CCTCC AB 206019, CIP 109736, IAM 15387, JCM 21831",1,"Amycolatopsis echigonensis",urease,+
+13261,N4-6,"DSM 45041, JCM 13279, NRRL B-24428",1,"Amycolatopsis halotolerans",urease,+
+13262,N7-3,"DSM 45042, JCM 13280, NRRL B-24427",1,"Amycolatopsis jejuensis",urease,+
+13227,KT2025,"DSM 45510, JCM 31204, KCTC 29056",1,"Amycolatopsis magusensis",urease,+
+13259,"CSC 17TA-090","DSM 44992, CIP 109581, NRRL B-24473, HKI 0330",1,"Amycolatopsis nigrescens",urease,+
+13266,LC11,"DSM 45165, CCTCC AB 206020, CIP 109735, IAM 15388, JCM 21832",1,"Amycolatopsis niigatensis",urease,+
+13254,1BDZ,"DSM 44832, AS 4.1729, PCM 2600",1,"Amycolatopsis palatopharyngis",urease,+
+13253,"SBHs Strp1","DSM 44776, CIP 108939, JCM 13852, NRRL B-24324",1,"Amycolatopsis plumensis",urease,+
+158797,DH51B-4-3,"TBRC 6029, NBRC 112509",1,"Amycolatopsis rhizosphaerae",urease,+
+13260,2406-001,"DSM 44993, JCM 14909, NRRL B-24474, HKI 0457",1,"Amycolatopsis saalfeldensis",urease,+
+13273,,"DSM 45649, BCC 35842, NBRC 106095, TISTR 1919, RM 287",1,"Amycolatopsis samaneae",urease,+
+140730,H-12,"KCTC 52581, CGMCC 1.15880",1,"Amylibacter cionae",urease,-
+17407,NS05,"DSM 18746, CCM 7435, CCUG 57200, NEU 1212",1,"Ancylobacter oerskovii",urease,+
+17403,Pla5,"DSM 2457, CIP 109301, NCIB 10516, CCUG 30553",1,"Ancylobacter polymorphus",urease,+
+158256,E130,"DSM 102029, LMG 29367",1,"Ancylobacter pratisalsi",urease,-
+157183,Osot,"CCUG 70237, JCM 32039, DSM 106440, VKM B-3145",1,"Ancylobacter sonchi",urease,+
+17406,NP-300,"DSM 1277, CIP 109300",1,"Ancylobacter vacuolatus",urease,+
+133003,FA102,"DSM 28825, CICC 10902, KCTC 42257",1,"Ancylomarina subtilis",urease,-
+5416,MK-1,"DSM 1989, ATCC 43737",1,"Andreesenia angusta",urease,-
+10500,GFC-1,"DSM 23236, BCRC 17832, LMG 24502",1,"Andreprevotia lacus",urease,+
+133860,7402J-48,"KACC 15527, NBRC 108730",1,"Angustibacter aerolatus",urease,+
+141003,YC2-20,"KCTC 39842, DSM 103769, JCM 32752",1,"Angustibacter speluncae",urease,-
+130972,,"DSM 21100, KACC 14636, KCTC 22261, LMG 24494, Gsoil 524",1,"Anseongella ginsenosidimutans",urease,-
+158772,JB01H24,"GDMCC 1.1229, KCTC 52984",1,"Antarcticibacterium flavum",urease,-
+140874,wkB301,"NRRL B-65307, NCIMB 14986",1,"Apibacter adventoris",urease,-
+132969,R-53146,"DSM 100903, LMG 28357",1,"Apibacter mensalis",urease,-
+140816,Ar-125,"CGMCC 1.15295, JCM 30876",1,"Aquaticitalea lipolytica",urease,-
+140593,SS2-9,"KCTC 52274, MCCC 1H00142",1,"Aquimarina rubra",urease,-
+158701,122CH820-2,"KACC 19274, LMG 30078",1,"Aquimarina spongiicola",urease,-
+133335,,"CBA3207, KACC 17666, JCM 19528",1,"Aquimarina versatilis",urease,-
+140914,P1297,"CCM 7557, LMG 28989, CCUG 67440",1,"Aquitalea pelogenes",urease,-
+133396,,"DSM 22792, JCM 30984, KCTC 22820, Gsoil 809",1,"Arachidicoccus ginsenosidivorans",urease,-
+204,P6775,"DSM 25104, CCM 7958, CCUG 61573, CIP 110339",1,"Arcanobacterium canis",urease,-
+197,11018,"DSM 20595, ATCC 9345, CCM 5947, NCTC 8452",1,"Arcanobacterium haemolyticum",urease,-
+203,M401624/00/2,"DSM 15539, CCUG 44697, CIP 106850",1,"Arcanobacterium hippocoleae",urease,-
+199,M1590/94/3,"DSM 10002, CCUG 38888, LMG 18722, CIP 105740",1,"Arcanobacterium phocae",urease,-
+202,M430/94/2,"DSM 13483, CCUG 42575, CIP 106442",1,"Arcanobacterium pluranimalium",urease,-
+140307,647,"DSM 102162, LMG 29418",1,"Arcanobacterium wilhelmae",urease,-
+2096,KH-2,"DSM 17680, CCUG 48482, LMG 21996, CIP 108697, CECT 7203",1,"Arcobacter cibarius",urease,-
+140702,MA5,"LMG 28652, JCM 31147",1,"Arcobacter lekithochrous",urease,+
+140651,MN12-7,"KCTC 32015, CIP 110422",1,"Arcticibacter svalbardensis",urease,-
+133367,,"SM1504, KCTC 42716, CCTCC AB 2015348",1,"Arcticibacterium luteifluviistationis",urease,+
+158564,R18H21,"GDMCC 1.1159, KCTC 52924",1,"Arenibacter antarcticus",urease,-
+158623,P308H10,"GDMCC 1.1230, KCTC 52983",1,"Arenibacter catalasegens",urease,-
+5484,,"DSM 19833, CCUG 48006, JCM 13507, KCTC 12113, KMM 3941, CIP 108496",1,"Arenibacter certesii",urease,+
+159746,z29,"JCM 32091, CCTCC AB 2017067",1,"Arenimonas caeni",urease,-
+17445,TR7-09,"DSM 18010, CIP 109794, KCTC 12666",1,"Arenimonas composti",urease,+
+17449,T7-07,"DSM 18060, KCTC 12667",1,"Arenimonas daejeonensis",urease,+
+140971,Y3L17,"CGMCC 1.15905, KCTC 52420",1,"Arenimonas soli",urease,+
+141004,HIs16-32,"NBRC 112289, TBRC 7038",1,"Arenivirga flava",urease,-
+158565,A24_SHP_-5_238,"DSM 102177, CECT 9235",1,"Aridibacter nitratireducens",urease,-
+133299,,"42-50, CCTCC AB 2014325, KCTC 42825",1,"Arsenicitalea aurantiaca",urease,+
+7518,LC6,"DSM 23368, CCTCC AB 206013, IAM 15383, JCM 218275",1,"Arthrobacter alkaliphilus",urease,+
+7603,R-5102,"DSM 16402, LMG 22283",1,"Arthrobacter castelli",urease,+
+7630,D48,"DSM 24664, CGMCC 1.10783, CIP 110640",1,"Arthrobacter cupressi",urease,+
+132518,"YIM CS25","DSM 29935, CGMCC 1.15091, KCTC 39544",1,"Arthrobacter deserti",urease,-
+158722,MDB1-42,"CGMCC 1.9772, NBRC 113088",1,"Arthrobacter ruber",urease,-
+158438,NEAU-SA1,"DSM 106716, CCTCC AB 2017271",1,"Arthrobacter silvisoli",urease,+
+7612,"AC 836","DSM 16005, CCM 2783, CIP 108701",1,"Arthrobacter stackebrandtii",urease,+
+133190,,"C-1-16, KEMB 900-374, KACC 18717, JCM 31293",1,"Arvibacter flaviflagrans",urease,-
+158566,DRW22-8,"KCTC 42356, JCM 30469",1,"Asprobacter aquaticus",urease,-
+2250,,"DSM 17538, CCUG 48253, CIP 108502",1,"Atopococcus tabaci",urease,+
+140944,2A-8,"NBRC 111187, KCTC 42676",1,"Aurantiacicella marina",urease,-
+141147,R14M6,"GDMCC 1.1202, KCTC 52919",1,"Aurantimonas aggregata",urease,+
+526,WP1,"DSM 14790, CCUG 53900, CIP 107386",1,"Aurantimonas coralicida",urease,+
+158798,BN130233,"CCTCC AB 2017051, KCTC 42642, DSM 103550",1,"Aurantisolimonas haloimpatiens",urease,-
+532,S21B,"DSM 21988, CECT 7138, CIP 109525, KCTC 22106, LMG 23375",1,"Aureimonas altamirensis",urease,+
+140972,2T4P-2-4,"KCTC 52217, CGMCC 1.15367",1,"Aureimonas endophytica",urease,-
+139618,PP-WC-4G-234,"DSM 29985, CIP 110892, LMG 28655",1,"Aureimonas galii",urease,+
+133355,B5-2,"CGMCC 1.15493, KCTC 52395",1,"Aureimonas glaciei",urease,+
+158604,4M3-2,"CFCC 11187, KCTC 42087",1,"Aureimonas populi",urease,+
+132997,PP-CE-2G-454,"DSM 102238, CCM 8665, LMG 29411",1,"Aureimonas pseudogalii",urease,+
+140460,S31,"CCUG 69858, KCTC 33611, MCC 3027",1,"Auricoccus indicus",urease,-
+11693,20186H4H1,"CIP 109717, DSM 18224, CCUG 52860",1,"Avibacterium endocarditidis",urease,+
+134168,Slu-05,"CCUG 56488, DSM 17719, KCTC 12530, CCBAU 10199",1,"Azonexus caeni",urease,+
+13889,d8-1,"DSM 23864, BCRC 17657, LMG 24005",1,"Azonexus hydrophilus",urease,+
+24668,NS12,"DSM 18749, CCM 7897, NEU 1219",1,"Azorhizobium oxalatiphilum",urease,+
+140877,CC-HIH038,"BCRC 80909, JCM 30827",1,"Azospirillum agricola",urease,+
+140653,SgZ-5,"CCTCC AB 2012021, KACC 16605",1,"Azospirillum humicireducens",urease,+/-
+134118,COC8,"IAM 15130, CCTCC AB 204051",1,"Azospirillum oryzae",urease,+
+13999,,"DSM 19922, CCUG 55431, IMMIB TAR-3",1,"Azospirillum picis",urease,+
+13998,"IMMIB AFH-6","DSM 19657, CCUG 53966",1,"Azospirillum rugosum",urease,+
+134266,N7,"NCCB 100147, LMG 23989",1,"Azospirillum zeae",urease,+
+158416,L28,"DSM 104296, MCCC 1K03287",1,"Peribacillus acanthi",urease,-
+140963,N35-10-2,"MCCC 1A02146, KCTC 33710, LMG 28875",1,"Bacillus albus",urease,-
+572,1,"DSM 485, ATCC 27647, JCM 5262, NCIB 10436, NCIB 8772, NCTC 4553, CCUG 28516, NRRL B-14309",1,"Alkalihalobacillus alcalophilus",urease,+
+158725,AK73,"JCM 32184, MTCC 12637, KCTC 33880",1,"Bacillus alkalilacus",urease,+
+1263,41KF2b,"DSM 21631, JCM 13350, MTCC 7306",1,"Bacillus altitudinis",urease,-
+1225,TF-12,"DSM 16205, JCM 11545, KCCM 41589",1,"Bacillus aquimaris",urease,-
+1290,B8W22,"DSM 21047, JCM 13839, MTCC 7755",1,"Bacillus megaterium",urease,+
+140878,NH7l_1,"MCCC 1A05787, LMG 27697, KCTC 33532",1,"Bacillus australimaris",urease,-
+599,"1, BAI","CCUG 28517, NRRL B-14310, DSM 1046, ATCC 29788, CCM 2849, CIP R925",1,"Calidifontibacillus azotoformans",urease,-
+1214,"IDA 1115, R-16315","DSM 15601, CIP 108807, LMG 21833",1,"Neobacillus bataviensis",urease,-
+158610,7578-1,"CGMCC 1.15374, KCTC 33845",1,"Bacillus camelliae",urease,-
+133067,,"DSM 103394, CGMCC 1.12820, KCTC 33514, EGI 6500252",1,"Bacillus capparidis",urease,-
+1281,PN5,"DSM 21993, JCM 15113, LMG 23935, MTCC 9127, CCUG 55698",1,"Solibacillus cecembensis",urease,+
+158260,5L6,"DSM 104513, CICC 23855, KCTC 33663",1,"Bacillus ciccensis",urease,-
+654,609,"DSM 1, CCM 2013, NCIB 9365, NCTC 10334, WDCM 00002, CCUG 7417, ATCC 7050, IAM 1115, NRS 609",1,"Bacillus coagulans",urease,-
+132382,Ap-6,"DSM 101566, CCM 8651, CIP 110974",1,"Neobacillus cucumis",urease,-
+1323,"391-98, NVH 391-98","DSM 22905, CIP 110041",1,"Bacillus cytotoxicus",urease,-
+1208,mcha2343,"DSM 14890, CIP 108363, LMG 19507",1,"Alkalihalobacillus decolorationis",urease,-
+1213,"IDA 1937, R-16337","DSM 15600, CIP 108808, LMG 21831",1,"Neobacillus drentensis",urease,-
+1203,2DT,"DSM 13796",1,"Bacillus endophyticus",urease,-
+158648,Bf-1,"JCM 31807, NCIMB 15079",1,"Bacillus fermenti",urease,+
+1251,"Rcp Sm1","DSM 18237, LMG 17489, NCIMB 13771",1,"Neobacillus fumarioli",urease,-
+1212,MB800,"DSM 15595, LMG 17892",1,"Bacillus galactosidilyticus",urease,+/-
+,,,,,urease,-
+132364,FJAT-4402,"DSM 29500, CGMCC 1.12902",1,"Bacillus gobiensis",urease,-
+140408,S36,"DSM 104297, CGMCC 1.16030, KCTC 33864",1,"Bacillus iocasae",urease,-
+158629,Ma50-5,"KCTC 33881, CCTCC AB 2017020",1,"Bacillus kexueae",urease,-
+158731,AK74,"MTCC 12638, KCTC 33946, JCM 32185",1,"Bacillus lacus",urease,-
+132573,FJAT-27997,"DSM 101776, CCTCC AB 2015285",1,"Peribacillus loiseleuriae",urease,+
+1256,B1761,"DSM 18845, CIP 107105, JCM 12212, KCTC 3846, LMG 18422",1,"Bacillus luciferensis",urease,-
+140965,TD41,"MCCC 1A00359, KCTC 33716, LMG 28872",1,"Bacillus luti",urease,-
+140556,AK61,"JCM 31087, MTCC 12015, KCTC 33872",1,"Bacillus mangrovi",urease,-
+158630,Ma50-6,"KCTC 33882, CCTCC AB 2017019",1,"Bacillus manusensis",urease,-
+1224,TF-11,"DSM 16204, JCM 11544, KCCM 41588",1,"Bacillus marisflavi",urease,-
+133059,KS16-9,"DSM 100413, KCTC 33834, MTCC 12305",1,"Mesobacillus maritimus",urease,+
+140964,0711P9-1,"MCCC 1A05942, KCTC 33717, LMG 28877",1,"Bacillus mobilis",urease,-
+23707,,"DSM 27953, CGMCC 1.10116, JCM 16507, NH3",1,"Alkalihalobacillus nanhaiisediminis",urease,+
+1243,4T19,"DSM 17723, CIP 109816, KACC 11279",1,"Metabacillus niabensis",urease,+
+140967,4049,"MCCC 1A00732, KCTC 33713, LMG 28871",1,"Bacillus nitratireducens",urease,-
+140352,SYP-B691,"DSM 29196, JCM 30743",1,"Neobacillus notoginsengisoli",urease,+
+1216,"IDA 3307, R-15439","DSM 15603, CIP 108805, LMG 21837",1,"Neobacillus novalis",urease,-
+132616,1DS3-10,"DSM 29761, ACCC 19781",1,"Bacillus oryzisoli",urease,+
+140961,EB422,"MCCC 1A06182, KCTC 33858",1,"Bacillus pacificus",urease,-
+133957,RC2,"MTCC 9831, MCC 2100, KCTC 13724, CCM 7754",1,"Bacillus paraflexus",urease,+
+140968,NH24A2,"MCCC 1A04098, KCTC 33709, LMG 28876",1,"Bacillus paramycoides",urease,-
+140960,Mn5,"MCCC 1A00395, KCTC 33714, LMG 28873",1,"Bacillus paranthracis",urease,-
+140966,TD42,"MCCC 1A00365, KCTC 33715, LMG 28870",1,"Bacillus proteolyticus",urease,-
+1264,FO-36b,"DSM 19292, ATCC BAA 1126, LMG 26769, NBRC 100820",1,"Bacillus safensis",urease,-
+159795,AK72,"MTCC 12636, KCTC 33981, JCM 32183",1,"Bacillus shivajii",urease,+
+1217,"IDA 0086, R-16300","DSM 15604, CIP 108804, LMG 21838",1,"Neobacillus soli",urease,-
+158259,NEAU-cbsb5,"DSM 100485, CGMCC 1.14993",1,"Bacillus solisilvae",urease,-
+140573,RA9,"LMG 29736, CECT 9170",1,"Bacillus terrae",urease,-
+140962,N24,"MCCC 1A01406, KCTC 33711, LMG 28874",1,"Bacillus tropicus",urease,-
+1215,"IDA 3632, R-15447","DSM 15602, CIP 108806, LMG 21834",1,"Neobacillus vireti",urease,-
+133012,"FSL W8-0169","DSM 102050, CIP 111364, LMG 29269",1,"Bacillus wiedmannii",urease,-
+140354,FJAT-27215,"DSM 100757, CCTCC AB 2015266",1,"Bacillus wudalianchiensis",urease,+
+140266,,"DSM 103964, CCM 8726, JJ-247, LMG 29876",1,"Mesobacillus zeae",urease,-
+140879,DW5-4,"MCCC 1A08372, LMG 27144, KCTC 33531",1,"Bacillus zhangzhouensis",urease,+
+133276,,"sw100, JCM 30597, MCCC 1K00501, KCTC 42424",1,"Bacterioplanoides pacificum",urease,-
+140882,C13EG70,"LIPI12-4-Ck732, JSAT12-4-Ck732, InaCC B449, NBRC 110958",1,"Bacteroides caecicola",urease,-
+140883,C13EG186,"LIPI12-4-Ck844, JSAT12-4-Ck884, InaCC B451, NBRC 110963",1,"Bacteroides gallinaceum",urease,-
+1626,XB1A,"DSM 18836, CCUG 53782, JCM 15633",1,"Bacteroides xylanisolvens",urease,-
+1634,,"DSM 21432, CCUG 45774, CIP 105477, IBS 382",1,"Bartonella alsatica",urease,-
+140945,PEB0122,"NCIMB 14961, DSM 29779",1,"Bartonella apis",urease,+
+1636,,"DSM 21463, CCUG 44360, CIP 106294, IBS 325",1,"Bartonella birtlesii",urease,-
+1637,91-4,"DSM 21464, CCUG 43828, CIP 106692",1,"Bartonella bovis",urease,-
+1638,,"DSM 21569, CCUG 43827, CIP 106691, IBS 193",1,"Bartonella capreoli",urease,-
+1643,"Fuji 18-1","DSM 23650, CIP 109861, JCM 15567",1,"Bartonella japonica",urease,-
+1644,"Fuji 23-1","DSM 23649, CIP 109862, JCM 15566",1,"Bartonella silvatica",urease,-
+1672,"BF-2819, Hilger","DSM 19635, CECT 7311, LMG 2819",1,"Beijerinckia doebereinerae",urease,-
+140946,5C,"VKM B-2724, KCTC 32194",1,"Belliella buryatensis",urease,-
+38,CP2C,"DSM 16746, ATCC BAA 1043, CIP 109215",1,"Belnapia moabensis",urease,+
+23491,PB-K8,"DSM 28067, JCM 18033, KCTC 23765",1,"Belnapia soli",urease,+
+12011,DSE10,"DSM 22132, JCM 14375, LMG 24411",1,"Bhargavaea cecembensis",urease,+
+23197,,"DSM 26128, CCM 8429, LMG 27071, ZMA 19",1,"Bhargavaea ullalensis",urease,+
+140310,RP115,"DSM 100238, CCM 8605, LMG 28779",1,"Bifidobacterium apri",urease,-
+158380,,"DSM 103152, JCM 31790, TRI 5",1,"Bifidobacterium callitrichidarum",urease,-
+158387,"MRM 8.19","DSM 103154",1,"Bifidobacterium catulorum",urease,-
+132454,LMM_E3,"DSM 100216, JCM 30801",1,"Bifidobacterium eulemuris",urease,-
+132346,"MRM 8.14, MRM_8.14","DSM 100202, JCM 30799",1,"Bifidobacterium hapali",urease,+
+132345,"MRM 5.9, MRM_5.9","DSM 100196, JCM 30796",1,"Bifidobacterium myosotis",urease,+
+132348,"MRM 5.18, MRM_5.18","DSM 100201, JCM 30798",1,"Bifidobacterium tissieri",urease,+
+1740,"OMB 115","DSM 17777, JCM 13495",1,"Bifidobacterium tsurumiense",urease,-
+134133,APA1-,"ACAM 1056, CIP 108533",1,"Bizionia algoritergicola",urease,+
+134125,ADA-4,"ACAM 1058, CIP 108535",1,"Bizionia myxarmorum",urease,+
+140551,P131,"MCCC 1H00124, KCTC 42587",1,"Bizionia sediminis",urease,-
+140974,T2,"KCTC 42354, JCM 30467",1,"Blastomonas fulva",urease,-
+158642,KB1,"KCTC 15618, JCM 32276",1,"Blautia hominis",urease,-
+377,"Hinz 591-77","DSM 11332, ATCC 35086, CCUG 13726, LMG 1852",1,"Bordetella avium",urease,-
+374,18323,"DSM 5571, ATCC 9797, CCUG 30873, CCUG 17764, NCTC 10739, LMG 14455, CIP 63.1",1,"Bordetella pertussis",urease,-
+382,Se-1111R,"DSM 12804, CCUG 43448, CIP 107267, ATCC BAA 461, CCM 7166",1,"Bordetella petrii",urease,-
+133298,8-296-03,"DSM 106160, NCTC 13808, NRRL B-59942, 8-296-03",0,"Bordetella pseudohinzii",urease,-
+379,"1779, 22-93","DSM 11334, CCUG 32381, LMG 13506",1,"Bordetella trematum",urease,-
+1788,34614,"DSM 21596, CCUG 43111, CIP 106338",1,"Bosea eneae",urease,+
+1791,R-46060,"DSM 26656, CCUG 61247, LMG 26379",1,"Bosea lathyri",urease,+
+1792,R-45681,"DSM 26673, CCUG 61248, LMG 26383",1,"Bosea lupini",urease,+
+1789,63287,"DSM 21079, CCUG 43117, CIP 106336",1,"Bosea massiliensis",urease,+
+1787,,"CCUG 55772, DSM 13099, ATCC 700918, CIP 106457, AMX 51",1,"Bosea minatitlanensis",urease,+
+1793,R-46070,"DSM 26672, CCUG 61249, LMG 26381",1,"Bosea robiniae",urease,-
+1790,34635,"DSM 21229, CCUG 43114, CIP 106340, CCUG 43114 T",1,"Bosea vestrisii",urease,+
+174,M1749/98/1,"DSM 15383, CCUG 41710, CIP 106509",1,"Boudabousia marimammalium",urease,-
+188,,"DSM 19116, CCUG 46092, CIP 107668",1,"Bowdeniella nasicola",urease,-
+132661,KWS-1,"DSM 28796, JCM 30059, MTCC 11836",1,"Brachybacterium aquaticum",urease,-
+3916,JB,"DSM 18832, CGMCC 1.6508, LMG 23926",1,"Brachybacterium zhongshanense",urease,+
+343,"RKI 99-01984","DSM 13743, LMG 19451, NCIMB 13739, CCUG 47103",1,"Brackiella oedipodis",urease,-
+1813,"P17Hg1, PL7HG1","DSM 17288, CECT 5829, LMG 21987, NBRC 103048, CCUG 55850",1,"Bradyrhizobium betae",urease,+
+1817,CTAW11,"DSM 23720, CECT 7749, LMG 25866",1,"Bradyrhizobium cytisi",urease,-
+1816,PAC68,"DSM 19632, CECT 7395, LMG 24556",1,"Bradyrhizobium jicamae",urease,+/-
+140478,,"LMG 30031, U675, BR 6010, CNPSo 1165, SEMIA 6399",1,"Bradyrhizobium mercantei",urease,+
+1784,S58,"DSM 12412, ATCC 43045, JCM 1494, LMG 10732, NCIMB 12151, CCUG 57401",1,"Bradyrhizobium oligotrophicum",urease,+
+1815,PAC48,"DSM 19631, CECT 7396, LMG 24246",1,"Bradyrhizobium pachyrhizi",urease,+/-
+140809,,"CNPSo 2823, HAMBI 3668, H-8, BR 446",1,"Bradyrhizobium stylosanthis",urease,+
+140740,D8-10-2-5,"CFCC 11935, KCTC 42841",1,"Brenneria populi subsp. brevivirga",urease,-
+140739,D9-5,"CFCC 11963, KCTC 42088",1,"Brenneria populi",urease,-
+132387,PDF4,"DSM 100115, NCCB 100559",1,"Brevibacillus gelatini",urease,-
+133398,,"ACCC 06527, JCM 30849, LAM 0312",1,"Brevibacillus halotolerans",urease,-
+23172,DA2,"DSM 26674, JCM 15774, NCIMB 14531",1,"Brevibacillus nitrificans",urease,+
+132383,,"DSM 29928, CPCC 100738, YIM 78300",1,"Brevibacillus sediminis",urease,+
+159885,BS05,"KACC 18875, LMG 29562",1,"Brevibacterium hankyongi",urease,-
+1867,HFW-26,"DSM 18964, JBRI 2001, KCTC 19221",1,"Brevibacterium marinum",urease,+
+1860,R-5391,"DSM 16132, CIP 108823, LMG 22061",1,"Brevibacterium picturae",urease,+
+1869,20,"DSM 21258, CCUG 56047, JCM 19110",1,"Brevibacterium ravenspurgense",urease,-
+133018,FXJ8.269,"DSM 102229, CGMCC 1.15472",1,"Brevibacterium sediminis",urease,-
+22937,MB18,"DSM 23676, LMG 25772",1,"Brevibacterium siliguriense",urease,+
+2318,EMB102,"DSM 17977, KCTC 12609",1,"Brevundimonas aveniformis",urease,+
+133414,GTAE24,"LMG 29500, CECT 9126",1,"Brevundimonas canariensis",urease,-
+2319,DS-18,"DSM 23960, JCM 14602, KCTC 12871",1,"Brevundimonas lenta",urease,+
+134292,,"BCCN94-74, NCTC 12891",1,"Brucella ceti",urease,+
+133528,BO1,"BCCN 09-01, CPAM 6436",1,"Brucella inopinata",urease,+
+134306,,"BCCN 07-01, CAPM 6434, CCM 4915",1,"Brucella microti",urease,+
+134291,,"BCCN94-73, NCTC 12890",1,"Brucella pinnipedialis",urease,+
+132528,F60,"DSM 101715, BCCN 09-2",1,"Brucella vulpis",urease,+
+140708,N62,"KCTC 42589, MCCC 1H00117",1,"Brumimicrobium aurantiacum",urease,-
+1983,ES0263A,"DSM 23435, CCUG 54561, LMG 24066",1,"Burkholderia arboris",urease,+
+1989,J2956,"DSM 22706, CCUG 55526, LMG 23361",1,"Burkholderia contaminans",urease,-
+1985,,"DSM 23436, CCUG 54555, LMG 24064, FIRENZE 3",1,"Burkholderia latens",urease,-
+1986,AU0553,"DSM 23519, CCUG 54567, LMG 24068",1,"Burkholderia metallica",urease,-
+1974,C6786,"DSM 21774, CCUG 51349, CIP 110344, LMG 23618, NCTC 13387",1,"Burkholderia oklahomensis",urease,-
+139753,,"DSM 103137, HST 245, LMG 29660, Campa 1040",1,"Burkholderia puraquae",urease,-
+1987,AU0475,"DSM 23518, CCUG 54564, LMG 24067",1,"Burkholderia seminalis",urease,-
+141032,B15,"KCTC 52552, MCCC 1K03221",1,"Butyratibacter algicola",urease,+
+158361,BB10,"DSM 104997, ATCC TSD-102",1,"Butyricicoccus porcorum",urease,+
+133154,,"DSM 105721, 180-3, CCUG 65562, JCM 18676",1,"Butyricimonas faecihominis",urease,-
+22942,R27,"DSM 25160, CGMCC 1.11013, LMG 27580",1,"Caballeronia grimmiae",urease,+
+159714,RPE64,"NCIMB 15023, JCM 31142",1,"Caballeronia insecticola",urease,-
+23817,OP-1,"DSM 28073, CCTCC AB 2010354, KCTC 23300",1,"Caballeronia zhejiangensis",urease,+
+133087,CGII-59m2,"DSM 29806, NCAIM B.02615",1,"Caenimicrobium hargitense",urease,-
+3027,EMB320,"DSM 17982, KCTC 12616",1,"Caenimonas koreensis",urease,+
+133755,AK4,"MTCC 10963, JCM 17360",1,"Caenispirillum salinarum",urease,+
+158813,THG-YT1,"KACC 19471, CGMCC 1.16306",1,"Camelliibacillus cellulosilyticus",urease,+
+2139,L266,"DSM 22948, CCUG 54429, LMG 24001, LMG 54429, KCTC 15211",1,"Campylobacter canadensis",urease,+
+140238,RC20,"DSM 102159, LMG 29375",1,"Campylobacter geochelonis",urease,-
+133218,,"HV10, NCTC 13823, CIP 111092",1,"Campylobacter hepaticus",urease,-
+2138,CH001A,"DSM 21671, CCUG 45161, CIP 107682, LMG 19568, NCTC 13146",1,"Campylobacter hominis",urease,-
+140602,WBE38,"CECT 9147, LMG 29815, CCUG 69482",1,"Campylobacter ornithocola",urease,+
+2136,"SU A4","DSM 19458, ATCC 51146, CCUG 30254, JCM 12989",1,"Campylobacter showae",urease,-
+390,BZ59,"DSM 22805, CGMCC 1.10190, LMG 26046",1,"Candidimonas bauzanensis",urease,+
+158815,JR1,"MCCC 1K03323, KCTC 52869",1,"Carboxylicivirga sediminis",urease,-
+158403,CP-1,"DSM 103363, CGMCC 1.15643",1,"Carnobacterium antarcticum",urease,-
+349,Ho-11,"DSM 22240, KCTC 12197, LMG 23411",1,"Castellaniella caeni",urease,-
+350,,"DSM 23970, JCM 15515, KCTC 22398, DCY 36",1,"Castellaniella ginsengisoli",urease,-
+139755,CG19-1,"DSM 106146, CCUG 71490, JCM 33534",1,"Catenibacillus scindens",urease,-
+140721,THG-AG3.4,"KACC 18849, CCTCC AB 2016077, CCUG 72326",0,"Caulobacter hibisci",urease,-
+140608,7F14,"CGMCC 1.15915, KCTC 52515",1,"Caulobacter rhizosphaerae",urease,-
+158348,7.3,"DSM 105478, CCUG 16493",1,"Caviibacterium pharyngocola",urease,-
+23239,L-6,"DSM 27375, CCUG 60799, KCTC 23497",1,"Celeribacter baekdonensis",urease,+
+13861,ZXM137,"DSM 26270, CGMCC 1.8891, LMG 24854",1,"Celeribacter halophilus",urease,+
+13855,"H 14","DSM 26471, CIP 109922, KMM 6012",1,"Celeribacter neptunius",urease,+
+140857,SBU1,"MCCC1A00672, DSM 100434, MCCC 1A00672",1,"Celeribacter persicus",urease,+
+2373,5420S-23,"DSM 18649, KACC 20692",1,"Cellulomonas aerilata",urease,+
+5499,"Cy l20, LIM -21","DSM 7489, ATCC 23178, IAM 14306",1,"Cellulophaga lytica",urease,-
+12582,DS-61,"DSM 18665, KCTC 19206",1,"Cellulosimicrobium terreum",urease,+
+140697,MVW-40,"BCRC 80977, LMG 29557, KCTC 52237",1,"Cellvibrio fontiphilus",urease,-
+140658,,"NCDO 2697, NCIMB 10462",1,"Cellvibrio japonicus",urease,-
+140168,CV41,"DSM 100879, ATCC TSD-39, NCIMB 15005",1,"Cephaloticoccus capnophilus",urease,+
+140800,CAG34,"NCIMB 15004, ATCC TSD-38",1,"Cephaloticoccus primus",urease,-
+158533,SM1355,"JCM 30336, CCTCC AB 2014246",1,"Changchengzhania lutea",urease,-
+132550,RB-25,"DSM 28811, LMG 28304",1,"Chania multitudinisentens",urease,-
+1652,TE2,"DSM 6462, ATCC 51531",1,"Chelatococcus asaccharovorans",urease,+
+1654,K106,"DSM 22069, CCUG 54519, KCTC 12979",1,"Chelatococcus daeguensis",urease,-
+133219,,"DSM 105737, JCM 30308, B2974, CGMCC 1.12919",1,"Chelatococcus reniformis",urease,+
+1653,HT4,"DSM 18167, JCM 14988",1,"Chelatococcus sambhunathii",urease,+
+132989,,"DSM 100641, CCTCC AB 2015175, KCTC 42661, CHL 1",1,"Chenggangzhangella methanolivorans",urease,-
+133181,STM-7,"STM-7, BCRC 80923, LMG 29289, KCTC 42982, DSM 107335",1,"Chitinibacter fontanus",urease,-
+1993,R2A43-10,"DSM 17726, KACC 11467",1,"Chitinimonas koreensis",urease,-
+17747,M1-09,"DSM 18108, KCTC 12654",1,"Chitinophaga ginsengisegetis",urease,+
+17751,JS16-4,"DSM 24859, JCM 15441, KACC 12954",1,"Chitinophaga niastensis",urease,+
+159794,LY-1,"CCTCC AB 2018018, KCTC 62444",1,"Chitinophaga parva",urease,-
+17740,,"DSM 2588, ATCC 43595, IFO 15968, NBRC 15968, UQM 2034",1,"Chitinophaga pinensis",urease,+
+140711,TFL-3,"ACCC 19966, KCTC 52590",1,"Chitinophaga sedimenti",urease,-
+133287,,"IITR-71, MTCC 11059, JCM 30068, KCTC 52433",1,"Chromobacterium alkanivorans",urease,+
+133161,,"LAM 1188, ACCC 19900, JCM 31180",1,"Chromobacterium rhizoryzae",urease,-
+6001,"4N, LTS-4N","DSM 14323, CECT 5315",1,"Chromohalobacter nigrandesensis",urease,+
+23025,CC-VM-7,"DSM 25208, CCM 7645, CCUG 57618",1,"Chryseobacterium arthrosphaerae",urease,+
+159792,F30,"KCTC 62135, MCCC 1K03457",1,"Chryseobacterium aurantiacum",urease,+
+5681,N4,"DSM 17710, CCBAU 10201, CIP 109625, KCTC 12506",1,"Chryseobacterium caeni",urease,+
+5711,"Sa 1147-06","DSM 23145, CCM 7737, CIP 110405, CCUG 58959",1,"Chryseobacterium chaponense",urease,+
+133363,,"KACC 18798, JCM 31422, GSE 06",1,"Chryseobacterium cucumeris",urease,+
+5709,R4-1A,"DSM 23031, CCM 7716, LMG 25442, CCUG 58784",1,"Chryseobacterium culicis",urease,+
+132418,D07,"DSM 100383, CCTCC AB 2011160, KCTC 42897",1,"Chryseobacterium frigidum",urease,-
+133901,,"KCTC 23760, JCM 18019, DCY 63",1,"Chryseobacterium ginsengisoli",urease,+
+158632,,"MTCC 12457, JCM 31156, KACC 19170, IHBB 10212",1,"Chryseobacterium glaciei",urease,+
+134032,THG-A18,"KACC 16227, LMG 26579",1,"Chryseobacterium gwangjuense",urease,+
+133143,,"WG4, KCTC 52204, CCTCC AB 2016058",1,"Chryseobacterium montanum",urease,-
+23024,,"CCUG 51923, CIP 109277, DSM 25207, CCUG 5192, LMG 23089",0,"Chryseobacterium piscium",urease,+
+140591,Ra1,"AB 2015431, KCTC 52230",1,"Chryseobacterium reticulitermitis",urease,+
+5707,1YB-R12,"DSM 22468, CCUG 55604, DSM 1183",1,"Chryseobacterium solincola",urease,+
+133828,THMBM1,"CGMCC 1.10941, NBRC 108747",1,"Chryseobacterium taihuense",urease,+
+5701,F-Fue-04IIIaaaa,"DSM 18017, CCUG 52546, CIP 110146",1,"Chryseobacterium ureilyticum",urease,+
+133773,687B-08,"CECT 7793, CCUG 60103",1,"Chryseobacterium viscerum",urease,+
+23023,,"DSM 25206, CCUG 50970, LMG 22846, CIP 108934",1,"Chryseobacterium vrystaatense",urease,+
+141028,THG-T1.18,"KACC 18929, CCTCC AB 2016179",1,"Chryseomicrobium deserti",urease,+
+159857,ET03,"KCTC 33943, LMG 30119, JCM 32415",1,"Chryseomicrobium excrementi",urease,-
+140621,PU1,"NBRC 106750, KCTC 13722, JCM 16712, CCUG 59101",1,"Chryseomicrobium palamuruense",urease,+
+133409,ED7,"JCM 30603, KCTC 42450",1,"Chthonobacter albigriseus",urease,+
+158347,A.slu09,"DSM 104151, KACC 19080, LMG 29962",1,"Ciceribacter azotifigens",urease,+
+24486,MSSRFBL1,"DSM 25528, KCTC 32403",1,"Ciceribacter lividus",urease,+
+133060,97/79,"DSM 103031, CIP 106467",1,"Citrobacter europaeus",urease,-
+140426,A60,"DSM 104542, CECT 9236",1,"Citrobacter portucalensis",urease,+
+133580,R2A-16,"CGMCC 1.7656, NBRC 104931",1,"Cloacibacterium rupense",urease,+
+159644,YB-7,"DSM 110900, CICC 24109, KCTC 15555",1,"Clostridium beihaiense",urease,+
+2817,P7,"DSM 15243, ATCC BAA 624, KCTC 15178",1,"Clostridium carboxidivorans",urease,-
+159814,YH-tan31,"KCTC 15630, JCM 32793",1,"Clostridium composti",urease,-
+159785,"LCDC 99A005","ATCC BAA 265, CCUG 46077, St. Boniface Hospital 30686",1,"Clostridium neonatale",urease,-
+158307,MJC39,"DSM 103944, JCM 31506",1,"Clostridium pabulibutyricum",urease,-
+2841,ISDg,"DSM 18823, ATCC 700394",1,"Clostridium phytofermentans",urease,+/-
+140317,"NRRL B-65463","DSM 104389, NRRL B-65463, IEH 97212",1,"Clostridium tepidum",urease,-
+132376,XA,"DSM 29843, CGMCC 1.15041",1,"Cnuibacter physcomitrellae",urease,-
+134000,JC131,"KCTC 32038, NBRC 109022",1,"Cohaesibacter haloalkalitolerans",urease,+
+133627,,"CGMCC 1.9157, NCCB 100300, DQHS 21",1,"Cohaesibacter marisflavi",urease,+
+158415,20.16T,"DSM 104983, VKM B-2846",1,"Cohnella kolymensis",urease,-
+133071,KSS-154-50,"DSM 103658, CCM 8707, LMG 29763",1,"Cohnella lubricantis",urease,-
+158408,C3-17,"DSM 104040, KACC 19055",1,"Collimonas antrihumi",urease,-
+2879,BCw111,"DSM 22576, CGMCC 1.9127, LMG 25329",1,"Colwellia chukchiensis",urease,+
+158694,A3,"LMG 30125, NCIMB 15095",1,"Colwellia echini",urease,+
+2928,,"DSM 9155, ATCC 11330, CCUG 17395, LMG 2370",1,"Comamonas aquatica",urease,-
+158653,SB30-Chr27-3,"CIP 111491, CCM 8815, DSM 106034",1,"Comamonas aquatilis",urease,-
+2937,YY287,"DSM 21721, BCRC 17659, LMG 24008",1,"Comamonas composti",urease,-
+2930,AFG1,"CIP 107987, DSM 16026, CCUG 15333, LMG 3475",1,"Comamonas kerstersii",urease,-
+2936,"Dant 3-8","DSM 22023, BCRC 17576, LMG 23579",1,"Comamonas odontotermitis",urease,-
+132361,WYH22-41,"DSM 26017, CGMCC 1.12294",1,"Comamonas phosphati",urease,+
+2927,,"DSM 7099, ATCC 8461, CCUG 15327, CIP 63.44, LMG 5929, NCIB 8193, NCTC 1937, NRRL B-1055",1,"Comamonas terrigena",urease,-
+2938,BF-3,"DSM 22523, CCTCC AB 209170",1,"Comamonas zonglianii",urease,+
+140616,BS27,"KACC 18745, JCM 17664",1,"Compostibacter hankyongensis",urease,-
+140749,XJNY,"KCTC 52638, MCCC 1H00183",1,"Confluentibacter citreus",urease,-
+17910,KT71,"DSM 17192, CECT 7588, NBRC 104960",1,"Congregibacter litoralis",urease,+
+158349,"7.4, HIM 794-7","DSM 105479, CCUG 24852",1,"Conservatibacter flavescens",urease,-
+140951,ZD5-4,"JCM 30076, CGMCC 1.12813",1,"Conyzicola nivalis",urease,-
+17651,04OKA010-24,"DSM 45221, IAM 15411, JCM 23193, KCTC 12865, MBIC 06463",1,"Coraliomargarita akajimensis",urease,+
+140818,16B10-2-7,"CFCC 12884, KCTC 42249",1,"Corticibacterium populi",urease,-
+133399,26D10-3-4,"CFCC 12725, KCTC 33575",1,"Corticicoccus populi",urease,-
+3166,,"DSM 44278, ATCC 49725, CCUG 28779, CNCTC Th1/57, LMG 19042",1,"Corynebacterium accolens",urease,-
+3198,"IMMIB R-3491","DSM 44531, JCM 11765, NRRL B-24151, CCUG 48298",1,"Corynebacterium appendicis",urease,+
+3213,R2070,"DSM 44849, CCUG 45804, CIP 107431, JCM 12368",1,"Corynebacterium atypicum",urease,-
+3199,"IMMIB D-1488","DSM 44532, CCUG 47449, CIP 107897, JCM 11766, NRRL B-24143",1,"Corynebacterium aurimucosum",urease,-
+158444,,"DSM 105776, FRC 0043, CIP 111412",1,"Corynebacterium belfantii",urease,-
+3203,,"DSM 44611, CCUG 39779, CIP 106739, S108/98/2, JCM 12101",1,"Corynebacterium capitovis",urease,-
+131684,JZ16,"DSM 100882, CCUG 69192, LMG 29813",1,"Corynebacterium crudilactis",urease,+
+3196,"IMMIB R-5091","DSM 44530, CIP 107989, NRRL B-24142, CCUG 48297, JCM 12208",1,"Corynebacterium glaucum",urease,-
+3092,534,"DSM 20300, ATCC 13032, NCIB 10025, CCUG 27702, CCTM La 2336",1,"Corynebacterium glutamicum",urease,+
+140638,S01,"KCTC 39608, CCTCC AB 2015423, GDMCC 1.1022, DSM 107476",1,"Corynebacterium guangdongense",urease,+
+3209,,"CCUG 54529, DSM 44683, CCTCC AA 001024, CIP 108972, JCM 12676, YIM 70093",1,"Corynebacterium halotolerans",urease,+
+3184,,"DSM 44385, CCUG 35717, CIP 105744, LMG 19050",1,"Corynebacterium kroppenstedtii",urease,-
+23877,RW2-5,"DSM 45799, CCUG 63372, CIP 110786",1,"Corynebacterium lactis",urease,+
+140633,"R-50085, TKD4","LMG 28276, CCUG 65815, DSM 107388, NML 130206",1,"Corynebacterium lowii",urease,+
+3178,S-8,"DSM 44356, CCUG 38654, CECT 4843, CIP 105509, IFO (NBRC) 16160, JCM 12269",1,"Corynebacterium mastitidis",urease,+
+140634,"R-50187, TVRM83/2006F4/44","CCUG 65816, LMG 28277, DSM 107387, NML 130210",1,"Corynebacterium oculi",urease,+
+132609,VDS11,"DSM 100104, KCTC 39687, MCC 2722",1,"Corynebacterium pollutisoli",urease,-
+3228,"IMMIB L-999","DSM 45148, CCUG 55795, CIP 109925, JCM 17321",1,"Corynebacterium sputi",urease,+
+3208,Y-11,"DSM 44721, CIP 105927, IFO 14764, JCM 10555, NBRC 14764, VKM Ac-2071, CCUG 46354, CCUG 44585",1,"Corynebacterium terpenotabidum",urease,+
+3206,"M935/96/4, ATCC BAA 467","DSM 44614, ATCC BAA 467, CCUG 41823, CIP 106763, M935/96/4, JCM 12108",1,"Corynebacterium testudinoris",urease,-
+134186,,"KCCM 42265, JCM 13411, KOPRI 13342",1,"Costertonia aggregata",urease,+
+141068,,"JCM 19657, KACC 17825, YIM 78023",1,"Crenalkalicoccus roseus",urease,+
+133014,Ery22,"DSM 101481, CGMCC 1.15360",1,"Croceicoccus mobilis",urease,+
+133013,Ery9,"DSM 101479, CGMCC 1.15358",1,"Croceicoccus pelagius",urease,-
+140751,H01-35,"MCCC 1K03229, KCTC 52368",1,"Croceitalea marina",urease,+
+140752,HSG9,"MCCC 1A06690, KCTC 52589",1,"Croceivirga radicis",urease,+
+158651,Hh31,"NBRC 107882, CGMCC 1.11213",1,"Cryobacterium aureum",urease,-
+3053,12-3,"DSM 15641, ATCC 700683, CCUG 55773",1,"Cryptobacterium curtum",urease,-
+140950,EURKPP3H10,"BCC 77605, NBRC 111482",1,"Cryptosporangium eucalypti",urease,-
+133795,MN08-A0264,"NBRC 105887, VTCC D9-27",1,"Cryptosporangium mongoliense",urease,+
+140833,X1,"KCTC 42909, LMG 29218",1,"Cupriavidus nantongensis",urease,-
+2040,TE26,"DSM 15562, CIP 108892, LMG 26411, CCUG 64483, NBRC 100056",1,"Wautersia numazuensis",urease,+
+2053,1245,"DSM 19553, CIP 108725, PNCM 10346, CCUG 53907",1,"Cupriavidus pinatubonensis",urease,+
+132605,,"DSM 29427, CCUG 66358, NTS 31307302",1,"Cutibacterium namnetense",urease,-
+140321,"SYSU D3-2","DSM 101832, CGMCC 1.15758, KCTC 52386, NBRC 112441",1,"Cysteiniphilum litorale",urease,-
+1904,K107,"DSM 21779, CCUG 54520, KCTC 12981",1,"Daeguia caeni",urease,-
+140959,NP5,"KACC 18626, LMG 29198",1,"Daejeonia ginsenosidivorans",urease,-
+133635,"Ben 114","CIP 107350, NCIMB 13612",1,"Defluviicoccus vanus",urease,+
+133959,BS14,"KACC 16442, JCM 18630",1,"Defluviimonas aestuarii",urease,+
+140990,DL5-4,"MCCC 1A06955, LMG 29616",1,"Defluviimonas nitratireducens",urease,-
+158664,ID0501,"KACC 19286, NBRC 112889",1,"Deinococcus aluminii",urease,-
+133034,FeSTC15-38,"DSM 101791, NCAIM B.02630",1,"Deinococcus budaensis",urease,+
+3893,I-0,"DSM 21396, CGMCC 1.7299, JCM 16679",1,"Deinococcus gobiensis",urease,+
+159760,17bor-2,"KCTC 33907, NBRC 113037",1,"Deinococcus irradiatisoli",urease,+
+159872,SJW1-2,"KACC 19332, NBRC 112908",1,"Deinococcus koreensis",urease,-
+158716,,"KCTC 52494, KACC 18979, NBRC 112440, IMCC 1711",1,"Deinococcus lacus",urease,-
+3869,AA-63,"DSM 12784, CIP 109039, NRRL B-41042",1,"Deinococcus marmoris",urease,-
+133032,"YIM F302","DSM 29933, CGMCC 1.15089",1,"Deinococcus saudiensis",urease,+
+158571,X-121,"CCTCC AB 207228, KCTC 33842",1,"Deinococcus taklimakanensis",urease,+
+3892,X-82,"DSM 25585, CCTCC AB 207226, NRRL B-51287",1,"Deinococcus xinjiangensis",urease,+
+3886,,"DSM 17005, KCTC 3962, YIM 007",1,"Deinococcus yunweiensis",urease,+
+140487,RA6,"LMG 29737, CECT 9171",1,"Delftia rhizosphaerae",urease,-
+2952,T7,"DSM 17581, ATCC BAA 554, NBRC 16741",1,"Delftia tsuruhatensis",urease,+
+133619,2622,"CCTCC AB 208152, KCTC 22436",1,"Desertibacter roseus",urease,+
+158424,"SYSU D60003","DSM 104921, KCTC 39917, NBRC 112924",1,"Desertimonas flava",urease,+
+16786,,"DSM 45169, CCUG 55916, IMMIB L-1269",1,"Desmospora activa",urease,+
+4167,JS,"DSM 19430, JCM 14597, KCTC 5573",1,"Desulfovibrio psychrotolerans",urease,-
+132457,TR1,"DSM 29984, JCM 30680",1,"Desulfurella amilsii",urease,-
+133463,,"CCM 7427, MTCC 8594, IPL 15",1,"Devosia albogilva",urease,+
+6170,,"DSM 24953, CCM 7426, MTCC 8593, IPL 18",1,"Devosia chinhatensis",urease,+
+133163,,"HJR-2, KCTC 52211, NBRC 112271",1,"Devosia confluentis",urease,+
+133462,,"CCM 7425, MTCC 8590, IPL 20",1,"Devosia crocina",urease,+
+133408,S37,"TBRC 5145, LMG 29420",1,"Devosia elaeis",urease,-
+6169,BD-c194,"DSM 19414, KCTC 22082",1,"Devosia geojensis",urease,+
+6172,Cr4-44,"DSM 23846, CGMCC 1.10691, LMG 26051",1,"Devosia glacialis",urease,+
+141130,THG-MM1,"KACC 18281, CCTCC AB 2015121",1,"Devosia humi",urease,-
+6167,DS-56,"DSM 17955, KCTC 12821",1,"Devosia insulae",urease,+
+6171,Yak96B,"DSM 21277, KCTC 22147, LMG 24299, NBRC 103855",1,"Devosia yakushimensis",urease,+
+3919,,"DSM 22407, CCUG 55056, LMG 24257, IMP 2",1,"Devriesea agamarum",urease,+
+2957,RF3,"DSM 22780, KCTC 22225, LMG 24467",1,"Diaphorobacter oryzae",urease,+
+4260,,"DSM 45140, CCTCC AA 207016, JCM 16002, YIM 65002",1,"Dietzia cercidiphylli",urease,+
+229,2991-95,"DSM 15742, ATCC BAA 56, CCM 4936, CIP 106314, CCUG 39307",1,"Dolosicoccus paucivorans",urease,-
+140270,NYU-BL-A4,"DSM 103457, ATCC TSD-64",1,"Dubosiella newyorkensis",urease,-
+141131,,"KCTC 42409, JCM 30745, DCY 83",1,"Massilia ginsengisoli",urease,-
+3777,"CP 183-8","DSM 16708, ATCC BAA 1036, KCTC 23639",1,"Dyadobacter crusticola",urease,-
+133376,4M-Z03,"NBRC 111980, KCTC 52131",1,"Dyella acidisoli",urease,+
+,,,,,urease,-
+141034,DHOB09,"CGMCC 1.15434, LMG 29202",1,"Dyella caseinilytica",urease,+
+159761,DHOG02,"NBRC 111474, CGMCC 1.15435",1,"Dyella halodurans",urease,+
+133215,,"DHG40, KCTC 42629, LMG 28842",1,"Dyella humi",urease,-
+24670,SBZ3-12,"DSM 26119, CCTCC AB 2012160, KACC 16539",1,"Dyella jiangningensis",urease,+
+17454,BB4,"CCUG 50883, DSM 17803, KCTC 12359, NBRC 100831",1,"Dyella koreensis",urease,+
+140577,DHOB07,"NBRC 111473, KCTC 52132",1,"Dyella lipolytica",urease,-
+141036,DHON07,"CGMCC 1.15400, NBRC 111475",1,"Dyella mobilis",urease,+
+17459,ATSB10,"DSM 25733, KACC 12756, LMG 24673",1,"Dyella thiooxydans",urease,+
+140501,JL3085,"NBRC 111782, CGMCC 1.15407",1,"Echinicola rosea",urease,-
+140384,001-Na2,"DSM 103729, KCTC 52495",1,"Echinicola sediminis",urease,-
+133368,,"MEBiC 08714, KCTC 52052, JCM 31307",1,"Echinicola strongylocentroti",urease,-
+140755,4G-K17,"CGMCC 1.15447, LMG 29212",1,"Edaphobacter acidisoli",urease,+
+159869,4MSH08,"GDMCC 1.1317, KCTC 62475",1,"Edaphobacter bradus",urease,+
+132350,DHF9,"DSM 29920, CGMCC 1.12997",1,"Edaphobacter dinghuensis",urease,-
+158304,,"DSM 104462, SBC 68, VKM B-3208",1,"Edaphobacter lichenicola",urease,-
+159870,HZ411,"GDMCC 1.1193, LMG 30085",1,"Edaphobacter flagellatus",urease,+
+158741,1-116,"CCTCC AB 2017054, KCTC 52843",1,"Edaphobaculum flavum",urease,-
+158404,"CEBAS 4A","DSM 104140, CCUG 70284",1,"Ellagibacter isourolithinifaciens",urease,-
+133252,,"IMCC 1731, KCTC 52248, JCM 31373",1,"Emticicia fontis",urease,+
+3783,GPTSA100-15,"DSM 17448, CIP 109782, MTCC 6937",1,"Emticicia oligotrophica",urease,+
+140503,HMF3850,"CECT 9087, KCTC 42851",1,"Emticicia paludis",urease,-
+140681,ZZ-4,"KCTC 52344, CCTCC AB 2016137",1,"Emticicia soli",urease,-
+133290,,"YIC 4027, HAMBI 3655, LMG 29286",1,"Ensifer alkalisoli",urease,+
+140805,,"LMG 29231, HAMBI 3645, CCBAU 23380",1,"Ensifer glycinis",urease,-
+132404,"247, 247BMC, EB-247","DSM 29888, NCCB 100573",1,"Enterobacter bugandensis",urease,-
+159819,,"GDMCC1.1217, CCTCC AB 2017104, KCTC 52994, WCHECl WCHECL1597",1,"Enterobacter sichuanensis",urease,-
+5361,C27,"DSM 26408, CCM 7889, LMG 26214",1,"Enterococcus plantarum",urease,+
+133150,,"VE80, JCM 31193, CCUG 68827",1,"Enterococcus saigonensis",urease,-
+132143,,"DSM 102981, CCM 4629, CCUG 48799, LMG 26676",1,"Enterococcus ureilyticus",urease,+
+158401,ResAG-96,"DSM 105130, JCM 32273",1,"Enteroscipio rubneri",urease,-
+13843,MD5,"DSM 26470, CECT 7557, KCTC 23350",1,"Tritonibacter multivorans",urease,+
+230,M1832/95/2,"CIP 106310, ATCC BAA 57, CCM 4939, DSM 15696, CCUG 38207",1,"Eremococcus coleocola",urease,+/-
+140918,BSTT30,"LMG 28457, CECT 8692",1,"Erwinia endophytica",urease,-
+140886,EM595,"LMG 28990, CCOS 903",1,"Erwinia gerundensis",urease,-
+140758,RC-4-10-4,"CGMCC 1.15507, JCM 31277",1,"Erythrobacter arachoides",urease,-
+17689,YUAN-3,"DSM 18485, CGMCC 1.5033, JCM 12961",1,"Ethanoligenens harbinense",urease,+
+158624,,"KCCM 43264, JCM 32170, MEBiC 12267",1,"Euzebyella algicola",urease,-
+133394,,"CCTCC AB 2014348, KCTC 42440, CY 01",1,"Euzebyella marina",urease,-
+131261,S4,"DSM 100911, CGMCC 1.10977, JCM 17803",1,"Extensimonas vulgaris",urease,+
+141117,A4,"KCTC 42507, CGMCC 1.15111",1,"Roseivirga thermotolerans",urease,-
+5426,AzA,"DSM 3598, ATCC 33661, JCM 31501, NCIB 10446, NCIMB 10446",1,"Faecalicatena fissicatena",urease,-
+2621,,"DSM 1287, ATCC 13619, ATCC 25750, JCM 1429, NCIB 10650",1,"Faecalicatena orotica",urease,-
+140268,EGH7,"DSM 103426, JCM 30896",1,"Faecalimonas umbilicata",urease,-
+1409,"CW 7","DSM 25281, CCTCC AB 207188, KCTC 13200, LMG 24451",1,"Falsibacillus pallidus",urease,-
+3043,"ATCC BAA 55","DSM 15829, ATCC BAA 55, CCUG 38953, CIP 106431, KCTC 15240",1,"Fannyhessea vaginae",urease,-
+141069,IEB3,"JCM 30817, NCIMB 14984",1,"Fermentibacillus polygoni",urease,-
+133937,CBA4601,"KACC 16695, KCTC 32029, JCM 18401",1,"Ferrimonas pelagia",urease,+
+133514,HU1-GD23,"KCTC 22306, LMG 4312",1,"Ferruginibacter alkalilentus",urease,+
+133515,HU1-HG42,"KCTC 22305, LMG 24324",1,"Ferruginibacter lapsinanis",urease,+
+158767,GDSW-R2A3,"VTCC-B-910015, CCM 8782",1,"Fictibacillus aquaticus",urease,+
+23766,Ca7,"DSM 26093, CCM 8426, LMG 27063",1,"Fictibacillus phosphorivorans",urease,+
+17763,YT21,"DSM 21054, NBRC 104114",1,"Filimonas lacunae",urease,+
+132574,"CGMCC 1.15290","DSM 100760, 772",1,"Filimonas zeae",urease,-
+132355,SMR-C,"DSM 100392, JCM 19453",1,"Filobacterium rodentium",urease,+
+133340,,"SP5, LMG 29572, VKM B-3045",1,"Fimbriiglobus ruber",urease,-
+5744,A11,"DSM 22638, KCTC 22665",1,"Muricauda flava",urease,+
+140292,AW305,"DSM 100282, LMG 29416",1,"Flaviaesturariibacter luteus",urease,-
+140957,HY03,"KCTC 52511, JCM 31723",1,"Flaviaesturariibacter terrae",urease,-
+133189,,"CJ663, KACC 18874, JCM 31431",1,"Flavihumibacter sediminis",urease,+
+140759,MBLN091,"KCTC 52527, JCM 31731",1,"Flavimarina flava",urease,-
+159790,RB1R16,"CGMCC 1.16126, NBRC 113112",1,"Flavipsychrobacter stenotrophus",urease,-
+158640,TX0661,"KACC 19145, KCTC 52779, NBRC 111784",1,"Flavisolibacter metallilatus",urease,-
+140505,LCS9,"KCTC 42070, JCM 19972",1,"Flavisolibacter tropicus",urease,-
+140550,AQ6-291,"CCTCC AB 2016109, KCTC 52491",1,"Flavitalea antarctica",urease,-
+133146,,"KIS20-3, KACC 17319, JCM 19937",1,"Flavitalea soli",urease,-
+159806,HYN0059,"KACC 19183, NBRC 112744",1,"Flavobacterium album",urease,-
+158819,HR-AY,"KACC 19407, JCM 32264",1,"Flavobacterium alvei",urease,-
+158535,KYPY10,"BCRC 81006, LMG 29727, KCTC 52443",1,"Flavobacterium amniphilum",urease,-
+132986,TMd3a3,"DSM 100880, JCM 30987",1,"Flavobacterium aquicola",urease,-
+133125,SM1502,"KCTC 42668, CCTCC AB 2015346",1,"Flavobacterium arcticum",urease,-
+140760,A2-1,"CCTCC AB 2017157, KCTC 52644",1,"Flavobacterium ardleyense",urease,-
+158661,SYP-B1015,"CGMCC 1.16115, KCTC 62025",1,"Flavobacterium artemisiae",urease,-
+140858,TTM-43,"BCRC 80913, KCTC 42744, LMG 29004",1,"Flavobacterium brevivitae",urease,-
+159750,,"P3160, LMG 30615, CCM 8826",1,"Flavobacterium chryseum",urease,-
+158742,,"KCTC 52573, NBRC 112526, IMCC 26013",1,"Flavobacterium chuncheonense",urease,-
+133366,,"wh15, CCTCC AB 2015420, JCM 31173",1,"Myroides cloacae",urease,-
+133395,LPB0076,"KACC 18706, JCM 31219",1,"Flavobacterium crassostreae",urease,-
+159807,HYN0056,"KACC 19182, NBRC 112743",1,"Flavobacterium crocinum",urease,-
+158657,TH021,"LMG 29720, CGMCC 1.16325",1,"Flavobacterium cyanobacteriorum",urease,-
+158744,MVW-23,"BCRC 80978, LMG 29558, KCTC 52234",1,"Flavobacterium dispersum",urease,-
+133309,SA31,"KACC 18743, JCM 31221",1,"Flavobacterium eburneum",urease,-
+159831,PSI-22,"BCRC 80973, LMG 29553, KCTC 52233",1,"Flavobacterium effusum",urease,-
+140682,CB-3,"KEMB 9005-535, KACC 19112, NBRC 112704",1,"Flavobacterium flaviflagrans",urease,-
+133319,EM1308,"KACC 18113, JCM 30144",1,"Flavobacterium gilvum",urease,-
+140383,JM-222,"DSM 100397, CCM 8610, LMG 28821",1,"Flavobacterium gossypii",urease,-
+5547,KW05,"DSM 17797, IAM 15099, JCM 21560, KCTC 12201, NBRC 102009",1,"Flavobacterium granuli",urease,+
+158810,KTCe-4,"KACC 16613, JCM 18198",1,"Flavobacterium hankyongi",urease,+
+5580,LQY-7,"DSM 22807, ACCC 05409, KCTC 23008",1,"Flavobacterium haoranii",urease,+
+133360,THG-HG1.4,"KACC 18852, CCTCC AB 2016178",1,"Flavobacterium hibisci",urease,+
+133310,,"KCTC 52244, JCM 31385, IMCC 27201",1,"Flavobacterium inkyongense",urease,+
+158639,WV39,"KCTC 42908, CECT 9085",1,"Flavobacterium kingsejongi",urease,-
+158799,,"KCTC 52571, NBRC 112883, IMCC 25901",1,"Flavobacterium lacicola",urease,-
+133392,AHQ-46,"BCRC 80889, LMG 28710",1,"Flavobacterium lacunae",urease,-
+133332,,"xz20, CCTCC AB 2015421, JCM 31174",1,"Flavobacterium luticocti",urease,-
+159809,HYN0048,"KACC 19180, NBRC 112740",1,"Flavobacterium magnum",urease,-
+158777,Brt-M,"KEMB 9005-692, KACC 19393, JCM 32171",1,"Flavobacterium naphthae",urease,-
+133920,N1,"MTCC 11155, JCM 17678",1,"Flavobacterium nitratireducens",urease,+
+133311,SP3,"CGMCC 1.12506, NBRC 109717",1,"Flavobacterium orientale",urease,-
+159808,HYN0049,"KACC 19181, NBRC 112741",1,"Flavobacterium pallidum",urease,-
+159751,,"P3922, LMG 30616, CCM 8827",1,"Flavobacterium psychroterrae",urease,-
+140761,EA-12,"CGMCC 1.15345, NBRC 111769",1,"Flavobacterium quisquiliarum",urease,-
+159810,TAPY6,"BCRC 81007, LMG 29728, KCTC 52444",1,"Flavobacterium riviphilum",urease,-
+159816,,"KCTC 62132, JCM 32291, MEBiC 07310",1,"Flavobacterium sediminis",urease,-
+140526,,"KCTC 52245, JCM 31384, IMCC 26223",1,"Flavobacterium soyangense",urease,-
+141075,G16-7,"CGMCC 1.15461, KCTC 42947",1,"Flavobacterium suaedae",urease,-
+133149,,"CUG 00004, CCTCC AB 2014151, KCTC 42876",1,"Flavobacterium terriphilum",urease,-
+141070,"GB 56.1","TISTR 1612, KCTC 42679",1,"Flavobacterium tistrianum",urease,-
+141064,THG-DN8.8,"KCTC 42726, CCTCC AB 2015295",1,"Flavobacterium tyrosinilyticum",urease,-
+133702,DS-12,"CCM 7847, MTCC 10766",1,"Flavobacterium ummariense",urease,+
+140502,TTM-46,"BCRC 80914, LMG 29005, KCTC 42745",1,"Flavobacterium verecundum",urease,-
+5560,AT1042,"DSM 19727, CIP 109334, IMSNU 14048, JCM 12384, KCTC 12223",1,"Flavobacterium weaverense",urease,+
+133330,,"MIB-4, BCRC 80926, LMG 29292, KCTC 33763",1,"Flectobacillus fontis",urease,-
+133118,MVW-6,"BCRC 80975, LMG 29555, KCTC 33800",1,"Flectobacillus pallidus",urease,-
+140492,,"KCTC 39536, CGMCC 1.15085, YIM 7505",1,"Flexivirga endophytica",urease,+
+133644,"YIM D17","DSM 21935, ACCC 10716",1,"Fodinibius salinus",urease,+
+17736,,"DSM 19247, JCM 14718, HKI 0501",1,"Fodinicola feengrottensis",urease,+
+14023,"YIM D812","DSM 21160, CCTCC AA 208037",1,"Fodinicurvata fenggangensis",urease,+
+14024,"YIM D82","DSM 21159, KCTC 22351",1,"Fodinicurvata sediminis",urease,+
+131144,,"DSM 16476, KMM 3553",1,"Formosa algae",urease,+
+133320,AHQ-12,"AHQ-12, BCRC 80690, LMG 27847, KCTC 32501, DSM 109231",1,"Formosimonas limnophila",urease,-
+140267,AT2,"DSM 100451, CSUR P2014",1,"Fournierella massiliensis",urease,-
+134058,JC2236,"KACC 16935, JCM 15585",1,"Fretibacter rubidus",urease,+
+132580,4Q3S-3,"DSM 100723, CGMCC 4.7307",1,"Microlunatus kandeliicorticis",urease,-
+12617,"A34_1, FA1","DSM 21741, NBRC 104963, KY 13132",1,"Friedmanniella luteola",urease,+
+528,,"DSM 15513, ATCC BAA 666, KCTC 12091, CCUG 52903, CIP 108376, HTCC 2506",1,"Fulvimarina pelagi",urease,+
+140312,RP51,"DSM 100235, CCM 8606, LMG 28778",1,"Galliscardovia ingluviei",urease,-
+1757,594,"DSM 4944, ATCC 14018, CCUG 3717, NCTC 10915, NCTC 10287, LMG 7832, JCM 11026",1,"Gardnerella vaginalis",urease,-
+140515,GYP-24,"KCTC 42903, MCCC 1K01730",1,"Gelatiniphilus marinus",urease,+
+134132,IC162,"ACAM 1053, CIP 108532",1,"Gelidibacter salicanalis",urease,+
+158276,RAM11,"DSM 29853, NCAIM B.02618",1,"Gellertiella hungarica",urease,-
+1452,"DS1, R-35651","DSM 15726, LMG 23069, VKM B-2301",1,"Geobacillus jurassicus",urease,-
+1419,R-35646,"DSM 22, ATCC 12980, CCM 2062, CCUG 26241, IAM 11062, LMG 6939, NBRC  12550, NBRC 12550, NCIMB 8923, NCTC 10339, VKM B-2231, IFO 12550, NCA 26",1,"Geobacillus stearothermophilus",urease,-
+1422,178,"DSM 730, BGSC 93, IFO 15316, LMG 19007, NBRC 15316, R-35648, VKM B-1259",1,"Geobacillus thermocatenulatus",urease,-
+1433,"LEH-1, R-35636","DSM 5366, ATCC 43513, VKM B-2230",1,"Geobacillus thermoleovorans",urease,-
+1439,3S-1,"DSM 13174, CIP 106305",1,"Geobacillus vulcani",urease,-
+141033,HF401,"KCTC 42595, MCCC 1H00119",1,"Geofilum rhodophaeum",urease,-
+158396,"SYSU D8004","DSM 104473, CGMCC 1.15793, KCTC 39987",1,"Georgenia deserti",urease,-
+1771,1A-C,"DSM 14418, CCM 4963",1,"Georgenia muralis",urease,+
+23992,LEN33,"DSM 27944, JCM 18389, KACC 16707",0,"Gibbsiella dentisursi",urease,+
+157587,NO3,"DSM 105629, LMG 30293",1,"Gilliamella apis",urease,-
+134128,IC154,"ACAM 1061, CIP 108528",1,"Gillisia hiemivivida",urease,+
+17899,,"DSM 19667, CGMCC 1.7008, QM 42",1,"Gilvimarinus chinensis",urease,+
+133296,12-2,"DSM 102813, KCTC 52141, NBRC 111987",1,"Gilvimarinus japonicus",urease,+
+140920,N1.38,"LMG 28868, CCOS 838",1,"Glaciimonas frigoris",urease,-
+130507,,"DSM 100199, CIP 110539, LMG 27070",1,"Glaciimonas singularis",urease,+
+179,M343/98/2,"DSM 15436, CCUG 41708, CIP 106873",1,"Gleimia coleocanis",urease,-
+158370,SJ-25,"DSM 105121, CGMCC 4.7414",1,"Glycomyces dulcitolivorans",urease,-
+5843,,"DSM 45002, JCM 16001, KCTC 19152, YIM 56134",1,"Glycomyces endophyticus",urease,+
+5846,,"DSM 45304, CCTCC AA 208004, KCTC 19527, YIM 61331",1,"Glycomyces mayteni",urease,+
+158319,NEAU-C11,"DSM 104646, CGMCC 4.7396",1,"Glycomyces rhizosphaerae",urease,-
+5847,,"DSM 44968, KCTC 19158, YIM 56256",1,"Glycomyces scopariae",urease,+
+133133,,"HKU50, CCOS 955, CIP 111027, NBRC 111234, NCCP 16210",1,"Gordonia hongkongensis",urease,-
+10615,"IMMIB WWCC-22","DSM 45064, CCUG 53555, CIP 109612",1,"Gordonia malaquae",urease,+
+141149,QH-11,"CICC 24107, KCTC 39933, DSM 108671",1,"Gordonia phthalatica",urease,-
+10617,SD29,"DSM 45094, CGMCC 4.3492, JCM 13907",1,"Gordonia shandongensis",urease,+
+2537,9a,"DSM 604, ATCC 7906, IMG 1642, KCTC 5404",1,"Clostridium acidurici",urease,-
+2650,,"DSM 1384, ATCC 33906, WA 1",1,"Clostridium purinilyticum",urease,-
+1469,"BH 097","DSM 19028, KCTC 13130",1,"Gracilibacillus bigeumensis",urease,-
+158807,LA399,"CGMCC 1.16248, KCTC 52885",1,"Gracilimonas amylolytica",urease,-
+24739,"YIM J14","DSM 21985, ACCC 10717",1,"Gracilimonas mengyeensis",urease,+
+5718,UST040801-001,"DSM 23547, JCM 13192, NBRC 101534, NRRL B-41137",1,"Gramella portivictoriae",urease,+
+80,CGDNIH1,"DSM 17861, ATCC BAA 1260",1,"Granulibacter bethesdensis",urease,+/-
+138,TPB6028,"DSM 22516, LMG 25274, VKM B-2571",1,"Granulicella aggregans",urease,-
+139,OB1010,"DSM 22464, LMG 25275",1,"Granulicella paludicola",urease,-
+137,TPB6011,"DSM 21001, VKM B-2509",1,"Granulicella pectinivorans",urease,+
+136,"T4, TPO-1014","DSM 18704, ATCC BAA 1396, TPO 1014",1,"Granulicella rosea",urease,-
+12620,PG-02,"DSM 17626, ATCC BAA 1292, CIP 109593, JCM 15570, NBRC 107789",1,"Granulicoccus phenolivorans",urease,+
+140804,96-237,"CECT 9029, KCTC 42960, LMG 29238",1,"Grimontia celer",urease,-
+133745,RU-04,"KCTC 13809, JCM 17590",1,"Gryllotalpicola daejeonensis",urease,+
+133747,RU-16,"KCTC 13810, JCM 17591",1,"Gryllotalpicola koreensis",urease,+
+133746,PU-02,"KCTC 13808, JCM 17593",1,"Gryllotalpicola kribbensis",urease,+
+1347,AD-6,"DSM 18198, CGMCC 1.3703, CIP 109013, JCM 12771",1,"Halobacillus aidingensis",urease,-
+1355,FP5,"DSM 18525, ATCC BAA 1361",1,"Halobacillus alkaliphilus",urease,-
+130201,NEAU-ST10-40,"DSM 25866, CGMCC 1.12153",1,"Halobacillus andaensis",urease,-
+1348,D-8,"DSM 18199, CGMCC 1.3704, JCM 12772",1,"Halobacillus dabanensis",urease,-
+1352,IGA7-4,"DSM 21559, IAM 15427, KCTC 13121, MBIC 08268",1,"Halobacillus faecis",urease,-
+1327,3,"DSM 2266, ATCC 35676, NCIMB 2269",1,"Halobacillus halophilus",urease,-
+1344,MA-2,"DSM 14948, CIP 108359, LMG 21515, X78",1,"Halobacillus karajensis",urease,-
+1349,JS-Hb7,"DSM 18393, JCM 14155",1,"Halobacillus kuroshimensis",urease,-
+1343,SL-4,"DSM 10405",1,"Halobacillus litoralis",urease,-
+1353,MS10,"DSM 21335, CCM 7397, CECT 7206",1,"Halobacillus mangrovi",urease,-
+1350,JS-Hb4,"DSM 18394, JCM 14154",1,"Halobacillus profundi",urease,-
+1351,HSL-3,"DSM 18897, CIP 108052, JCM 11546, KCCM 41590",1,"Halobacillus salinus",urease,-
+1356,,"DSM 21185, KCTC 13236, JSM 078133",1,"Halobacillus salsuginis",urease,-
+1354,ISL-50,"DSM 22302, CCUG 54358, KCTC 13145",1,"Halobacillus seohaensis",urease,-
+1342,SL-5,"DSM 10404",1,"Halobacillus trueperi",urease,-
+1346,MSS-402,"DSM 17110, KCTC 3957",1,"Halobacillus yeomjeoni",urease,-
+133813,,"KCTC 23578, CCUG 61920, CAU 1074",1,"Haloferula chungangensis",urease,+
+133412,XJ16,"KCTC 42259, MCCC 1H00120, CICC 23817",1,"Halofilum ochraceum",urease,+
+140276,56-L4-10aEn,"DSM 103354, CICC 11012s",1,"Halomonas alkalicola",urease,-
+6056,LC6,"DSM 19434, CCUG 54844, LMG 24243",1,"Halomonas andesensis",urease,+
+6043,FP35,"DSM 16096",1,"Halomonas anticariensis",urease,+
+133780,NTU-107,"BCRC 17999, KCTC 22876, JCM 16084",1,"Halomonas beimenensis",urease,+
+6067,SP4,"DSM 23438, CECT 7282, LMG 24145, SP4",1,"Halomonas cerina",urease,+
+134359,DQD2-30,"CGMCC 1.6443, LMG 23896",1,"Halomonas daqingensis",urease,+
+158800,MC28,"KCTC 52999, MCCC 1K03343",1,"Halomonas endophytica",urease,-
+140921,JJ-M1,"KACC 18117, JCM 30151",1,"Halomonas garicola",urease,-
+6054,SL014B-69,"DSM 23417, CGMCC 1.6133, LMG 23610",1,"Halomonas gudaonensis",urease,+
+6060,XK1,"DSM 19633, CGMCC 1.6981",1,"Halomonas korlensis",urease,+
+158781,YU-PRIM-29,"LMG 28855, CCM 8737",1,"Halomonas malpeensis",urease,-
+6068,11S,"DSM 23437, CECT 7281, LMG 24185",1,"Halomonas nitroreducens",urease,+
+134084,,"CGMCC 1.6774, JCM 14803, BC 7",1,"Halomonas salifodinae",urease,+
+158650,LCB169,"CGMCC 1.15818, KCTC 52618",1,"Halomonas saliphila",urease,-
+6055,SL014B-85,"DSM 23416, CGMCC 1.6444, LMG 23897",1,"Halomonas shengliensis",urease,+
+6075,S18214,"DSM 21198, KCTC 22148",1,"Halomonas stevensii",urease,+
+6059,ZG16,"DSM 23550, CGMCC 1.6495, JCM 14608, LMG 23977",1,"Halomonas subterranea",urease,+
+140845,BZ-SZ-XY27,"JCM 30202, CGMCC 1.12917, DSM 29014",1,"Halomonas urumqiensis",urease,-
+133645,A-1,"CGMCC 1.6848, JCM 14849",1,"Halomonas xianhensis",urease,+
+133244,,"SR-441, JCM 19583, KCTC 4248",1,"Halopiger thermotolerans",urease,-
+158747,SP28,"JCM 31424, KCCM 43210",1,"Haloplanus salinarum",urease,-
+133308,SB9,"JCM 19565, CGMCC 1.14959",1,"Haloprofundus marisrubri",urease,-
+158600,SAH-A6,"KCCM 43215, JCM 31519",1,"Halorubrum aethiopicum",urease,-
+141136,,"CECT 8745, IBRC-M 10233, CB Cb34",1,"Halorubrum halodurans",urease,-
+141118,DC8,"IBRC-M 10911, CECT 8793",1,"Halosiccatus urmianus",urease,-
+141067,CBA1114,"JCM 30111, KCTC 4206",1,"Halostella salina",urease,-
+134166,EJ-46,"CGMCC 1.4248, CECT 7098",1,"Halovivax asiaticus",urease,+
+132477,"YIM C0533","DSM 100517, CGMCC 4.7289, CPCC 204160, KCTC 39591",1,"Hamadaea flava",urease,-
+24180,PG04,"DSM 25481, ACCC 05759",1,"Hansschlegelia beijingensis",urease,+
+7229,"S 113","DSM 18984, CCTCC AB 206143, KCTC 12880",1,"Hansschlegelia zhihuaiae",urease,+
+133200,,"LIP-5, CCTCC AB 2015365, KCTC 42956",1,"Haoranjiania flava",urease,-
+3920,"6401990, CSUR P17","DSM 23040, CCUG 53859, CIP 109418, CSUR P17",1,"Helcobacillus massiliensis",urease,+
+141061,"A 19","DSM 28990, LMG 28471",1,"Helicobacter apri",urease,-
+134274,M50,"LMG 23839, CCUG 53816",1,"Helicobacter baculiformis",urease,+
+134160,JKM4,"LMG 23188",1,"Helicobacter cynogastricus",urease,+
+6110,ASB3,"DSM 23983",0,"Helicobacter heilmannii",urease,+
+6102,"RPH 13487","CCUG 15815, LMG 7540, CIP 103995, DSM 21031, ATCC 43504, CCUG 17874, DSM 4867, LMG 7539, NCTC 11637",1,"Helicobacter pylori",urease,+
+6109,HS1,"DSM 19735, LMG 23995",1,"Helicobacter suis",urease,+
+140997,LA220,"CGMCC 1.15928, KCTC 52577",1,"Henriciella pelagia",urease,-
+11369,,"DSM 21191, ATCC BAA 1628, KCTC 32019, IEH 4430",1,"Herbaspirillum aquaticum",urease,+
+11366,CPW301,"DSM 17796, IAM 15024, JCM 21487, KCTC 12096, NBRC 102525, CCUG 52898",1,"Herbaspirillum chlorophenolicum",urease,+
+159766,shQ-4,"CFCC 14641, KCTC 52804, LMG 52804",1,"Herbaspirillum piri",urease,-
+11367,UMS-37,"DSM 21885, CIP 108917, KCTC 12558",1,"Herbaspirillum rhizosphaerae",urease,+
+16509,,"DSM 45214, BCC 49353, CCTCC AA 208019, JCM 16900, NBRC 106571, TBRC 193, YIM 65070",0,"Herbidospora cretacea",urease,+
+24261,,"DSM 28178, CCM 7991, CCUG 53591",1,"Herminiimonas contaminans",urease,+
+17982,,"DSM 15118, JCM 13267, GPC 589",1,"Howardella ureilytica",urease,+
+17886,"OFN S31","DSM 45258, CIP 109864, NBRC 109631",1,"Hoyosella altamirensis",urease,+
+132659,J12GA03,"DSM 101985, CGMCC 1.15478",1,"Hoyosella rhizosphaerae",urease,+
+133246,,"LIP-1, CCTCC AB 2015422, KCTC 39698",1,"Huakuichenia soli",urease,-
+7498,SC-083,"DSM 18994, CCUG 54538, LMG 23996",1,"Humibacter albus",urease,+
+133102,CC-YTH161,"BCRC 80936, JCM 31199",1,"Humibacter aquilariae",urease,-
+140819,R1-20,"KCTC 39614, JCM 31015",1,"Humibacter soli",urease,-
+23513,W37,"DSM 24525, CIP 110261, LMG 26243",1,"Humitalea rosea",urease,+
+140762,LPB0072,"KACC 18705, JCM 31188",1,"Hydrogenophaga crassostreae",urease,-
+140763,S10,"KCTC 52520, JCM 31711",1,"Hydrogenophaga soli",urease,-
+2968,2K1,"DSM 2082, ATCC 49743, CCUG 15921, LMG 7170",1,"Hydrogenophaga taeniospiralis",urease,+
+133120,16F3P,"KCTC 52194, JCM 31653",1,"Hymenobacter aquaticus",urease,-
+159697,HMF3095,"KCTC 52398, NBRC 112669",1,"Hymenobacter aquatilis",urease,-
+159882,DK6-66,"CGMCC 1.15795, KCTC 52629",1,"Hymenobacter bucti",urease,-
+140596,,"LMG 29441, P5239, CCM 8649",1,"Hymenobacter coccineus",urease,-
+133822,,"KCTC 23674, JCM 17841, DCY 57",1,"Hymenobacter ginsengisoli",urease,+
+140598,,"LMG 29440, P5086, CCM 8648",1,"Hymenobacter glacialis",urease,-
+158673,ANT-18,"BCRC 80966, LMG 29477, KCTC 52166",1,"Hymenobacter gummosus",urease,-
+140597,,"P3150, LMG 29435, CCM 8643",1,"Hymenobacter lapidarius",urease,-
+140836,KJ035,"KCTC 42854, CECT 9069",1,"Hymenobacter marinus",urease,+
+140922,XF-6R,"KCTC 42733, CCTCC AB 2015206",1,"Hymenobacter monticola",urease,-
+140680,LYH-12,"BCRC 80919, LMG 29171, KCTC 42898",1,"Hymenobacter pallidus",urease,-
+140889,KBP-30,"LMG 27293, KCTC 32237",1,"Hymenobacter paludis",urease,+
+158705,TAPP3,"BCRC 80979, LMG 29559, KCTC 52236",1,"Hymenobacter rivuli",urease,-
+158615,NY03-3-30,"CCTCC AB 2017095, KCTC 62163",1,"Hymenobacter rubripertinctus",urease,-
+159745,S1-2-2-6,"KCTC 52736, JCM 32196",1,"Hymenobacter rufus",urease,-
+133390,K2-33028,"CCTCC AB 2016091, KCTC 52447",1,"Hymenobacter rutilus",urease,-
+133364,16F7G,"KCTC 52197, JCM 31655",1,"Hymenobacter seoulensis",urease,-
+159821,2ED5,"CGMCC 1.16466, JCM 32612",1,"Hyphobacterium indicum",urease,-
+133333,,"FA042, KCTC 42398, MCCC 1H00110",1,"Hyunsoonleella rubra",urease,-
+141120,KBP-31,"BCRC 80524, KCTC 32238",1,"Ideonella paludis",urease,-
+159851,UAE-HKU57,"CCOS 1165, NBRC 113042",1,"Ignatzschineria cameli",urease,-
+235,1607-97,"DSM 15695, ATCC 700630, CCUG 37658, CIP 105896",1,"Ignavigranum ruoffiae",urease,+
+140269,NYU-BL-A3,"DSM 103668, ATCC TSD-63",1,"Ileibacterium valens",urease,-
+133093,TR3.2,"DSM 103040, ATCC TSD-58",1,"Immundisolibacter cernigliae",urease,-
+5746,K1,"DSM 24931, JCM 17677, MTCC 11055",1,"Imtechella halotolerans",urease,+
+158434,,"DSM 105146, CGMCC 1.15812, SCSIO 08040",1,"Indioceanicola profundi",urease,+
+6246,Q5-1,"DSM 25801, CCTCC Aa 2010019, CGMCC 1.10750, KCTC 19811, NRRL B-59521",1,"Intrasporangium chromatireducens",urease,+
+133277,,"C-3, JCM 17843, LMG 28660",1,"Iodidimonas muriae",urease,-
+12583,MX5,"DSM 10177, ATCC BAA 303, CIP 109082, JCM 11754",1,"Isoptericola variabilis",urease,-
+13667,H1-M8,"DSM 19073, KACC 11609",1,"Jannaschia pohangensis",urease,+
+1511,YKJ-13,"DSM 18867, CIP 107405, JCM 10872, KCCM 80002",1,"Jeotgalibacillus alimentarius",urease,-
+133266,,"JC303, KCTC 33662, LMG 28756",1,"Jeotgalibacillus alkaliphilus",urease,-
+159771,22-7,"MCCC 1H00228, KCTC 33930",1,"Jeotgalibacillus proteolyticus",urease,-
+1514,P9,"DSM 23228, LMG 25523",1,"Jeotgalibacillus soli",urease,+
+130206,,"DSM 22174, KCTC 13528, JSM 081008",1,"Jeotgalibacillus terrae",urease,+
+132617,140805-STR-02,"DSM 102815, CCM 8667, LMG 29445",1,"Jeotgalicoccus schoeneichii",urease,-
+17821,,"DSM 44835, CCTCC AA 204001, KCTC 19044, YIM 002",1,"Jiangella gansuensis",urease,+
+159791,"PLAI 1-1","NBRC 113144, TBRC 7644",1,"Micromonospora zingiberis",urease,-
+10620,NP8-5,"DSM 45133, CIP 110031, KCTC 19360",1,"Jongsikchunia kroppenstedtii",urease,+
+159825,,"JCM 31803, KACC 19096, LYH 11",1,"Kaistia algarum",urease,+
+133806,B6-12,"KCTC 23766, JCM 18034",1,"Kaistia defluvii",urease,+
+13564,Ko04,"DSM 23481, KCTC 12575, LMG 23410",1,"Kaistia granuli",urease,+
+13566,5YN7-3,"DSM 21341, KACC 12910",1,"Kaistia terrae",urease,+
+354,3925,"DSM 16618, CCUG 47000, LMG 5906, CIP 108214",1,"Kerstersia gyiorum",urease,-
+140582,K08-0175,"DSM 103925, TBRC 6786, NBRC 112388",1,"Kibdelosporangium kanagawaense",urease,+
+133307,"KC 266","KCTC 39719, CCTCC AA 2016002",1,"Kibdelosporangium metalli",urease,+
+140583,K10-0543,"NBRC 112389, TBRC 6787, DSM 103926",1,"Kibdelosporangium rhizosphaerae",urease,+
+140584,K12-0791,"DSM 103985, TBRC 6788, NBRC 112390",1,"Kibdelosporangium rhizovicinum",urease,+
+140549,soj2014,"KCTC 42186, JCM 30386",1,"Kiloniella antarctica",urease,-
+158283,,"DSM 102158, KCTC 39739, YIM 121940",1,"Kineococcus aureolus",urease,-
+134344,KKD096,"TISTR 1856, NRRL B-24568, BCC 26245, NBRC 103943",1,"Kineococcus gynurae",urease,+
+140890,L2-1-L1,"BCC 75409, NBRC 110933",1,"Kineococcus mangrovi",urease,-
+158284,,"DSM 102155, KCTC 39738, YIM 121936",1,"Kineococcus terrestris",urease,-
+6328,,"DSM 45271, CCTCC AA 208061, JCM 16902, YIM 65293",1,"Kineosporia mesophila",urease,+
+133070,KNHs209,"DSM 100556, ATCC TSD-26",1,"Kineothrix alysoides",urease,-
+140547,,"CSUR P957, CCUG 69806, SCH Sch538",1,"Kingella negevensis",urease,-
+133650,LX3,"DSM 16265, JCM 12419, CCUG 57108, CIP 108642",0,"Klebsiella variicola",urease,+
+23033,PB34,"DSM 45843, JCM 17785, KCTC 19880",1,"Klenkia soli",urease,+
+24062,3-wff-81,"DSM 45962, CGMCC 1.12303, NBRC 109416",1,"Klenkia taihuensis",urease,+
+23034,"PB 261","DSM 45844, JCM 17786, KCTC 19881",1,"Klenkia terrae",urease,+
+140923,CM1E1,"HAMBI 3625, LMG 28671, CCBAU 101092",1,"Kocuria arsenatis",urease,+
+7665,P30,"DSM 23883, JCM 15914, KCTC 19594, P30",1,"Kocuria atrinae",urease,+
+7662,HO-9041,"DSM 22142, CCTCC AB 206106, KCTC 19306",1,"Kocuria flava",urease,+
+7657,,"DSM 16420, KCTC 9943, KMM 3905, CCUG 51442",1,"Kocuria marina",urease,+
+7666,104,"DSM 24776, JCM 16361, KACC 21128",1,"Kocuria salsicia",urease,+
+133649,OT-1,"KCC8814P, NBRC 1000336",1,"Kordia algicida",urease,-
+140820,,"KCTC 42872, MCCC 1A01772, LMG 29123, SC 2",1,"Kordia ulvae",urease,+
+133812,101-1,"KACC 16184, JCM 17742",1,"Kordiimonas aestuarii",urease,+
+140838,M41,"CGMCC 1.15304, JCM 30877",1,"Kordiimonas lipolytica",urease,-
+12605,,"DSM 21481, CCTCC AA 208024, JCM 16551, CC 0387",1,"Krasilnikoviella flava",urease,-
+133327,T6220-5-2b,"T6220-5-2b, JCM 28789, NCIMB 15040, DSM 111259",1,"Krasilnikoviella muralis",urease,-
+11079,,"DSM 18824, JCM 14599, HKI 0478",1,"Kribbella aluminosa",urease,+
+133358,SL15-1,"CGMCC 1.15906, KCTC 39825",1,"Kribbella deserti",urease,+
+23163,,"DSM 23718, JCM 30548, NRRL B-24812, PIP 118",1,"Kribbella endophytica",urease,+
+11073,,"DSM 17305, CIP 108509, HD9, JCM 12204, KACC 20266, NBRC 101070",1,"Kribbella jejuensis",urease,+
+158430,NEAU-SW521,"DSM 105770, CGMCC 4.7465",1,"Kribbella monticola",urease,-
+159725,EAod7,"CECT 9075, LMG 29858",1,"Kushneria endophytica",urease,-
+140736,X49,"KACC 14623, JCM 16805",1,"Kushneria konosiri",urease,-
+159726,EAod3,"CECT 9073, LMG 29856",1,"Kushneria phyllosphaerae",urease,-
+13835,"mano 18","DSM 17023, KCTC 12288",1,"Roseibium marinum",urease,+
+134210,Liujia-146,"BCRC 17578, LMG 23578",1,"Labrys neptuniae",urease,+
+17411,"F 11","DSM 17916, LMG 23412",1,"Labrys portucalensis",urease,+
+16741,"A 978","DSM 43356, ATCC 27375, CBS 701.70, CUB 618, IFO 13920, KCTC 9790, NBRC 13920, NCIB 10486, NCTC 10721, CCUG 7967, CBS 7001.70",1,"Laceyella sacchari",urease,+
+140689,,"CCTC AB 2015040, NBRC 110772, YIM 79486, DSM 46882",0,"Laceyella thermophila",urease,+
+132396,DLD10,"DSM 28816, JCM 30818",1,"Lachnotalea glycerini",urease,-
+140675,,"KCTC 23619, CECT 7956, HME 7103",1,"Lacihabitans lacunae",urease,-
+140924,Lxc1,"MCCC 1A01567, KCTC 42808",1,"Lacinutrix gracilariae",urease,-
+159711,BS-W1,"BCRC 80970, NBRC 112377",1,"Levilactobacillus bambusae",urease,-
+140356,MOZM2,"DSM 100239, CCM 8609, LMG 28780",1,"Limosilactobacillus caviae",urease,-
+159887,NIBRBAC000499792,"KCTC 21093, JCM 32269",1,"Companilactobacillus metriopterae",urease,-
+141153,MIMbqt9,"MCCC 1K01309, KCTC 42800",1,"Larkinella soli",urease,-
+132991,ST307,"DSM 22428, CGMCC 1.8902",1,"Larsenimonas suaedae",urease,+
+157758,3BBH22,"DSM 106493, JCM 32166, KCTC 15743",1,"Lawsonibacter asaccharolyticus",urease,-
+158285,NEAU-A2,"DSM 104541, CGMCC 4.7405",1,"Lentzea rhizosphaerae",urease,-
+1364,8-1,"DSM 18342, CGMCC 1.3702, CIP 109588",1,"Lentibacillus halodurans",urease,-
+1362,PS11-2,"DSM 19123, CIP 109343, JCM 12149, PCU 240, PS11-2, TISTR 1549",1,"Lentibacillus halophilus",urease,-
+1367,Grbi,"DSM 23924, JCM 15795, KCTC 13300",1,"Lentibacillus jeotgali",urease,-
+1363,PN7-6,"DSM 19124, JCM 12580, PCU 259, PN7-6, TISTR 1551",1,"Lentibacillus kapialis",urease,+
+1368,Amb31,"DSM 22530, CCM 7683, CECT 7524, LMG 25304",1,"Lentibacillus persicus",urease,-
+1360,BH139,"DSM 16459, KCTC 3911",1,"Lentibacillus salarius",urease,-
+1359,SF-20,"DSM 16425, CIP 107807, JCM 11462, KCCM 41560",1,"Lentibacillus salicampi",urease,-
+1365,AHS-1,"DSM 21356, CCUG 54822, KCTC 13162",1,"Lentibacillus salinarum",urease,-
+1366,BH113,"DSM 16817, KCTC 3936",1,"Lentibacillus salis",urease,-
+140311,"SYSU K10001","DSM 103464, CGMCC 4.7367, KCTC 39804, NBRC 112394",1,"Lentzea cavernae",urease,+
+13314,,"DSM 44909, CIP 109797, JCM 14913, LDDC 2876-05, NRRL B-24416",1,"Lentzea kentuckyensis",urease,+
+158659,"NEAU-LZC 7","CCTCC AA 2017027, JCM 32384, DSM 105695",1,"Lentzea soli",urease,+
+159642,"NEAU-LZS 42","DSM 105696, CGMCC 4.7428",1,"Lentzea terrae",urease,+
+133450,YM3-301,"KCTC 221605, MBIC06275 5, NBRC 104141",1,"Leptobacterium flavescens",urease,+
+132479,T14,"DSM 28968, JCM 30245",1,"Leucobacter holotrichiae",urease,-
+158382,JW-1,"DSM 105188, LMG 30083",1,"Leucobacter triazinivorans",urease,-
+159811,,"KACC 18010, NBRC 110382, IMCC 9719",1,"Leucothrix arctica",urease,-
+133611,KP1-19,"LMG 24869, NBRC 105857, CIP 109929",1,"Limnobacter litoralis",urease,+
+159817,FSX-11,"JCM 32715, MCCC 1K03503",1,"Litorivita pollutaquae",urease,+
+132517,CB-286315,"DSM 29007, CECT 8660",1,"Longimicrobium terrae",urease,-
+158778,X5,"CGMCC 4.7317, NBRC 112237",1,"Longivirga aurantiaca",urease,+
+158749,R-43280,"LMG 26267, NCPPB 4481, CFCC 10822",1,"Lonsdalea britannica",urease,-
+158750,R-44166,"LMG 26264, NCPPB 4490, CFCC 10824",1,"Lonsdalea iberica",urease,-
+23013,NY060,"DSM 25466, NCAIM B 02483, CFCC 13125, LMG 27349",1,"Lonsdalea populi",urease,-
+141071,26-35,"KCTC 42824, CCTCC AB 2014326",1,"Luteimonas arsenica",urease,-
+24675,HB2,"DSM 26429, CICC 11005s",1,"Luteimonas huabeiensis",urease,+
+133519,MN07-A0370,"NBRC 105296, VTCC D9-09",1,"Luteipulveratus mongoliensis",urease,+
+140275,HEG_-6_39,"DSM 100886, KCTC 52215",1,"Luteitalea pratensis",urease,-
+140773,CB-286403,"CECT 8659, DSM 28998",1,"Luteolibacter gellanilyticus",urease,-
+133312,Y2A20,"CGMCC 1.15760, KCTC 33825",1,"Lysinibacillus alkalisoli",urease,+
+23760,FSt3A,"DSM 25560, CCM 8383, CIP 110362, CCUG 62186",1,"Lysinibacillus contaminans",urease,+
+23756,4400831,"DSM 27596, CCUG 49529, CIP 108446, KCTC 13178",1,"Ureibacillus massiliensis",urease,+
+1539,BAM-582,"DSM 25242, KCTC 13154, NBRC 103144",1,"Lysinibacillus parviboronicapiens",urease,+
+141007,HT7-17,"NBRC 112286, TBRC 7037",1,"Demequina sediminis",urease,-
+140892,S2-C,"KACC 18502, JCM 31130",1,"Lysobacter aestuarii",urease,-
+133170,,"RS-LYSO-3, CCIC 23922, JCM 31042",1,"Lysobacter erysipheiresistens",urease,-
+158751,D-14,"KEMB 9005-572, KACC 19173, JCM 31917",1,"Lysobacter olei",urease,-
+157768,AM20-91,"DSM 104734, LMG 30011",0,"Lysobacter silvestris",urease,-
+133084,"KM 45013","DSM 101690, CCOS 969, CCUG 68920, CIP 111363",1,"Macrococcus canis",urease,-
+2097,LA31B,"CCUG 53805, DSM 18005, ATCC BAA 1022, CIP 108450",1,"Arcobacter halophilus",urease,-
+140470,MP23,"KCTC 42580, DSM 100250",1,"Mangrovibacter phragmitis",urease,-
+159731,5T4P-12-1,"KCTC 62053, CGMCC 1.16279",1,"Mangrovicella endophytica",urease,+
+159777,T1lg56,"CCTCC AB 2016238, KCTC 52623",1,"Mangrovicoccus ximenensis",urease,+
+140578,S3Cf-2,"DSM 100693, CGMCC 4.7299",1,"Mangrovihabitans endophyticus",urease,-
+133912,LYYY01,"CGMCC 1.12280, LMG 27142",1,"Mangrovimonas yunxiaonensis",urease,+
+158538,M11-4,"MCCC 1K03312, JCM 32104",1,"Mangrovitalea sediminis",urease,-
+159839,SDRB-Phe2,"JCM 32373, KCTC 62273, DSM 106042",1,"Maribacter litoralis",urease,-
+140859,KJ4,"KACC 16438, JCM 31154",1,"Maribacter lutimaris",urease,-
+159865,HMF3635,"KCTC 52399, NBRC 112671",1,"Maribacter maritimus",urease,-
+140774,CBA3204,"KACC 17671, JCM 19533",1,"Maribacter pelagius",urease,-
+23234,B5-6,"DSM 26893, JCM 14009, KCCM 42336",1,"Maribius pelagius",urease,+
+23235,CL-SP27,"DSM 26892, JCM 13037, KCCM 42113",1,"Maribius salinus",urease,+
+133321,,"CAU 1311, KCTC 52189, NBRC 111988, DSM 108276",1,"Marimonas arenosa",urease,-
+11263,,"DSM 45154, CCTCC AA 208041, JCM 16903, SCSIO 00652",1,"Marinactinospora thermotolerans",urease,+
+159708,F2,"KCTC 42953, MCCC 1H00149",1,"Marinicella sediminis",urease,-
+158395,KSS164-79,"DSM 104943, CCM 8749, CIP 111345, LMG 30062",1,"Marinicrinis lubricantis",urease,-
+140620,NC2-42,"KCTC 33676, MCCC 1K01238",1,"Marinicrinis sediminis",urease,-
+133197,,"FB208, KCTC 42591, MCCC 1H00113",1,"Marinifilum albidiflavum",urease,-
+158685,,"KCCM 43216, JCM 31588, MEBiC 09412",1,"Marinirhabdus citrea",urease,+
+132988,NH83,"DSM 101478, CGMCC 1.15462",1,"Marinirhabdus gelatinilytica",urease,-
+493,HP15,"DSM 23420, CIP 110141",1,"Marinobacter adhaerens",urease,-
+482,DG893,"DSM 16394, CIP 109780, NCIMB 14009",1,"Marinobacter algicola",urease,+
+140701,M6-53,"CECT 9228, LMG 30006",1,"Marinobacter aquaticus",urease,-
+159844,T17,"KCTC 52710, MCCC 1K03282",1,"Marinobacter bohaiensis",urease,+
+480,114-50-11,"DSM 15401, KMM 3840",1,"Marinobacter bryozoorum",urease,-
+483,SW-156,"DSM 16072",1,"Marinobacter daepoensis",urease,-
+481,SW145,"DSM 16070",1,"Marinobacter flavimaris",urease,-
+133354,,"CP12, KACC 18381, NBRC 110910",1,"Marinobacter halotolerans",urease,+
+473,,"DSM 8798, ATCC 49840",1,"Marinobacter nauticus",urease,-
+486,CK47,"DSM 16561, JCM 12521, MTCC 6519",1,"Marinobacter maritimus",urease,+
+492,,"DSM 22359, CECT 7499, SET Set74",1,"Marinobacter oulmenensis",urease,-
+158675,,"KCTC 52545, MCCC 1H00176, HJR 7",1,"Marinobacter salexigens",urease,+
+133343,,"Hb8, KCTC 52255, JCM 31416",1,"Marinobacter salinus",urease,-
+491,NKSG1,"DSM 21262",1,"Marinobacter santoriniensis",urease,+
+479,"R 65","DSM 15400, KMM 3657",1,"Marinobacter sediminum",urease,-
+133506,NTU-104,"BCRC 17809, CGMCC 1.7011, JCM 15751",1,"Marinobacter szutsaonensis",urease,+
+461,,"DSM 23545, KCTC 12756, LMG 23872, CCUG 54309, IMCC 1877",1,"Marinobacterium litorale",urease,+
+140895,,"KCCM 43095, JCM 30410, PAMC 27536",1,"Marinobacterium profundum",urease,-
+158676,"Yeongu 1-4","KEMB 9005-327, MCCC1 K00609",1,"Marinomonas algicida",urease,+
+140861,SMJ19,"CECT 8886, KCTC 42958",1,"Marinomonas spartinae",urease,+
+133443,B142,"CCTCC AB 208225, LMG 24627, MCCC 1A01235",1,"Marispirillum indicum",urease,+
+130632,,"DSM 100037, KCCM 42376, NBRC 102057, HTCC 2654",1,"Maritimibacter alkaliphilus",urease,+
+158611,HSLHS2,"KCTC 52588, MCCC 1A06712",1,"Marivivens niveibacter",urease,-
+158677,8BXZ-J1,"KCTC 39789, CGMCC 1.16067",1,"Marmoricola endophyticus",urease,-
+132514,,"DSM 22772, KACC 14267, Gsoil 097",1,"Marmoricola ginsengisoli",urease,-
+132515,,"DSM 22773, KACC 14275, Gsoil 818",1,"Marmoricola pocheonensis",urease,-
+158712,S20-100,"LMG 30008, DSM 104694",1,"Marmoricola silvestris",urease,-
+531,MACL11,"DSM 17316, CECT 5861, LMG 22193",1,"Martelella mediterranea",urease,+
+11331,5516S-11,"DSM 19289, KACC 12505",1,"Massilia aerilata",urease,+
+11325,45,"CCUG 52214, DSM 17472, CCTCC AB 204071, KCTC 12343",1,"Massilia albidiflava",urease,+
+11324,,"DSM 17462, CCTCC AA 204003, KCTC 12194, YIM 31775, CCUG 50882",1,"Massilia alkalitolerans",urease,+
+11330,byr23-80,"DSM 18925, ATCC BAA 1465, CCM 8559",1,"Massilia brevitalea",urease,+
+158678,A9,"DSM 103547, CGMCC 1.15931, KCTC 52429",1,"Massilia buxea",urease,+
+11328,16,"DSM 17513, CCTCC AB 204070, KCTC 12342, CCUG 52213",1,"Massilia dura",urease,+
+140777,B448-2,"JCM 30271, CGMCC 1.12920",1,"Massilia glaciei",urease,-
+133930,D5,"CGMCC 1.10822, KCTC 23880",1,"Massilia lurida",urease,+
+140695,12-OD1,"CCTCC AB 2016251, LMG 29956, KCTC 52513",1,"Massilia phosphatilytica",urease,-
+140511,T33,"KACC 18748, KEMB 9005-368, JCM 31316",1,"Massilia pinisoli",urease,-
+11327,76,"DSM 17505, CCTCC AB 204072, KCTC 12344",1,"Massilia plicata",urease,+
+133173,,"B1555-1, CGMCC 1.15196, JCM 30813",1,"Massilia psychrophila",urease,-
+141141,6NM-7,"DSM 27523, KCTC 42761",1,"Massilia putida",urease,-
+140531,,"KCTC 15482, JCM 30748, BR 31",1,"Merdimonas faecis",urease,-
+140348,15-S14-6,"DSM 102814, CGMCC 1.16020, KCCM 43197, NCAIM B.02633",1,"Mesonia maritima",urease,-
+159849,6GN-30,"ACCC 60073, KCTC 62410",1,"Mesorhizobium ephedrae",urease,-
+140544,CSLC115,"CECT 9168, LMG 29734",1,"Mesorhizobium helmanticense",urease,+
+133271,,"MAFF 303099, LMG 29417, CECT 9101",1,"Mesorhizobium japonicum",urease,+
+130532,,"DSM 29667, CCBAU 33460, CGMCC 1.12097, HAMBI 3277, LMG 26793",1,"Mesorhizobium qingshengii",urease,+
+159737,,"CECT 9305, LMG 30060, BSA 136",1,"Mesorhizobium sanjuanii",urease,+
+133222,,"YIM M12096, CCTCC AB 2014219, KCTC 42205",1,"Mesorhizobium sediminum",urease,-
+158441,4NBBH2,"DSM 106860, JCM 32464",1,"Mesosutterella multiformis",urease,-
+134120,PM1,"ATCC BAA 1232, LMG 22953",1,"Methylibium petroleiphilum",urease,+
+133349,,"Z, VKM B-3037, JCM 31401, CCUG 68999",1,"Methylobacillus methanolivorans",urease,+
+7236,F31,"DSM 16019, NCIMB 13994, VKM B-2247",1,"Methylobacillus pratensis",urease,+
+7180,AR27,"DSM 17169, CCM 7305, CECT 7069",1,"Methylobacterium adhaesivum",urease,+
+7176,GR16,"DSM 16371, CCM 7218, CECT 5998, CIP 108333",1,"Methylobacterium aquaticum",urease,+
+24174,99b,"DSM 24105, NBRC 107710",1,"Methylobacterium brachythecii",urease,+
+7197,"C15, C20oh1-15","DSM 23679, CCM 7788, CCUG 60040",1,"Methylobacterium cerastii",urease,+
+159850,PR1016A,"KACC 19662, JCM 32670",1,"Methylobacterium currus",urease,+
+158776,IER25-16,"KACC 19280, JCM 32048",1,"Methylobacterium frigidaeris",urease,+
+7200,23e,"DSM 24027, NBRC 107716",1,"Methylobacterium gnaphalii",urease,+
+133689,Gh-105,"CCM 7572, NRRL B-51692",1,"Methylobacterium gossipiicola",urease,+
+7175,GP34,"DSM 16372, CCM 7219, CECT 5997, CIP 108332",1,"Methylobacterium hispanicum",urease,+
+7179,AR24,"DSM 17168, CCM 7304, CECT 7068",1,"Methylobacterium isbiliense",urease,+
+134213,S2R03-9,"KCTC 12671, LMG 23639",1,"Methylobacterium jeotgali",urease,+
+7193,JT1,"DSM 21328, CCUG 56108",1,"Methylobacterium marchantiae",urease,+
+133674,,"CNCMI 2342, LMG 21967, ORS 2060",1,"Methylobacterium nodulans",urease,+
+7192,"CBMB27, EF 126746","DSM 19779, KACC 11716, LMG 24361",1,"Methylobacterium phyllosphaerae",urease,+
+24173,N4211,"DSM 25844, KCTC 23615",1,"Methylobacterium tarhaniae",urease,+
+133947,C34,"LMG 25777, CCM 7787",1,"Methylobacterium thuringiense",urease,+
+133946,TA73,"LMG 25778, CCM 7786",1,"Methylobacterium trifolii",urease,+
+7178,GR3,"DSM 16961, CCM 7281, CECT 7045",1,"Methylobacterium variabile",urease,+
+11908,MPL,"DSM 24656, MCC 1002, VKM B-2684",1,"Methylophaga lonarensis",urease,+
+7240,B,"DSM 5898, CCUG 59685, VKM B-1607",1,"Methylophilus glucosoxydans",urease,+
+133517,CBMB127,"KACC 13099, NCCB 100233",1,"Methylophilus rhizosphaerae",urease,+
+23093,MUSA,"DSM 24986, CCUG 61696, VKM B-2646",1,"Methylopila musalis",urease,+
+134237,MR,"CGMCC 1.6474, NCCB 100140",1,"Methylorubrum salsuginis",urease,+
+23100,301,"DSM 24635, JCM 17579, VKM B-2679",1,"Methylotenera versatilis",urease,+
+141142,M48,"KEMB 224-262, JCM 30821",1,"Methyloterrigena soli",urease,-
+158383,"SYSU D8007","DSM 104474, CGMCC 1.15794, KCTC 39990",1,"Microbacterium album",urease,-
+133183,,"JF-6, MTCC 11843, JCM 30060, KCTC 39828",1,"Microbacterium aureliae",urease,-
+158586,"SYSU D8014","CPCC 204619, KCTC 39991",1,"Microbacterium deserti",urease,-
+132664,RZ63,"DSM 27101, CECT 8355",1,"Microbacterium diaminobutyricum",urease,+
+7455,,"DSM 24823, JCM 15516, KCTC 19526, DCY 37",1,"Microbacterium ginsengiterrae",urease,+
+158442,,"DSM 106431, CGMCC 1.16264, YJYP 303, KCTC 49100",1,"Microbacterium halophytorum",urease,+
+23104,ViU22,"DSM 25044, ATCC BAA 2396, CCUG 62198, CIP 110791, NBRC 110788",1,"Microbacterium lemovicicum",urease,+
+7433,SC-087B,"DSM 19459, CCUG 54537, JCM 15576",1,"Microbacterium luticocti",urease,+
+7425,TNJL143-2,"DSM 17277, ATCC BAA 1032, CIP 108753, JCM 12611",1,"Microbacterium natoriense",urease,+
+7427,US15,"DSM 16915, KCTC 19080",1,"Microbacterium paludicola",urease,+
+140585,T7528-3-6b,"JCM 28836, NCIMB 15039",1,"Microbacterium tumbae",urease,-
+133404,HSF11,"KCTC 52363, MCCC 1K03192",1,"Microbaculum marinum",urease,+
+159813,RTBAU4-9,"TBRC 7648, NBRC 113147",1,"Microbispora soli",urease,+
+159804,NEAU-HRDPA2-9,"CGMCC 4.7399, DSM 104649",1,"Microbispora triticiradicis",urease,+
+7761,,"DSM 23974, LMG 26183, WS 4601",1,"Micrococcus cohnii",urease,+
+7673,,"CCUG 5858, ATCC 15307, DSM 20030, ATCC 4698, CCM 169, NCIB 9278, NCTC 2665, WDCM 00111",1,"Micrococcus luteus",urease,+
+7748,"JL 178","DSM 20315, ATCC 27566, CCM 2693, CCUG 33027, NCTC 11037",1,"Micrococcus lylae",urease,-
+132512,7515T-26,"DSM 27139, KACC 17306",1,"Microlunatus aerolatus",urease,-
+132342,S3Af-1,"DSM 100019, CGMCC 4.7306",1,"Microlunatus endophyticus",urease,-
+24346,W6,"DSM 27985, CGMCC 4.6856, JCM 17701",1,"Microlunatus flavus",urease,+
+12616,"FA2, M2_8","DSM 21742, NBRC 104964, KY 13138",1,"Microlunatus lucidus",urease,+
+12618,"FB1, O4_4","DSM 21744, NBRC 104966, KY 13159",1,"Microlunatus okinawensis",urease,+
+12619,"FB2, S20_27","DSM 21743, NBRC 104965, KY 13154",1,"Microlunatus sagamiharensis",urease,+
+7985,,"DSM 44830, LMG 22229, NBRC 101890, NRRL B-24769, WA 201",1,"Micromonospora mirobrigensis",urease,+
+133064,NEAU-JXY5,"DSM 103125, CGMCC 4.7347",1,"Micromonospora parathelypteridis",urease,+
+7344,PON10,"DSM 22300, LMG 24222, MTCC 9128, CCUG 55700, JCM 15132",1,"Microterricola pindariensis",urease,+
+133490,25B,"CGMCC 1.7666, JCM 15710",1,"Microvirga guangxiensis",urease,+
+131253,,"DSM 28906, HAMBI 3237",1,"Microvirga lotononidis",urease,+
+133752,Lut6,"LMG 26460, HAMBI 3236",1,"Microvirga lupini",urease,+
+133326,,"V5/3M, LMG 29787, RCAM 02728",1,"Microvirga ossetica",urease,+
+131254,,"DSM 28907, CB 1298, HAMBI 3238, LMG 26454, WSM 3693",1,"Microvirga zambiensis",urease,+
+10626,J81,"DSM 44463, CIP 109234, NRRL B-24424",1,"Millisia brevis",urease,+
+158764,HZ7,"JCM 31671, CCTCC AB 2014353",1,"Mitsuaria noduli",urease,-
+140308,,"DSM 27611, CCTCC AB 2013229, YIM 101593",1,"Mobilicoccus caccae",urease,-
+5831,CP153-2,"DSM 16678, ATCC BAA 1040, CIP 109814, JCM 15578",1,"Modestobacter versicolor",urease,+
+132419,"YIM 4-4","DSM 27929, CCTCC AB 2012966",0,"Mongoliibacter ruber",urease,+
+158306,14,"DSM 104782, JCM 31914",1,"Monoglobus pectinilyticus",urease,-
+133346,,"YH6, KCTC 42594, MCCC 1H00122",1,"Motilimonas eburnea",urease,-
+158597,TAPP7,"BCRC 80976, LMG 29556, KCTC 52238",1,"Mucilaginibacter amnicola",urease,-
+133251,,"S14-88, CCTCC AB 2015321, KCTC 52232",1,"Mucilaginibacter antarcticus",urease,-
+140863,PR0008K,"KACC 17938, NBRC 111539",1,"Mucilaginibacter carri",urease,-
+140683,N60A,"KCTC 52404, NRRL B-65396",1,"Mucilaginibacter craterilacus",urease,-
+133441,,"KCTC 12639, LMG 23488, Jip 10",1,"Mucilaginibacter daejeonensis",urease,+
+133196,,"TTM-2, BCRC 80785, LMG 28455, KCTC 42274",1,"Mucilaginibacter fluminis",urease,-
+140568,PP-F2F-G47,"CCM 8711, CIP 111182, LMG 29767, DSM 103633",1,"Mucilaginibacter galii",urease,-
+158582,BXN5-31,"KACC 14957, JCM 17085",1,"Mucilaginibacter panaciglaebae",urease,-
+133142,,"TBZ30, KCTC 42833, CCTCC AB 2015301",1,"Mucilaginibacter pedocola",urease,-
+133144,PP-F2F-G21,"DSM 100995, CCM 8625, CIP 110921, LMG 29118",1,"Mucilaginibacter phyllosphaerae",urease,-
+140514,,"KCTC 12641, LMG 23495, Gsoil 032",1,"Mucilaginibacter pocheonensis",urease,+
+133386,NH7-4,"JCM 30607, CGMCC 1.14937",1,"Mucilaginibacter psychrotolerans",urease,-
+140897,TTM-1,"LMG 28454, KCTC 42273",1,"Mucilaginibacter roseus",urease,-
+140679,EF23,"CGMCC 1.15913, KCTC 52516",1,"Mucilaginibacter rubeus",urease,-
+140778,,"LMG 29437, CCM 8645",1,"Mucilaginibacter terrae",urease,-
+132970,yx-36,"DSM 26809, CCTCC AB 2012880",1,"Mucilaginibacter yixingensis",urease,-
+158733,3PC125-7,"MCCC 1A03198, KCTC 52318",1,"Muricauda indica",urease,-
+159871,L2,"CCTCC AB 2017193, KCTC 62196",1,"Muricauda iocasae",urease,-
+24030,12C25,"DSM 25030, CGMCC 1.11028, MCCC 1F01096",1,"Muricauda zhangzhouensis",urease,+
+140847,B1-EB,"JCM 30646, LMG 28693, NBRC 110909",1,"Mycoavidus cysteinexigens",urease,-
+131575,"TB 1906","DSM 45230, CCUG 56586",1,"Mycobacterium alsense",urease,-
+140371,RW6,"DSM 104277, CIP 111198",1,"Mycobacterium aquaticum",urease,-
+24237,,"DSM 45768, JCM 18538, YIM 121001",1,"Mycobacterium arabiense",urease,+
+132615,"269, ParisRGMnew_3","DSM 46715, CIP 110654",1,"Mycobacterium arcueilense",urease,+
+8519,"MF-657, W5998","DSM 44677, ATCC 49935, CCUG 47580, CIP 107829",1,"Mycobacterium boenickei",urease,+
+8521,"MF-614, W6743","DSM 44680, ATCC 49938, CCUG 47584, CIP 107830",1,"Mycobacterium brisbanense",urease,+
+158425,,"DSM 105360, TBL 1200985, ATCC TSD-117",1,"Mycobacterium decipiens",urease,-
+140369,X82,"DSM 44358, CECT 8775",1,"Mycobacterium eburneum",urease,+
+8534,FI-93171,"DSM 44852, CIP 108409, CCUG 50992",1,"Mycobacterium florentinum",urease,+
+158264,PB739,"DSM 104744, CIP 111318",1,"Mycobacterium grossiae",urease,+
+131823,"MF-89, W5198","DSM 44676, ATCC 49403, CDC 80-719, CCUG 47581",1,"Mycobacterium houstonense",urease,+
+8347,M05,"DSM 45541, CCUG 62053, JCM 17461",1,"Mycobacterium iranicum",urease,+
+158795,,"CIP 110823T, ATCC BAA 2758, GPK 1020",1,"Mycobacterium komaniense",urease,+
+158311,,"CECT 9646, DSM 107316, NCTC 11659",1,"Mycobacterium kyogaense",urease,+
+8339,40,"DSM 43219, CECT 8763, SN 1900",1,"Mycobacterium lehmannii",urease,+
+8588,F4,"DSM 45785, CGMCC 4.5724, JCM 17423",1,"Mycobacterium litorale",urease,+
+132613,"071, ParisRGMnew_1","DSM 46713, CIP 110656",1,"Mycobacterium lutetiense",urease,+
+133382,,"ATCC BAA 2759, CIP 110822, WCM 7299",1,"Mycobacterium malmesburyense",urease,+
+8583,"04-1474, NLA000401474","DSM 45255, CIP 109863",1,"Mycobacterium mantenii",urease,+
+132614,"196, ParisRGMnew_2","DSM 46714, CIP 110655",1,"Mycobacterium montmartrense",urease,-
+8246,2409,"DSM 43532, CECT 8766, SN 1904",1,"Mycobacterium neumannii",urease,+
+8520,"MF-465, W6705","CCUG 47582, CIP 107827, CIP 105354, DSM 44679, ATCC 49404, CDC 87-1098",1,"Mycobacterium neworleansense",urease,+
+133186,,"JC290, KCTC 39560, LMG 28809",1,"Mycobacterium oryzae",urease,+
+134025,49061,"JCM 18565, KCTC 29126T",1,"Mycobacterium paragordonae",urease,+
+140637,MOTT64,"KCTC 29084, JCM 30622",1,"Mycobacterium intracellulare",urease,-
+8533,,"DSM 44648, ATCC BAA 614, HSC 68",1,"Mycobacterium parascrofulaceum",urease,+
+8538,31118,"DSM 45000, KCTC 19145",1,"Mycobacterium paraseoulense",urease,+
+8493,Fi-14400,"DSM 44553, CIP 107385, MUP 1182, CCUG 50998",1,"Mycobacterium parmense",urease,+
+140288,AFPC-000227,"DSM 104278, CIP 111197, AFPC 000207",1,"Mycobacterium persicum",urease,-
+8544,,"DSM 45108, ATCC BAA 883, L15, NCTC 13318",1,"Mycobacterium pseudoshottsii",urease,+
+8522,,"DSM 44697, CIP 108547, LMG 21953, WA 101",1,"Mycobacterium psychrotolerans",urease,+
+8579,NLA000201958,"DSM 45176, CIP 109808, CCUG 58462",1,"Mycobacterium riyadhense",urease,+
+8576,JS14,"DSM 45406, ATCC BAA 1377, CIP 109273, JCM 16372",1,"Mycobacterium rufum",urease,+
+8577,czh-117,"DSM 45405, ATCC BAA 1375, CIP 109271, JCM 16371",1,"Mycobacterium rutilum",urease,+
+133184,,"DL734, JCM 30395, NCCB 100519",1,"Mycobacterium sarraceniae",urease,-
+24236,"YIM M13028","DSM 45643, KCTC 19999",1,"Mycobacterium sediminis",urease,+
+8553,"ABO-M06, MBS-1","DSM 45070, CIP 109395, CCUG 55975, CIP 139395",1,"Mycobacterium setense",urease,+
+140668,NJB0901,"JCM 31611, KCTC 39843, DSM 109040",1,"Mycobacterium stephanolepidis",urease,+
+24032,IM13,"DSM 26542, NBIMCC 8736",1,"Myroides guanonis",urease,+
+5623,JS-08,"DSM 23048, JCM 16529, KCTC 23023",1,"Myroides marinus",urease,+
+5624,MY15,"DSM 23313, LMG 25566",1,"Myroides phaeus",urease,+
+132455,2Q3S-4-2,"DSM 100722, CGMCC 4.7308",1,"Nakamurella endophytica",urease,-
+23147,DS-52,"DSM 26917, CIP 108919, JCM 15652, KCTC 19127",1,"Nakamurella flavida",urease,+
+133020,S20-107,"DSM 102309, LMG 29427",1,"Nakamurella silvestris",urease,+
+132586,"JW/NM-HA 15","DSM 23470",0,"Natrarchaeobaculum aegyptiacum",urease,-
+140343,AFT2,"DSM 103164, CCTCC AB 2015428",1,"Naumannella cuiyingiana",urease,-
+12674,,"DSM 24323, LMG 26184, WS 4616",1,"Naumannella halotolerans",urease,+
+140279,KH1503,"DSM 103136, ATCC TSD-57",1,"Neisseria arctica",urease,+
+158278,93087,"DSM 104677, LMG 30012",1,"Neisseria dumasiana",urease,-
+13638,,"DSM 21826, CCBAU 01393, HAMBI 3051, LMG 24763",1,"Neorhizobium alkalisoli",urease,+
+158718,S27-2,"KCTC 52335, MCCC 1A02149",1,"Neptunicella marina",urease,-
+158806,,"CCTCC AB 2015430, KCTC 42985, NBRC 111872, MCCC 1K03518, CY 02",1,"Neptunicoccus sediminis",urease,-
+132446,CK5,"DSM 27373, JCM 19723",1,"Nesterenkonia aurantiaca",urease,-
+159880,,"CCTCC AB 2017176, NBRC 112398, EGI 60016",1,"Nesterenkonia endophytica",urease,-
+7764,,"DSM 15474, CCTCC AA 001022, YIM 70084",1,"Nesterenkonia halotolerans",urease,+
+7765,,"DSM 15475, CCTCC AA 001025, YIM 70097",1,"Nesterenkonia xinjiangensis",urease,+
+140513,RP-2,"JCM 30952, KACC 18623",1,"Niabella aquatica",urease,-
+133520,,"LMG 24661, HAMBI 3031, CCBAU 05354",1,"Niabella yanshanensis",urease,+
+133253,,"THG-YS3.2.1, KCTC 52084, CCTCC AB 2015356",1,"Niastella hibisci",urease,-
+140864,DJ57,"KCTC 42474, CCTCC AB 2015052",1,"Niastella vici",urease,-
+141099,MME-018,"KCCM 43135, JCM 30752",1,"Nioella aestuarii",urease,-
+140471,JS7-11,"MCCC 1A00710, KCTC 42144",1,"Nioella sediminis",urease,-
+140601,2-2-12-1,"CGMCC 1.15320, LMG 29090",1,"Nitratireductor aestuarii",urease,+
+133633,C115,"RC92-7, CCTCC AB 209298, LMG 25540, MCCC 1A01260",1,"Nitratireductor indicus",urease,+
+133275,,"GSS14, KCTC 52186, MCCC 1K02481",1,"Nitratireductor lacus",urease,+
+141102,,"ATCC TSD-97, NCIMB 15022, SCM 1",1,"Nitrosopumilus maritimus",urease,-
+140139,,"DSM 106739, JCM 18716, KACC 17062, MIC 2059",1,"Niveibacterium umoris",urease,-
+10715,W9988,"DSM 45539, CCUG 59655",1,"Nocardia amikacinitolerans",urease,+
+10786,,"DSM 44729, IFM 0575, JCM 12118, NBRC 100135",1,"Nocardia araoensis",urease,+
+132481,1H-HV4,"DSM 100526, CGMCC 4.7278",1,"Nocardia camponoti",urease,+
+140953,"YIM A1135","KCTC 39595, CCTCC AA 2017030, DSM 100514",1,"Nocardia cavernae",urease,-
+10799,,"DSM 44804, CIP 108975, IFM 0354, JCM 12351, NBRC 100430, CCUG 52242",1,"Nocardia concava",urease,+
+10806,,"DSM 44883, IFM 0803, JCM 12667, NBRC 100660",1,"Nocardia exalbida",urease,+
+10830,A2012,"DSM 45516, KCTC 19986, NRRL B-24833",1,"Nocardia goodfellowii",urease,+
+23157,GW5-5797,"DSM 45869, CCUG 60970, CIP 110294, JCM 19117",1,"Nocardia grenadensis",urease,+
+140373,"CFH S0067","DSM 46764, JCM 30085",1,"Nocardia heshunensis",urease,+
+10778,,"DSM 44732, CIP 108597, IFM 10084, JCM 12121, NBRC 100133",1,"Nocardia higoensis",urease,+
+10782,,"DSM 44667, JCM 11891, NBRC 100128, IFM 0092",1,"Nocardia inohanensis",urease,+
+10824,"BM123, UI122540","DSM 45197, JCM 18299, NRRL 5646, NRRL B-24671",1,"Nocardia iowensis",urease,+
+10808,"N 3-2","DSM 44959, JCM 13281, NRRL B-24430",1,"Nocardia jejuensis",urease,+
+10785,,"DSM 44670, JCM 11894, NBRC 100131, IFM 0330",1,"Nocardia niigatensis",urease,+
+10810,"OFN 02.72","DSM 44978, CIP 108955",1,"Nocardia ninae",urease,+
+10827,W9241,"DSM 45340, CCUG 57756, JCM 19118",1,"Nocardia niwae",urease,+
+133695,7031,"AS4.1808, JCM 11884",1,"Nocardia pigrifrangens",urease,+
+158323,"KLBMP S0039","DSM 101726, CGMCC 4.7329, KCTC 39693",1,"Nocardia rhizosphaerihabitans",urease,+
+10777,,"DSM 44733, CIP 108598, IFM 10311, JCM 12122, NBRC 100134",1,"Nocardia shimofusensis",urease,+
+10780,MS1-3,"DSM 44801, CIP 108681, NBRC 100417",1,"Nocardia takedensis",urease,+
+10773,"GW 39-1573","DSM 44704, CIP 107929, CCUG 49019",1,"Nocardia tenerifensis",urease,+
+10814,,"DSM 44935, DSM 44897, IFM 0706, JCM 13033, NBRC 100888",1,"Nocardia terpenica",urease,+
+10831,A2019,"DSM 45517, KCTC 19985, NRRL B-24834",1,"Nocardia thraciensis",urease,+
+10797,276,"DSM 44895, CGMCC 4.1860, IFM 10549, JCM 12160",1,"Nocardia xishanensis",urease,+
+10784,,"DSM 44669, JCM 11893, NBRC 100130, IFM 0265",1,"Nocardia yamanashiensis",urease,+
+140784,djl-8,"KCTC 39844, CCTCC AB 2017058",1,"Nocardioides agrisoli",urease,-
+141143,THG-S11.7,"KCTC 39607, CCTCC AB 2015297",1,"Nocardioides albidus",urease,-
+159868,,"KCTC 49020, CGMCC 4.7457, CFH 30205",1,"Nocardioides allogilvus",urease,-
+132635,B2-12,"DSM 100725, KCTC 39748, NRRL B-65313",1,"Nocardioides baekrokdamisoli",urease,-
+133079,"YIM A1136","DSM 29950, KCTC 39551",1,"Nocardioides cavernae",urease,-
+133240,,"Y4, CGMCC 1.12791, MCCC 1A09944, LMG 28100, JCM 19770",1,"Nocardioides flavus",urease,-
+132516,SYP-A7303,"DSM 100492, KCTC 39594",1,"Nocardioides ginkgobilobae",urease,+
+11119,,"DSM 17921, CCUG 52478, KCTC 19135, Gsoil 1124",1,"Nocardioides ginsengisoli",urease,+
+158314,78,"DSM 106424, CGMCC 4.7461",1,"Nocardioides houyundeii",urease,-
+11146,,"DSM 23133, KCTC 19265, LMG 24128, DCY 24",1,"Nocardioides humi",urease,+
+133130,,"YIM DR1091, JCM 30632, CGMCC 4.7251",1,"Nocardioides intraradicalis",urease,-
+140785,,"KCTC 39886, DSM 104480, BGMRC 2075",1,"Nocardioides kandeliae",urease,+
+11157,D94-1,"DSM 24663, CGMCC 4.6858",1,"Nocardioides lianchengensis",urease,+
+140309,002-2,"DSM 103718, KCTC 39838",0,"Nocardioides litoris",urease,-
+140786,x-2,"KCTC 39845, CCTCC AB 2016255",1,"Nocardioides litorisoli",urease,-
+133952,CL-GY44,"KCCM 90109, JCM 18459",1,"Nocardioides marinquilinus",urease,+
+158822,THG-T63,"KACC 19192, CGMCC 4.7388",1,"Nocardioides pelophilus",urease,+
+133104,WYH11-7,"DSM 104026, CGMCC 4.7371",1,"Nocardioides phosphati",urease,-
+140849,GY0594,"MCCC 1A10561, KCTC 39638",1,"Nocardioides rotundus",urease,-
+140344,,"DSM 100390, KCTC 39565, NBRC 110251, BGMRC 0092",1,"Nocardioides sonneratiae",urease,+
+132482,JM-601,"DSM 101604, CCM 8654, CIP 110980",1,"Nocardioides zeicaulis",urease,-
+133234,,"TRM 46250, CCTCC AA 2015027, KCTC 39725",1,"Nocardiopsis akesuensis",urease,-
+11234,,"DSM 45031, CGMCC 4.3500, HBUM 20038",1,"Nocardiopsis ganjiahuensis",urease,+
+11237,"IMMIB L-21","DSM 45234, CCUG 56587",1,"Nocardiopsis potens",urease,+
+158292,"SYSU K10005","DSM 103465, CGMCC 4.7368, KCTC 39805",1,"Nonomuraea cavernae",urease,-
+133109,,"MCCC 1K03213, KCTC 39826, XMU 110",1,"Nonomuraea ceibae",urease,-
+16573,A4036,"DSM 45507, KCTC 19870",1,"Nonomuraea jabiensis",urease,+
+132533,NEAU-ND5,"DSM 100528, CGMCC 4.7280",1,"Nonomuraea zeae",urease,+
+140696,XMTR2A4,"MCCC 1A01882, KCTC 52427",1,"Notoacmeibacter marinus",urease,+/-
+11370,SUEMI08,"DSM 24251, CECT 7839, LMG 26150",1,"Noviherbaspirillum aurantiacum",urease,+
+140483,,"JCM 17723, DSM 25787, TSA 66",1,"Noviherbaspirillum autotrophicum",urease,-
+11371,SUEMI03,"DSM 24250, CECT 7838, LMG 26151",1,"Noviherbaspirillum canariense",urease,+
+140482,,"JCM 17722, ATCC TSD-69, TSA 40",1,"Noviherbaspirillum denitrificans",urease,-
+24271,PB1,"DSM 26001, LMG 27282",1,"Noviherbaspirillum psychrotolerans",urease,+
+11372,SUEMI10,"DSM 24276, CECT 7840, LMG 26149",1,"Noviherbaspirillum soli",urease,+
+159855,Jyi-02,"BCRC 80537, KCTC 32422",1,"Novosphingobium arvoryzae",urease,-
+23265,LL02,"DSM 25411, CCM 7980",1,"Novosphingobium barchaimii",urease,+
+133280,,"STM-24, BCRC 80925, LMG 29291, KCTC 42984",1,"Novosphingobium bradum",urease,-
+141008,164,"CICC 11035s, DSM 103351",1,"Novosphingobium clariflavum",urease,-
+140931,Teta.03,"LMG 27385, KCTC 32255",1,"Novosphingobium colocasiae",urease,-
+140632,UCM-28,"KACC 18571, NBRC 111647",1,"Novosphingobium flavum",urease,-
+140737,Tese-5,"BCRC 80904, LMG 28838, KCTC 42656",1,"Novosphingobium ipomoeae",urease,-
+23267,,"DSM 25409, CCM 7976, LE 124",0,"Novosphingobium lindaniclasticum",urease,+
+158720,KSS165-70,"CIP 111490, CCM 8814, DSM 106122",1,"Novosphingobium lubricantis",urease,-
+140899,SLH-16,"BCRC 80888, LMG 28418, KCTC 42194",1,"Novosphingobium piscinae",urease,-
+132351,277,"DSM 25168, LMG 26948",1,"Occallatibacter riparius",urease,-
+132353,A2-1c,"DSM 25170, LMG 26946",1,"Occallatibacter savannae",urease,-
+14022,LMC2up-L3,"DSM 22161, CCTCC AB 209059, LMG 24859, MCCC 1A02656",1,"Oceanibaculum pacificum",urease,+
+24525,CLW,"DSM 24423, CGMCC 1.10808, LMG 26245, MCCC 1A06272",0,"Oceanicella actignis",urease,+
+132996,S9-10,"DSM 28133, CGMCC 1.12628, LMG 28074",1,"Oceanihabitans sediminis",urease,-
+133770,V1-41,"CCUG 58690, KCTC 23013, NBRC 106171",1,"Oceanisphaera arctica",urease,+
+132549,,"DSM 101867, CIP 110951, NCIMB 703044, AVG 2115",1,"Oceanivirga salmonicida",urease,-
+1377,S-11,"DSM 21910, CCUG 53534, CIP 109363, KCTC 13061",1,"Oceanobacillus caeni",urease,-
+23737,A21,"DSM 28042, JCM 17251, NCIMB 14685",1,"Oceanobacillus indicireducens",urease,+
+1378,SSK2-2,"DSM 23158, KCTC 13177, PCU 300, TISTR 1858",1,"Oceanobacillus kapialis",urease,-
+1380,A1g,"DSM 24772, CGMCC 1.7693, JCM 15776",1,"Oceanobacillus neutriphilus",urease,-
+1374,20AG,"DSM 16557, ATCC BAA 954, CIP 109235",1,"Oceanobacillus oncorhynchi subsp. incaldanensis",urease,-
+133964,SA9,"JCM 17252, NCIMB 14684, DSM 107338, BCRC 80661",1,"Oceanobacillus polygoni",urease,+
+1376,CL-MP28,"DSM 18246, CIP 109535, KCCM 42318, KCTC 13625",1,"Oceanobacillus profundus",urease,-
+1878,"CIP 82.115, CIP 149-70","DSM 6882, Alc 37, ATCC 49188, CIP 149-70, CIP 82.115, LMG 3331",1,"Brucella anthropi",urease,+
+1890,,"DSM 19778, CECT 7172, CIP 109590, LMG 22713, CCUG 54646, ESC 1",1,"Brucella cytisi",urease,-
+1882,OgA9a,"DSM 13338, NBRC 102586, CCUG 46362, CIP 107373, LMG 18954",1,"Brucella grignonensis",urease,-
+1891,,"CCUG 55422, DSM 17490, CIP 109116, KCTC 22760, ADV 31",1,"Brucella pseudintermedia",urease,-
+133086,"SM 30","DSM 102969, NBRC 111955",1,"Oharaeibacter diazotrophicus",urease,-
+140604,,"JCM 30904, KCCM 43131, MEBiC 09124",1,"Oleiagrimonas citrea",urease,+
+140605,3.5X,"NBRC 110685, KCTC 42351, CPCC 100614, DSM 107085",1,"Oleiagrimonas soli",urease,+
+11298,2O1,"DSM 24913, BTCC B-675, NBRC 105760",1,"Oleibacter marinus",urease,+
+159703,NVT,"ATCC BAA 2697, DSM 29249",1,"Oleiharenicola alkalitolerans",urease,+
+356,,"DSM 18253, ATCC 43534, CCM 4583, CCUG 1465Aa, CDC C379, CIP 103114, LMG 6519, NCTC 11997, CCUG 1465 A",1,"Oligella ureolytica",urease,+
+355,MC213,"DSM 7531, ATCC 17960, CCUG 13463, LMG 5303, CDC 7603",1,"Oligella urethralis",urease,-
+134299,,"KCTC 12646, LMG 23491, Gsoil 060",1,"Olivibacter ginsengisoli",urease,+
+159786,BS18,"KACC 16612, JCM 18200",1,"Olivibacter ginsenosidimutans",urease,+
+133862,14-2A,"KCTC 23098, CCTCC AB 2010105",1,"Olivibacter jilunii",urease,+
+134298,,"KCTC 12645, LMG 23492, Gsoil 034",1,"Olivibacter soli",urease,+
+134297,,"KCTC 12644, LMG 23494, Jip 13",1,"Olivibacter terrae",urease,+
+17917,,"DSM 22228, CCUG 57622, CN 3",1,"Orbus hercynius",urease,+
+1381,,"DSM 15681, CCM 7096, WSBC 24001",1,"Ornithinibacillus bavariensis",urease,-
+1382,MB-9,"DSM 16628, CCM 7237",1,"Ornithinibacillus californiensis",urease,-
+140787,Aerobe-19,"KACC 18485, KCTC 39705, NBRC 111450",1,"Oryzihumus soli",urease,-
+140788,EPL6,"LMG 28427, CECT 8927, CCUG 62476",1,"Oryzisolibacter propanilivorax",urease,-
+133342,,"TPP412, BCRC 80905, JCM 30814",1,"Oryzomicrobium terrae",urease,-
+157756,SK3863,"DSM 105395, KCCM 43236",1,"Ottowia konkukae",urease,-
+159829,KADR8-3,"KACC 19325, NBRC 113109",1,"Ottowia oryzae",urease,+
+140618,L14,"CGMCC 1.15420, JCM 31170",1,"Paenibacillus aceti",urease,-
+158574,Q4-3,"CGMCC 1.16134, KCTC 33911",1,"Paenibacillus albidus",urease,-
+134087,20CM,"LMG 22078, CECT 5836",1,"Paenibacillus antarcticus",urease,+
+158293,,"DSM 108811, JCM 30981, KCTC 33985, MME2_R6, PAMC 28731",1,"Paenibacillus arcticus",urease,-
+140714,RC11,"KCTC 33816, LMG 29659, TISTR 2452",1,"Paenibacillus aurantiacus",urease,-
+141156,NF2-4-5,"KACC 18967, LMG 29963, DSM 104138",1,"Paenibacillus azotifigens",urease,-
+140850,Back-11,"KCTC 33723, CECT 8890",1,"Paenibacillus baekrokdamisoli",urease,-
+23182,D75,"DSM 24714, CGMCC 1.10784",1,"Paenibacillus catalpae",urease,+
+140900,BK114-2,"KCTC 33251, TISTR 2282",1,"Paenibacillus cathormii",urease,-
+132384,C4-5,"DSM 100100, KCTC 33652",1,"Paenibacillus cavernae",urease,-
+132589,LC2-13A,"DSM 101873, NRRL B-65368, UICC B-42",1,"Paenibacillus cisolokensis",urease,+
+132572,AP-115,"DSM 101601, CCM 8653, LMG 29222, CCM 8655",1,"Paenibacillus cucumis",urease,+/-
+158407,"KUDC 6143","DSM 106581, KCTC 33853",1,"Paenibacillus elymi",urease,-
+159854,"CFH S0170","KCTC 33624, BCRC 80802",1,"Paenibacillus esterisolvens",urease,-
+133092,I12B-01101,"DSM 26048, KCTC 33054, CPCC 100226",1,"Paenibacillus eucommiae",urease,-
+11588,GMP01,"DSM 17253, CECT 5760, LMG 20987",1,"Paenibacillus favisporus",urease,+
+11625,ZL,"DSM 21315, BCRC 17579, LMG 23577",1,"Paenibacillus fonticola",urease,+
+133207,,"AMTAE16, LMG 29501, CECT 9124",1,"Paenibacillus hispanicus",urease,-
+132390,R55,"DSM 29850, CGMCC 1.15043",1,"Paenibacillus marchantiophytorum",urease,-
+158786,S8,"KCTC 33848, JCM 31672",1,"Paenibacillus mobilis",urease,-
+159846,RA17,"KCTC 33894, CCTCC AB 2017053",1,"Paenibacillus montanisoli",urease,-
+134375,MXC2-2,"KCTC 13036, PCU 281, TISTR 1836",1,"Paenibacillus montaniterrae",urease,+
+11636,MX2-3,"DSM 22867, KCTC 13044, PCU 276, TISTR 1828",1,"Paenibacillus nanensis",urease,+
+140932,P5-1,"CGMCC 1.15178, NBRC 111536",1,"Paenibacillus nasutitermitis",urease,+
+141157,JJ-59,"DSM 103623, CIP 111179, LMG 29764",1,"Paenibacillus nebraskensis",urease,-
+133265,,"1DrF-4, ACCC 19927, JCM 30486",1,"Paenibacillus oryzae",urease,-
+11615,,"DSM 21345, KCTC 13020, LMG 23405, Gsoil 1411",1,"Paenibacillus panacisoli",urease,-
+140866,PM10,"LMG 28691, CECT 8827",1,"Paenibacillus periandrae",urease,-
+133371,,"TEGT-2, CCTCC AB 2015258, KCTC 33806",1,"Paenibacillus qinlingensis",urease,-
+140933,694,"CGMCC 1.15286, DSM 100762",1,"Paenibacillus radicis",urease,-
+11651,"MC-246, rec-246","DSM 22072, CCUG 57263",1,"Paenibacillus residui",urease,+
+133089,JJ-64,"DSM 103963, CCM 8725, LMG 29875",1,"Paenibacillus rhizoplanae",urease,-
+132619,DB13260,"DSM 28014, CGMCC 1.12769",1,"Paenibacillus segetis",urease,-
+134374,X13-1,"KCTC 13039, PCU 280",1,"Paenibacillus septentrionalis",urease,+
+158769,YYJ7-1,"ACCC 19965, KCTC 33849",1,"Paenibacillus shunpengii",urease,-
+134373,S5-3,"KCTC 13038, PCU 279, TISTR 1831",1,"Paenibacillus siamensis",urease,+
+133264,,"TEGR-3, CCTCC AB 2016047, KCTC 33807",1,"Paenibacillus sinopodophylli",urease,-
+133010,FJAT-22460,"DSM 100999, CCTCC AB 2015207",1,"Paenibacillus solani",urease,+
+132363,D33,"DSM 100035, CCTCC AB 2015273, KACC 18491",1,"Paenibacillus terreus",urease,-
+140529,RTAE36,"CECT 9125, LMG 29502",1,"Paenibacillus tritici",urease,-
+24286,,"DSM 27954, CCUG 53270, JCM 18268",1,"Paenibacillus vulneris",urease,+
+158762,,"IBRCM 10987, LMG 29451, AS 7",1,"Paenibacillus xanthanilyticus",urease,-
+830,,"DSM 520, ATCC 27380, CCUG 10978, NRRL NRS-1629",1,"Paenibacillus xerothermodurans",urease,-
+11655,X11-1,"DSM 25299, KCTC 13042, PCU 311, TISTR 1829",1,"Paenibacillus xylanisolvens",urease,+
+158816,J-3,"KCTC 33926, CGMCC 1.16455",1,"Paenibacillus yanchengensis",urease,-
+7610,Lz1y,"DSM 15796, JCM 12166",1,"Paeniglutamicibacter gangotriensis",urease,+
+7609,KGN15,"DSM 15797, CIP 108629, JCM 12165",1,"Paeniglutamicibacter kerguelensis",urease,+
+7597,AG31,"DSM 15454, CIP 108593, LMG 21914",1,"Paeniglutamicibacter psychrophenolicus",urease,+
+24335,PN2,"DSM 28130, JCM 15114, LMG 23933",1,"Paenisporosarcina indica",urease,+
+12496,,"DSM 17365, JCM 13257, CCUG 53888, WB 4",1,"Paludibacter propionicigenes",urease,-
+140824,KJ031,"KCTC 42852, CECT 8976",1,"Paludibacterium purpuratum",urease,-
+132417,PX4,"DSM 28747, VKM B-2904",1,"Paludisphaera borealis",urease,-
+132637,"GS 1550","DSM 18138, JCM 31452, KCTC 12658, Gsoil 1550",1,"Panacibacter ginsenosidivorans",urease,-
+2059,,"DSM 16535, CCM 4976, CCUG 38412, CIP 106627, LMG 16407",1,"Pandoraea apista",urease,+
+2062,KOx,"DSM 23572, CCM 2766, NBRC 106092",1,"Pandoraea faecigallinarum",urease,-
+2056,"R2, UBM 101","DSM 11628, CCUG 39188, LMG 18379, CIP 39188",1,"Pandoraea norimbergensis",urease,-
+2063,TA25,"DSM 23570, CCM 7677, NBRC 106091, NEU 105",1,"Pandoraea oxalativorans",urease,+
+2060,,"DSM 16536, CCM 4978, CCUG 38742, CIP 106626, LMG 18087",1,"Pandoraea pnomenusa",urease,+
+2058,"FC 330","DSM 16583, CCM 4979, CCUG 38759, CIP 106625, LMG 18106",1,"Pandoraea pulmonicola",urease,-
+140630,SE-S21,"JCM 30137, KACC 18127",1,"Pandoraea terrae",urease,+
+2061,ATSB16,"DSM 25325, KACC 12757, LMG 24779",1,"Pandoraea thiooxydans",urease,+
+2066,"561, NS15","DSM 23571, CCM 7667, NBRC 106088",1,"Pandoraea vervacti",urease,+
+159698,Q4.6,"CGMCC 1.15703, KCTC 52466",1,"Pannonibacter carbonis",urease,+
+13692,C6/19,"DSM 14782, NCAIM B02025, CCUG 54624",1,"Pannonibacter phragmitetus",urease,+
+13690,C6/8,"DSM 14780, NCAIM B02027",0,"Pannonibacter phragmitetus",urease,+
+13691,C6/17,"DSM 14781, NCAIM B02026",0,"Pannonibacter phragmitetus",urease,+
+133586,SA33,"NBRC 101816, VTCC-D6-6",1,"Paraburkholderia acidipaludis",urease,+
+158708,BN5,"KACC 19419, JCM 32303",1,"Paraburkholderia aromaticivorans",urease,-
+158593,NF2-5-3,"KACC 18968, LMG 29961",1,"Paraburkholderia azotifigens",urease,+
+133179,,"CF1, LMG 28690, CGMCC 1.15103",1,"Paraburkholderia caffeinilytica",urease,-
+158824,HM451,"GDMCC 1.1190, LMG 30092",1,"Paraburkholderia caseinilytica",urease,+
+130228,,"DSM 29787, BCRC 80259, JPY 461, KCTC 23308, LMG 26031, NKMU-JPY461",1,"Paraburkholderia diazotrophica",urease,+
+159875,,"LMG 27177, HAMBI 3356, WSM 4178",1,"Paraburkholderia fynbosensis",urease,-
+133562,SA41,"NBRC 101817",1,"Paraburkholderia heleia",urease,+
+1978,,"DSM 21604, BCRC 17575, LMG 23741, CCUG 54299, BR Br3437",1,"Paraburkholderia nodosa",urease,+
+1991,OX-01,"DSM 22550, LMG 26376, NBRC 105797",1,"Paraburkholderia oxyphila",urease,+
+133350,,"DSM 101189, LMG 29163, STM 7183",1,"Paraburkholderia piptadeniae",urease,-
+1981,RP007,"DSM 23088, CCUG 53604, ICMP 13529, LMG 24000",1,"Paraburkholderia sartisoli",urease,+
+1973,SRMrh-20,"DSM 21840, ATCC BAA 1244, CCUG 54297, LMG 23149",1,"Paraburkholderia silvatlantica",urease,+
+1968,KMY02,"DSM 17804, KCTC 12388, NBRC 100964, CCUG 54786",1,"Paraburkholderia terrae",urease,+
+1944,PPe8,"DSM 15359, ATCC BAA 831, BR 11366, LMG 21772, LMG 22274, CCUG 54298, LMG 21393",1,"Paraburkholderia tropica",urease,+
+1961,,"DSM 17197, ATCC BAA 744, CIP 107921, MTI-641",1,"Paraburkholderia unamae",urease,+
+140306,IMT-305,"DSM 100048, CCM 8599, CIP 110902, LMG 28740",1,"Paracandidimonas soli",urease,-
+140901,JC272,"KCTC 15476, LMG 28745",1,"Paraclostridium benzoelyticum",urease,-
+140628,SCU-M53,"KCTC 42932, CGMCC 1.15419",1,"Paracoccus acridae",urease,-
+141078,0511ARD5E5,"LMG 27962, CECT 8482",1,"Paracoccus cavernae",urease,+
+133454,KS-11,"CGMCC 1.7655, NBRC 104937",1,"Paracoccus chinensis",urease,+
+134285,HN-182,"CGMCC 1.6117, JCM 14014",1,"Paracoccus halophilus",urease,+
+140480,THG-T2.8,"KACC 18932, CCTCC AB 2016181",1,"Paracoccus hibisci",urease,+
+140949,THG-T2.31,"KACC 18933, CCTCC AB 2016182",1,"Paracoccus hibiscisoli",urease,+
+159773,WN007,"KCTC 52851, ACCC 19972",1,"Paracoccus salipaludis",urease,-
+13728,,"DSM 18447, CCTCC AB 206074, KCTC 22163, YIM 90738",1,"Paracoccus saliphilus",urease,+
+158753,LP91,"KCTC 42938, CCM 8696, MCC 3128, DSM 101680",1,"Paracoccus sordidisoli",urease,+
+133615,Zy-3,"ACCC 05413, HAMBI 3106",1,"Paracoccus sphaerophysae",urease,+
+1440,S1812,"DSM 12041, ATCC 700356, NBRC 107762",1,"Parageobacillus caldoxylosilyticus",urease,-
+1438,"M1, R-35644","DSM 9572, LMG 23032",1,"Parageobacillus thermantarcticus",urease,-
+1430,"KP 1006, R-35637","DSM 2542, ATCC 43742, NCIB 11955, CCUG 28887, NRRL B-14233, CIP 106930, NRRL B-14516",1,"Parageobacillus thermoglucosidasius",urease,-
+141039,Bps-1,"JCM 31808, NCIMB 15080",1,"Paralkalibacillus indicireducens",urease,+
+140559,N5SSJ16,"KCTC 54216",1,"Parapedobacter deserti",urease,-
+140981,DCSW07,"KCTC 52369, MCCC 1K03197, JCM 31458, CGMCC 1.15762, DSM 108666",1,"Paraphaeobacter pallidus",urease,+
+139573,,"CIP 111031, KCTC 52126, MCCC 1A01886",1,"Paraphotobacterium marinum",urease,-
+140603,,"DSM 103442, LMG 29675, NAQVI 59",1,"Pararhizobium antarcticum",urease,+
+141041,ATAX6-5,"KACC 18993, JCM 31719",1,"Parasphingopyxis algicola",urease,-
+158397,2CBE6H3,"DSM 105194, JCM 31932",1,"Parolsenella catena",urease,-
+158709,,"BCRC 81053, LMG 30055, KCTC 52814, KMB 9",1,"Parvibium lacunae",urease,-
+132374,D16/0/H6,"DSM 25205, LMG 26950",1,"Parviterribacter kavangonensis",urease,-
+132375,A22/0/F9_1,"DSM 25204, LMG 26949",1,"Parviterribacter multiflagellatus",urease,-
+17631,P4-5,"DSM 25990, CECT 7603, KCTC 19427",1,"Patulibacter ginsengiterrae",urease,+
+158635,YHM-9,"JCM 32093, CCTCC AB 2017125",1,"Pedobacter agrisoli",urease,-
+159768,CM134L-2,"CGMCC 1.16520, KCTC 62643",1,"Pedobacter chitinilyticus",urease,-
+141079,"THG S15-2","KCTC 42735, CCTCC AB 2015293",1,"Pedobacter humi",urease,-
+133113,,"LMG 29684, CCM 8689",1,"Pedobacter jamesrossensis",urease,-
+133123,NL19,"LMG 29220, CECT 9028",1,"Pedobacter lusitanus",urease,-
+158646,1-32,"KCTC 52859, CCTCC AB 2017084",1,"Pedobacter mongoliensis",urease,-
+140674,P4487A,"CCM 8644, LMG 29436",1,"Pedobacter psychrophilus",urease,-
+133008,V5RD,"DSM 103236, CGMCC 1.15644",1,"Pedobacter psychrotolerans",urease,-
+158603,C62-2,"CGMCC 1.15343, NBRC 111767",1,"Pedobacter quisquiliarum",urease,-
+23258,W1,"DSM 24536, CIP 110258, LMG 26240",1,"Daejeonella rubra",urease,+
+158756,EN12,"KCTC 42612, LMG 28820",1,"Pedobacter solisilvae",urease,-
+133249,,"XNV015, KCTC 42866, CCTCC AB 2015319",1,"Pedobacter vanadiisoli",urease,-
+159787,YL28-9,"CGMCC 1.16050, KCTC 62104",1,"Pedobacter yulinensis",urease,+
+140255,22,"DSM 100774, CGMCC 1.15287",1,"Pedobacter zeae",urease,-
+6304,BXN5-13,"DSM 21006, KCTC 19419, LMG 24462",1,"Pedococcus ginsenosidimutans",urease,+
+140722,B2,"MCCC 1K03218, CGMCC 1.15896, KCTC 52551",1,"Pelagibacterium lentulum",urease,+
+134246,02PA-Ca-133,"MBIC 08004, IAM 15422, KCTC 13126",1,"Pelagicoccus mobilis",urease,+
+158524,S5,"KCTC 33632, CGMCC 1.15177",1,"Pelagirhabdus alkalitolerans",urease,+
+159840,BH-SD19,"CCTCC AB 2017074, KCTC 62202",1,"Pelagivirga sediminicola",urease,-
+133028,M108,"DSM 100347, VKM B-2932",1,"Peptococcus simiae",urease,-
+132525,M6.X2D,"DSM 29874, CCUG 66798",1,"Peptoniphilus catoniae",urease,-
+140543,BK296,"KCTC 52162, JCM 31377",1,"Perlucidibaca aquatica",urease,-
+158275,27-4,"DSM 103509, LMG 29708",1,"Phaeobacter piscinae",urease,-
+140629,W2-3-4,"LMG 28593, KACC 18306",1,"Phenylobacterium aquaticum",urease,+
+158580,HKS-05,"KACC 18628, LMG 30081",1,"Phenylobacterium hankyongense",urease,-
+2339,E,"DSM 1986, ATCC 35973, NCIB 12055",1,"Phenylobacterium immobile",urease,-
+158680,H01100410B,"CECT 9189, LMG 29991",1,"Photobacterium toruni",urease,+
+158410,LJ24-63,"DSM 105690, CCOS 1159",1,"Photorhabdus bodei",urease,-
+5048,3107,"DSM 19724, NCAIM B 02271",1,"Photorhabdus cinerea",urease,+
+133380,PB45.5,"LMG 29915, CCM 8729, DSM 104082",1,"Photorhabdus namnaonensis",urease,-
+23010,AM7,"DSM 25462, ATCC BAA 2407, LMG 29523",1,"Photorhabdus noenieputensis",urease,+
+132430,JP6SC6,"DSM 100020, CGMCC 4.7300",1,"Phycicoccus endophyticus",urease,-
+133241,,"DCY 87, KCTC 39635, JCM 31016",1,"Phycicoccus ginsengisoli",urease,-
+134109,,"CECT 5680, LMG 22520, CSC 19",1,"Phyllobacterium catacumbae",urease,+
+11874,,"DSM 5892, ATCC 43590, IAM 13584, JCM 20932, LMG 2t2, NCIMB 12127",1,"Phyllobacterium myrsinacearum",urease,+
+158802,Tri-48,"LMG 30371, RCAM 03910",1,"Phyllobacterium zundukense",urease,+
+158583,,"CNCTC 5729, ATCC 27989",1,"Phytobacter ursingii",urease,-
+141030,SAP-32,"KCTC 52619, DSM 104039",1,"Pigmentiphaga aceris",urease,-
+361,,"DSM 19789, CCTCC AA 207034, KCTC 22165, JSM 061001",1,"Pigmentiphaga litoralis",urease,-
+158823,E9,"KEMB 9005-534, KACC 19120, NBRC 112686",1,"Pinisolibacter ravus",urease,+
+159877,MQ-18,"CCTCC AB 2017223, JCM 32138",1,"Piscinibacter caeni",urease,-
+133221,,"SH-1, KACC 18594, JCM 31230",1,"Piscinibacter defluvii",urease,+
+133289,,"LYH-15, BCRC 80969, LMG 29480, KCTC 52168",1,"Piscinibacterium candidicorallinum",urease,-
+133415,,"LMG 28835, KCTC 42657, BCRC 80901",1,"Planctobacterium marinum",urease,-
+140733,,"KACC 18009, NBRC 110393, IMCC 9565",1,"Planktotalea arctica",urease,-
+11959,"CMS 26or","DSM 14505, MTCC 3854",1,"Planococcus antarcticus",urease,-
+140686,CW1,"CCTCC AB 207187, LMG 24442",1,"Planococcus ruber",urease,+/-
+23098,R5-392,"DSM 25022, KACC 16233",1,"Pleomorphomonas diazotrophica",urease,+
+7227,Y9,"DSM 23070, KCTC 12246, NBRC 100803",1,"Pleomorphomonas koreensis",urease,+
+7226,F-7,"DSM 16300, IAM 15079",1,"Pleomorphomonas oryzae",urease,+
+133370,,"HMF2268, KCTC 42191, CECT 8862",1,"Polaribacter lacunae",urease,-
+158681,WS2-14,"KCTC 52275, MCCC 1H00163",1,"Polaribacter tangerinus",urease,-
+133317,LPB0003,"KACC 18704, JCM 31217",1,"Polaribacter vadi",urease,-
+2985,Cr4-35,"DSM 24278, KACC 15090, LMG 26050",1,"Polaromonas cryoconiti",urease,-
+140826,B717-2,"CGMCC 1.15322, JCM 31171",1,"Polaromonas eurypsychrophila",urease,-
+158788,,"LMG 23393, KCTC 12577, Gsoil 115",1,"Polaromonas ginsengisoli",urease,-
+2986,Cr4-12,"DSM 24062, KACC 15089, LMG 26049",1,"Polaromonas glacialis",urease,-
+2984,JS12-13,"DSM 19351, KACC 12508",1,"Polaromonas jejuensis",urease,-
+2982,CJ2,"DSM 15660, ATCC BAA 779, CCUG 51246",1,"Polaromonas naphthalenivorans",urease,-
+13856,GRP21,"DSM 21219, KCTC 22497",1,"Pontibaca methylaminivorans",urease,+
+1386,BH030062,"DSM 16287",1,"Pontibacillus chungwhensis",urease,-
+140146,9-2,"DSM 27987, CGMCC 1.12749, JCM 19653, MCCC 1K00278",1,"Pontibacter amylolyticus",urease,+
+158763,XAAS-2,"CCTCC AB 2016135, JCM 31443",1,"Pontibacter brevis",urease,-
+133910,LP43,"CCM 8406, MCC 2019",1,"Pontibacter ramchanderi",urease,+
+159762,XAAS-R86,"CCTCC AB 2017165, KCTC 62047",1,"Pontibacter silvestris",urease,-
+159757,17SD1-15,"KCTC 52915, NBRC 113057",1,"Pontibacter terrae",urease,+
+140497,2D-4,"KCTC 33576, CFCC 11886",1,"Populibacterium corticicola",urease,-
+133139,"MRK101, UQD 444, UQD444","DSM 28520, NCTC 13658, UQD444, MRK101",1,"Porphyromonas loveana",urease,-
+132928,"LFT 1.7","DSM 100870, CECT 8942",1,"Arcobacter lekithochrous",urease,-
+158435,109,"DSM 105141, VKM B-2992",1,"Prevotella rara",urease,-
+159756,PX7,"KCTC 42952, MCCC 1H00196",1,"Primorskyibacter marinus",urease,+
+132440,1C-HV12,"DSM 100490, CGMCC 4.7283",1,"Promicromonospora alba",urease,+
+141045,NEAU-GS50,"CGMCC 4.7398, DSM 104515",1,"Promicromonospora soli",urease,+
+141046,TEYR-7,"CCTCC AB 2015257, KCTC 33808",1,"Brevilactibacter sinopodophylli",urease,+
+158818,"Y1A-10 4-9-1","CCTCC AB 2016249, KCTC 15566, LMG 29810",1,"Propionicimonas ferrireducens",urease,+
+158351,BA2-13,"DSM 103060, LMG 29818",1,"Proteiniborus indolifex",urease,-
+158717,08MAS0041,"CGMCC 1.15939, DSM 104685",1,"Proteus alimentorum",urease,+
+158686,08MAS2615,"DSM 104686, CGMCC 1.15982",1,"Proteus columbae",urease,+
+5092,A,"DSM 19967, ATCC BAA 1589, JCM 16941",1,"Providencia sneebia",urease,+
+5088,OP1,"DSM 17385, CIP 108829, CCUG 55499",1,"Providencia vermicola",urease,+
+130241,,"DSM 28005, JCM 19624, KACC 17839, KCTC 29256, EGI 60002",1,"Pseudactinotalea suaedae",urease,-
+133083,5GHs33-03,"DSM 27157, KACC 16542, NBRC 111006",1,"Pseudactinotalea terrae",urease,-
+130419,LC4,"DSM 28855, CCTCC AB 206012, IAM 15382, JCM 30147",1,"Pseudarthrobacter niigatensis",urease,+
+159881,PCS8,"KCTC 62038, JCM 32226",1,"Pseudaeromonas paramecii",urease,-
+140827,rzy34,"CGMCC 1.15325, KCTC 42730",1,"Pseudoalteromonas fenneropenaei",urease,-
+448,,"DSM 15748, CIP 105339, KMM 216",1,"Pseudoalteromonas fuliginea",urease,+
+140626,,"KCCM 43187, JCM 31286, PAMC 28425",1,"Pseudoalteromonas neustonica",urease,-
+140699,OCN003,"CCOS 1042, CIP 111189",1,"Pseudoalteromonas piratica",urease,-
+132433,,"DSM 29943, CGMCC 1.15081, KCTC 39112, EGI 60007",1,"Pseudoclavibacter endophyticus",urease,-
+7479,KP02,"DSM 23366, JCM 15058, KCTC 19255",1,"Pseudoclavibacter soli",urease,+
+13832,"MCCC 1A00107, Y-2","DSM 18339, CGMCC 1.7081, LMG 24574",1,"Pseudodonghicola xiamenensis",urease,+
+133214,E3/2,"E3/2, LMG 29678, CCM 8698, DSM 103461",1,"Pseudoduganella danionis",urease,-
+158768,DT7-02,"KCTC 33854, JCM 31192",1,"Pseudogracilibacillus endophyticus",urease,-
+140619,NIOT.bflm.S4,"TBRC 5831, MTCC 12376, KACC 18456",1,"Pseudogracilibacillus marinus",urease,+
+24311,YC6898,"DSM 23348, KACC 14911, NBRC 107700",1,"Pseudohoeflea suaedae",urease,+
+133284,,"SCS-49, CGMCC 1.15425, KCTC 52155, MCCC 1K03186",1,"Pseudohongiella nitratireducens",urease,-
+159712,MT5,"KCTC 62295, MCCC 1K03351",1,"Pseudomonas abyssi",urease,+
+12800,,"DSM 50071, ATCC 10145, ICPB 2523, NCIB 8295, NCTC 10332, NRRL B-771, WDCM 00024",1,"Pseudomonas aeruginosa",urease,+/-
+,,,,,urease,-
+13093,,"DSM 15318, CCUG 49625, CIP 108466, CMS 35",1,"Pseudomonas antarctica",urease,+
+133410,2-92,"LMG 28499, DOAB 798",1,"Pseudomonas canadensis",urease,+
+13153,RLD-1,"DSM 18900, CCUG 55753, CCM 7361, MTCC 7601, CIP 109527",1,"Pseudomonas delhiensis",urease,+
+13170,78-123,"DSM 25351, CGMCC 1.1365, JCM 14085, CCUG 59930",0,"Pseudomonas flexibilis",urease,+
+158598,ASS-1,"KCTC 52437, CCM 8778",1,"Pseudomonas fluvialis",urease,-
+24440,PCAVU11,"DSM 28410, CECT 8262, LMG 27394",1,"Pseudomonas guariconensis",urease,+
+133945,CC-G9A,"BCRC 80438, JCM 18416",1,"Pseudomonas guguanensis",urease,+
+140299,,"DSM 29167, LMG 28435, WS 4992",1,"Pseudomonas lactis",urease,-
+133663,,"MTCC 4993, DSM 15319, CMS 38",1,"Pseudomonas meridiana",urease,+
+132649,"KX 20","DSM 100277, CGMCC 1.15195",1,"Pseudomonas oceani",urease,-
+13164,Esp-1,"DSM 21819, CCM 7469, MTCC 8990",1,"Pseudomonas panipatensis",urease,+
+140300,,"DSM 29164, LMG 28439, WS 4672",1,"Pseudomonas paralactis",urease,-
+140904,KBL-4-9,"JCM 19138, CCTCC AB 2013069, NRRL B-59988",1,"Pseudomonas populi",urease,-
+158812,M5,"CCTCC AB 2017186, KCTC 62119, CICC 24308",1,"Pseudomonas profundi",urease,-
+159884,68,"CICC 24204, KCTC 52977",1,"Pseudomonas tianjinensis",urease,-
+133231,,"IB1.1, VKM B-2935, CECT 9091",1,"Pseudomonas turukhanskensis",urease,-
+24437,,"DSM 27927, ACCC 05688, BY-1, KACC 15471",1,"Pseudomonas zeshuii",urease,+
+13400,,"DSM 45401, BCC 28481, NBRC 104274, NRRL B-24609, GMKU 095, TISTR 1862",1,"Pseudonocardia acaciae",urease,+
+13398,,"DSM 44979, JCM 16009, KCTC 19315, YIM 45505",1,"Pseudonocardia ailaonensis",urease,+
+13393,H9,"DSM 44958, CMGCC 4.1877, JCM 12462",1,"Pseudonocardia ammonioxydans",urease,+
+13399,Y8,"DSM 45349, JCM 14827, KCCM 42678",1,"Pseudonocardia carboxydivorans",urease,+
+158253,NEAU-G57,"DSM 105123, CGMCC 4.7397, JCM 32387",1,"Pseudonocardia lutea",urease,-
+140580,GY0556,"MCCC 1A10574, KCTC 39641",1,"Pseudonocardia profundimaris",urease,-
+158711,NW8-21,"BCC 58125, NBRC 109519",1,"Pseudonocardia soli",urease,-
+140671,CMU-NKS-70,"JCM 31292, TBRC 2000",1,"Pseudonocardia thailandensis",urease,+
+13412,,"DSM 45635, JCM 17906, KCTC 29005, YIM 63638",1,"Pseudonocardia xishanensis",urease,+
+13687,,"DSM 15984, ATCC BAA 863, KCTC 12145, HTCC 2597",1,"Pseudooceanicola batsensis",urease,+
+130612,AZO-C,"DSM 29588, BCRC 17591, KCTC 22753, LMG 23705",1,"Pseudooceanicola marinus",urease,+
+158526,4-T-34,"CCTCC AB 2014005, LMG 28256",1,"Cypionkella collinsensis",urease,-
+133823,NAFc-7,"BCRC 80210, LMG 26333, KCTC 23314",1,"Pseudorhodoferax aquiterrae",urease,+
+140810,MME-001,"KCCM 43133, JCM 30751",1,"Pseudoruegeria aestuarii",urease,-
+130631,WM67,"DSM 29328, JCM 18872, KACC 17214",1,"Pseudoruegeria haliotis",urease,+
+13736,F423,"DSM 16392, IAM 15084, KCTC 12308, NBRC 100514",1,"Pseudovibrio ascidiaceicola",urease,+
+141084,UST20140214-052,"KCTC 42384, MCCC 1K00452",1,"Pseudovibrio stylochi",urease,-
+133278,,"roo10, BCC 70700, NBRC 110414",1,"Pseudoxanthomonas helianthi",urease,-
+134100,T7-09,"KCTC 12208, IAM 15116, CCUG 55488, CIP 108711",1,"Pseudoxanthomonas koreensis",urease,+
+140611,WD12,"KACC 15045, LMG 25968",1,"Pseudoxanthomonas putridarboris",urease,-
+17514,BD-c54,"DSM 19373, KCTC 22080",1,"Pseudoxanthomonas sacheonensis",urease,+
+158270,NEAU-3TGS17,"DSM 100484, CGMCC 1.15308",1,"Psychrobacillus lasiicapitis",urease,+
+8198,,"DSM 15339, MTCC 4386, CMS 56",1,"Psychrobacter aquaticus",urease,+
+133480,KC40,"KMM 3954, NRIC 0746, JCM 15525",1,"Psychrobacter fulvigenes",urease,+
+139044,,"CIP 111025, KCTC 42280, CCTCC AB 2014019",1,"Psychrobacter glaciei",urease,-
+8208,"IMMIB L-1110","DSM 21542, CCUG 56590",1,"Psychrobacter lutiphocae",urease,+
+8187,"Pi 2-20","DSM 15387, CIP 108811, KMM 3646",1,"Psychrobacter maritimus",urease,+
+141029,A1019,"CIP 110853, CECT 9184",1,"Psychrobacter pasteurii",urease,+
+133525,T-3-2,"JCM 15603, NCIMB 14510",1,"Psychrobacter piscatorii",urease,+
+133281,,"S6-60, JCM 31058, LMG 29157",1,"Psychrobacter pocilloporae",urease,+
+130458,13983,"DSM 23635, CCUG 59771",1,"Psychrobacter sanguinis",urease,+
+159836,,"JCM 31143, KACC 19070, MCC 2780, MTCC 12460, IHBB 11108",1,"Psychromicrobium lacuslunae",urease,-
+133081,AK20-18,"DSM 102047, LMG 29369",1,"Psychromicrobium silvestre",urease,-
+159736,T8,"CGMCC 1.15924, KCTC 333888",1,"Pueribacillus theae",urease,-
+364,,"DSM 25164, JCM 14767, KCTC 22046, DCY 25",1,"Pusillimonas ginsengisoli",urease,-
+140646,MI-28,"KCTC 29239, LMG 27848, BCRC 80688",1,"Puzihella rosea",urease,-
+158527,GYP-11,"CGMCC 1.15125, KCTC 42509",1,"Pyruvatibacter mobilis",urease,-
+141111,CGI-09,"DSM 29781, JCM 31785",1,"Quisquiliibacterium transsilvanicum",urease,+
+2085,K-288,"DSM 6297, ATCC 27511, CIP 73.23, JCM 5969, NCTC 11149, CCUG 3318, LMG 5942",1,"Ralstonia pickettii",urease,+
+,,,,,urease,+/-
+141112,CJ661,"KACC 19305, JCM 32081",1,"Ramlibacter alkalitolerans",urease,-
+141048,THG-YS3.2.7,"KCTC 52083, CCTCC AB 2015357",1,"Ramlibacter rhizophilus",urease,+
+158528,,"KACC 17315, CECT 8288, HME 8277",1,"Reinekea marina",urease,-
+133909,KIS14-15,"KACC 13034, NBRC 108950",1,"Reyranella soli",urease,+
+2460,SW-353,"DSM 22684, JCM 14331, KCTC 12840",1,"Rheinheimera aquimaris",urease,+
+140851,DS48-6-5,"KCTC 42645, NBRC 111169",1,"Rhizobacter profundi",urease,-
+141093,FH13,"CCBAU 101094, HAMBI 3626, LMG 28672",1,"Rhizobium acidisoli",urease,+
+133176,,"BR 10423, HAMBI 3664",1,"Rhizobium altiplani",urease,+
+132978,"Po 20/26","DSM 100211, LMG 28788",1,"Rhizobium azooxidifex",urease,-
+13631,"ALA 10B2","DSM 18291",1,"Rhizobium cellulosilyticum",urease,+
+13630,L61,"DSM 17795",1,"Rhizobium daejeonense",urease,+
+141049,,"UMR 1320, Z87-8, LMG 30030, U 10001, CNPSo 668",1,"Rhizobium esperanzae",urease,+
+13633,,"DSM 19331, CCBAU 33202, JCM 14381, LMG 23997",1,"Rhizobium fabae",urease,+
+133217,,"LPU83, CECT 9014, LMG 29160",1,"Rhizobium favelukesii",urease,+
+133182,,"ZFJT-2, CCTCC AB 2013015, KCTC 32301, LMG 27603",1,"Rhizobium gei",urease,+
+13648,YC6881,"DSM 21600, KACC 13775",1,"Rhizobium halophytocola",urease,+
+140867,shin9-1,"LMG 27163, KCTC 32148",1,"Rhizobium ipomoeae",urease,+
+133473,,"5LMG24135, JCM 14777, CCBAU 25010",1,"Rhizobium mesosinicum",urease,+
+13635,,"DSM 21814, CCBAU 83401, HAMBI 2975, LMG 23946",1,"Rhizobium multihospitium",urease,+
+133413,N19,"ACCC 19962, KCTC 52413",1,"Allorhizobium oryziradicis",urease,+
+130599,L6-8,"DSM 100301, BCC 55142, NBRC 109338",1,"Rhizobium paknamense",urease,+
+140905,PC004,"BCC 73740, NBRC 110722",1,"Rhizobium puerariae",urease,+
+132917,PL-41,"DSM 105042, CCTCC AB 2011011, NRRL B-59556",1,"Rhizobium tarimense",urease,+
+13639,,"DSM 25379, CCBAU 85046, LMG 25225, HAMBI 3066",1,"Rhizobium tubonense",urease,+
+13640,,"DSM 25378, CCBAU 05176, LMG 25447, HAMBI 3039",1,"Neorhizobium vignae",urease,+
+159888,W44,"CCTCC AB 2017179, GDMCC 1.1257, KCTC 62194",1,"Rhizobium wuzhouense",urease,+
+140545,CRZM18R,"LMG 29735, CECT 9169",1,"Rhizobium zeae",urease,+
+140469,RS22,"KEMB 9005-480, KACC 19048, NBRC 112473",1,"Rhodanobacter humi",urease,-
+159720,G-5-5,"KEMB 9005-533, KACC 19113, NBRC 112685",1,"Rhodanobacter hydrolyticus",urease,-
+11030,A1-22,"DSM 44587, JCM 11411, GTC 1041",1,"Rhodococcus baikonurensis",urease,+
+141077,,"KACC 18500, NBRC 111581, UC 33",1,"Rhodococcus humicola",urease,-
+11045,DS472,"DSM 45159, CCTCC AB 206088, CIP 109729, IAM 15415, JCM 23211",1,"Rhodococcus kyotonensis",urease,+
+141076,,"KACC 18499, NBRC 111580, UC 12",1,"Rhodococcus pedocola",urease,-
+11046,djl-6,"DSM 45222, CGMCC 1.6580, KCTC 19205",1,"Rhodococcus qingshengii",urease,+
+11047,djl-6-2,"DSM 45257, CCTCC AB 208292, JCM 16906",0,"Rhodococcus qingshengii",urease,+
+133063,H004,"DSM 102881, NCAIM B.02632",1,"Rhodococcus sovatensis",urease,-
+11039,,"DSM 44892, CCUG 50202, IMMIB RIV-085, JCM 13396",1,"Rhodococcus triatomae",urease,+
+133122,JZ3C29,"MCCC 1H00131, KCTC 52046, JCM 31413",1,"Rhodohalobacter halophilus",urease,-
+13748,JA125,"DSM 18064, CIP 109541, JCM 13589",1,"Rhodovulum imhoffii",urease,+
+5636,,"DSM 15991, HTCC 2501, KCTC 12146",1,"Robiginitalea biformata",urease,-
+140302,"996025094, Ac69","DSM 103978, CCUG 69667",1,"Rodentibacter heidelbergensis",urease,+
+140609,,"MCCM 237, P309, RGWyllie C57, HIM1014-1, CCUG 998, ATCC 12555",1,"Rodentibacter heylii",urease,+
+140305,Ppn418,"DSM 103979, CCUG 69669",1,"Rodentibacter mrazii",urease,+
+140610,Ac151,"CCUG 69666, DSM 103994",1,"Rodentibacter myodis",urease,+
+11739,"P 421","DSM 21403, ATCC 35149, CCUG 12398, CIP 66.16, JCM 14074, LMG 4224, NCTC 8141, MCCM 00234",1,"Rodentibacter pneumotropicus",urease,+
+140304,2325/79,"DSM 103980, CCUG 17206, HPA 41",1,"Rodentibacter rarus",urease,+
+140301,F75,"DSM 103977, CCUG 69665",1,"Rodentibacter ratti",urease,+
+140303,H1987082031,"DSM 104075, CCUG 69668",1,"Rodentibacter trehalosifermentans",urease,+
+158358,FRIFI,"DSM 28814, KCTC 15553",1,"Romboutsia hominis",urease,-
+13829,,"DSM 19469, CIP 107377, JCM 11220, OCh 323",1,"Roseibacterium elongatum",urease,+
+158703,AW1220,"LMG 29977, DSM 104292",1,"Roseisolibacter agri",urease,-
+24495,22DY03,"DSM 29329, CGMCC 1.12410, JCM 18866",1,"Allosediminivita pacifica",urease,+
+13761,"YIM D21","DSM 21977, ACCC 10710, KCTC 23444",1,"Roseivivax sediminis",urease,+
+76,5420S-30,"DSM 19363, KACC 12521",1,"Roseomonas aerilata",urease,-
+133919,7515T-07,"KACC 16529, NBRC 108923",1,"Roseomonas aerophila",urease,+
+72,TR53,"DSM 19438, CECT 7131, JCM 13556",1,"Roseomonas aquatica",urease,+
+140906,M6-79,"CCTCC AB 2013101, LMG 28251",1,"Roseomonas arctica",urease,+
+133171,,"MC 3624, CCTCC AB 2014278, LMG 28637",1,"Roseomonas arcticisoli",urease,-
+141000,THG-N2.22,"KACC 18935, CCTCC AB 2016176",1,"Roseomonas hibiscisoli",urease,+
+77,N75,"DSM 25268, CIP 110074, LMG 25481",1,"Roseomonas pecuniae",urease,-
+159866,17Sr1-1,"KCTC 52899, NBRC 112872",1,"Roseomonas radiodurans",urease,+
+134265,DS-48,"KCTC 12874, JCM 14592",1,"Roseomonas terrae",urease,+
+158546,EM302,"KACC 13942, KCTC 42906, NBRC 111477",1,"Roseomonas terricola",urease,+
+73,,"DSM 19362, CCM 7468, KCTC 22045, CPCC 100056",1,"Roseomonas vinacea",urease,-
+141127,R12B,"MCCC 1A09786, KCTC 42506",1,"Roseovarius atlanticus",urease,-
+133347,,"SAG 6, KACC 18598, JCM 31541",1,"Roseovarius confluentis",urease,-
+130623,HJ50,"DSM 29507, KCTC 22224, LMG 24468",1,"Roseovarius halotolerans",urease,+
+158737,D15,"CECT 9424, LMG 30322",1,"Roseovarius ramblicola",urease,-
+132581,140917-MRSA-09,"DSM 102816, CCM 8669, LMG 29446",1,"Rothia aerolata",urease,-
+7664,P31,"DSM 23367, JCM 15915, KCTC 19595",1,"Rothia koreensis",urease,+
+13774,C-lvkR2A-2,"DSM 16684, CCUG 51817, HAMBI 2421, CIP 109278",1,"Rubellimicrobium thermophilum",urease,+
+158400,ResAG-85,"DSM 105129, JCM 32272",1,"Rubneribacter badeniensis",urease,-
+159705,SAORIC-165,"NBRC 110691, KCTC 52460",1,"Rubritalea profundi",urease,-
+140498,SAORIC-476,"NBRC 110607, KACC 18401",1,"Rubrivirga profundi",urease,-
+158426,,"DSM 105148, CGMCC 1.16398, SCSIO 08198",1,"Rubrobacter indicoceani",urease,-
+17624,KIS3-4,"DSM 22992, JCM 15422, KACC 12734",1,"Rudaea cellulosilytica",urease,+
+22986,HOR6-4,"DSM 19560, KACC 12637",1,"Rudaeicoccus suwonensis",urease,+
+135100,,"CIP 108403, CECT 5091, 5OM10, LMG 29896",1,"Ruegeria denitrificans",urease,-
+158547,ZGT118,"JCM 19519, ACCC 19862",1,"Ruegeria marisrubri",urease,-
+158548,ZGT108,"JCM 19518, ACCC 19861",1,"Ruegeria profundi",urease,-
+158531,MDT1-10-3,"CGMCC 1.9789, NBRC 109705",1,"Rufibacter glacialis",urease,-
+133023,CAI-18b,"DSM 29854, NCAIM B.02614",1,"Rufibacter quisquiliarum",urease,-
+133192,,"CCM 8646, LMG 29438",1,"Rufibacter ruber",urease,-
+133402,CC-MHH0563,"BCRC 80918, JCM 31066",1,"Ruficoccus amylovorans",urease,-
+133073,Ca6,"DSM 103039, ATCC TSD-59",1,"Rugosibacter aromaticivorans",urease,-
+2760,H10,"DSM 5812, ATCC 35319, JCM 6584",1,"Ruminiclostridium cellulolyticum",urease,-
+133369,,"HMF3829, KCTC 42850, CECT 8978",1,"Runella palustris",urease,-
+158542,J107-1,"KEMB 9005-549, KACC 19167, JCM 31921",1,"Rurimicrobium arvi",urease,-
+132588,585-1,"DSM 100348, VKM B-2901",1,"Ruthenibacterium lactatiformans",urease,-
+158549,HMF6543,"KCTC 52401, NBRC 112674",1,"Sabulilitoribacter arenilitoris",urease,+
+133353,,"CAG32, NCIMB 15010, DSM 100909",1,"Saccharedens versatilis",urease,-
+133208,,"H6, CCTCC AB 2016001, JCM 31172",1,"Saccharibacillus qingshengii",urease,+
+158719,06168H-1,"BCRC 16893, KCTC 19743",1,"Saccharomonospora piscinae",urease,-
+13467,"05-74, I05-00074","DSM 45119, CCM 7463, KCTC 19303",1,"Saccharopolyspora antimicrobica",urease,+
+158633,"SYSU D8010","KCTC 39989, CPCC 204620",1,"Saccharopolyspora deserti",urease,+
+13470,W12,"DSM 45556, CGMCC 4.3529, JCM 14613",0,"Saccharopolyspora kobensis",urease,+
+159824,3SS5-12,"NBRC 112863, TBRC 7048",1,"Saccharopolyspora maritima",urease,+
+13474,SR8.15,"DSM 45584, BCC 35844, NRRL B-24798, TISTR 1921",1,"Saccharopolyspora phatthalungensis",urease,+
+13471,,"DSM 45226, CCUG 56401, IMMIB L-1070, JCM 19121",1,"Saccharopolyspora rosea",urease,+
+13469,"strain 88","DSM 45244, CGMCC 4.3530, JCM 14614",1,"Saccharopolyspora shandongensis",urease,+
+13472,,"DSM 45269, CCTCC AA 208062, YIM 65359",1,"Saccharopolyspora tripterygii",urease,+
+13491,D409-5,"DSM 43911, ATCC 31203, IFO 14104, JCM 3273, KCC A-0273, NBRC 14104, NRRL B-16296",1,"Saccharothrix variisporea",urease,+
+5640,"Fg 69","DSM 17794, CIP 107843, KMM 6000",1,"Salegentibacter flavus",urease,+
+159784,K5023,"KCTC 52477, MCCC 1H00173",1,"Salegentibacter sediminis",urease,-
+159796,SMB4,"MTCC 12633, KCTC 33876, JCM 32187",1,"Salibacterium nitratireducens",urease,+
+1276,CM1,"DSM 21621, CGMCC 1.6134, JCM 14087",1,"Salibacterium qingdaonense",urease,+
+134190,7Sm5,"CECT 7107, CIP 108835",1,"Salicola marasensis",urease,+
+132562,J11Y309,"DSM 46875, CGMCC 4.7242, LMG 29297",1,"Salilacibacter albus",urease,-
+11266,CXB832,"DSM 45442, LMG 25567",1,"Salinactinospora qingdaonensis",urease,+
+1830,SL014B-41A4,"DSM 22962, CGMCC 1.9161",1,"Salinarimonas ramus",urease,-
+1829,"YIM YD3","DSM 21201, CCTCC AA 208038, KCTC 22346",1,"Salinarimonas rosea",urease,+
+14435,W24,"DSM 19336, CGMCC 1.6501",1,"Salinicoccus halodurans",urease,+
+140792,X7,"KCTC 42585, MCCC 1H00115",1,"Salinimicrobium flavum",urease,-
+471,BH030046,"DSM 16280, KCTC 12239",1,"Salinimonas chungwhensis",urease,+
+159822,N102,"MCCC 1K03497, KCTC 62440.",1,"Salinimonas sediminis",urease,+
+132265,,"DSM 103380, CCTCC AA 2013002, KACC 17683, NRRL B-24926, TRM 49201",0,"Salininema proteolyticum",urease,+
+140600,YCWB25,"MCCC 1K00272, LMG 25394",1,"Salinovum rubellum",urease,-
+1120,"AC 13","DSM 8721, ATCC 700163, PN 105",1,"Salipaludibacillus agaradhaerens",urease,-
+140829,S9,"KCTC 33633, LMG 28644",1,"Salipaludibacillus aurantiacus",urease,+
+1293,,"DSM 19794, CCTCC AB 207161, KCTC 13187, JSM 071004",1,"Salipaludibacillus neizhouensis",urease,-
+5117,LT2,"DSM 17058, ATCC 43971, CIP 60.62, NCIMB 11450, NCTC 12416, CCUG 42060",1,"Salmonella enterica",urease,-
+23763,halo-1,"DSM 28389, CGMCC 1.7653, NBRC 104934",1,"Salsuginibacillus halophilus",urease,+
+158551,LSN-49,"BCRC 81005, LMG 29726, KCTC 52439",1,"Salsuginimonas clara",urease,+
+158825,RKSG058,"TSD-72, LMG 29871",1,"Sansalvadorimonas verongulae",urease,+
+140375,,"DSM 29762, CIP 110873, MOLA 117",1,"Saonia flava",urease,+
+180,,"DSM 15536, CCUG 41706, CIP 106351, IFR M2289/98/2",1,"Schaalia canis",urease,-
+181,"Hudd B9912678","DSM 15537, CCUG 42773, CIP 106713, KCTC 15233",1,"Schaalia funkei",urease,-
+162,"D145A-07, VPI D145A-07","DSM 6843, ATCC 49285, CCUG 32935",1,"Schaalia georgiae",urease,-
+182,,"DSM 15538, CCUG 39276, CIP 106779, SVA 489II",1,"Schaalia suimastitidis",urease,-
+185,,"DSM 15804, CCUG 46091, CIP 107423",1,"Schaalia vaccimaxillae",urease,-
+133011,ZQ18-1,"DSM 28236, CICC 10824",1,"Scopulibacillus daqui",urease,-
+140623,KHS03,"KCTC 42412, JCM 31160",1,"Sedimentitalea todarodis",urease,-
+133194,,"AA5, KACC 18509, JCM 31013",1,"Sediminibacterium aquarii",urease,-
+158552,SYL130,"KCTC 52860, CCTCC AB 2017082",1,"Sediminibacterium roseum",urease,-
+13849,"YIM B024","DSM 21189, CCTCC AA 208033, KCTC 22349",1,"Sediminimonas qiaohouensis",urease,+
+140907,F23,"JCM 19771, CGMCC 1.12785, MCCC 1A09945",1,"Sediminivirga luteola",urease,-
+17760,GS664,"DSM 18137, KCTC 12655, Gsoil 664",1,"Segetibacter koreensis",urease,+
+132393,,"DSM 103502, BR 72, KCTC 15479",1,"Sellimonas intestinalis",urease,-
+132370,2015-2462-01,"DSM 100980, CCM 8626, LMG 29119",1,"Serratia aquatilis",urease,+
+5169,C1,"DSM 22080, CCM 7984, CCUG 57457, CIP 111024",0,"Serratia fonticola",urease,+
+140703,J11-6,"ACCC 19934, KCTC 52529",1,"Serratia oryzae",urease,+
+5166,,"DSM 16952, CCUG 50595, LMG 22860, NIVA NiVa51",1,"Serratia ureilytica",urease,+
+14081,HAW-EB5,"CIP 109519, DSM 18400, CCUG 54554, NCIMB 14239",1,"Shewanella atlantica",urease,+
+14080,HAW-EB2,"DSM 18399, CCUG 54553, NCIMB 14238, CIP 109520",1,"Shewanella canadensis",urease,+
+158312,08MAS2251,"DSM 104682, CGMCC 1.16033",1,"Shewanella carassii",urease,-
+133524,JC5,"CCUG 57101, NBRC 105217, KCC 22540, KCTC 22540",1,"Shewanella chilikensis",urease,+
+14078,"A22-B3, HAW-EB4","DSM 17350, CIP 109778, NCIMB 14093",1,"Shewanella halifaxensis",urease,+
+140484,XMDDZSB0408,"KCTC 52125, MCCC 1A01895",1,"Shewanella intestini",urease,-
+133273,,"KX27, KCTC 42807, CGMCC 1.15339",1,"Shewanella inventionis",urease,-
+159740,MMS16-UL482,"KCTC 62129, JCM 32306",1,"Shewanella litoralis",urease,-
+14079,PV4,"DSM 17748, ATCC BAA 1088, CIP 109777",1,"Shewanella loihica",urease,+
+159741,MMS16-UL250,"KCTC 62131, JCM 32304",1,"Shewanella saliphila",urease,-
+14074,"A010-1, HAW-EB3","DSM 17055, CIP 109531, NCIMB 14036",1,"Shewanella sediminis",urease,+
+159742,MMS16-UL253,"KCTC 62130, JCM 32305",1,"Shewanella ulleungensis",urease,-
+134055,CC-AMW-C,"JCM 18818, BCRC 80548",1,"Shimia biformata",urease,+
+13906,DC-196,"DSM 21319, CCUG 55808, LMG 24714",1,"Shinella fusca",urease,+
+159722,AH-1,"KCTC 52677, CCTCC AB 2017242",1,"Shinella pollutisoli",urease,-
+140724,M23,"KCTC 52219, JCM 31889",1,"Silanimonas algicola",urease,-
+158734,CA-16,"KEMB 9005-529, KACC 19107, NBRC 112689",1,"Simplicispira soli",urease,-
+159874,SC1-8,"KACC 19329, NBRC 113111",1,"Simplicispira suum",urease,+/-
+11943,MOB10,"DSM 18658, ATCC BAA 1392, VKM B-2454",1,"Singulisphaera acidiphila",urease,+
+130501,SCSWE24,"DSM 100316, CCTCC AB 209289, LMG 25705, MCCC 1F01088",1,"Sinobacterium caligoides",urease,+
+134301,LC13,"IAM 15386, CCTCC AB 206018",1,"Sinomonas albida",urease,+
+133423,CW108,"LMG 24447, KCTC 19388, CCTCC AB 207194",1,"Sinomonas flava",urease,+
+7791,"CW 59","DSM 26463, CCTCC AB 207193, KCTC 19389",1,"Sinomonas soli",urease,+
+158820,HR-U,"KACC 19409, JCM 32267",1,"Siphonobacter curvatus",urease,-
+132915,wkB2,"DSM 104735, ATCC BAA 2449, NCIMB 14803, NRRL B-59751",1,"Snodgrassella alvi",urease,+
+1292,B3W22,"DSM 21046, JCM 13838, MTCC 7902",1,"Solibacillus isronensis",urease,+
+133088,ISSFR-015,"DSM 101595, NRRL B-65388",1,"Solibacillus kalamii",urease,+
+159715,S20-91,"DSM 104733, LMG 30010",1,"Solimicrobium silvestre",urease,-
+18154,"CW-KD 4","DSM 18980, CCTCC AB 206145, KCTC 12881",1,"Solimonas flava",urease,+
+159883,HR-BB,"KACC 19410, JCM 32268",1,"Solimonas fluminis",urease,-
+18155,,"DSM 21787, KCTC 12834, LMG 24014, CCUG 60890, LMG 23841, DCY 12",1,"Solimonas soli",urease,+
+159729,HR-AV,"KACC 19411, JCM 32259",1,"Solitalea longa",urease,-
+158369,NEAU-mq3,"DSM 106198, CGMCC 4.7429, JCM 32389",1,"Sphaerisporangium rhizosphaerae",urease,-
+133270,,"YLT33, CCTCC AB 2015150, KCTC 42644",1,"Sphingoaurantiacus capsulatus",urease,-
+158203,"MC 3718","DSM 107189, CCTCCAB 2014274, LMG 28636",1,"Sphingoaurantiacus polygranulatus",urease,-
+140595,Y3L14,"CGMCC 1.15782, KCTC 52379",1,"Sphingobacterium alkalisoli",urease,+
+158691,YK2,"MTCC 12631, KCTC 52685, JCM 31951",1,"Sphingobacterium bovisgrunnientis",urease,-
+133928,DC-8,"CCTCC AB 2012020, KACC 16850",1,"Sphingobacterium caeni",urease,+
+133096,R-53603,"DSM 102028, LMG 28764",1,"Sphingobacterium cellulitidis",urease,-
+134056,N7,"CCTCC AB 2012100, KACC 16854",1,"Sphingobacterium changzhouense",urease,+
+133248,,"DH-5, ACCC 19856, KCTC 42746",1,"Sphingobacterium chuzhouense",urease,+
+133808,No.6,"KCTC 22613, JCM 16113",1,"Sphingobacterium cladoniae",urease,+
+140793,23D10-4-9,"CFCC 12640, KCTC 42248",1,"Sphingobacterium corticis",urease,-
+133774,6.2S,"CECT 7938, LMG 26465",1,"Sphingobacterium detergens",urease,+
+141086,SCU-B140,"KCTC 42158, CGMCC 1.12966",1,"Sphingobacterium griseoflavum",urease,-
+159833,5JN-11,"ACCC 60072, KCTC 62457",1,"Sphingobacterium haloxyli",urease,+
+158555,D1,"KACC 18595, JCM 31225",1,"Sphingobacterium humi",urease,-
+133193,,"GJ30-7, KACC 18625, JCM 30948",1,"Sphingobacterium jejuense",urease,-
+134364,10C,"JCM 14970, NCIMB 14398",1,"Sphingobacterium kitahiroshimense",urease,+
+140613,7Y-4,"CFCC 11742, KCTC 42247",1,"Sphingobacterium populi",urease,+
+134347,SY1,"KCTC 22131, CGMCC 1.6855",1,"Sphingobacterium siyangense",urease,+
+158780,MLS-26-JM13-11,"ACCC 60057, JCM 32274",1,"Sphingobacterium solani",urease,+
+14118,,"DSM 11722, ATCC 33861, CDC E7288, GIFU 3101, JCM 1277, NCTC 11386, CCUG 13224",1,"Sphingobacterium spiritivorum",urease,+
+158556,h337,"KCTC 52298, CCTCC AB 2017155",1,"Sphingobacterium tabacisoli",urease,-
+133127,,"CKTN2, JCM 17858, KCTC 23708",1,"Sphingobacterium thermophilum",urease,+
+,,,,,urease,-
+139617,,"CIP 110975, LMG 29191, CCM 8652",1,"Sphingobacterium zeae",urease,-
+141163,Pch-E,"KACC 19284, JCM 32055",1,"Sphingobium limneticum",urease,-
+14196,JZ-2,"DSM 21829, CGMCC 1.7749",1,"Sphingobium faniae",urease,+
+24556,BA-3,"DSM 26189, CCTCC AB 201217, KACC 16433, KCTC 23196",1,"Sphingobium jiangsuense",urease,+
+141162,Pch-B,"KACC 19283, JCM 32054",1,"Sphingobium limneticum",urease,-
+14190,RL-3,"DSM 22942, CCM 7431, MTCC 8599",1,"Sphingobium ummariense",urease,+
+159873,,"KCTC 62233, NBRC 113094, CAU 1457",1,"Sphingomicrobium arenosum",urease,+
+158557,HKS-06,"KACC 18880, LMG 29563",1,"Sphingomonas agri",urease,-
+140794,200,"CCTCC AB 2016064, KCTC 52488",1,"Sphingomonas antarctica",urease,-
+141164,L9-754,"DSM 27347, KACC 17595",1,"Sphingomonas carotinifaciens",urease,-
+141052,PR0302,"KACC 18487, NBRC 111532",1,"Sphingomonas carri",urease,-
+14261,V2M44,"DSM 25652, CGMCC 1.7057, NBRC 104936",1,"Sphingomonas changbaiensis",urease,+
+141166,1PNM-26,"GDMCC 1.664, KCTC 42758, DSM 27573",1,"Sphingomonas difficilis",urease,-
+141059,E62-3,"KCTC 42834, CCTCC AB 2015300",1,"Sphingomonas faucium",urease,+
+140795,KER25-10,"KACC 19285, JCM 32053",1,"Sphingomonas frigidaeris",urease,-
+140999,SN6-9,"KCTC 52405, NRRL B-65395",1,"Sphingomonas gotjawalisoli",urease,-
+141165,S5-249,"DSM 27345, KACC 17593",1,"Sphingomonas jatrophae",urease,-
+141053,G39,"DSM 103790, LMG 29955T, LMG 29955",1,"Sphingomonas jeddahensis",urease,-
+14272,,"DSM 25432, CCM 7880, MTCC 10873, LNB 2",1,"Sphingomonas laterariae",urease,+
+140978,03SUJ6,"KCTC 23331, JCM 17543",1,"Sphingomonas limnosediminicola",urease,-
+140852,9O-5,"CGMCC 1.15330, KCTC 42759",1,"Sphingomonas metalli",urease,-
+140979,WM95,"KACC 18738, JCM 31399",1,"Sphingomonas palustris",urease,-
+133291,,"LYH-20, BCRC 80911, LMG 29002, KCTC 42741",1,"Sphingomonas piscinae",urease,-
+132650,W18RD,"DSM 103336, CGMCC 1.15645",1,"Sphingomonas prati",urease,-
+158693,THG-T61,"KACC 19189, CCTCC AB 2016245",1,"Sphingomonas rhizophila",urease,+
+140320,9NM-10,"DSM 27571, GDMCC 1.657",1,"Sphingomonas spermidinifaciens",urease,-
+159719,X1-8,"KCTC 62032, CGMCC 1.16275",1,"Sphingomonas tabacisoli",urease,-
+157911,MCT13,"DSM 105457, BAC RE RSCIC 7",1,"Sphingomonas turrisvirgatae",urease,-
+159655,WS5A3p,"DSM 106274, PCM 2932",1,"Sphingopyxis lindanitolerans",urease,-
+158562,"JC 216","KCTC 32445, LMG 27671",1,"Sphingorhabdus contaminans",urease,-
+14282,FR1093,"DSM 22379, IMSNU 14133, JCM 14162, KCTC 12764",1,"Sphingorhabdus litoris",urease,+
+14283,FR1087,"DSM 22363, IMSNU 14132, JCM 14161, KCTC 12763",1,"Sphingorhabdus marina",urease,+
+11265,"CXB 654","DSM 45414, LMG 25485",1,"Spinactinospora alkalitolerans",urease,+
+141001,SP30,"CECT 9238, LMG 30005",1,"Spiribacter roseus",urease,+
+133180,,"SSL 50, CECT 9117, IBRC-M 11076",1,"Spiribacter roseus",urease,+
+140796,TX0406,"KACC 19013, NBRC 112494",1,"Spirosoma carri",urease,-
+158698,S7-3-19,"KCTC 52728, JCM 32131",1,"Spirosoma horti",urease,-
+140567,15J8-12,"JCM 31407, KCTC 52510",1,"Spirosoma knui",urease,-
+158607,TX0405,"KACC 19012, NBRC 112493",1,"Spirosoma metallilatum",urease,-
+133359,JBM2-3,"KCTC 52176, JCM 31298",1,"Spirosoma swuense",urease,-
+133174,,"SPT1, JCM 31012, BCRC 80916",1,"Spongiibacter taiwanensis",urease,+
+11996,F73,"DSM 16921, CIP 109817, KACC 11299",1,"Sporosarcina koreensis",urease,+
+12006,6062,"DSM 23544, CCUG 59649, LMG 26022",1,"Sporosarcina newyorkensis",urease,+
+11997,I80,"DSM 16920, CIP 109802, KACC 11300",1,"Sporosarcina soli",urease,+
+140528,LZ2,"KACC 18822, MCCC 1K03174",1,"Sporosarcina terrae",urease,+
+132431,"YIM ART06","DSM 100594, CCTCC AA 2015021, KCTC 39599",1,"Stackebrandtia cavernae",urease,-
+23285,CJ70,"DSM 27203, JCM 18079, KACC 16559",1,"Stakelama sediminis",urease,+
+158429,NW1,"DSM 105366, NCTC 13950",1,"Staphylococcus cornubiensis",urease,-
+14676,KS-SP60,"DSM 25293, CCUG 58238, LMG 25332, CCM 7896",1,"Staphylococcus devriesei",urease,+
+14671,B3117,"DSM 19554, CCUG 51270, CIP 107711",1,"Staphylococcus pettenkoferi",urease,+
+14670,"ON 86","DSM 21284, CCUG 49543, CIP 108864, LMG 22219",1,"Staphylococcus pseudintermedius",urease,+
+14665,,"CCUG 51256, DSM 17636, CCM 7213, CIP 108931, LMG 22723",1,"Staphylococcus simiae",urease,+
+140359,BII-R7,"DSM 103927, CECT 9180, LMG 29893",1,"Stenotrophomonas bentonitica",urease,-
+17569,DCY-01,"DSM 24757, KCTC 12539, NBRC 101154, CCUG 59870",1,"Stenotrophomonas ginsengisoli",urease,+
+17561,TR6-01,"DSM 17805, JCM 13256, KCTC 12211, CCUG 53887, CIP 109170",1,"Stenotrophomonas koreensis",urease,+
+13146,,"DSM 19282, ATCC 23328, CCM 284, CIP 103273, JCM 9942, LMG 981, NCIMB 9152, VKM 1240",1,"Stenotrophomonas pictorum",urease,-
+140908,T5916-2-1b,"JCM 30961, NCIMB 15009",1,"Stenotrophomonas tumulicola",urease,-
+158316,NEAU-SW11,"DSM 105744, CGMCC 4.7427",1,"Streptacidiphilus monticola",urease,-
+157075,12-5202,"CCUG 69378, DSM 103678",1,"Streptococcus azizii",urease,-
+157063,,"CCUG 69277, LMG 29747",1,"Streptococcus bovimastitidis",urease,-
+140263,"Cavy grass 6","DSM 102819, TISTR 2371",1,"Streptococcus caviae",urease,+
+133152,,"DSM 27381, JCM 19284, NUM 2404",1,"Streptococcus dentiloxodontae",urease,-
+14835,M54/01/1,"DSM 18627, CCUG 48494, CIP 108309",1,"Streptococcus marimammalium",urease,+
+140138,M8,"CCUG 70868, DSM 100101, JCM 30719",1,"Streptococcus oricebi",urease,-
+23299,,"DSM 25324, JCM 18038, CCUG 70864, TKU 31",1,"Streptococcus troglodytae",urease,+
+11251,,"DSM 45171, CCTCC AA 208048, YIM 91353",1,"Streptomonospora amylolytica",urease,+
+16499,"YIM M 10400","DSM 42024, CCTCC AA 2010008",1,"Streptomyces abyssalis",urease,+
+141107,1H-SSA8,"CGMCC 4.7350, DSM 103128",1,"Streptomyces amphotericinicus",urease,+
+159778,,"KCTC 39610, CCTCC AA 2015009, TRM 46399",1,"Streptomyces aqsuensis",urease,-
+16502,C60,"DSM 42065, CGMCC 4.7018, KACC 15492",1,"Streptomyces atacamensis",urease,+
+16461,,"DSM 41860, LDDC 6330-99, NRRL B-24165",1,"Streptomyces atriruber",urease,+
+132630,2H-TWYE14,"DSM 100523, CGMCC 4.7275",1,"Streptomyces camponoticapitis",urease,+
+132985,"TRM 46794-61","DSM 104041, CCTCC AA 2015006, KCTC 39568",1,"Streptomyces canalis",urease,-
+158362,1H-SSA4,"DSM 104537, CGMCC 4.7403",1,"Streptomyces capitiformicae",urease,+
+159788,XZHG99,"CGMCC 4.7472, KCTC 49090",1,"Streptomyces dengpaensis",urease,-
+158423,NEAU-S1GS20,"DSM 104538, CCTCC AA 2017006",1,"Streptomyces durbertensis",urease,+
+16406,"MS 405","DSM 41863, CIP 108995, JCM 16011",1,"Streptomyces durmitorensis",urease,+
+16503,,"DSM 41984, CCTCC AA 209036, YIM 65594",1,"Streptomyces endophyticus",urease,+
+16385,SF0p68,"DSM 41836, CGMCC 4.1985, NCIMB 13954",1,"Streptomyces ferralitis",urease,+
+159717,A301,"CGMCC 4.7422, JCM 32177",1,"Streptomyces geranii",urease,+
+16427,,"DSM 41900, YIM 47672, CCTCC AA 205017, JCM 15129",1,"Streptomyces hainanensis",urease,+
+23303,NEAU-Da3,"DSM 42076, CGMCC 4.7047",1,"Streptomyces harbinensis",urease,+
+16476,"FH 8121, OU-40","DSM 42074, CCTCC AA 209024, JCM 17657, PCM 2692",1,"Streptomyces hyderabadensis",urease,+
+132536,,"DSM 104005, CCTCC AA 2015010, KCTC 39611, TRM 43006",1,"Streptomyces indoligenes",urease,+
+141108,,"CCTCC AA 2015028, KCTC 39667, TRM 46509",1,"Streptomyces kalpinensis",urease,+
+131989,NEAU-ML8,"DSM 101986, CGMCC 4.7323",1,"Streptomyces kronopolitis",urease,-
+133232,"CGMCC 4.7272, Z1027","Z1027, CGMCC 4.7272, JCM 31054, DSM 111125",1,"Streptomyces lacrimifluminis",urease,+
+133105,3H-HV17(2),"CGMCC 4.7349, DSM 103124",1,"Streptomyces lasiicapitis",urease,+
+133236,,"TRM 46515, CCTCC AA 2015040, KCTC 39729",1,"Streptomyces litoralis",urease,-
+16416,RCQ1071,"DSM 41876, ATCC BAA 1231, CIP 108852",1,"Streptomyces lunalinharesii",urease,+
+133356,,"CCTCC AA 2014003, NRRL B-59117, TRM 45540",1,"Streptomyces luteus",urease,+
+16012,,"DSM 41925, CCTCC AA 208005, KCTC 19400, SCSIO 01066",1,"Streptomyces nanshensis",urease,+
+133581,OU-63,"CCTCC AA 209025, PCM 2690",1,"Streptomyces osmaniensis",urease,+
+132444,NEAU-G9,"DSM 100521, CGMCC 4.7237",1,"Streptomyces polygonati",urease,+
+159718,A249,"CGMCC 4.7417, JCM 32175",1,"Streptomyces populi",urease,+
+16492,172205,"DSM 42035, CGMCC 4.6825",1,"Streptomyces qinglanensis",urease,+
+158662,,"CCTCC AA 2015030, KCTC 39726, TRM 41337",1,"Streptomyces salilacus",urease,-
+16462,,"DSM 41861, LDDC 6638-99, NRRL B-24166",1,"Streptomyces silaceus",urease,+
+16495,BK179,"DSM 42057, KACC 20912, NRRL B-24850",1,"Streptomyces staurosporininus",urease,+
+16474,Sp080513SC-30,"DSM 41969, NBRC 105048",1,"Streptomyces tateyamensis",urease,+
+158315,NEAU-A4,"DSM 104540, CGMCC 4.7393",1,"Streptomyces tritici",urease,-
+159651,NEAU-DSCPA1-4-4,"DSM 105118, CCTCC AA 2017025",1,"Streptomyces triticisoli",urease,+
+159789,CMU-AB225,"JCM 31290, TBRC 2001",1,"Streptomyces venetus",urease,+
+24618,FX61,"DSM 42132, CGMCC 4.7042, KCTC 29112",1,"Streptomyces wuyuanensis",urease,+
+16501,"YIM M 10378","DSM 42022, CCTCC AA 2010006",1,"Streptomyces xishensis",urease,+
+132160,Z4,"DSM 102251, CGMCC 4.7035, KCTC 29111",1,"Streptomyces yaanensis",urease,+
+16618,7177,"DSM 45034, CGMCC 4.2126, HBUM 170018",1,"Streptosporangium canum",urease,+
+140840,NEAU-JH1-4,"CGMCC 4.7213, JCM 30348, DSM 111302",1,"Streptosporangium jiaoheense",urease,+
+16589,"N I 9100, UNCC 27 B","DSM 43021, ATCC 12428, CBS 313.56, IAM 14294, IFO 3776, JCM 3005, KCC A-0005, NBRC 3776, NCIB 10171, NRRL B-2505, RIA 470",1,"Streptosporangium roseum",urease,-
+23323,GW-12028,"DSM 45763, LMG 27062",1,"Streptosporangium sandarakinum",urease,+
+140841,NEAU-Wp2-0,"CGMCC 4.7217, JCM 30349, DSM 111303",1,"Streptosporangium taraxaci",urease,+
+158202,SM1214,"DSM 107948, CCTCC AB 2014245, JCM 30334",1,"Subsaxibacter arcticus",urease,-
+158726,,"MCC 3191, KCTC 42965, LMG 29783, GDMCC 1.1201, ARC 111",1,"Subsaxibacter sediminis",urease,-
+133103,9583b,"DSM 103962, CGMCC 1.12976, KCTC 33586",1,"Subtercola lobariae",urease,-
+103,SE10,"DSM 9236",1,"Succiniclasticum ruminis",urease,-
+158440,6FBBBH3,"DSM 106861, JCM 32470",1,"Sutterella megalosphaeroides",urease,-
+140,TPB6017,"DSM 23630, VKM B-2570",1,"Telmatobacter bradus",urease,-
+141110,HZ1,"MCCC 1H00174, KCTC 52476",1,"Tenacibaculum agarivorans",urease,-
+158792,LPB0136,"KACC 18887, JCM 31564",1,"Tenacibaculum todarodis",urease,-
+134010,WJ-1,"CGMCC 1.12378, LMG 27422",1,"Tenacibaculum xiamenense",urease,+
+132445,S6R2A4-9,"DSM 28944, CGMCC 4.7241",1,"Tenggerimyces flavus",urease,-
+3021,,"DSM 19605, CIP 108724, LMG 23030",1,"Tepidicella xavieri",urease,+
+134149,PPLB,"CECT 3379, LMG 22921",1,"Terrabacter terrae",urease,+
+130139,03SUJ4,"DSM 29483, JCM 17517, KCTC 23332",1,"Terriglobus aquaticus",urease,+
+134,,"DSM 18391, NRRL B-41598, KBS 63",1,"Terriglobus roseus",urease,-
+135,SP1PR4,"DSM 23119, ATCC BAA 1853",1,"Terriglobus saanensis",urease,-
+133391,M1-33108,"CCTCC AB 2016103, KCTC 52448",1,"Terrimonas crocea",urease,-
+133334,,"CR94, KACC 17564, NCAIM B 025317",1,"Terrimonas rhizosphaerae",urease,-
+158697,FL-8,"CCTCC AB 2017059, JCM 32095",1,"Terrimonas soli",urease,-
+132379,,"DSM 27597, CCTCC AB 2013217, YIM 101269",1,"Tessaracoccus rhinocerotis",urease,-
+132402,ELNT2x,"DSM 28140, CCUG 65146",1,"Testudinibacter aquarius",urease,-
+1392,HS286,"DSM 21635, CCM 7597, JCM 15722",1,"Thalassobacillus cyri",urease,-
+1393,"18 OM, 18OM","DSM 22784, CECT 7566, JCM 16412",1,"Thalassobacillus pellis",urease,-
+141073,HSF7,"KCTC 42651, MCCC 1K01158",1,"Thalassobaculum fulvum",urease,+
+140871,MME-075,"KCCM 43143, JCM 30758",1,"Thalassobius litorarius",urease,-
+159743,G27,"MCC 3411, CGMCC 1.15772, KCTC 33941",1,"Thalassorhabdus alkalitolerans",urease,-
+133272,,"PB8B, MCCC 1A01103, LMG 29620",1,"Thalassospira indica",urease,+
+159890,CSC3H3,"MCCC 1A11786, KCTC 62333",1,"Thalassospira marina",urease,+
+133545,P-4,"CGMCC 1.6849, JCM 14850",1,"Thalassospira xianhensis",urease,+
+140539,LPB0090,"KACC 18695, JCM 31189",1,"Thalassotalea crassostreae",urease,+
+130655,,"DSM 100429, CCTCC M 2011497, KACC 16524, SgZ-1",1,"Thauera humireducens",urease,+
+24745,PM5,"DSM 45816, ATCC BAA 2534",1,"Thermogemmatispora carboxidivorans",urease,-
+140694,,"NBRC 112415, CCTCC AB 2016305, YIM 73026",1,"Thermus caldifontis",urease,-
+133741,HL-EbGr7,"NCCB 100376, UNIQUEM U246",1,"Thioalkalivibrio sulfidiphilus",urease,+
+140607,,"KCTC 52190, NBRC 111989, DSM 108277, CAU 1312",1,"Pseudothioclava arenosa",urease,-
+130630,DLFJ1-1,"DSM 29618, CGMCC 1.12325, LMG 27290, MCCC 1A03957",1,"Thioclava dalianensis",urease,+
+158274,"ElOx 9","DSM 103712",1,"Thioclava sediminum",urease,+
+140534,25B10_4,"MCCC 1A07302, LMG 29614",1,"Thioclava nitratireducens",urease,+
+17083,G1,"DSM 21228",1,"Thiothrix caldifontis",urease,+
+17084,BL,"DSM 21227, VKM B-2521",1,"Thiothrix lacustris",urease,+
+14025,,"DSM 21585, JCM 15529, KCTC 22406, USBA 355",1,"Tistlia consotensis",urease,+
+295,,"DSM 22975, ATCC BAA 1908, OCF 7",1,"Tolumonas osonensis",urease,-
+130227,JPY-345,"DSM 29917, BCRC 80258, KCTC 23309, LMG 26032, NKMU-JPY-345",1,"Trinickia symbiotica",urease,+
+130633,M97,"DSM 29339, JCM 17731, KACC 15544",1,"Tropicimonas sediminicola",urease,+
+218,Murakami,"DSM 19515, ATCC BAA 1522, JCM 14813, CCUG 58417",1,"Trueperella abortisuis",urease,-
+214,"GF 750","DSM 9152, CCUG 33419, CIP 104252, LCDC 89-0504, LMG 18721, ATCC 51727",1,"Trueperella bernardiae",urease,-
+216,1W3/01,"DSM 17162, CIP 109229, NCTC 13354, CCUG 59862",1,"Trueperella bialowiezensis",urease,-
+217,2W106/04,"CCUG 59861, DSM 17163, CIP 109232, NCTC 13355",1,"Trueperella bonasi",urease,-
+212,"84, C-100","DSM 20630, ATCC 19411, CCUG 13230, CIP 103129, LMG 16162, NCTC 5224",1,"Trueperella pyogenes",urease,-
+140719,P12,"LMG 29571, VKM B-3044",1,"Tundrisphaera lichenicola",urease,-
+157132,MBLW1,"CCUG 69661, DSM 105045",1,"Tuwongella immobilis",urease,+
+13936,5YN10-9,"DSM 18521, KACC 11603",1,"Uliginosibacterium gangwonense",urease,+
+133283,,"KBP-13, BCRC 80903, LMG 28837, KCTC 42655",1,"Uliginosibacterium paludis",urease,+
+158641,M1-21,"KACC 19271, JCM 32000",1,"Uliginosibacterium sediminicola",urease,+
+157757,06D021,"DSM 105630, CIP 111401",0,"Klebsiella grimontii",urease,-
+141168,KYPY9,"BCRC 81009, LMG 29730 KCTC 52442",1,"Undibacterium amnicola",urease,-
+141056,6-67,"CCTCC AB 2015162, KCTC 42986",1,"Undibacterium arcticum",urease,-
+132626,E3/4,"DSM 102221, CCM 8677, CIP 111017",1,"Undibacterium danionis",urease,+
+131260,,"DSM 102222, NBRC 108789",1,"Undibacterium terreum",urease,+
+3017,BAM-48,"DSM 21722, KCTC 22010, NBRC 103145",1,"Variovorax boronicumulans",urease,-
+3018,,"DSM 25185, CCUG 52469, KCTC 12583, LMG 23392, Gsoil 3165",1,"Variovorax ginsengisoli",urease,-
+140831,,"KACC 18501, NBRC 111520, UC 38",1,"Variovorax humicola",urease,-
+3016,GH9-3,"DSM 18216, KACC 11579",1,"Variovorax soli",urease,-
+141060,CV58,"NCIMB 15011, DSM 100910",1,"Ventosimonas gracilis",urease,-
+132025,NEAU-QY3,"DSM 101530, CGMCC 4.7312",1,"Verrucosispora sonchi",urease,-
+17346,J74,"DSM 22054, JCM 14949, KCTC 22122, CCUG 57111",1,"Vibrio areninigrae",urease,+
+17355,,"DSM 25292, CGMCC 1.8461, LMG 24781, HHS 02",1,"Vibrio atypicus",urease,+
+158354,FJ201301,"DSM 104687, CGMCC 1.16099",1,"Vibrio fujianensis",urease,-
+23341,,"DSM 27061, JCM 16453, LMG 25398, TCFB 0772",1,"Vibrio jasicida",urease,+
+17312,MANO22D,"DSM 17657, CAIM 315, CIP 109585, KCTC 12520",1,"Vibrio litoralis",urease,+
+140734,EAod9,"CECT 9027, LMG 29724",1,"Vibrio palustris",urease,-
+140735,SMJ21,"CECT 9026, LMG 29723",1,"Vibrio spartinae",urease,-
+132582,Ac_5_C6,"DSM 29464, LMG 29035",1,"Vicinamibacter silvestris",urease,-
+158595,ANORD5,"NCIMB 15042, MTCC 12686, DSM 103558",1,"Vicingus serpentipes",urease,-
+22931,J18,"DSM 26676, JCM 16994, KACC 14624",1,"Virgibacillus alimentarius",urease,-
+1487,,"DSM 19574, JCM 14839, HAL Hal1",1,"Virgibacillus arcticus",urease,-
+1482,mccs2332,"DSM 14868, JCM 16508, LMG 20964",1,"Virgibacillus carmonensis",urease,-
+1484,DSW-10,"DSM 16826, CIP 109001, KCTC 3933",1,"Virgibacillus dokdonensis",urease,-
+132443,S1-20,"DSM 29015, LMG 28381",1,"Virgibacillus flavescens",urease,-
+1483,5B73C,"DSM 21623, IAM 15308, JCM 21758, KCTC 13935",1,"Virgibacillus halophilus",urease,+
+23745,,"DSM 25060, G 6065, LMG 26644, WS 4627",1,"Virgibacillus halotolerans",urease,+
+133313,NS3012,"NS3012, KEMB 9001-125, JCM 16522, DSM 107337",1,"Virgibacillus jeotgali",urease,-
+1488,YIM-kkny16,"DSM 17056, CGMCC 1.6298, JCM 16510",1,"Virgibacillus kekensis",urease,-
+1477,123,"DSM 12325, ATCC 700626, CECT 5066, CIP 105609",1,"Virgibacillus marismortui",urease,+
+1481,mccs2660,"DSM 14866, JCM 16509, LMG 19488",1,"Virgibacillus necropolis",urease,-
+158787,LM2416,"KCTC 33927, JCM 32144",1,"Virgibacillus phasianinus",urease,-
+1486,"SA-Vb 1","DSM 18441, JCM 12946",1,"Virgibacillus salarius",urease,-
+1494,CC-YMP-6,"DSM 22952, CCM 7714, CCUG 58580",1,"Virgibacillus soli",urease,-
+571,R-17170,"DSM 16319, LMG 22166",1,"Viridibacillus arenosi",urease,-
+570,R-16993,"DSM 16317, LMG 22165",1,"Viridibacillus arvi",urease,+
+140283,MCy10943,"DSM 102952, NCCB 100600",1,"Vitiosangium cumulatum",urease,-
+140141,TTM-24,"DSM 105718, BCRC 80912, KCTC 42742, LMG 29003",1,"Vogesella facilis",urease,-
+13839,HY34,"DSM 24838, CGMCC 1.6105, JCM 14017",1,"Wenxinia marina",urease,+
+132995,CZ1127,"DSM 100787, CCTCC AB 2015089, KCTC 42864",1,"Wenyingzhuangia fucanilytica",urease,-
+17375,"IMMIB RIV-956","DSM 44902, CCUG 50873, CIP 109147, IMMIB RIV-956",1,"Williamsia deligens",urease,+
+17379,N1350,"DSM 45372, NCIMB 14575, NRRL B-24794",1,"Williamsia faeni",urease,+
+17381,L1505,"DSM 45521, KCTC 19981, NRRL B-24829",1,"Williamsia limnetica",urease,+
+17378,"IMMIB SR-4","DSM 45037, CCUG 53151, CIP 109522",1,"Williamsia serinedens",urease,+
+24667,,"DSM 45741, CPCC 203464, KCTC 29118",1,"Williamsia sterculiae",urease,+
+159763,,"KACC 18883, KCTC 52240, JCM 31383, IMCC 20180",1,"Winogradskyella aurantiaca",urease,-
+133539,022-2-26,"KMM 6013, CIP 109976",1,"Winogradskyella exilis",urease,+
+140799,,"KCTC 42189, CECT 8979, HME 9613",1,"Winogradskyella maritima",urease,-
+158804,AFPH31,"CCM 8816, CIP 111546",1,"Winogradskyella pocilloporae",urease,-
+133895,RS-3,"CIP 110154, NBRC 106169",1,"Winogradskyella psychrotolerans",urease,+
+140167,S5-23-3,"DSM 28134, CGMCC 1.12601, LMG 28075",1,"Winogradskyella sediminis",urease,-
+159730,M1309,"KCTC 52896, MCCC 1K03310",1,"Winogradskyella tangerina",urease,-
+141145,XK5,"ATCC BAA 2615, CICC 10905",1,"Woeseia oceani",urease,-
+158559,34C10-3-10,"CFCC 12747, KCTC 52796",1,"Wohlfahrtiimonas populi",urease,-
+132678,DY30321,"DSM 103478, KCTC 15549, MCCC 1A01532",1,"Wukongibacter baidiensis",urease,-
+158738,,"CECT 9404, IVIA 3287.1, CFBP 8353",1,"Xanthomonas prunicola",urease,-
+140467,DL20,"LMG 29917, CCM 8728",1,"Xenorhabdus eapokensis",urease,-
+140466,30TX1,"CCM 8727, LMG 29916",1,"Xenorhabdus thuongxuanensis",urease,-
+159876,ZQBW,"KCTC 62102, CCTCC AB 2017177",1,"Xinfangfangia soli",urease,-
+23231,DX5-10,"DSM 26894, CGMCC 1.3455, JCM 12573",1,"Salipiger pacificus",urease,+
+7787,,"DSM 15476, CCTCC AA 001023, JCM 13527, YIM 70085",1,"Yaniella halotolerans",urease,+
+5218,Y159,"DSM 14987, CIP 109000, LMG 22254, CCUG 52872, WA 758",1,"Yersinia aleksiciae",urease,+
+5228,50640,"DSM 21859, CCUG 53443, CIP 109351",1,"Yersinia massiliensis",urease,+
+5219,Y228,"DSM 18211, CCUG 52882, LMG 23763",1,"Yersinia similis",urease,+
+13673,R-9477,"DSM 16212, LMG 22003",1,"Yoonia vestfoldensis",urease,+
+140499,S2-22,"KACC 18503, JCM 31155",1,"Zeaxanthinibacter aestuarii",urease,-
+159728,X9-2-2,"MCCC 1K03307, JCM 32107",1,"Zhengella mangrovi",urease,+
+159859,HN-Y44,"MCCC 1K03329, LMG 30460",1,"Zhouia spongiae",urease,-
+296,ZD1,"DSM 19707, BCRC 17493, JCM 13380",1,"Zobellella denitrificans",urease,+
+159772,59N8,"ACCC 60074, KCTC 62456",1,"Zobellella endophytica",urease,-
+134181,ZT1,"BCRC 17494, JCM 13381",1,"Zobellella taiwanensis",urease,+
+134147,A-7,"IAM 15218, CCTCC AB 2052005",1,"Zoogloea oryzae",urease,+
+140678,CPA58,"CECT 9128, LMG 29517",1,"Zunongwangia endophytica",urease,-
