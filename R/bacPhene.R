@@ -31,35 +31,12 @@ getStrains <- function(page, genus, species, userpassword, getJSON = RCurl::getU
 
 }
 
-#' Gets the phenotype data for a specific strain
-#'
-#' @param speciesData The list object that you got from \code{\link{getStrains}}
-#' @param selection Which strain you want from the list object
-#' @param userpassword The userpassword in the form of "user:password" that you got when you registered at bacdive.org
-#'
-#' @return A list of phenotype data from bacdive.org
-#' @export
-#'
-#' @importFrom RCurl getURL
-#' @importFrom rjson fromJSON
-#'
-#' @examples
-#' \dontrun{
-#' strain_list <- getStrains(page = 1,
-#' genus = 'Bacteroides',
-#' species = 'xylanisolvens',
-#' userpassword = paste0(user,':',passwd))
-#' phenotypes_list <- getStrainData(strain_list,
-#' selection=1,
-#' userpassword = paste0(user,':',passwd))
-#' }
-getStrainData <- function(speciesData, selection=1, userpassword) {
+# new way:
+# credentials <- Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PASSWORD"))
+# bacdive <- open_bacdive(credentials[[1L]], credentials[[2L]])
+# bg2h <- list()
+# retrieve(object = bacdive, query = "Bacteroides xylanisolvens", search = "taxon", sleep = 0.1, handler = function(x) bg2h <<- c(bg2h, x))
 
-  response <- RCurl::getURL(paste0(speciesData[["results"]][[selection]][["url"]],'/?format=json'), userpwd=userpassword, httpauth = 1L) #getting the data as a json object
-
-  strainData <- rjson::fromJSON(response) #converting the data to a R list
-
-}
 
 #' Gets the gram-stain of the strain
 #'
@@ -87,6 +64,9 @@ gramStain <- function(strainData, reference=1) {
 
 }
 
+# new way
+# bg2h[["1626"]][["Morphology"]][["cell morphology"]][[1]][["gram stain"]]
+
 #' Gets the oxygen tolerance of the strain
 #'
 #' @param strainData A list from the function \code{\link{getStrainData}}
@@ -112,6 +92,10 @@ oxygenTolerance <- function(strainData, reference=1) {
   strainData[["morphology_physiology"]][["oxygen_tolerance"]][[reference]][["oxygen_tol"]]
 
 }
+
+# new way
+# bg2h[["1626"]][["Physiology and metabolism"]][["oxygen tolerance"]][[2]][["oxygen tolerance"]]
+
 
 #' Checks whether a strain has a specific antibiotic sensitivity
 #'
@@ -154,6 +138,10 @@ abxSensitive <- function(strainData, abx = "vancomycin") {
   }
 
 }
+
+# new way
+# > bg2h[["158577"]][["Physiology and metabolism"]][["antibiotic resistance"]][[1]][["metabolite"]]
+# [1] "gentamicin"
 
 #' Checks whether a strain has a specific antibiotic resistance
 #'

@@ -16,4 +16,5 @@ Suggests:
 Imports: 
     rjson,
     RCurl,
-    rlist
+    rlist,
+    BacDive

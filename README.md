@@ -29,15 +29,20 @@ After this, you MUST register at bacdive.org
 [here](https://api.bacdive.dsmz.de/login). Otherwise, you will not be
 able to access the API and get phenotype data.
 
+-   Recommended \*
+
+Edit your $HOME/.Renviron file (you can open in R with ) and add your
+bacdive credentials like so:
+
+    DSMZ_API_USER=your_email@something.com
+    DSMZ_API_PASSWORD=your_password
+
 ## Examples
 
 This will only work once you have gotten an account at bacdive.org:
 
 ``` r
 library(bacphene)
-
-user <- "usually_your_email"
-passwd <- "a_good_password"
 
 strain_list <- getStrains(page = 1, 
   genus = 'Bacteroides', 
@@ -49,7 +54,7 @@ phenotypes_list <- getStrainData(strain_list,
     userpassword = paste0(user,':',passwd))
 ```
 
-However, to facilitate demonstration, I have run the previous codeblock
+However, to facilitate demonstration, I have run the previous code-block
 and written the results lists to flat files here:
 ./examples/Bacteroides\_xylanisolvens.RData
 
