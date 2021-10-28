@@ -1,3 +1,6 @@
+
+# TODO: Get rid of this first function since it is redundant with BacDive, when the other functions need to access BacDive they will use the package, I do not need to write a wrapper (I think)
+
 #' Gets the strains from bacdive that belong to a supplied species
 #'
 #' @param credentials Your login credentials for bacdive.org. Defaults to DSMZ_API_USER and DSMZ_API_PASSWORD in your Renviron file. Supplied as a character vector c("username", "password").
@@ -26,12 +29,6 @@ getStrains <- function(credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PAS
   bg2h
 
 }
-
-# new way:
-# credentials <- Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PASSWORD"))
-# bacdive <- open_bacdive(credentials[[1L]], credentials[[2L]])
-# bg2h <- list()
-# retrieve(object = bacdive, query = "Bacteroides xylanisolvens", search = "taxon", sleep = 0.1, handler = function(x) bg2h <<- c(bg2h, x))
 
 
 #' Gets the gram-stain of the strain
