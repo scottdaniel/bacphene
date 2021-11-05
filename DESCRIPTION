@@ -18,3 +18,5 @@ Imports:
     RCurl,
     rlist,
     BacDive
+Depends: 
+    R (>= 2.10)
