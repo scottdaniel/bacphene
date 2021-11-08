@@ -25,9 +25,7 @@ Searching for strains with taxon specification
 }
 \examples{
 \dontrun{
-strain_list <- getStrains(page = 1,
-genus = 'Bacteroides',
-species = 'xylanisolvens',
-userpassword = paste0(user,':',passwd))
+strain_list <- getStrains(query = "Bacteroides xylanisolvens",
+sleep = 0.1)
 }
 }

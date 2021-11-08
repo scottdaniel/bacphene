@@ -1,4 +1,5 @@
-## code to prepare `bacdive_phenotypes` dataset
+## code to prepare `bacdive_phenotypes` and `bacdive_susceptibility` datasets
+## also saves a large type strain list for later use if needed
 
 library(BacDive)
 library(tidyverse)
