@@ -5,4 +5,4 @@
 bacdive_examples.Rmd
 bacdive_credentials*
 .DS_Store
-type_strain_large_list.RData
+data-raw/type_strain_large_list.rda
