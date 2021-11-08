@@ -1,4 +1,4 @@
-## code to prepare `bacdive_typestrains` dataset
+## code to prepare `bacdive_phenotypes` dataset
 
 library(BacDive)
 library(tidyverse)
@@ -8,7 +8,7 @@ credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PASSWORD"))
 
 bacdive <- open_bacdive(credentials[[1L]], credentials[[2L]])
 
-full_list <- read_csv("full_list_of_bacteria_from_bacdive_20211027.csv", skip = 2)
+full_list <- read_csv("full_list_of_bacteria_from_bacdive_20211027.csv", skip = 2) # this was downloaded here: https://bacdive.dsmz.de/advsearch?filter-group%5B1%5D%5Bgroup-condition%5D=OR&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield%5D=Domain&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-option%5D=contains&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-value%5D=Bacteria&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-validation%5D=strains-domain-1
 
 type_strains <- full_list %>%
   filter(is_type_strain_header == 1)
@@ -22,38 +22,100 @@ list_holder <- list()
 
 i = 1
 
-for (i in seq(1, length(type_strains$ID), 100)) {
-
-  if (i+99 > length(type_strains$ID)) {
-    k = length(type_strains$ID) #since the last block would include NA's otherwise
-  } else {
-    k = i+99
+if (file.exists("data-raw/type_strain_large_list.rda")) {
+  list_holder <- read_rds("data-raw/type_strain_large_list.rda")
+} else {
+  for (i in seq(1, length(type_strains$ID), 100)) {
+    if (i + 99 > length(type_strains$ID)) {
+      k = length(type_strains$ID) #since the last block would include NA's otherwise
+    } else {
+      k = i + 99
+    }
+    temp_list <- fetch(bacdive, type_strains$ID[i:k])
+    list_holder <- c(list_holder, temp_list$results)
   }
-
-  temp_list <-fetch(bacdive, type_strains$ID[i:k])
-
-  list_holder <- c(list_holder, temp_list$results)
-
+  write_rds(list_holder, "data-raw/type_strain_large_list.rda") #so if we re-run the script we don't have to keep GETing data from bacdive
 }
-
-write_rds(list_holder, "type_strain_large_list.RData")
 
 # now we want to extract the important bits (gram stain, oxygen tolerance, abx sensitivity / resistance, and urease activity)
+# splitting into bacdive_phenotypes and bacdive_susceptibility for compatibility with abxidx
 
-bacdive_typestrains <- tibble()
-
-i = 1
-
+bacdive_phenotypes <- tibble()
 for (i in 1:length(list_holder)) {
-
-  bacdive_typestrains[i,"ID"] <- list_holder[[i]]$General$`BacDive-ID`
-  bacdive_typestrains[i,"species"] <- list_holder[[i]]$`Name and taxonomic classification`$species
+  bacdive_phenotypes[i,"ID"] <- list_holder[[i]]$General$`BacDive-ID`
+  bacdive_phenotypes[i,"taxon"] <- list_holder[[i]]$`Name and taxonomic classification`$species
+  bacdive_phenotypes[i,"rank"] <- "Species"
   if (is.null(list_holder[[i]]$Morphology$`cell morphology`$`gram stain`)) {
-    bacdive_typestrains[i,"gram_stain"] <- NA
+    bacdive_phenotypes[i,"gram_stain"] <- NA
   } else {
-  bacdive_typestrains[i,"gram_stain"] <- list_holder[[i]]$Morphology$`cell morphology`$`gram stain`
+  bacdive_phenotypes[i,"gram_stain"] <- list_holder[[i]]$Morphology$`cell morphology`$`gram stain`
   }
+  if (is.null(list_holder[[i]]$`Physiology and metabolism`$`oxygen tolerance`$`oxygen tolerance`)) {
+    bacdive_phenotypes[i,"aerobic_status"] <- NA
+  } else {
+    bacdive_phenotypes[i,"aerobic_status"] <- list_holder[[i]]$`Physiology and metabolism`$`oxygen tolerance`$`oxygen tolerance`
+  }
+}
+
+usethis::use_data(bacdive_phenotypes, overwrite = TRUE)
+
+bacdive_susceptibility <- tibble()
+for (i in 1:length(list_holder)) {
+  abx_df <-
+    list_holder[[i]]$`Physiology and metabolism`$`antibiotic resistance`
+  my_df <- tibble()
+
+  if (!is.null(abx_df)) {
+    if (!is.null(names(abx_df))) {
+      #for when you have a single antibiotic entry since a longer list will not have a `names` attribute
+      my_df[1, "ID"] <- list_holder[[i]]$General$`BacDive-ID`
+      my_df[1, "taxon"] <-
+        list_holder[[i]]$`Name and taxonomic classification`$species
+      my_df[1, "rank"] <- "Species"
+      my_df[1, "antibiotic"] <- abx_df$metabolite
+      resistant <- abx_df$`is resistant`
+      #there is probably a smarter way to do this
+      sensitive <- abx_df$`is sensitive`
+      if (!is.null(resistant)) {
+        if (resistant %in% "yes") {
+          #you can not test both at once because R will error
+          my_df[1, "value"] <- "resistant"
+        }
+      }
+      if (!is.null(sensitive)) {
+        if (sensitive %in% "yes") {
+          my_df[1, "value"] <- "susceptible"
+        }
+      }
+    } else {
+      for (j in 1:length(abx_df)) {
+        my_df[j, "ID"] <- list_holder[[i]]$General$`BacDive-ID`
+        my_df[j, "taxon"] <-
+          list_holder[[i]]$`Name and taxonomic classification`$species
+        my_df[j, "rank"] <- "Species"
+        my_df[j, "antibiotic"] <- abx_df[[j]]$metabolite
+        resistant <- abx_df[[j]]$`is resistant`
+        sensitive <- abx_df[[j]]$`is sensitive`
+        if (!is.null(resistant)) {
+          if (resistant %in% "yes") {
+            #you can not test both at once because R will error
+            my_df[j, "value"] <- "resistant"
+          }
+        }
+        if (!is.null(sensitive)) {
+          if (sensitive %in% "yes") {
+            my_df[j, "value"] <- "susceptible"
+          }
+        }
+      }
+    }
+  }
+
+  bacdive_susceptibility <- bind_rows(bacdive_susceptibility, my_df)
 
 }
 
-usethis::use_data(bacdive_typestrains, overwrite = TRUE)
+usethis::use_data(bacdive_susceptibility, overwrite = TRUE)
+
+#pro-tip to search for a given bacdive ID: list.which(list_holder, General$`BacDive-ID` == "141146")
+
