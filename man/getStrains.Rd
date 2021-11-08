@@ -2,24 +2,26 @@
 % Please edit documentation in R/bacPhene.R
 \name{getStrains}
 \alias{getStrains}
-\title{Gets the strains from bacdive that belong to a supplied species}
+\title{Searching for strains with taxon specification}
 \usage{
-getStrains(page, genus, species, userpassword, getJSON = RCurl::getURL)
+getStrains(
+  credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PASSWORD")),
+  query,
+  sleep = 0.1,
+  handler = NULL,
+  getList = BacDive::retrieve
+)
 }
 \arguments{
-\item{page}{You get entries only from the first page (page = '1'), to consider the other pages you have to change the parameter page}
+\item{credentials}{Your login credentials for bacdive.org. Defaults to DSMZ_API_USER and DSMZ_API_PASSWORD in your Renviron file. Supplied as a character vector c("username", "password").}
 
-\item{genus}{Genus of the species}
-
-\item{species}{The species}
-
-\item{userpassword}{The userpassword in the form of "user:password" that you got when you registered at bacdive.org}
+\item{sleep}{A waiting period in seconds between successive API requests, if any.}
 }
 \value{
-A list of strains from bacdive.org
+A list of strains with phenotype information from bacdive.org
 }
 \description{
-Gets the strains from bacdive that belong to a supplied species
+Searching for strains with taxon specification
 }
 \examples{
 \dontrun{
