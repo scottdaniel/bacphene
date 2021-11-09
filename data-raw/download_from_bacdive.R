@@ -9,7 +9,8 @@ credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PASSWORD"))
 
 bacdive <- open_bacdive(credentials[[1L]], credentials[[2L]])
 
-full_list <- read_csv("full_list_of_bacteria_from_bacdive_20211027.csv", skip = 2) # this was downloaded here: https://bacdive.dsmz.de/advsearch?filter-group%5B1%5D%5Bgroup-condition%5D=OR&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield%5D=Domain&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-option%5D=contains&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-value%5D=Bacteria&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-validation%5D=strains-domain-1
+full_list <- read_csv("data-raw/full_list_of_bacteria_from_bacdive_20211027.csv", skip = 2, show_col_types = FALSE)
+# this was downloaded here: https://bacdive.dsmz.de/advsearch?filter-group%5B1%5D%5Bgroup-condition%5D=OR&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield%5D=Domain&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-option%5D=contains&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-value%5D=Bacteria&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-validation%5D=strains-domain-1
 
 type_strains <- full_list %>%
   filter(is_type_strain_header == 1)
@@ -57,6 +58,12 @@ for (i in 1:length(list_holder)) {
     bacdive_phenotypes[i,"aerobic_status"] <- list_holder[[i]]$`Physiology and metabolism`$`oxygen tolerance`$`oxygen tolerance`
   }
 }
+
+# If we want to exactly match the values for abxidx
+# bacdive_phenotypes <- bacdive_phenotypes %>%
+#   mutate(gram_stain = case_when(gram_stain %in% "positive" ~ "Gram-positive",
+#                                 gram_stain %in% "negative" ~ "Gram-negative"))
+# this turns all the "variable" values for gram_stain into NA's
 
 usethis::use_data(bacdive_phenotypes, overwrite = TRUE)
 
