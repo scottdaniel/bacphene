@@ -7,10 +7,10 @@
 \format{
 A data frame with the following columns:
 \describe{
-  \item{ID}{The BacDive ID}
-  \item{taxon}{The name of the taxon}
-  \item{rank}{The rank of the taxon}
-  \item{antibiotic}{The antibiotic or antibiotic class}
+  \item{ID}{The BacDive ID.}
+  \item{taxon}{The name of the taxon.}
+  \item{rank}{The rank of the taxon.}
+  \item{antibiotic}{The antibiotic or antibiotic class.}
   \item{value}{
     The susceptibility of the taxon to the antibiotic, one of "susceptible"
     or "resistant".}
@@ -21,5 +21,8 @@ bacdive_susceptibility
 }
 \description{
 Antibiotic susceptibility data from bacdive.org
+}
+\note{
+Data frame also has the attribute "date_downloaded" for when the data was downloaded from bacdive.org.
 }
 \keyword{datasets}

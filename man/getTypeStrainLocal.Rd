@@ -4,10 +4,16 @@
 \alias{getTypeStrainLocal}
 \title{Gets a single type strain of a species}
 \usage{
-getTypeStrainLocal(rda = "data-raw/type_strain_large_list.rda", query)
+getTypeStrainLocal(
+  list = NULL,
+  rda = "data-raw/type_strain_large_list.rda",
+  query
+)
 }
 \arguments{
-\item{rda}{An RData file representing a full download of type strain from BacDive.org's API. Can be created using download_from_bacdive.R}
+\item{list}{A list object containing strain information already present in the R environment}
+
+\item{rda}{An RData file representing a full download of type strain from BacDive.org's API. Can be created using download_from_bacdive.R OR}
 
 \item{query}{A species}
 }
