@@ -15,6 +15,7 @@
 #' }
 getStrains <- function(credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PASSWORD")), query, sleep = 0.1, handler = NULL, getList = BacDive::retrieve) {
 
+  # maybe just have this function open bacdive with default credentials and nothing else
   bacdive <- BacDive::open_bacdive(credentials[[1L]], credentials[[2L]])
   getList(object = bacdive, query = query, search = "taxon", sleep = sleep, handler = handler)
 
@@ -22,7 +23,8 @@ getStrains <- function(credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PAS
 
 #' Gets a single type strain of a species
 #'
-#' @param rda An RData file representing a full download of type strain from BacDive.org's API. Can be created using download_from_bacdive.R
+#' @param rda An RData file representing a full download of type strain from BacDive.org's API. Can be created using download_from_bacdive.R OR
+#' @param list A list object containing strain information already present in the R environment
 #' @param query A species
 #'
 #' @return A list containing information on the type strain of a species
@@ -34,11 +36,13 @@ getStrains <- function(credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PAS
 #' \dontrun{
 #' abyss <- getTypeStrainLocal(query = "Abyssibacter profundi")
 #' }
-getTypeStrainLocal <- function(rda = "data-raw/type_strain_large_list.rda", query) {
+getTypeStrainLocal <- function(list = NULL, rda = "data-raw/type_strain_large_list.rda", query) {
 
-  my_list <- readRDS(rda)
+  if (is.null(list)) {
+    list <- readRDS(rda)
+  }
 
-  rlist::list.filter(my_list, `Name and taxonomic classification`$species %in% query)
+  rlist::list.filter(list, `Name and taxonomic classification`$species %in% query)
 
 }
 
