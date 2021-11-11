@@ -64,9 +64,7 @@ DSMZ_API_PASSWORD=your_password
 When using BacDive for research please consider citing the following paper:
 
 BacDive in 2019: bacterial phenotypic data for High-throughput biodiversity analysis.
-
 Reimer, L. C., Vetcininova, A., Sardà Carbasse, J., Söhngen, C., Gleim, D., Ebeling, C., Overmann, J.
-
 [Nucleic Acids Research; database issue 2019](https://academic.oup.com/nar/article/47/D1/D631/5106998).
 
 To cite this package enter `citation("bacphene")` in your R console.
