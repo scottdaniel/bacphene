@@ -20,12 +20,12 @@ knitr::opts_chunk$set(
 
 The goal of bacphene is to generate a table of phenotype characteristics about your samples. Input is a table of Samples with counts per taxa. 
 
-The package utilizes the official [BacDive R package](https://r-forge.r-project.org/R/?group_id=1573) that accesses
-bacterial phenotype data from [bacdive.org](https://bacdive.dsmz.de/).
+The package utilizes the official [BacDive R package] that accesses
+bacterial phenotype data from [bacdive.org].
 
 ## Installation
 
-You can install bacphene from [github](https://github.com/scottdaniel/bacphene). You also need to install the BacDive R package (if you want the full data - see below).
+You can install bacphene from the [github repo]. You also need to install the BacDive R package (if you want the full data - see below).
 
 ``` r
 library(devtools)
@@ -35,7 +35,7 @@ install.packages("BacDive", repos="http://R-Forge.R-project.org")
 
 After this, you may register at bacdive.org [here](https://api.bacdive.dsmz.de/login). 
 
-If you do not register, you will not be able to download the full information on strains in BacDive. Instead, what you will get is access to two data-frames: `bacdive_phenotypes` and `bacdive_susceptibility`. Which look like this:
+If you do not register, you will not be able to download the full information on strains in BacDive. Instead, what you will get is access to three data-frames: `bacdive_phenotypes`, `bacdive_susceptibility`, and `bacdive_enzymes`. Which look like this:
 
 ```{r}
 library(bacphene)
@@ -46,10 +46,30 @@ head(bacdive_phenotypes)
 head(bacdive_susceptibility)
 ```
 
-* Recommended *
+```{r}
+head(bacdive_enzymes)
+```
+
+
+### Recommended
 
 Edit your $HOME/.Renviron file (you can open in R with `usethis::edit_r_environ()`) and add your bacdive credentials like so:
 ```
 DSMZ_API_USER=your_email@something.com
 DSMZ_API_PASSWORD=your_password
 ```
+
+# References
+
+When using BacDive for research please consider citing the following paper:
+```
+BacDive in 2019: bacterial phenotypic data for High-throughput biodiversity analysis
+Reimer, L. C., Vetcininova, A., Sardà Carbasse, J., Söhngen, C., Gleim, D., Ebeling, C., Overmann, J.
+[Nucleic Acids Research; database issue 2019](https://academic.oup.com/nar/article/47/D1/D631/5106998).
+```
+
+To cite this package: `citation("bacphene")`
+
+[BacDive R package]: https://r-forge.r-project.org/R/?group_id=1573
+[bacdive.org]: https://bacdive.dsmz.de
+[github repo]: https://github.com/scottdaniel/bacphene

@@ -2,8 +2,9 @@ Package: bacphene
 Type: Package
 Title: Imports Bacterial Phenotype Data Into R
 Version: 0.1.0
-Author: Scott G. Daniel <scottdaniel25@gmail.com>
-Maintainer: Scott G. Daniel <scottdaniel25@gmail.com>
+Date: 2021-11-11
+Authors@R: person("Scott G.", "Daniel", email = "scottdaniel25@gmail.com",
+  role = c("aut", "cre"))
 Description: Grabs bacterial phenotype data from bacdive.org.
 License: GPL-3
 Encoding: UTF-8
