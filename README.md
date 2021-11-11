@@ -65,7 +65,7 @@ head(bacdive_enzymes)
 #> 4 159837 Abyssibacter profundi Species        -   alpha-mannosidase 3.2.1.24
 #> 5 159837 Abyssibacter profundi Species        -    beta-glucosidase 3.2.1.21
 #> 6 159837 Abyssibacter profundi Species        -  beta-glucuronidase 3.2.1.31
-#>                  doi/url
+#>                      doi
 #> 1 10.1099/ijsem.0.002999
 #> 2 10.1099/ijsem.0.002999
 #> 3 10.1099/ijsem.0.002999
@@ -87,8 +87,10 @@ Edit your $HOME/.Renviron file (you can open in R with
 When using BacDive for research please consider citing the following
 paper:
 
-    BacDive in 2019: bacterial phenotypic data for High-throughput biodiversity analysis
-    Reimer, L. C., Vetcininova, A., Sardà Carbasse, J., Söhngen, C., Gleim, D., Ebeling, C., Overmann, J.
-    [Nucleic Acids Research; database issue 2019](https://academic.oup.com/nar/article/47/D1/D631/5106998).
+BacDive in 2019: bacterial phenotypic data for High-throughput
+biodiversity analysis Reimer, L. C., Vetcininova, A., Sardà Carbasse,
+J., Söhngen, C., Gleim, D., Ebeling, C., Overmann, J. [Nucleic Acids
+Research; database issue
+2019](https://academic.oup.com/nar/article/47/D1/D631/5106998).
 
-To cite this package: `citation("bacphene")`
+To cite this package enter `citation("bacphene")` in your R console.
