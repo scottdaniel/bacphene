@@ -149,7 +149,7 @@ for (i in 1:length(list_holder)) {
 }
 
 bacdive_enzymes %<>%
-  select(ID, taxon, rank, activity, value, ec, `doi/url`)
+  select(ID, taxon, rank, activity, value, ec, doi = `doi/url`)
 attr(bacdive_enzymes, "date_downloaded") <- attr(list_holder, "date_downloaded")
 usethis::use_data(bacdive_enzymes, overwrite = TRUE)
 
