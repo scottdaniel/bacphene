@@ -1,9 +1,11 @@
 ## code to prepare `bacdive_phenotypes` and `bacdive_susceptibility` datasets
 ## also saves a large type strain list for later use if needed
+## pro-tip to search for a given bacdive ID: list.filter(list_holder, General$`BacDive-ID` == "141146")
 
 library(BacDive)
 library(tidyverse)
 library(usethis)
+library(magrittr)
 
 credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PASSWORD"))
 
@@ -24,6 +26,7 @@ list_holder <- list()
 
 i = 1
 
+# This can take a few minutes to download all the type strain data from bacdive.org
 if (file.exists("data-raw/type_strain_large_list.rda")) {
   list_holder <- read_rds("data-raw/type_strain_large_list.rda")
 } else {
@@ -36,6 +39,7 @@ if (file.exists("data-raw/type_strain_large_list.rda")) {
     temp_list <- fetch(bacdive, type_strains$ID[i:k])
     list_holder <- c(list_holder, temp_list$results)
   }
+  attr(list_holder, "date_downloaded") <- Sys.Date()
   write_rds(list_holder, "data-raw/type_strain_large_list.rda") #so if we re-run the script we don't have to keep GETing data from bacdive
 }
 
@@ -58,6 +62,9 @@ for (i in 1:length(list_holder)) {
     bacdive_phenotypes[i,"aerobic_status"] <- list_holder[[i]]$`Physiology and metabolism`$`oxygen tolerance`$`oxygen tolerance`
   }
 }
+
+# have this so we know when the data was downloaded
+attr(bacdive_phenotypes, "date_downloaded") <- attr(list_holder, "date_downloaded")
 
 # If we want to exactly match the values for abxidx
 # bacdive_phenotypes <- bacdive_phenotypes %>%
@@ -123,7 +130,26 @@ for (i in 1:length(list_holder)) {
 
 }
 
+attr(bacdive_susceptibility, "date_downloaded") <- attr(list_holder, "date_downloaded")
 usethis::use_data(bacdive_susceptibility, overwrite = TRUE)
 
-#pro-tip to search for a given bacdive ID: list.which(list_holder, General$`BacDive-ID` == "141146")
+# and now for enzyme activity
+
+bacdive_enzymes <- tibble()
+for (i in 1:length(list_holder)) {
+  if (!is.null(list_holder[[i]]$`Physiology and metabolism`$enzymes)) {
+    ref_df <-bind_rows(list_holder[[i]]$Reference) %>% select(`@id`, `doi/url`)
+    enzyme_df <- bind_rows(list_holder[[i]]$`Physiology and metabolism`$enzymes) %>%
+      mutate(ID = list_holder[[i]]$General$`BacDive-ID`,
+             taxon = list_holder[[i]]$`Name and taxonomic classification`$species,
+             rank = "Species") %>%
+      left_join(ref_df, by = c("@ref" = "@id"))
+  }
+  bacdive_enzymes <- bind_rows(bacdive_enzymes, enzyme_df)
+}
+
+bacdive_enzymes %<>%
+  select(ID, taxon, rank, activity, value, ec, `doi/url`)
+attr(bacdive_enzymes, "date_downloaded") <- attr(list_holder, "date_downloaded")
+usethis::use_data(bacdive_enzymes, overwrite = TRUE)
 
