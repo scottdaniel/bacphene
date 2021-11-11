@@ -12,7 +12,7 @@ A data frame with the following columns:
   \item{rank}{The rank of the taxon.}
   \item{activity}{Whether the enzyme is active or not with '+' being active, '-' being non-active, and '+/-' being variable.}
   \item{value}{The enzyme name.}
-  \item{ec}{[The Enzyme Commission number.](https://en.wikipedia.org/wiki/Enzyme_Commission_number)}
+  \item{ec}{\href{https://en.wikipedia.org/wiki/Enzyme_Commission_number}{The Enzyme Commission number.}}
   \item{doi}{Digital object identifier for the literature that supports the evidence of activity.}
 }
 }

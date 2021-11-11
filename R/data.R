@@ -36,11 +36,23 @@
 #'   \item{rank}{The rank of the taxon.}
 #'   \item{activity}{Whether the enzyme is active or not with '+' being active, '-' being non-active, and '+/-' being variable.}
 #'   \item{value}{The enzyme name.}
-#'   \item{ec}{[The Enzyme Commission number.](https://en.wikipedia.org/wiki/Enzyme_Commission_number)}
+#'   \item{ec}{\href{https://en.wikipedia.org/wiki/Enzyme_Commission_number}{The Enzyme Commission number.}}
 #'   \item{doi}{Digital object identifier for the literature that supports the evidence of activity.}
 #' }
 #' @note Data frame also has the attribute "date_downloaded" for when the data was downloaded from bacdive.org.
 "bacdive_enzymes"
 
-# TODO
-#' Data frame from Shen et al. 2021 (liver cirrhosis kraken results)
+#' Taxonomic count data from shotgun metagenomics
+#' @format A data frame with the following columns:
+#' \describe{
+#'   \item{SampleID}{The unique SampleID.}
+#'   \item{SampleType}{The type of sample: either "Rectal swab" or "Feces".}
+#'   \item{ETOH_etiology}{Whether the liver disease was alcohol related or not.}
+#'   \item{Antibiotics}{The type of antibiotic the patient was taking.}
+#'   \item{MELD}{MELD Score (Model For End-Stage Liver Disease). Higher numbers indicate worse prognosis.}
+#'   \item{read_counts}{Total read counts in the sample.}
+#'   \item{Taxa}{Taxa at the species level.}
+#'   \item{count}{Count of the Taxa.}
+#' }
+#' @note Data obtained from the following study: Shen, T.-C. D. et al. (2021) ‘The Mucosally-Adherent Rectal Microbiota Contains Features Unique to Alcohol-Related Cirrhosis’, Gut microbes, 13(1), p. 1987781. \url{https://www.ncbi.nlm.nih.gov/pubmed/34747331}.
+"Shen2021"

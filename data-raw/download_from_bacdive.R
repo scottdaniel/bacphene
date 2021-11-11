@@ -153,3 +153,6 @@ bacdive_enzymes %<>%
 attr(bacdive_enzymes, "date_downloaded") <- attr(list_holder, "date_downloaded")
 usethis::use_data(bacdive_enzymes, overwrite = TRUE)
 
+# Sample data
+Shen2021 <- read_csv("data-raw/Shen2021.csv", show_col_types = FALSE)
+usethis::use_data(Shen2021, overwrite = TRUE)
