@@ -33,7 +33,15 @@ install_github(repo = "scottdaniel/bacphene")
 install.packages("BacDive", repos="http://R-Forge.R-project.org")
 ```
 
-After this, you may register at bacdive.org [here](https://api.bacdive.dsmz.de/login). 
+After this, you may register at bacdive.org [here](https://api.bacdive.dsmz.de/login).
+
+### Recommended
+
+Edit your $HOME/.Renviron file (you can open in R with `usethis::edit_r_environ()`) and add your bacdive credentials like so:
+```
+DSMZ_API_USER=your_email@something.com
+DSMZ_API_PASSWORD=your_password
+```
 
 If you do not register, you will not be able to download the full information on strains in BacDive. Instead, what you will get is access to three data-frames: `bacdive_phenotypes`, `bacdive_susceptibility`, and `bacdive_enzymes`. Which look like this:
 
@@ -50,16 +58,51 @@ head(bacdive_susceptibility)
 head(bacdive_enzymes)
 ```
 
+## Demo
 
-### Recommended
+Our test data-set is from Shen et al. 2021 and contains taxonomic counts from metagenomic shotgun alignments. See `?Shen2021` for a full description of the columns. With our test data and bacdive we can ask a few questions:
 
-Edit your $HOME/.Renviron file (you can open in R with `usethis::edit_r_environ()`) and add your bacdive credentials like so:
+### Do the rectal swabs contain more oxygen tolerant organisms?
+
+While this may seem like an obvious "yes", it still stands as a proof-of-concept.
+
+```{r}
+
+library(tidyverse)
+
+my_df <- Shen2021 %>%
+  left_join(bacdive_phenotypes, by = "taxon")
+
+my_df %>%
+  group_by(SampleType, aerobic_status) %>%
+  filter(count > 0, !is.na(aerobic_status)) %>%
+  summarise(n = n(), weighted_n = sum(count) * n(), .groups = "drop") %>%
+  group_by(SampleType) %>%
+  mutate(normalised_n = weighted_n / sum(weighted_n)) %>%
+  ungroup() %>%
+  ggplot(aes(x = SampleType, y = weighted_n, fill = aerobic_status)) +
+    geom_bar(stat = "identity", position = "fill") +
+  theme_bw() +
+  theme(strip.text.x = element_text(size = 8),
+        strip.background = element_blank(),
+        axis.text.x = element_text(angle=45, hjust = 1)) +
+  scale_y_continuous(labels = scales::percent) +
+  labs(y = "Relative abundance", x = "", fill = "Aerobic status")
+
+# The problem here seems to be that some Bacteroides (which are highly abundant) have NA's for aerobic status which is just WRONG see the TODO in download_from_bacdiv.Rmd
+
 ```
-DSMZ_API_USER=your_email@something.com
-DSMZ_API_PASSWORD=your_password
+
+```{r}
+
+top_taxa <- my_df %>%
+  group_by(SampleType, aerobic_status, taxon) %>%
+  summarise(total_count = sum(count), .groups = "drop") %>%
+  slice_max(order_by = total_count, n = 5)
+
 ```
 
-# References
+## References
 
 When using BacDive for research please consider citing the following paper:
 

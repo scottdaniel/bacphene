@@ -1,35 +1,46 @@
-## code to prepare `bacdive_phenotypes` and `bacdive_susceptibility` datasets
-## also saves a large type strain list for later use if needed
-## pro-tip to search for a given bacdive ID: list.filter(list_holder, General$`BacDive-ID` == "141146")
+# Code to prepare datasets
 
+Also saves a large type strain list for later use if needed
+
+Pro-tip to search for a given bacdive ID: list.filter(list_holder, General$`BacDive-ID` == "141146")
+
+```{r libraries}
 library(BacDive)
 library(tidyverse)
 library(usethis)
 library(magrittr)
+```
 
-credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PASSWORD"))
-
-bacdive <- open_bacdive(credentials[[1L]], credentials[[2L]])
-
-full_list <- read_csv("data-raw/full_list_of_bacteria_from_bacdive_20211027.csv", skip = 2, show_col_types = FALSE)
-# this was downloaded here: https://bacdive.dsmz.de/advsearch?filter-group%5B1%5D%5Bgroup-condition%5D=OR&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield%5D=Domain&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-option%5D=contains&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-value%5D=Bacteria&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-validation%5D=strains-domain-1
-
-type_strains <- full_list %>%
-  filter(is_type_strain_header == 1)
-
-# If you try to download more than 100 you get warnings and errors like this one:
-# Warning message:
-#   In download_json_with_retry(url, object) :
-#   [API] title: BacDive API error; code: 400; message: You exceeded the maximum amount of 100 ids per request.
-
-list_holder <- list()
-
-i = 1
+```{r download from bacdive if needed}
 
 # This can take a few minutes to download all the type strain data from bacdive.org
 if (file.exists("data-raw/type_strain_large_list.rda")) {
   list_holder <- read_rds("data-raw/type_strain_large_list.rda")
 } else {
+  credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PASSWORD"))
+  
+  bacdive <- open_bacdive(credentials[[1L]], credentials[[2L]])
+  
+  full_list <-
+    read_csv(
+      "data-raw/full_list_of_bacteria_from_bacdive_20211027.csv",
+      skip = 2,
+      show_col_types = FALSE
+    )
+  # this was downloaded here: https://bacdive.dsmz.de/advsearch?filter-group%5B1%5D%5Bgroup-condition%5D=OR&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield%5D=Domain&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-option%5D=contains&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-value%5D=Bacteria&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-validation%5D=strains-domain-1
+  
+  type_strains <- full_list %>%
+    filter(is_type_strain_header == 1)
+  
+  # If you try to download more than 100 you get warnings and errors like this one:
+  # Warning message:
+  #   In download_json_with_retry(url, object) :
+  #   [API] title: BacDive API error; code: 400; message: You exceeded the maximum amount of 100 ids per request.
+  
+  list_holder <- list()
+  
+  i = 1
+  
   for (i in seq(1, length(type_strains$ID), 100)) {
     if (i + 99 > length(type_strains$ID)) {
       k = length(type_strains$ID) #since the last block would include NA's otherwise
@@ -42,29 +53,41 @@ if (file.exists("data-raw/type_strain_large_list.rda")) {
   attr(list_holder, "date_downloaded") <- Sys.Date()
   write_rds(list_holder, "data-raw/type_strain_large_list.rda") #so if we re-run the script we don't have to keep GETing data from bacdive
 }
+```
 
-# now we want to extract the important bits (gram stain, oxygen tolerance, abx sensitivity / resistance, and urease activity)
-# splitting into bacdive_phenotypes and bacdive_susceptibility for compatibility with abxidx
 
+Now we want to extract the important bits (gram stain, oxygen tolerance, abx sensitivity / resistance, and urease activity)
+
+## bacdive_phenotypes
+
+```{r}
 bacdive_phenotypes <- tibble()
 for (i in 1:length(list_holder)) {
-  bacdive_phenotypes[i,"ID"] <- list_holder[[i]]$General$`BacDive-ID`
-  bacdive_phenotypes[i,"taxon"] <- list_holder[[i]]$`Name and taxonomic classification`$species
-  bacdive_phenotypes[i,"rank"] <- "Species"
+  bacdive_phenotypes[i, "ID"] <- list_holder[[i]]$General$`BacDive-ID`
+  bacdive_phenotypes[i, "taxon"] <-
+    list_holder[[i]]$`Name and taxonomic classification`$species
+  bacdive_phenotypes[i, "rank"] <- "Species"
   if (is.null(list_holder[[i]]$Morphology$`cell morphology`$`gram stain`)) {
-    bacdive_phenotypes[i,"gram_stain"] <- NA
+    bacdive_phenotypes[i, "gram_stain"] <- NA
   } else {
-  bacdive_phenotypes[i,"gram_stain"] <- list_holder[[i]]$Morphology$`cell morphology`$`gram stain`
+    bacdive_phenotypes[i, "gram_stain"] <-
+      list_holder[[i]]$Morphology$`cell morphology`$`gram stain`
   }
   if (is.null(list_holder[[i]]$`Physiology and metabolism`$`oxygen tolerance`$`oxygen tolerance`)) {
-    bacdive_phenotypes[i,"aerobic_status"] <- NA
+    bacdive_phenotypes[i, "aerobic_status"] <- NA
   } else {
-    bacdive_phenotypes[i,"aerobic_status"] <- list_holder[[i]]$`Physiology and metabolism`$`oxygen tolerance`$`oxygen tolerance`
+    bacdive_phenotypes[i, "aerobic_status"] <-
+      list_holder[[i]]$`Physiology and metabolism`$`oxygen tolerance`$`oxygen tolerance`
+    # TODO this breaks when you have multiple references for the aerobic status
+    # what we really need here is sth like bind_rows(list_holder[[i]]$`Physiology and metabolism`$`oxygen tolerance`)
+    # and then taking them all and doing the filtering below
+    # might as well do this for gram stain too and then join the tables
   }
 }
 
 # have this so we know when the data was downloaded
-attr(bacdive_phenotypes, "date_downloaded") <- attr(list_holder, "date_downloaded")
+attr(bacdive_phenotypes, "date_downloaded") <-
+  attr(list_holder, "date_downloaded")
 
 # if both gram_stain and aerobic_status are NA then it's not useful to keep
 bacdive_phenotypes %<>%
@@ -82,8 +105,11 @@ dupes <- bacdive_phenotypes %>% count(taxon) %>% filter(n > 1) %>%
 bacdive_phenotypes %<>%
   group_by(taxon) %>%
   slice(1) %>% #remove any duplicates
-  mutate(gram_stain = ifelse(taxon %in% dupes$taxon, dupes$gram_stain, gram_stain), #if they were a duplicate, replace with most common information
-         aerobic_status = ifelse(taxon %in% dupes$taxon, dupes$aerobic_status, aerobic_status))
+  mutate(
+    gram_stain = ifelse(taxon %in% dupes$taxon, dupes$gram_stain, gram_stain),
+    #if they were a duplicate, replace with most common information
+    aerobic_status = ifelse(taxon %in% dupes$taxon, dupes$aerobic_status, aerobic_status)
+  )
 
 # maybe concatenate multiple entries?
 # summarise(gram_stain = paste(gram_stain, collapse = ", "),
@@ -96,13 +122,17 @@ bacdive_phenotypes %<>%
 # this turns all the "variable" values for gram_stain into NA's
 
 usethis::use_data(bacdive_phenotypes, overwrite = TRUE)
+```
 
+## bacdive_susceptibility
+
+```{r}
 bacdive_susceptibility <- tibble()
 for (i in 1:length(list_holder)) {
   abx_df <-
     list_holder[[i]]$`Physiology and metabolism`$`antibiotic resistance`
   my_df <- tibble()
-
+  
   if (!is.null(abx_df)) {
     if (!is.null(names(abx_df))) {
       #for when you have a single antibiotic entry since a longer list will not have a `names` attribute
@@ -148,24 +178,31 @@ for (i in 1:length(list_holder)) {
       }
     }
   }
-
+  
   bacdive_susceptibility <- bind_rows(bacdive_susceptibility, my_df)
-
+  
 }
 
-attr(bacdive_susceptibility, "date_downloaded") <- attr(list_holder, "date_downloaded")
+attr(bacdive_susceptibility, "date_downloaded") <-
+  attr(list_holder, "date_downloaded")
 usethis::use_data(bacdive_susceptibility, overwrite = TRUE)
+```
 
-# and now for enzyme activity
+## bacdive_enzymes
 
+```{r}
 bacdive_enzymes <- tibble()
 for (i in 1:length(list_holder)) {
   if (!is.null(list_holder[[i]]$`Physiology and metabolism`$enzymes)) {
-    ref_df <-bind_rows(list_holder[[i]]$Reference) %>% select(`@id`, `doi/url`)
-    enzyme_df <- bind_rows(list_holder[[i]]$`Physiology and metabolism`$enzymes) %>%
-      mutate(ID = list_holder[[i]]$General$`BacDive-ID`,
-             taxon = list_holder[[i]]$`Name and taxonomic classification`$species,
-             rank = "Species") %>%
+    ref_df <-
+      bind_rows(list_holder[[i]]$Reference) %>% select(`@id`, `doi/url`)
+    enzyme_df <-
+      bind_rows(list_holder[[i]]$`Physiology and metabolism`$enzymes) %>%
+      mutate(
+        ID = list_holder[[i]]$General$`BacDive-ID`,
+        taxon = list_holder[[i]]$`Name and taxonomic classification`$species,
+        rank = "Species"
+      ) %>%
       left_join(ref_df, by = c("@ref" = "@id"))
   }
   bacdive_enzymes <- bind_rows(bacdive_enzymes, enzyme_df)
@@ -173,9 +210,17 @@ for (i in 1:length(list_holder)) {
 
 bacdive_enzymes %<>%
   select(ID, taxon, rank, activity, value, ec, doi = `doi/url`)
-attr(bacdive_enzymes, "date_downloaded") <- attr(list_holder, "date_downloaded")
+attr(bacdive_enzymes, "date_downloaded") <-
+  attr(list_holder, "date_downloaded")
 usethis::use_data(bacdive_enzymes, overwrite = TRUE)
+```
 
-# Sample data
+## Shen2021
+
+```{r}
 Shen2021 <- read_csv("data-raw/Shen2021.csv", show_col_types = FALSE)
 usethis::use_data(Shen2021, overwrite = TRUE)
+```
+
+# The end
+

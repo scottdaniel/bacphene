@@ -13,8 +13,8 @@ A data frame with the following columns:
   \item{Antibiotics}{The type of antibiotic the patient was taking.}
   \item{MELD}{MELD Score (Model For End-Stage Liver Disease). Higher numbers indicate worse prognosis.}
   \item{read_counts}{Total read counts in the sample.}
-  \item{Taxa}{Taxa at the species level.}
-  \item{count}{Count of the Taxa.}
+  \item{taxon}{Taxon at the species level.}
+  \item{count}{Count of the Taxon.}
 }
 }
 \usage{

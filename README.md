@@ -28,6 +28,14 @@ install.packages("BacDive", repos="http://R-Forge.R-project.org")
 After this, you may register at bacdive.org
 [here](https://api.bacdive.dsmz.de/login).
 
+### Recommended
+
+Edit your $HOME/.Renviron file (you can open in R with
+`usethis::edit_r_environ()`) and add your bacdive credentials like so:
+
+    DSMZ_API_USER=your_email@something.com
+    DSMZ_API_PASSWORD=your_password
+
 If you do not register, you will not be able to download the full
 information on strains in BacDive. Instead, what you will get is access
 to three data-frames: `bacdive_phenotypes`, `bacdive_susceptibility`,
@@ -74,15 +82,63 @@ head(bacdive_enzymes)
 #> 6 10.1099/ijsem.0.002999
 ```
 
-### Recommended
+## Demo
 
-Edit your $HOME/.Renviron file (you can open in R with
-`usethis::edit_r_environ()`) and add your bacdive credentials like so:
+Our test data-set is from Shen et al. 2021 and contains taxonomic counts
+from metagenomic shotgun alignments. See `?Shen2021` for a full
+description of the columns. With our test data and bacdive we can ask a
+few questions:
 
-    DSMZ_API_USER=your_email@something.com
-    DSMZ_API_PASSWORD=your_password
+### Do the rectal swabs contain more oxygen tolerant organisms?
 
-# References
+While this may seem like an obvious “yes”, it still stands as a
+proof-of-concept.
+
+``` r
+library(tidyverse)
+#> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
+#> ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
+#> ✓ tibble  3.1.3     ✓ dplyr   1.0.7
+#> ✓ tidyr   1.1.3     ✓ stringr 1.4.0
+#> ✓ readr   2.0.0     ✓ forcats 0.5.1
+#> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+#> x dplyr::filter() masks stats::filter()
+#> x dplyr::lag()    masks stats::lag()
+
+my_df <- Shen2021 %>%
+  left_join(bacdive_phenotypes, by = "taxon")
+
+my_df %>%
+  group_by(SampleType, aerobic_status) %>%
+  filter(count > 0, !is.na(aerobic_status)) %>%
+  summarise(n = n(), weighted_n = sum(count) * n(), .groups = "drop") %>%
+  group_by(SampleType) %>%
+  mutate(normalised_n = weighted_n / sum(weighted_n)) %>%
+  ungroup() %>%
+  ggplot(aes(x = SampleType, y = weighted_n, fill = aerobic_status)) +
+    geom_bar(stat = "identity", position = "fill") +
+  theme_bw() +
+  theme(strip.text.x = element_text(size = 8),
+        strip.background = element_blank(),
+        axis.text.x = element_text(angle=45, hjust = 1)) +
+  scale_y_continuous(labels = scales::percent) +
+  labs(y = "Relative abundance", x = "", fill = "Aerobic status")
+```
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
+``` r
+# The problem here seems to be that some Bacteroides (which are highly abundant) have NA's for aerobic status which is just WRONG see the TODO in download_from_bacdiv.Rmd
+```
+
+``` r
+top_taxa <- my_df %>%
+  group_by(SampleType, aerobic_status, taxon) %>%
+  summarise(total_count = sum(count), .groups = "drop") %>%
+  slice_max(order_by = total_count, n = 5)
+```
+
+## References
 
 When using BacDive for research please consider citing the following
 paper:
