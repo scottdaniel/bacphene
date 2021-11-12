@@ -51,8 +51,8 @@
 #'   \item{Antibiotics}{The type of antibiotic the patient was taking.}
 #'   \item{MELD}{MELD Score (Model For End-Stage Liver Disease). Higher numbers indicate worse prognosis.}
 #'   \item{read_counts}{Total read counts in the sample.}
-#'   \item{Taxa}{Taxa at the species level.}
-#'   \item{count}{Count of the Taxa.}
+#'   \item{taxon}{Taxon at the species level.}
+#'   \item{count}{Count of the Taxon.}
 #' }
 #' @note Data obtained from the following study: Shen, T.-C. D. et al. (2021) ‘The Mucosally-Adherent Rectal Microbiota Contains Features Unique to Alcohol-Related Cirrhosis’, Gut microbes, 13(1), p. 1987781. \url{https://www.ncbi.nlm.nih.gov/pubmed/34747331}.
 "Shen2021"
