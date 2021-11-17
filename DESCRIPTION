@@ -16,6 +16,9 @@ Suggests:
     testthat (>= 2.1.0)
 Imports:
     rlist,
-    BacDive
+    BacDive,
+    magrittr,
+    tibble,
+    dplyr
 Depends: 
     R (>= 2.10)
