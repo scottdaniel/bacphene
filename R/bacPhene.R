@@ -46,3 +46,121 @@ getTypeStrainLocal <- function(list = NULL, rda = "data-raw/type_strain_large_li
 
 }
 
+#' Extracts cell morphology data from a bacdive list
+#'
+#' @param list_holder A list object containing strain information already present in the R environment
+#'
+#' @return A dataframe of cell morphology information about taxa in the list
+#' @export
+#'
+#' @importFrom dplyr bind_rows mutate left_join select
+#' @importFrom tibble tibble
+#'
+#' @examples
+#' \dontrun{
+#' morphology_df <- getMorphology(list_holder)
+#' }
+getMorphology <- function(list_holder = list_holder) {
+  bacdive_morphology <- tibble::tibble()
+  for (i in 1:length(list_holder)) {
+    if (!is.null(list_holder[[i]]$Morphology$`cell morphology`)) {
+      ref_df <-
+        dplyr::bind_rows(list_holder[[i]]$Reference) %>% dplyr::select(`@id`, `doi/url`)
+      cell_morphology_df <-
+        dplyr::bind_rows(list_holder[[i]]$Morphology$`cell morphology`) %>%
+        dplyr::mutate(
+          ID = list_holder[[i]]$General$`BacDive-ID`,
+          taxon = list_holder[[i]]$`Name and taxonomic classification`$species,
+          rank = "Species"
+        ) %>%
+        dplyr::left_join(ref_df, by = c("@ref" = "@id"))
+      bacdive_morphology <-
+        dplyr::bind_rows(bacdive_morphology, cell_morphology_df)
+    }
+  }
+  attr(bacdive_morphology, "date_downloaded") <-
+    attr(list_holder, "date_downloaded")
+  return(bacdive_morphology)
+}
+
+#' Extracts oxygen tolerance data from a bacdive list
+#'
+#' @param list_holder A list object containing strain information already present in the R environment
+#'
+#' @return A dataframe of oxygen tolerance information about taxa in the list
+#' @export
+#'
+#' @importFrom dplyr bind_rows mutate left_join select
+#' @importFrom tibble tibble
+#'
+#' @examples
+#' \dontrun{
+#' oxygen_df <- getOxygen(list_holder)
+#' }
+getOxygen <- function(list_holder = list_holder) {
+  bacdive_oxygen <- tibble::tibble()
+  for (i in 1:length(list_holder)) {
+    if (!is.null(list_holder[[i]]$`Physiology and metabolism`$`oxygen tolerance`)) {
+      ref_df <-
+        dplyr::bind_rows(list_holder[[i]]$Reference) %>% dplyr::select(`@id`, `doi/url`)
+      oxygen_df <-
+        dplyr::bind_rows(list_holder[[i]]$`Physiology and metabolism`$`oxygen tolerance`) %>%
+        dplyr::mutate(
+          ID = list_holder[[i]]$General$`BacDive-ID`,
+          taxon = list_holder[[i]]$`Name and taxonomic classification`$species,
+          rank = "Species"
+        ) %>%
+        dplyr::left_join(ref_df, by = c("@ref" = "@id"))
+      bacdive_oxygen <-
+        dplyr::bind_rows(bacdive_oxygen, oxygen_df)
+    }
+  }
+  attr(bacdive_oxygen, "date_downloaded") <-
+    attr(list_holder, "date_downloaded")
+  return(bacdive_oxygen)
+}
+
+#' Combined oxygen tolerance and gram stain data for use with other packages
+#'
+#' @param morphology_df A dataframe from \code{\link{getMorphology}}
+#' @param oxygen_df A dataframe from \code{\link{getOxygen}}
+#'
+#' @return A dataframe of oxygen tolerance and gram stain information about taxa in the list
+#' @export
+#'
+#' @importFrom dplyr select full_join filter group_by count ungroup
+#' @importFrom magrittr %<>%
+#'
+#' @examples
+#' \dontrun{
+#' morphology_df <- getMorphology(list_holder)
+#' oxygen_df <- getOxygen(list_holder)
+#' phenotype_df <- getPhenotypes(morphology_df, oxygen_df)
+#' }
+getPhenotypes <- function(morphology_df, oxygen_df) {
+  # this introduces duplicates due to multiple sources of information
+  bacdive_phenotypes <- oxygen_df %>%
+    dplyr::select(ID, taxon, rank, aerobic_status = `oxygen tolerance`) %>%
+    dplyr::full_join(morphology_df %>% dplyr::select(ID, gram_stain = `gram stain`), by = "ID")
+
+  # if both gram_stain and aerobic_status are NA then it's not useful to keep
+  bacdive_phenotypes %<>%
+    dplyr::filter(!is.na(gram_stain) | !is.na(aerobic_status))
+
+  # only keeps the most common combination of aerobic status and gram stain
+  bacdive_phenotypes %<>%
+    dplyr::group_by(ID, taxon, rank) %>%
+    dplyr::count(gram_stain, aerobic_status) %>%
+    dplyr::filter(n == max(n)) %>%
+    dplyr::ungroup() %>%
+    dplyr::select(-n)
+
+  if (!attr(oxygen_df, "date_downloaded") %in% attr(morphology_df, "date_downloaded")) {
+    simpleError(paste0("Error: Date downloaded does not match for oxygen_df ", attr(oxygen_df, "date_downloaded"), " and morphology_df ", attr(morphology_df, "date_downloaded"), ". Did you get your dataframes elsewhere?"))
+  }
+
+  attr(bacdive_phenotypes, "date_downloaded") <-
+    attr(oxygen_df, "date_downloaded")
+
+  return(bacdive_phenotypes)
+}
