@@ -44,42 +44,42 @@ and `bacdive_enzymes`. Which look like this:
 ``` r
 library(bacphene)
 head(bacdive_phenotypes)
-#>       ID                       taxon    rank gram_stain aerobic_status
-#> 1 159837       Abyssibacter profundi Species   negative         aerobe
-#> 2 159709      Acidicapsa dinghuensis Species   negative         aerobe
-#> 3 159652 Abditibacterium utsteinense Species       <NA>           <NA>
-#> 4 157972      Acetivibrio mesophilus Species       <NA>           <NA>
-#> 5 156534       Achromobacter anxifer Species       <NA>         aerobe
-#> 6 156528  Achromobacter aegrifaciens Species       <NA>         aerobe
+#> # A tibble: 6 × 5
+#> # Groups:   taxon [6]
+#>       ID taxon                         rank    gram_stain aerobic_status   
+#>    <int> <chr>                         <chr>   <chr>      <chr>            
+#> 1    219 Abiotrophia defectiva         Species <NA>       anaerobe         
+#> 2 159837 Abyssibacter profundi         Species negative   aerobe           
+#> 3 132478 Abyssivirga alkaniphila       Species positive   obligate anaerobe
+#> 4  24718 Acanthopleuribacter pedis     Species negative   aerobe           
+#> 5   7517 Acaricomes phytoseiuli        Species positive   <NA>             
+#> 6 134101 Acetanaerobacterium elongatum Species positive   anaerobe
 ```
 
 ``` r
 head(bacdive_susceptibility)
-#>       ID                  taxon    rank      antibiotic       value
-#> 1 159709 Acidicapsa dinghuensis Species        Amikacin   resistant
+#> # A tibble: 6 × 5
+#>       ID taxon                  rank    antibiotic      value      
+#>    <int> <chr>                  <chr>   <chr>           <chr>      
+#> 1 159709 Acidicapsa dinghuensis Species Amikacin        resistant  
 #> 2 159709 Acidicapsa dinghuensis Species chloramphenicol susceptible
-#> 3 159709 Acidicapsa dinghuensis Species   ciprofloxacin susceptible
-#> 4 159709 Acidicapsa dinghuensis Species    erythromycin susceptible
-#> 5 159709 Acidicapsa dinghuensis Species      gentamicin   resistant
-#> 6 159709 Acidicapsa dinghuensis Species       kanamycin   resistant
+#> 3 159709 Acidicapsa dinghuensis Species ciprofloxacin   susceptible
+#> 4 159709 Acidicapsa dinghuensis Species erythromycin    susceptible
+#> 5 159709 Acidicapsa dinghuensis Species gentamicin      resistant  
+#> 6 159709 Acidicapsa dinghuensis Species kanamycin       resistant
 ```
 
 ``` r
 head(bacdive_enzymes)
-#>       ID                 taxon    rank activity               value       ec
-#> 1 159837 Abyssibacter profundi Species        -    acid phosphatase  3.1.3.2
-#> 2 159837 Abyssibacter profundi Species        - alpha-galactosidase 3.2.1.22
-#> 3 159837 Abyssibacter profundi Species        -   alpha-glucosidase 3.2.1.20
-#> 4 159837 Abyssibacter profundi Species        -   alpha-mannosidase 3.2.1.24
-#> 5 159837 Abyssibacter profundi Species        -    beta-glucosidase 3.2.1.21
-#> 6 159837 Abyssibacter profundi Species        -  beta-glucuronidase 3.2.1.31
-#>                      doi
-#> 1 10.1099/ijsem.0.002999
-#> 2 10.1099/ijsem.0.002999
-#> 3 10.1099/ijsem.0.002999
-#> 4 10.1099/ijsem.0.002999
-#> 5 10.1099/ijsem.0.002999
-#> 6 10.1099/ijsem.0.002999
+#> # A tibble: 6 × 7
+#>       ID taxon                 rank    activity value               ec     doi  
+#>    <int> <chr>                 <chr>   <chr>    <chr>               <chr>  <chr>
+#> 1 159837 Abyssibacter profundi Species -        acid phosphatase    3.1.3… 10.1…
+#> 2 159837 Abyssibacter profundi Species -        alpha-galactosidase 3.2.1… 10.1…
+#> 3 159837 Abyssibacter profundi Species -        alpha-glucosidase   3.2.1… 10.1…
+#> 4 159837 Abyssibacter profundi Species -        alpha-mannosidase   3.2.1… 10.1…
+#> 5 159837 Abyssibacter profundi Species -        beta-glucosidase    3.2.1… 10.1…
+#> 6 159837 Abyssibacter profundi Species -        beta-glucuronidase  3.2.1… 10.1…
 ```
 
 ## Demo
@@ -128,7 +128,7 @@ my_df %>%
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
 
 ``` r
-# The problem here seems to be that some Bacteroides (which are highly abundant) have NA's for aerobic status which is just WRONG see the TODO in download_from_bacdiv.Rmd
+# Seems like there should still be more aerobic bacteria in the rectal swabs
 ```
 
 ``` r

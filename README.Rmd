@@ -89,7 +89,7 @@ my_df %>%
   scale_y_continuous(labels = scales::percent) +
   labs(y = "Relative abundance", x = "", fill = "Aerobic status")
 
-# The problem here seems to be that some Bacteroides (which are highly abundant) have NA's for aerobic status which is just WRONG see the TODO in download_from_bacdiv.Rmd
+# Seems like there should still be more aerobic bacteria in the rectal swabs
 
 ```
 
