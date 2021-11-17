@@ -1,4 +1,40 @@
+#bacdive_morphology
 
+test_that("getMorphology", {
+
+  # structure of list object gotten from bacdive
+  # if it changes, it will break the code
+  test_list <- readr::read_rds(file = "test_data.rda")
+
+  morphology_df <- getMorphology(list_holder = test_list)
+
+  expect_named(morphology_df, c("@ref", "gram stain", "cell length", "cell width", "cell shape", "motility", "flagellum arrangement", "ID", "taxon", "rank", "doi/url"), ignore.order = T)
+
+})
+
+test_that("getOxygen", {
+
+  test_list <- readr::read_rds(file = "test_data.rda")
+
+  oxygen_df <- getOxygen(list_holder = test_list)
+
+  expect_named(oxygen_df, c("@ref", "oxygen tolerance", "ID", "taxon", "rank", "doi/url"), ignore.order = T)
+
+})
+
+test_that("getPhenotypes", {
+
+  test_list <- readr::read_rds(file = "test_data.rda")
+  morphology_df <- getMorphology(list_holder = test_list)
+  oxygen_df <- getOxygen(list_holder = test_list)
+
+  phenotypes_df <- getPhenotypes(morphology_df = morphology_df, oxygen_df = oxygen_df)
+
+  expect_named(phenotypes_df, c("ID", "taxon", "rank", "gram_stain", "aerobic_status"), ignore.order = T)
+
+})
+
+# More like notes for future tests:
 test_that("annotate microbiome data", {
 
   my_df <- data.frame(Taxa = c('E. coli', 'B. fragilis'),
