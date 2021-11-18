@@ -64,7 +64,7 @@ if (file.exists(here("data-raw/type_strain_large_list.rda"))) {
 # random_set <- sample(seq(1,13572), 10)
 random_set <- c(2065L, 558L, 11208L, 6966L, 3485L, 12912L, 12046L, 3912L, 2530L, 8477L)
 test_list <- list()
-for (i in randome_set) {
+for (i in random_set) {
   test_list <- list.append(test_list, list_holder[[i]])
 }
 attr(test_list, "date_downloaded") <- attr(list_holder, "date_downloaded")
