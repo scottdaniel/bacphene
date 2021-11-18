@@ -106,14 +106,17 @@ library(tidyverse)
 #> x dplyr::lag()    masks stats::lag()
 
 my_df <- Shen2021 %>%
-  left_join(bacdive_phenotypes, by = "taxon")
+  left_join(bacdive_phenotypes, by = "taxon") %>%
+  mutate(aerobic_status = ifelse(taxon %in% "Escherichia coli", "facultative aerobe", aerobic_status)) %>%
+  mutate(aerobic_status = ifelse(taxon %in% "Faecalibacterium prausnitzii", "anaerobe", aerobic_status))
+
+#E.coli strain info: https://bacdive.dsmz.de/search?search=4434
+#F. prausnitzii strain info: https://bacdive.dsmz.de/strain/17680
 
 my_df %>%
   group_by(SampleType, aerobic_status) %>%
   filter(count > 0, !is.na(aerobic_status)) %>%
   summarise(n = n(), weighted_n = sum(count) * n(), .groups = "drop") %>%
-  group_by(SampleType) %>%
-  mutate(normalised_n = weighted_n / sum(weighted_n)) %>%
   ungroup() %>%
   ggplot(aes(x = SampleType, y = weighted_n, fill = aerobic_status)) +
     geom_bar(stat = "identity", position = "fill") +
@@ -131,12 +134,61 @@ my_df %>%
 # Seems like there should still be more aerobic bacteria in the rectal swabs
 ```
 
+What are contributing most to these counts?
+
+### Top taxa in feces
+
 ``` r
-top_taxa <- my_df %>%
+library(pander)
+
+top_taxa_feces <- my_df %>%
+  filter(SampleType %in% "Feces") %>%
   group_by(SampleType, aerobic_status, taxon) %>%
   summarise(total_count = sum(count), .groups = "drop") %>%
-  slice_max(order_by = total_count, n = 5)
+  mutate(percentage = paste(round((total_count / sum(total_count))*100), "%")) %>%
+  slice_max(order_by = total_count, n = 10)
+
+top_taxa_feces %>% pander(split.table = Inf, split.cells = 20, digits = 2)
 ```
+
+| SampleType |  aerobic\_status   |            taxon             | total\_count | percentage |
+|:----------:|:------------------:|:----------------------------:|:------------:|:----------:|
+|   Feces    |         NA         |     Bacteroides vulgatus     |    2e+07     |    20 %    |
+|   Feces    |         NA         |      Bacteroides ovatus      |   1.2e+07    |    12 %    |
+|   Feces    | facultative aerobe |       Escherichia coli       |   9936438    |    10 %    |
+|   Feces    |         NA         |      Bacteroides dorei       |   5932307    |    6 %     |
+|   Feces    |         NA         |     Veillonella parvula      |   5770211    |    6 %     |
+|   Feces    |   microaerophile   |     Enterococcus faecium     |   4872165    |    5 %     |
+|   Feces    |         NA         | Bacteroides thetaiotaomicron |   3898980    |    4 %     |
+|   Feces    |         NA         |     Bacteroides fragilis     |   3777075    |    4 %     |
+|   Feces    |       aerobe       |    Klebsiella pneumoniae     |   2474785    |    2 %     |
+|   Feces    |      anaerobe      |    Bacteroides caecimuris    |   2260004    |    2 %     |
+
+### Top taxxa in rectal swab
+
+``` r
+top_taxa_rectal <- my_df %>%
+  filter(SampleType %in% "Rectal swab") %>%
+  group_by(SampleType, aerobic_status, taxon) %>%
+  summarise(total_count = sum(count), .groups = "drop") %>%
+  mutate(percentage = paste(round((total_count / sum(total_count))*100), "%")) %>%
+  slice_max(order_by = total_count, n = 10)
+
+top_taxa_rectal %>% pander(split.table = Inf, split.cells = 20, digits = 2)
+```
+
+| SampleType  |  aerobic\_status   |             taxon             | total\_count | percentage |
+|:-----------:|:------------------:|:-----------------------------:|:------------:|:----------:|
+| Rectal swab |         NA         |     Bacteroides vulgatus      |   6640257    |    18 %    |
+| Rectal swab |         NA         |       Bacteroides dorei       |   2727767    |    7 %     |
+| Rectal swab | facultative aerobe |       Escherichia coli        |   2431818    |    6 %     |
+| Rectal swab |         NA         |      Bacteroides ovatus       |   2156264    |    6 %     |
+| Rectal swab |         NA         |     Bacteroides fragilis      |    2e+06     |    5 %     |
+| Rectal swab |         NA         |       Finegoldia magna        |   1880837    |    5 %     |
+| Rectal swab |         NA         |      Veillonella parvula      |   1783028    |    5 %     |
+| Rectal swab |         NA         | Bacteroides thetaiotaomicron  |   1693954    |    4 %     |
+| Rectal swab |      anaerobe      | Faecalibacterium prausnitzii  |   1591240    |    4 %     |
+| Rectal swab |         NA         | Porphyromonas asaccharolytica |   1223907    |    3 %     |
 
 ## References
 

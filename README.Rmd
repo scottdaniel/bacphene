@@ -71,14 +71,17 @@ While this may seem like an obvious "yes", it still stands as a proof-of-concept
 library(tidyverse)
 
 my_df <- Shen2021 %>%
-  left_join(bacdive_phenotypes, by = "taxon")
+  left_join(bacdive_phenotypes, by = "taxon") %>%
+  mutate(aerobic_status = ifelse(taxon %in% "Escherichia coli", "facultative aerobe", aerobic_status)) %>%
+  mutate(aerobic_status = ifelse(taxon %in% "Faecalibacterium prausnitzii", "anaerobe", aerobic_status))
+
+#E.coli strain info: https://bacdive.dsmz.de/search?search=4434
+#F. prausnitzii strain info: https://bacdive.dsmz.de/strain/17680
 
 my_df %>%
   group_by(SampleType, aerobic_status) %>%
   filter(count > 0, !is.na(aerobic_status)) %>%
   summarise(n = n(), weighted_n = sum(count) * n(), .groups = "drop") %>%
-  group_by(SampleType) %>%
-  mutate(normalised_n = weighted_n / sum(weighted_n)) %>%
   ungroup() %>%
   ggplot(aes(x = SampleType, y = weighted_n, fill = aerobic_status)) +
     geom_bar(stat = "identity", position = "fill") +
@@ -93,12 +96,37 @@ my_df %>%
 
 ```
 
+What are contributing most to these counts?
+
+### Top taxa in feces
+
 ```{r}
 
-top_taxa <- my_df %>%
+library(pander)
+
+top_taxa_feces <- my_df %>%
+  filter(SampleType %in% "Feces") %>%
   group_by(SampleType, aerobic_status, taxon) %>%
   summarise(total_count = sum(count), .groups = "drop") %>%
-  slice_max(order_by = total_count, n = 5)
+  mutate(percentage = paste(round((total_count / sum(total_count))*100), "%")) %>%
+  slice_max(order_by = total_count, n = 10)
+
+top_taxa_feces %>% pander(split.table = Inf, split.cells = 20, digits = 2)
+
+```
+
+### Top taxxa in rectal swab
+
+```{r}
+
+top_taxa_rectal <- my_df %>%
+  filter(SampleType %in% "Rectal swab") %>%
+  group_by(SampleType, aerobic_status, taxon) %>%
+  summarise(total_count = sum(count), .groups = "drop") %>%
+  mutate(percentage = paste(round((total_count / sum(total_count))*100), "%")) %>%
+  slice_max(order_by = total_count, n = 10)
+
+top_taxa_rectal %>% pander(split.table = Inf, split.cells = 20, digits = 2)
 
 ```
 
