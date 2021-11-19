@@ -14,55 +14,16 @@ library(bacphene)
 library(rlist)
 ```
 
-```{r download from bacdive if needed}
+```{r download typestrains}
 
-# This can take a few minutes to download all the type strain data from bacdive.org
-if (file.exists(here("data-raw/type_strain_large_list.rda"))) {
-  list_holder <- read_rds(here("data-raw/type_strain_large_list.rda"))
-} else {
-  credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PASSWORD"))
-  
-  bacdive <- open_bacdive(credentials[[1L]], credentials[[2L]])
-  
-  full_list <-
-    read_csv(
-      here("data-raw/full_list_of_bacteria_from_bacdive_20211027.csv"),
-      skip = 2,
-      show_col_types = FALSE
-    )
-  # this was downloaded here: https://bacdive.dsmz.de/advsearch?filter-group%5B1%5D%5Bgroup-condition%5D=OR&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield%5D=Domain&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-option%5D=contains&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-value%5D=Bacteria&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-validation%5D=strains-domain-1
-  
-  type_strains <- full_list %>%
-    filter(is_type_strain_header == 1)
-  
-  # If you try to download more than 100 you get warnings and errors like this one:
-  # Warning message:
-  #   In download_json_with_retry(url, object) :
-  #   [API] title: BacDive API error; code: 400; message: You exceeded the maximum amount of 100 ids per request.
-  
-  list_holder <- list()
-  
-  i = 1
-  
-  for (i in seq(1, length(type_strains$ID), 100)) {
-    if (i + 99 > length(type_strains$ID)) {
-      k = length(type_strains$ID) #since the last block would include NA's otherwise
-    } else {
-      k = i + 99
-    }
-    temp_list <- fetch(bacdive, type_strains$ID[i:k])
-    list_holder <- c(list_holder, temp_list$results)
-  }
-  # have this so we know when the data was downloaded
-  attr(list_holder, "date_downloaded") <- Sys.Date()
-  write_rds(list_holder, here("data-raw/type_strain_large_list.rda")) #so if we re-run the script we don't have to keep GETing data from bacdive
-}
+list_holder <- getStrains(typestrain_only = F)
+
 ```
 
-```{r test set}
+```{r test set, eval=FALSE, include=FALSE}
 #for unit tests
-# random_set <- sample(seq(1,13572), 10)
-random_set <- c(2065L, 558L, 11208L, 6966L, 3485L, 12912L, 12046L, 3912L, 2530L, 8477L)
+# random_set <- sample(seq(1,length(list_holder)), 10)
+random_set <- c(46551L, 376L, 78203L, 51907L, 20151L, 41583L, 11608L, 36060L, 38371L, 6841L)
 test_list <- list()
 for (i in random_set) {
   test_list <- list.append(test_list, list_holder[[i]])
@@ -109,8 +70,11 @@ bacdive_phenotypes <- getPhenotypes(morphology_df = bacdive_morphology, oxygen_d
 usethis::use_data(bacdive_phenotypes, overwrite = TRUE)
 
 # maybe concatenate multiple entries?
-# summarise(gram_stain = paste(gram_stain, collapse = ", "),
-#           aerobic_status = paste(aerobic_status, collapse = ", "))
+# summarise(
+#   gram_stain = paste(gram_stain, collapse = ", "),
+#   aerobic_status = paste(aerobic_status, collapse = ", "),
+#   ID = paste(ID, collapse = ", ")
+# )
 
 # If we want to exactly match the values for abxidx
 # bacdive_phenotypes <- bacdive_phenotypes %>%
