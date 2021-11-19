@@ -2,30 +2,32 @@
 % Please edit documentation in R/bacPhene.R
 \name{getStrains}
 \alias{getStrains}
-\title{Searching for strains with taxon specification}
+\title{Downloads BacDive strains from a list of supplied ID's}
 \usage{
 getStrains(
-  credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_API_PASSWORD")),
-  query,
-  sleep = 0.1,
-  handler = NULL,
-  getList = BacDive::retrieve
+  strain_list = "data-raw/full_list_of_bacteria_from_bacdive_20211027.csv",
+  typestrain_only = T,
+  bacdive_keycloak = getBacDiveAccess(),
+  rda = "data-raw/strain_large_list.rda"
 )
 }
 \arguments{
-\item{credentials}{Your login credentials for bacdive.org. Defaults to DSMZ_API_USER and DSMZ_API_PASSWORD in your Renviron file. Supplied as a character vector c("username", "password").}
+\item{strain_list}{A csv file containing at least two columns: "ID" - The BacDive ID and "is_type_strain_header". Can be gotten using \href{https://bacdive.dsmz.de/advsearch}{BacDive's advanced search}.}
 
-\item{sleep}{A waiting period in seconds between successive API requests, if any.}
+\item{typestrain_only}{Whether to filter down to typestrains only.}
+
+\item{bacdive_keycloak}{A 'dsmz_keycloak' object that allows access to the BacDive API. Created using \code{\link{getBacDiveAccess}} or \code{\link[BacDive]{open_bacdive}}.}
+
+\item{save_rda}{If this is being run for the first time, the list of strains will be saved to the specificed RData file. Otherwise, the function will load strains from the specified data file.}
 }
 \value{
-A list of strains with phenotype information from bacdive.org
+A list object of strain information. If running for the first time, saves an RData file of the list.
 }
 \description{
-Searching for strains with taxon specification
+Downloads BacDive strains from a list of supplied ID's
 }
 \examples{
 \dontrun{
-strain_list <- getStrains(query = "Bacteroides xylanisolvens",
-sleep = 0.1)
+large_list <- getStrains(strain_list = "my_csv_file.csv", typestrain_only = F)
 }
 }

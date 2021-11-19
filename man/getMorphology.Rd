@@ -7,10 +7,10 @@
 getMorphology(list_holder = list_holder)
 }
 \arguments{
-\item{list_holder}{A list object containing strain information already present in the R environment}
+\item{list_holder}{A list object containing strain information already present in the R environment.}
 }
 \value{
-A dataframe of cell morphology information about taxa in the list
+A dataframe of cell morphology information about taxa in the list.
 }
 \description{
 Extracts cell morphology data from a bacdive list

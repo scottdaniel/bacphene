@@ -11,14 +11,14 @@ getTypeStrainLocal(
 )
 }
 \arguments{
-\item{list}{A list object containing strain information already present in the R environment}
+\item{list}{A list object containing strain information already present in the R environment. Required if an rda file is not given.}
 
-\item{rda}{An RData file representing a full download of type strain from BacDive.org's API. Can be created using download_from_bacdive.R OR}
+\item{rda}{An RData file representing a full download of type strain from BacDive.org's API. Can be created using download_from_bacdive.Rmd. Required if list is not given.}
 
-\item{query}{A species}
+\item{query}{A species.}
 }
 \value{
-A list containing information on the type strain of a species
+A list containing information on the type strain of a species.
 }
 \description{
 Gets a single type strain of a species

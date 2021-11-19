@@ -44,16 +44,15 @@ and `bacdive_enzymes`. Which look like this:
 ``` r
 library(bacphene)
 head(bacdive_phenotypes)
-#> # A tibble: 6 × 5
-#> # Groups:   taxon [6]
-#>       ID taxon                         rank    gram_stain aerobic_status   
-#>    <int> <chr>                         <chr>   <chr>      <chr>            
-#> 1    219 Abiotrophia defectiva         Species <NA>       anaerobe         
-#> 2 159837 Abyssibacter profundi         Species negative   aerobe           
-#> 3 132478 Abyssivirga alkaniphila       Species positive   obligate anaerobe
-#> 4  24718 Acanthopleuribacter pedis     Species negative   aerobe           
-#> 5   7517 Acaricomes phytoseiuli        Species positive   <NA>             
-#> 6 134101 Acetanaerobacterium elongatum Species positive   anaerobe
+#> # A tibble: 6 × 4
+#>   taxon                         rank    gram_stain aerobic_status   
+#>   <chr>                         <chr>   <chr>      <chr>            
+#> 1 Abiotrophia defectiva         Species <NA>       microaerophile   
+#> 2 Abyssibacter profundi         Species negative   aerobe           
+#> 3 Abyssivirga alkaniphila       Species positive   obligate anaerobe
+#> 4 Acanthopleuribacter pedis     Species negative   aerobe           
+#> 5 Acaricomes phytoseiuli        Species positive   aerobe           
+#> 6 Acetanaerobacterium elongatum Species positive   anaerobe
 ```
 
 ``` r
@@ -106,12 +105,7 @@ library(tidyverse)
 #> x dplyr::lag()    masks stats::lag()
 
 my_df <- Shen2021 %>%
-  left_join(bacdive_phenotypes, by = "taxon") %>%
-  mutate(aerobic_status = ifelse(taxon %in% "Escherichia coli", "facultative aerobe", aerobic_status)) %>%
-  mutate(aerobic_status = ifelse(taxon %in% "Faecalibacterium prausnitzii", "anaerobe", aerobic_status))
-
-#E.coli strain info: https://bacdive.dsmz.de/search?search=4434
-#F. prausnitzii strain info: https://bacdive.dsmz.de/strain/17680
+  left_join(bacdive_phenotypes, by = "taxon")
 
 my_df %>%
   group_by(SampleType, aerobic_status) %>%
@@ -151,20 +145,20 @@ top_taxa_feces <- my_df %>%
 top_taxa_feces %>% pander(split.table = Inf, split.cells = 20, digits = 2)
 ```
 
-| SampleType |  aerobic\_status   |            taxon             | total\_count | percentage |
-|:----------:|:------------------:|:----------------------------:|:------------:|:----------:|
-|   Feces    |         NA         |     Bacteroides vulgatus     |    2e+07     |    20 %    |
-|   Feces    |         NA         |      Bacteroides ovatus      |   1.2e+07    |    12 %    |
-|   Feces    | facultative aerobe |       Escherichia coli       |   9936438    |    10 %    |
-|   Feces    |         NA         |      Bacteroides dorei       |   5932307    |    6 %     |
-|   Feces    |         NA         |     Veillonella parvula      |   5770211    |    6 %     |
-|   Feces    |   microaerophile   |     Enterococcus faecium     |   4872165    |    5 %     |
-|   Feces    |         NA         | Bacteroides thetaiotaomicron |   3898980    |    4 %     |
-|   Feces    |         NA         |     Bacteroides fragilis     |   3777075    |    4 %     |
-|   Feces    |       aerobe       |    Klebsiella pneumoniae     |   2474785    |    2 %     |
-|   Feces    |      anaerobe      |    Bacteroides caecimuris    |   2260004    |    2 %     |
+| SampleType | aerobic\_status |            taxon             | total\_count | percentage |
+|:----------:|:---------------:|:----------------------------:|:------------:|:----------:|
+|   Feces    |    anaerobe     |     Bacteroides vulgatus     |    2e+07     |    18 %    |
+|   Feces    |    anaerobe     |      Bacteroides ovatus      |   1.2e+07    |    11 %    |
+|   Feces    |    anaerobe     |      Bacteroides dorei       |   1.2e+07    |    11 %    |
+|   Feces    |     aerobe      |       Escherichia coli       |   9936438    |    9 %     |
+|   Feces    |    anaerobe     |     Veillonella parvula      |   5770211    |    5 %     |
+|   Feces    | microaerophile  |     Enterococcus faecium     |   4872165    |    4 %     |
+|   Feces    |    anaerobe     | Bacteroides thetaiotaomicron |   3898980    |    3 %     |
+|   Feces    |    anaerobe     |     Bacteroides fragilis     |   3777075    |    3 %     |
+|   Feces    |     aerobe      |    Klebsiella pneumoniae     |   2474785    |    2 %     |
+|   Feces    |    anaerobe     |    Bacteroides caecimuris    |   2260004    |    2 %     |
 
-### Top taxxa in rectal swab
+### Top taxa in rectal swab
 
 ``` r
 top_taxa_rectal <- my_df %>%
@@ -177,18 +171,63 @@ top_taxa_rectal <- my_df %>%
 top_taxa_rectal %>% pander(split.table = Inf, split.cells = 20, digits = 2)
 ```
 
-| SampleType  |  aerobic\_status   |             taxon             | total\_count | percentage |
-|:-----------:|:------------------:|:-----------------------------:|:------------:|:----------:|
-| Rectal swab |         NA         |     Bacteroides vulgatus      |   6640257    |    18 %    |
-| Rectal swab |         NA         |       Bacteroides dorei       |   2727767    |    7 %     |
-| Rectal swab | facultative aerobe |       Escherichia coli        |   2431818    |    6 %     |
-| Rectal swab |         NA         |      Bacteroides ovatus       |   2156264    |    6 %     |
-| Rectal swab |         NA         |     Bacteroides fragilis      |    2e+06     |    5 %     |
-| Rectal swab |         NA         |       Finegoldia magna        |   1880837    |    5 %     |
-| Rectal swab |         NA         |      Veillonella parvula      |   1783028    |    5 %     |
-| Rectal swab |         NA         | Bacteroides thetaiotaomicron  |   1693954    |    4 %     |
-| Rectal swab |      anaerobe      | Faecalibacterium prausnitzii  |   1591240    |    4 %     |
-| Rectal swab |         NA         | Porphyromonas asaccharolytica |   1223907    |    3 %     |
+| SampleType  | aerobic\_status |             taxon             | total\_count | percentage |
+|:-----------:|:---------------:|:-----------------------------:|:------------:|:----------:|
+| Rectal swab |    anaerobe     |     Bacteroides vulgatus      |   6640257    |    16 %    |
+| Rectal swab |    anaerobe     |       Bacteroides dorei       |   5455534    |    13 %    |
+| Rectal swab |     aerobe      |       Escherichia coli        |   2431818    |    6 %     |
+| Rectal swab |    anaerobe     |      Bacteroides ovatus       |   2156264    |    5 %     |
+| Rectal swab |    anaerobe     |     Bacteroides fragilis      |    2e+06     |    5 %     |
+| Rectal swab |    anaerobe     |       Finegoldia magna        |   1880837    |    5 %     |
+| Rectal swab |    anaerobe     |      Veillonella parvula      |   1783028    |    4 %     |
+| Rectal swab |    anaerobe     | Bacteroides thetaiotaomicron  |   1693954    |    4 %     |
+| Rectal swab |    anaerobe     | Faecalibacterium prausnitzii  |   1591240    |    4 %     |
+| Rectal swab |    anaerobe     | Porphyromonas asaccharolytica |   1223907    |    3 %     |
+
+### Is the aerobe / anaerobe ratio significantly different?
+
+``` r
+totals_df <- my_df %>%
+  group_by(SampleID, aerobic_status) %>%
+  filter(count > 0, !is.na(aerobic_status)) %>%
+  summarise(n = n(), weighted_n = sum(count) * n(), .groups = "drop") %>%
+  ungroup() %>%
+  pivot_wider(-n, names_from = "aerobic_status", values_from = "weighted_n") %>%
+  mutate(log_aerobe_ratio = log(aerobe / anaerobe)) %>%
+  left_join(Shen2021 %>% select(SampleID, SampleType) %>% unique(), by = "SampleID")
+
+my_lm <- lm(log_aerobe_ratio ~ SampleType, data = totals_df)
+
+summary(my_lm)
+#> 
+#> Call:
+#> lm(formula = log_aerobe_ratio ~ SampleType, data = totals_df)
+#> 
+#> Residuals:
+#>     Min      1Q  Median      3Q     Max 
+#> -3.8089 -1.7570  0.1451  1.3841  7.4353 
+#> 
+#> Coefficients:
+#>                       Estimate Std. Error t value Pr(>|t|)    
+#> (Intercept)            -2.5868     0.3634  -7.119 6.67e-10 ***
+#> SampleTypeRectal swab   0.2112     0.5284   0.400     0.69    
+#> ---
+#> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+#> 
+#> Residual standard error: 2.269 on 72 degrees of freedom
+#> Multiple R-squared:  0.002215,   Adjusted R-squared:  -0.01164 
+#> F-statistic: 0.1598 on 1 and 72 DF,  p-value: 0.6905
+```
+
+#### Graph
+
+``` r
+totals_df %>%
+  ggplot(aes(x = SampleType, y = log_aerobe_ratio)) +
+  geom_boxplot()
+```
+
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
 
 ## References
 
@@ -200,5 +239,10 @@ biodiversity analysis. Reimer, L. C., Vetcininova, A., Sardà Carbasse,
 J., Söhngen, C., Gleim, D., Ebeling, C., Overmann, J. [Nucleic Acids
 Research; database issue
 2019](https://academic.oup.com/nar/article/47/D1/D631/5106998).
+
+Sample data set from: Shen, T.-C. D. et al. (2021) ‘The
+Mucosally-Adherent Rectal Microbiota Contains Features Unique to
+Alcohol-Related Cirrhosis’, [Gut microbes, 13(1),
+p. 1987781.](https://www.ncbi.nlm.nih.gov/pubmed/34747331)
 
 To cite this package enter `citation("bacphene")` in your R console.

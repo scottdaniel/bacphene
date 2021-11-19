@@ -7,10 +7,10 @@
 getOxygen(list_holder = list_holder)
 }
 \arguments{
-\item{list_holder}{A list object containing strain information already present in the R environment}
+\item{list_holder}{A list object containing strain information already present in the R environment.}
 }
 \value{
-A dataframe of oxygen tolerance information about taxa in the list
+A dataframe of oxygen tolerance information about taxa in the list.
 }
 \description{
 Extracts oxygen tolerance data from a bacdive list

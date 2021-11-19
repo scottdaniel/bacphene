@@ -71,12 +71,7 @@ While this may seem like an obvious "yes", it still stands as a proof-of-concept
 library(tidyverse)
 
 my_df <- Shen2021 %>%
-  left_join(bacdive_phenotypes, by = "taxon") %>%
-  mutate(aerobic_status = ifelse(taxon %in% "Escherichia coli", "facultative aerobe", aerobic_status)) %>%
-  mutate(aerobic_status = ifelse(taxon %in% "Faecalibacterium prausnitzii", "anaerobe", aerobic_status))
-
-#E.coli strain info: https://bacdive.dsmz.de/search?search=4434
-#F. prausnitzii strain info: https://bacdive.dsmz.de/strain/17680
+  left_join(bacdive_phenotypes, by = "taxon")
 
 my_df %>%
   group_by(SampleType, aerobic_status) %>%
@@ -115,7 +110,7 @@ top_taxa_feces %>% pander(split.table = Inf, split.cells = 20, digits = 2)
 
 ```
 
-### Top taxxa in rectal swab
+### Top taxa in rectal swab
 
 ```{r}
 
@@ -130,6 +125,36 @@ top_taxa_rectal %>% pander(split.table = Inf, split.cells = 20, digits = 2)
 
 ```
 
+### Is the aerobe / anaerobe ratio significantly different?
+
+```{r}
+
+totals_df <- my_df %>%
+  group_by(SampleID, aerobic_status) %>%
+  filter(count > 0, !is.na(aerobic_status)) %>%
+  summarise(n = n(), weighted_n = sum(count) * n(), .groups = "drop") %>%
+  ungroup() %>%
+  pivot_wider(-n, names_from = "aerobic_status", values_from = "weighted_n") %>%
+  mutate(log_aerobe_ratio = log(aerobe / anaerobe)) %>%
+  left_join(Shen2021 %>% select(SampleID, SampleType) %>% unique(), by = "SampleID")
+
+my_lm <- lm(log_aerobe_ratio ~ SampleType, data = totals_df)
+
+summary(my_lm)
+
+```
+
+#### Graph
+
+```{r}
+
+totals_df %>%
+  ggplot(aes(x = SampleType, y = log_aerobe_ratio)) +
+  geom_boxplot()
+
+```
+
+
 ## References
 
 When using BacDive for research please consider citing the following paper:
@@ -137,6 +162,9 @@ When using BacDive for research please consider citing the following paper:
 BacDive in 2019: bacterial phenotypic data for High-throughput biodiversity analysis.
 Reimer, L. C., Vetcininova, A., Sardà Carbasse, J., Söhngen, C., Gleim, D., Ebeling, C., Overmann, J.
 [Nucleic Acids Research; database issue 2019](https://academic.oup.com/nar/article/47/D1/D631/5106998).
+
+Sample data set from:
+Shen, T.-C. D. et al. (2021) ‘The Mucosally-Adherent Rectal Microbiota Contains Features Unique to Alcohol-Related Cirrhosis’, [Gut microbes, 13(1), p. 1987781.](https://www.ncbi.nlm.nih.gov/pubmed/34747331)
 
 To cite this package enter `citation("bacphene")` in your R console.
 

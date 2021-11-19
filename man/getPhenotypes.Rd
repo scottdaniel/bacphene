@@ -7,12 +7,12 @@
 getPhenotypes(morphology_df, oxygen_df)
 }
 \arguments{
-\item{morphology_df}{A dataframe from \code{\link{getMorphology}}}
+\item{morphology_df}{A dataframe from \code{\link{getMorphology}}.}
 
-\item{oxygen_df}{A dataframe from \code{\link{getOxygen}}}
+\item{oxygen_df}{A dataframe from \code{\link{getOxygen}}.}
 }
 \value{
-A dataframe of oxygen tolerance and gram stain information about taxa in the list
+A dataframe of oxygen tolerance and gram stain information about taxa in the list.
 }
 \description{
 Combined oxygen tolerance and gram stain data for use with other packages
