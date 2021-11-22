@@ -90,9 +90,6 @@ few questions:
 
 ### Do the rectal swabs contain more oxygen tolerant organisms?
 
-While this may seem like an obvious “yes”, it still stands as a
-proof-of-concept.
-
 ``` r
 library(tidyverse)
 #> ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
@@ -105,37 +102,48 @@ library(tidyverse)
 #> x dplyr::lag()    masks stats::lag()
 
 my_df <- Shen2021 %>%
-  left_join(bacdive_phenotypes, by = "taxon")
+  left_join(bacdive_phenotypes, by = "taxon") %>%
+  mutate(prop = count / read_counts) %>%
+  group_by(SampleID, aerobic_status) %>%
+  filter(count > 0, !is.na(aerobic_status)) %>%
+  summarise(n = n(), weighted_n = sum(prop) * n(), .groups = "drop") %>%
+  ungroup()
+
+sort_order <- my_df %>%
+  group_by(SampleID) %>%
+  mutate(prop = weighted_n / sum(weighted_n)) %>%
+  filter(aerobic_status %in% "anaerobe") %>%
+  arrange(prop) %>%
+  pull(SampleID)
 
 my_df %>%
-  group_by(SampleType, aerobic_status) %>%
-  filter(count > 0, !is.na(aerobic_status)) %>%
-  summarise(n = n(), weighted_n = sum(count) * n(), .groups = "drop") %>%
-  ungroup() %>%
-  ggplot(aes(x = SampleType, y = weighted_n, fill = aerobic_status)) +
-    geom_bar(stat = "identity", position = "fill") +
+  left_join(Shen2021 %>% select(SampleID, SampleType) %>% unique(), by = "SampleID") %>%
+  mutate(SampleID = fct_relevel(SampleID, sort_order)) %>%
+  mutate(aerobic_status = fct_relevel(aerobic_status, "anaerobe", "aerobe")) %>%
+  
+  ggplot(aes(x = SampleID, y = weighted_n, fill = aerobic_status)) +
+  geom_bar(stat = "identity", position = "fill") +
   theme_bw() +
   theme(strip.text.x = element_text(size = 8),
         strip.background = element_blank(),
-        axis.text.x = element_text(angle=45, hjust = 1)) +
+        axis.text.x = element_blank()) +
+  facet_wrap(~SampleType, scales = "free") +
   scale_y_continuous(labels = scales::percent) +
-  labs(y = "Relative abundance", x = "", fill = "Aerobic status")
+  scale_fill_brewer(palette = "Set1") +
+  labs(y = "Proportion of bacteria type weighted by abundance", x = "", fill = "Aerobic status", caption = "Each column represents an individual sample")
 ```
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
 
-``` r
-# Seems like there should still be more aerobic bacteria in the rectal swabs
-```
-
 What are contributing most to these counts?
 
-### Top taxa in feces
+#### Top taxa in feces
 
 ``` r
 library(pander)
 
-top_taxa_feces <- my_df %>%
+top_taxa_feces <- Shen2021 %>%
+  left_join(bacdive_phenotypes, by = "taxon") %>%
   filter(SampleType %in% "Feces") %>%
   group_by(SampleType, aerobic_status, taxon) %>%
   summarise(total_count = sum(count), .groups = "drop") %>%
@@ -158,10 +166,11 @@ top_taxa_feces %>% pander(split.table = Inf, split.cells = 20, digits = 2)
 |   Feces    |     aerobe      |    Klebsiella pneumoniae     |   2474785    |    2 %     |
 |   Feces    |    anaerobe     |    Bacteroides caecimuris    |   2260004    |    2 %     |
 
-### Top taxa in rectal swab
+#### Top taxa in rectal swab
 
 ``` r
-top_taxa_rectal <- my_df %>%
+top_taxa_rectal <- Shen2021 %>%
+  left_join(bacdive_phenotypes, by = "taxon") %>%
   filter(SampleType %in% "Rectal swab") %>%
   group_by(SampleType, aerobic_status, taxon) %>%
   summarise(total_count = sum(count), .groups = "drop") %>%
@@ -184,14 +193,10 @@ top_taxa_rectal %>% pander(split.table = Inf, split.cells = 20, digits = 2)
 | Rectal swab |    anaerobe     | Faecalibacterium prausnitzii  |   1591240    |    4 %     |
 | Rectal swab |    anaerobe     | Porphyromonas asaccharolytica |   1223907    |    3 %     |
 
-### Is the aerobe / anaerobe ratio significantly different?
+#### Is the aerobe / anaerobe ratio significantly different?
 
 ``` r
 totals_df <- my_df %>%
-  group_by(SampleID, aerobic_status) %>%
-  filter(count > 0, !is.na(aerobic_status)) %>%
-  summarise(n = n(), weighted_n = sum(count) * n(), .groups = "drop") %>%
-  ungroup() %>%
   pivot_wider(-n, names_from = "aerobic_status", values_from = "weighted_n") %>%
   mutate(log_aerobe_ratio = log(aerobe / anaerobe)) %>%
   left_join(Shen2021 %>% select(SampleID, SampleType) %>% unique(), by = "SampleID")
@@ -219,7 +224,7 @@ summary(my_lm)
 #> F-statistic: 0.1598 on 1 and 72 DF,  p-value: 0.6905
 ```
 
-#### Graph
+##### Graph
 
 ``` r
 totals_df %>%
@@ -228,6 +233,11 @@ totals_df %>%
 ```
 
 <img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
+
+Looks like there are slightly more aerobes compared to anaerobes in the
+rectal swabs but not enough to be statistically significant.
+
+### Differences in gram-staining
 
 ## References
 
