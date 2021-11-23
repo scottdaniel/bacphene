@@ -17,28 +17,39 @@ getBacDiveAccess <- function(credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_A
 
 }
 
-#' Gets a single type strain of a species
+#' Gets a single strain of a species
 #'
 #' @param list A list object containing strain information already present in the R environment. Required if an rda file is not given.
-#' @param rda An RData file representing a full download of type strain from BacDive.org's API. Can be created using download_from_bacdive.Rmd. Required if list is not given.
-#' @param query A species.
+#' @param rda An RData file representing a full download of strain from BacDive.org's API. Can be created using download_from_bacdive.Rmd. Required if list is not given.
+#' @param query Either a bacdive ID (integer) or species name (character).
+#' @param typestrain_only Whether to filter down to typestrains only.
 #'
-#' @return A list containing information on the type strain of a species.
+#' @return A list containing information on the strain of a species.
 #' @export
 #'
 #' @importFrom rlist list.filter
 #'
 #' @examples
 #' \dontrun{
-#' abyss <- getTypeStrainLocal(query = "Abyssibacter profundi")
+#' abyss <- getStrainLocal(query = "Abyssibacter profundi")
 #' }
-getTypeStrainLocal <- function(list = NULL, rda = "data-raw/type_strain_large_list.rda", query) {
+#' @note If you give typestrain_only = T and your BacDive-ID query is not a typestrain you will get zero results.
+getStrainLocal <- function(list = NULL, rda = "data-raw/strain_large_list.rda", query, typestrain_only = F) {
 
   if (is.null(list)) {
     list <- readRDS(rda)
   }
 
-  rlist::list.filter(list, `Name and taxonomic classification`$species %in% query)
+  if (typestrain_only) {
+    list <- rlist::list.filter(list, `Name and taxonomic classification`$`type strain` %in% "yes")
+  }
+
+  if (is.character(query)) {
+    rlist::list.filter(list, `Name and taxonomic classification`$species %in% query)
+  } else {
+    rlist::list.filter(list, General$`BacDive-ID` == query)
+  }
+
 
 }
 
@@ -221,4 +232,197 @@ getStrains <- function(strain_list = "data-raw/full_list_of_bacteria_from_bacdiv
     readr::write_rds(list_holder, here::here(rda)) #so if we re-run the script we don't have to keep GETing data from bacdive
   }
   return(list_holder)
+}
+
+#' Get full antibiotic susceptibility / resistance information
+#'
+#' @param list_holder A list object containing strain information already present in the R environment.
+#'
+#' @return A dataframe of antibiotic susceptibility / resistance information about taxa in the list.
+#'
+#' @importFrom dplyr bind_rows mutate left_join select all_of
+#' @importFrom tibble tibble
+#' @importFrom magrittr %<>%
+#' @importFrom tidyr pivot_longer
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' bacdive_abx <- getAbx(list_holder)
+#' }
+getAbx <- function(list_holder = list_holder) {
+  bacdive_abx <- tibble::tibble()
+  for (i in 1:length(list_holder)) {
+    if (!is.null(list_holder[[i]]$`Physiology and metabolism`$`antibiotic resistance`)) {
+      ref_df <-
+        dplyr::bind_rows(list_holder[[i]]$Reference)
+
+      if ("doi/url" %in% names(ref_df)) {
+        ref_df %<>% dplyr::select(`@id`, `doi/url`)
+      } else {
+        ref_df %<>% dplyr::select(`@id`) %>% mutate(`doi/url` = "Unknown")
+      }
+
+      abx_df <-
+        dplyr::bind_rows(list_holder[[i]]$`Physiology and metabolism`$`antibiotic resistance`) %>%
+        dplyr::mutate(
+          ID = list_holder[[i]]$General$`BacDive-ID`,
+          taxon = list_holder[[i]]$`Name and taxonomic classification`$species,
+          rank = "Species",
+          type_strain = list_holder[[i]]$`Name and taxonomic classification`$`type strain`
+        ) %>%
+        dplyr::left_join(ref_df, by = c("@ref" = "@id"))
+      bacdive_abx <-
+        dplyr::bind_rows(bacdive_abx, abx_df)
+    } else if (!is.null(list_holder[[i]]$`Physiology and metabolism`$antibiogram)) {
+
+      ref_df <-
+        dplyr::bind_rows(list_holder[[i]]$Reference)
+
+      if ("doi/url" %in% names(ref_df)) {
+        ref_df %<>% dplyr::select(`@id`, `doi/url`)
+      } else {
+        ref_df %<>% dplyr::select(`@id`) %>% dplyr::mutate(`doi/url` = "Unknown")
+      }
+
+      abx_df <-
+        dplyr::bind_rows(list_holder[[i]]$`Physiology and metabolism`$antibiogram)
+
+      contains_columns <- intersect(names(abx_df), c("@ref", "medium", "incubation temperature", "oxygen condition", "incubation time"))
+
+      abx_df %<>%
+        tidyr::pivot_longer(cols = -c(dplyr::all_of(contains_columns)), names_to = "metabolite", values_to = "diameter") %>%
+      dplyr::mutate(
+        ID = list_holder[[i]]$General$`BacDive-ID`,
+        taxon = list_holder[[i]]$`Name and taxonomic classification`$species,
+        rank = "Species",
+        type_strain = list_holder[[i]]$`Name and taxonomic classification`$`type strain`
+      ) %>%
+        dplyr::left_join(ref_df, by = c("@ref" = "@id"))
+      bacdive_abx <-
+        dplyr::bind_rows(bacdive_abx, abx_df)
+    }
+  }
+  attr(bacdive_abx, "date_downloaded") <-
+    attr(list_holder, "date_downloaded")
+  return(bacdive_abx)
+}
+
+#' Simplify the full antibiotic susceptibility / resistance information
+#'
+#' @param data A dataframe of antibiotic susceptibility / resistance information from \code{\link{getAbx}}.
+#' @param extra_info Whether to return some extra info for testing purposes. This will include the columns `is resistant`, `is_sensitive`, and `diameter`.
+#' @param most_common The function will take the most common value for any given antibiotic / species combination. See details.
+#' @param remove_unknown Remove antibiotic / species combinations where the resistance / sensitivity information is unknown or variable.
+#'
+#' @return A simplified dataframe of antibiotic susceptibility / resistance information.
+#'
+#' @importFrom dplyr bind_rows mutate left_join select all_of
+#' @importFrom stringr str_to_lower
+#' @importFrom magrittr %<>%
+#' @importFrom tidyr pivot_longer
+#'
+#' @export
+#'
+#' @examples
+#' \dontrun{
+#' bacdive_susceptibility <- getSimplifiedAbx(bacdive_abx)
+#' }
+#' @details Hypothetically, a species might have 50 strains that are resistant to Penicillin and 25 strains that are sensitive. With `most_common = T` the function will collapse the results to the most common value. Thus, the returned dataframe will have this species as being resistant to Penicillin.
+getSimplifiedAbx <- function(data = bacdive_abx, extra_info = F, most_common = T, remove_unknown = T) {
+
+  bacdive_susceptibility <- data %>% dplyr::select(-c("is antibiotic", "ChEBI", "resistance conc.", "sensitivity conc.", "medium", "incubation temperature", "oxygen condition", "incubation time", "group ID", "is intermediate", "intermediate conc.")) %>%
+    dplyr::mutate(
+      value = dplyr::case_when(
+        `is resistant` %in% "yes" | diameter %in% "0" ~ "resistant",
+        `is sensitive` %in% "yes" |
+          !(diameter %in% "0") ~ "sensitive"
+      )
+    ) %>%
+    dplyr::mutate(value = ifelse((`is resistant` %in% "no" | `is sensitive` %in% "no") & is.na(diameter) | diameter %in% "n.d.", "unknown", value)) %>% # can not get this to work in the case_when
+    dplyr::mutate(value = ifelse(`is sensitive` %in% "no" & `is resistant` %in% "yes", "resistant", value)) %>% # the weird ones
+    dplyr::mutate(value = ifelse(`is sensitive` %in% "yes" & `is resistant` %in% "no", "sensitive", value)) %>% # there are not any of these but best to future-proof
+    dplyr::mutate(value = ifelse(`is sensitive` %in% "yes" & `is resistant` %in% "yes", "unknown", value)) %>% # this should not be possible but there it is
+    dplyr::mutate(antibiotic = stringr::str_to_lower(metabolite)) # to deal with some inconsistent capitlization
+
+  if (extra_info) {
+    bacdive_susceptibility %<>% dplyr::select(ID, taxon, rank, antibiotic, value, `is sensitive`, `is resistant`, diameter)
+  } else {
+    bacdive_susceptibility %<>% dplyr::select(ID, taxon, rank, antibiotic, value)
+  }
+
+  if (most_common) {
+    bacdive_susceptibility %<>%
+      dplyr::group_by(taxon, rank, antibiotic) %>%
+      dplyr::count(value) %>%
+      dplyr::filter(n == max(n)) %>%
+      dplyr::ungroup() %>%
+      dplyr::select(-n)
+  }
+
+  if (remove_unknown) {
+    bacdive_susceptibility %<>%
+      dplyr::filter(!value %in% "unknown")
+  }
+
+  attr(bacdive_susceptibility, "date_downloaded") <-
+    attr(data, "date_downloaded")
+  return(bacdive_susceptibility)
+
+}
+
+#' Extracts enzyme data from a bacdive list
+#'
+#' @param list_holder A list object containing strain information already present in the R environment.
+#' @param most_common The function will take the most common value for any given species enzyme activity combination. See details.
+#' @param remove_unknown Remove enzyme activity entries where the value is NA.
+#'
+#' @return A dataframe of enzyme information about taxa in the list.
+#' @export
+#'
+#' @importFrom dplyr bind_rows mutate left_join select
+#' @importFrom tibble tibble
+#'
+#' @examples
+#' \dontrun{
+#' bacdive_enzymes <- getEnzymes(list_holder)
+#' }
+#' @details Staphylococcus aureus has 31 strains with positive catalase activity and 2 strains with negative catalase activity. With `most_common = T`, the function will return a dataframe denoting that S. aureus is most commonly positive for catalase activity.
+getEnzymes <- function(list_holder = list_holder, most_common = T, remove_unknown = T) {
+  bacdive_enzymes <- tibble()
+  for (i in 1:length(list_holder)) {
+    if (!is.null(list_holder[[i]]$`Physiology and metabolism`$enzymes)) {
+      ref_df <-
+        dplyr::bind_rows(list_holder[[i]]$Reference) %>% dplyr::select(`@id`, `doi/url`)
+      enzyme_df <-
+        dplyr::bind_rows(list_holder[[i]]$`Physiology and metabolism`$enzymes) %>%
+        dplyr::mutate(
+          ID = list_holder[[i]]$General$`BacDive-ID`,
+          taxon = list_holder[[i]]$`Name and taxonomic classification`$species,
+          rank = "Species"
+        ) %>%
+        dplyr::left_join(ref_df, by = c("@ref" = "@id"))
+      bacdive_enzymes <- dplyr::bind_rows(bacdive_enzymes, enzyme_df)
+    }
+  }
+
+  if (most_common) {
+    bacdive_enzymes %<>%
+      dplyr::group_by(taxon, rank, value, ec) %>%
+      dplyr::count(activity) %>%
+      dplyr::filter(n == max(n)) %>%
+      dplyr::ungroup() %>%
+      dplyr::select(-n)
+  }
+
+  if (remove_unknown) {
+    bacdive_enzymes %<>%
+      dplyr::filter(!is.na(activity))
+  }
+
+  attr(bacdive_enzymes, "date_downloaded") <-
+    attr(list_holder, "date_downloaded")
+  return(bacdive_enzymes)
 }
