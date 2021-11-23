@@ -57,15 +57,15 @@ head(bacdive_phenotypes)
 
 ``` r
 head(bacdive_susceptibility)
-#> # A tibble: 6 × 5
-#>       ID taxon                  rank    antibiotic      value      
-#>    <int> <chr>                  <chr>   <chr>           <chr>      
-#> 1 159709 Acidicapsa dinghuensis Species Amikacin        resistant  
-#> 2 159709 Acidicapsa dinghuensis Species chloramphenicol susceptible
-#> 3 159709 Acidicapsa dinghuensis Species ciprofloxacin   susceptible
-#> 4 159709 Acidicapsa dinghuensis Species erythromycin    susceptible
-#> 5 159709 Acidicapsa dinghuensis Species gentamicin      resistant  
-#> 6 159709 Acidicapsa dinghuensis Species kanamycin       resistant
+#> # A tibble: 6 × 4
+#>   taxon                      rank    antibiotic      value    
+#>   <chr>                      <chr>   <chr>           <chr>    
+#> 1 Achromobacter marplatensis Species d-serine        resistant
+#> 2 Achromobacter marplatensis Species fusidate        resistant
+#> 3 Achromobacter marplatensis Species nalidixic acid  resistant
+#> 4 Achromobacter marplatensis Species niaproof        resistant
+#> 5 Achromobacter marplatensis Species sodium bromate  sensitive
+#> 6 Achromobacter marplatensis Species sodium butyrate resistant
 ```
 
 ``` r
@@ -238,6 +238,41 @@ Looks like there are slightly more aerobes compared to anaerobes in the
 rectal swabs but not enough to be statistically significant.
 
 ### Differences in gram-staining
+
+``` r
+my_df <- Shen2021 %>%
+  left_join(bacdive_phenotypes, by = "taxon") %>%
+  mutate(prop = count / read_counts) %>%
+  group_by(SampleID, gram_stain) %>%
+  filter(count > 0, !is.na(gram_stain)) %>%
+  summarise(n = n(), weighted_n = sum(prop) * n(), .groups = "drop") %>%
+  ungroup()
+
+sort_order <- my_df %>%
+  group_by(SampleID) %>%
+  mutate(prop = weighted_n / sum(weighted_n)) %>%
+  filter(gram_stain %in% "negative") %>%
+  arrange(prop) %>%
+  pull(SampleID)
+
+my_df %>%
+  left_join(Shen2021 %>% select(SampleID, SampleType) %>% unique(), by = "SampleID") %>%
+  mutate(SampleID = fct_relevel(SampleID, sort_order)) %>%
+  mutate(gram_stain = fct_relevel(gram_stain, "negative", "positive")) %>%
+  
+  ggplot(aes(x = SampleID, y = weighted_n, fill = gram_stain)) +
+  geom_bar(stat = "identity", position = "fill") +
+  theme_bw() +
+  theme(strip.text.x = element_text(size = 8),
+        strip.background = element_blank(),
+        axis.text.x = element_blank()) +
+  facet_wrap(~SampleType, scales = "free") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(y = "Proportion of bacteria type weighted by abundance", x = "", fill = "Gram stain", caption = "Each column represents an individual sample")
+```
+
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
 
 ## References
 
