@@ -1,3 +1,5 @@
+# TODO: Documentation for bacdive_morphology, bacdive_oxygen, and bacdive_abx. Check documentation for bacdive_phenotypes, bacdive_susceptibility, and bacdive_enzymes.
+
 #' Phenotype data of bacterial type strains from bacdive.org
 #' @format A data frame with the following columns:
 #' \describe{
