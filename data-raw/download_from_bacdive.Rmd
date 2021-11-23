@@ -28,6 +28,18 @@ test_list <- list()
 for (i in random_set) {
   test_list <- list.append(test_list, list_holder[[i]])
 }
+test_list <- list.append(test_list, getStrainLocal(list_holder, query = "Acidicapsa dinghuensis", typestrain_only = T)[[1]]) #for testing getAbx
+test_list <- list.append(test_list, getStrainLocal(list_holder, query = "Acinetobacter calcoaceticus", typestrain_only = T)[[2]]) #for testing getAbx (antibiogram)
+test_list <- list.append(test_list, getStrainLocal(list_holder, query = 21374, typestrain_only = F)[[1]]) #for testing getAbx
+test_list <- list.append(test_list, getStrainLocal(list_holder, query = 280, typestrain_only = F)[[1]]) #for testing getAbx
+test_list <- list.append(test_list, getStrainLocal(list_holder, query = 8094, typestrain_only = F)[[1]]) #for testing getAbx
+test_list <- list.append(test_list, getStrainLocal(list_holder, query = 159751, typestrain_only = F)[[1]]) #for testing getAbx
+test_list <- list.append(test_list, getStrainLocal(list_holder, query = 158420, typestrain_only = F)[[1]]) #for testing getAbx
+
+test_list <- list.append(test_list, getStrainLocal(list_holder, query = "Abyssibacter profundi", typestrain_only = T)[[1]]) #for testing getEnzymes
+test_list <- list.append(test_list, getStrainLocal(list_holder, query = "Bacteroides fragilis", typestrain_only = T)[[1]])
+test_list <- list.append(test_list, getStrainLocal(list_holder, query = "Bacteroides fragilis", typestrain_only = F)[[2]]) #for testing getStrainLocal and having multiple strains of the same species
+
 attr(test_list, "date_downloaded") <- attr(list_holder, "date_downloaded")
 write_rds(test_list, file = here("tests/testthat/test_data.rda"))
 ```
@@ -61,7 +73,7 @@ usethis::use_data(bacdive_oxygen, overwrite = TRUE)
 
 ## bacdive_phenotypes
 
-Here we are combining the essential parts of `bacdive_morphology` and `bacdive_oxygen` to get a dataframe that is compatible with the [abxidx package](https://github.com/PennChopMicrobiomeProgram/abxidx)
+Here we are combining the essential parts of `bacdive_morphology` and `bacdive_oxygen` to get a dataframe that is compatible with the [abxidx package](https://github.com/PennChopMicrobiomeProgram/abxidx).
 
 ```{r}
 
@@ -87,100 +99,37 @@ usethis::use_data(bacdive_phenotypes, overwrite = TRUE)
 
 ## bacdive_susceptibility
 
-```{r}
-bacdive_susceptibility <- tibble()
-for (i in 1:length(list_holder)) {
-  abx_df <-
-    list_holder[[i]]$`Physiology and metabolism`$`antibiotic resistance`
-  my_df <- tibble()
-  
-  if (!is.null(abx_df)) {
-    if (!is.null(names(abx_df))) {
-      #for when you have a single antibiotic entry since a longer list will not have a `names` attribute
-      my_df[1, "ID"] <- list_holder[[i]]$General$`BacDive-ID`
-      my_df[1, "taxon"] <-
-        list_holder[[i]]$`Name and taxonomic classification`$species
-      my_df[1, "rank"] <- "Species"
-      my_df[1, "antibiotic"] <- abx_df$metabolite
-      resistant <- abx_df$`is resistant`
-      #there is probably a smarter way to do this
-      sensitive <- abx_df$`is sensitive`
-      if (!is.null(resistant)) {
-        if (resistant %in% "yes") {
-          #you can not test both at once because R will error
-          my_df[1, "value"] <- "resistant"
-        }
-      }
-      if (!is.null(sensitive)) {
-        if (sensitive %in% "yes") {
-          my_df[1, "value"] <- "susceptible"
-        }
-      }
-    } else {
-      for (j in 1:length(abx_df)) {
-        my_df[j, "ID"] <- list_holder[[i]]$General$`BacDive-ID`
-        my_df[j, "taxon"] <-
-          list_holder[[i]]$`Name and taxonomic classification`$species
-        my_df[j, "rank"] <- "Species"
-        my_df[j, "antibiotic"] <- abx_df[[j]]$metabolite
-        resistant <- abx_df[[j]]$`is resistant`
-        sensitive <- abx_df[[j]]$`is sensitive`
-        if (!is.null(resistant)) {
-          if (resistant %in% "yes") {
-            #you can not test both at once because R will error
-            my_df[j, "value"] <- "resistant"
-          }
-        }
-        if (!is.null(sensitive)) {
-          if (sensitive %in% "yes") {
-            my_df[j, "value"] <- "susceptible"
-          }
-        }
-      }
-    }
-  }
-  
-  bacdive_susceptibility <- bind_rows(bacdive_susceptibility, my_df)
-  
-}
+`bacdive_abx` contains all the information from bacdive, including multiple strains and details for antibiotic sensitivity / resistance. `bacdive_susceptibility` contains a simplified version that gets the most common values for each taxon that is compatible with the [abxidx package](https://github.com/PennChopMicrobiomeProgram/abxidx).
 
-attr(bacdive_susceptibility, "date_downloaded") <-
-  attr(list_holder, "date_downloaded")
+```{r}
+
+bacdive_abx <- getAbx(list_holder)
+
+bacdive_susceptibility <- getSimplifiedAbx(data = bacdive_abx, extra_info = F, most_common = T, remove_unknown = T)
+
+usethis::use_data(bacdive_abx, overwrite = TRUE)
 usethis::use_data(bacdive_susceptibility, overwrite = TRUE)
+
 ```
 
 ## bacdive_enzymes
 
 ```{r}
-bacdive_enzymes <- tibble()
-for (i in 1:length(list_holder)) {
-  if (!is.null(list_holder[[i]]$`Physiology and metabolism`$enzymes)) {
-    ref_df <-
-      bind_rows(list_holder[[i]]$Reference) %>% select(`@id`, `doi/url`)
-    enzyme_df <-
-      bind_rows(list_holder[[i]]$`Physiology and metabolism`$enzymes) %>%
-      mutate(
-        ID = list_holder[[i]]$General$`BacDive-ID`,
-        taxon = list_holder[[i]]$`Name and taxonomic classification`$species,
-        rank = "Species"
-      ) %>%
-      left_join(ref_df, by = c("@ref" = "@id"))
-    bacdive_enzymes <- bind_rows(bacdive_enzymes, enzyme_df)
-  }
-}
 
-bacdive_enzymes %<>%
-  select(ID, taxon, rank, activity, value, ec, doi = `doi/url`)
-attr(bacdive_enzymes, "date_downloaded") <-
-  attr(list_holder, "date_downloaded")
+bacdive_enzymes <- getEnzymes(list_holder, most_common = T, remove_unknown = T)
+
 usethis::use_data(bacdive_enzymes, overwrite = TRUE)
+
 ```
 
 ## Shen2021
 
 ```{r}
-Shen2021 <- read_csv("data-raw/Shen2021.csv", show_col_types = FALSE)
+
+Shen2021 <- read_csv(here("data-raw/Shen2021.csv"), show_col_types = FALSE)
+
 usethis::use_data(Shen2021, overwrite = TRUE)
+
 ```
 
 # The end
