@@ -53,9 +53,20 @@ Cell morphology -> gram_stain
 
 ```{r}
 
+# run this in the console not in the code block
+# library(microbenchmark)
+# microbenchmark(getMorphology(list_holder), getMorphologyOld(list_holder), times = 5)
+# Unit: seconds
+#                           expr      min       lq     mean   median       uq      max neval cld
+#     getMorphology(list_holder) 37.78438 38.02507 38.23184 38.07286 38.30433 38.97256     5  a 
+#  getMorphologyOld(list_holder) 39.68092 39.73736 39.81061 39.78563 39.84407 40.00506     5   b
+# It's about one second faster on average :shrug:
+
 bacdive_morphology <- getMorphology(list_holder)
 
 usethis::use_data(bacdive_morphology, overwrite = TRUE)
+
+
 
 ```
 

@@ -49,11 +49,63 @@ getStrainLocal <- function(list = NULL, rda = "data-raw/strain_large_list.rda", 
   } else {
     rlist::list.filter(list, General$`BacDive-ID` == query)
   }
+}
 
-
+#' Extracts cell morphology data from a single entry in a bacdive structured list
+#'
+#' @param bacdive_entry A single entry representing a strain within a bacdive list.
+#'
+#' @return A dataframe of cell morphology information about the strain.
+#' @export
+#'
+#' @importFrom dplyr bind_rows mutate left_join select
+#' @importFrom tibble tibble
+#'
+#' @examples
+#' \dontrun{
+#' morphology_df <- bind_rows(lapply(list_holder, getMorphologySingle))
+#' # OR
+#' single_strain <- getMorphologySingle(list_holder[[1]])
+#' }
+#' @note Used in \code{\link{getMorphology}}.
+getMorphologySingle <- function(bacdive_entry) {
+  if (!is.null(bacdive_entry$Morphology$`cell morphology`)) {
+    ref_df <-
+      dplyr::bind_rows(bacdive_entry$Reference) %>% dplyr::select(`@id`, `doi/url`)
+    cell_morphology_df <-
+      dplyr::bind_rows(bacdive_entry$Morphology$`cell morphology`) %>%
+      dplyr::mutate(
+        ID = bacdive_entry$General$`BacDive-ID`,
+        taxon = bacdive_entry$`Name and taxonomic classification`$species,
+        rank = "Species",
+        type_strain = bacdive_entry$`Name and taxonomic classification`$`type strain`
+      ) %>%
+      dplyr::left_join(ref_df, by = c("@ref" = "@id"))
+  }
 }
 
 #' Extracts cell morphology data from a bacdive list
+#'
+#' @param list_holder A list object containing strain information already present in the R environment.
+#'
+#' @return A dataframe of cell morphology information about taxa in the list.
+#' @export
+#'
+#' @importFrom dplyr bind_rows
+#'
+#' @examples
+#' \dontrun{
+#' morphology_df <- getMorphology(list_holder)
+#' }
+#' @note Essentially a wrapper for applying \code{\link{getMorphologySingle}} to a list and turning the result into a dataframe. Also adds the "date_downloaded" attribute from the list to the dataframe.
+getMorphology <- function(list_holder = list_holder) {
+  bacdive_morphology <- bind_rows(lapply(list_holder, getMorphologySingle))
+  attr(bacdive_morphology, "date_downloaded") <-
+    attr(list_holder, "date_downloaded")
+  return(bacdive_morphology)
+}
+
+#' Obsolete -- do no use -- for testing porpoises only
 #'
 #' @param list_holder A list object containing strain information already present in the R environment.
 #'
@@ -65,9 +117,9 @@ getStrainLocal <- function(list = NULL, rda = "data-raw/strain_large_list.rda", 
 #'
 #' @examples
 #' \dontrun{
-#' morphology_df <- getMorphology(list_holder)
+#' morphology_df <- getMorphologyOld(list_holder)
 #' }
-getMorphology <- function(list_holder = list_holder) {
+getMorphologyOld <- function(list_holder = list_holder) {
   bacdive_morphology <- tibble::tibble()
   for (i in 1:length(list_holder)) {
     if (!is.null(list_holder[[i]]$Morphology$`cell morphology`)) {
