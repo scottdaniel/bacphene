@@ -25,6 +25,13 @@ install_github(repo = "scottdaniel/bacphene")
 install.packages("BacDive", repos="http://R-Forge.R-project.org")
 ```
 
+If you want to follow along with the demo, you will also need the
+following package(s):
+
+``` r
+install.packages("nlme")
+```
+
 After this, you may register at bacdive.org
 [here](https://api.bacdive.dsmz.de/login).
 
@@ -88,7 +95,7 @@ from metagenomic shotgun alignments. See `?Shen2021` for a full
 description of the columns. With our test data and bacdive we can ask a
 few questions:
 
-### Do the rectal swabs contain more oxygen tolerant organisms?
+### Differences in aerobic status
 
 ``` r
 library(tidyverse)
@@ -122,7 +129,7 @@ my_df %>%
   mutate(aerobic_status = fct_relevel(aerobic_status, "anaerobe", "aerobe")) %>%
   
   ggplot(aes(x = SampleID, y = weighted_n, fill = aerobic_status)) +
-  geom_bar(stat = "identity", position = "fill") +
+  geom_bar(stat = "identity", position = "fill", color = "white", size = 0.2) +
   theme_bw() +
   theme(strip.text.x = element_text(size = 8),
         strip.background = element_blank(),
@@ -261,7 +268,7 @@ my_df %>%
   mutate(gram_stain = fct_relevel(gram_stain, "negative", "positive")) %>%
   
   ggplot(aes(x = SampleID, y = weighted_n, fill = gram_stain)) +
-  geom_bar(stat = "identity", position = "fill") +
+  geom_bar(stat = "identity", position = "fill", color = "white", size = 0.2) +
   theme_bw() +
   theme(strip.text.x = element_text(size = 8),
         strip.background = element_blank(),
@@ -274,7 +281,251 @@ my_df %>%
 
 <img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
 
-## References
+#### Is the gram-stain status significantly different?
+
+``` r
+totals_df <- my_df %>%
+  pivot_wider(-n, names_from = "gram_stain", values_from = "weighted_n") %>%
+  mutate(log_neggramstain_ratio = log(negative / positive)) %>%
+  left_join(Shen2021 %>% select(SampleID, SampleType) %>% unique(), by = "SampleID")
+
+my_lm <- lm(log_neggramstain_ratio ~ SampleType, data = totals_df)
+
+summary(my_lm)
+#> 
+#> Call:
+#> lm(formula = log_neggramstain_ratio ~ SampleType, data = totals_df)
+#> 
+#> Residuals:
+#>     Min      1Q  Median      3Q     Max 
+#> -5.7493 -0.9379  0.0629  0.9940  4.7959 
+#> 
+#> Coefficients:
+#>                       Estimate Std. Error t value Pr(>|t|)    
+#> (Intercept)             3.9994     0.2833  14.115  < 2e-16 ***
+#> SampleTypeRectal swab  -1.2563     0.4120  -3.049  0.00321 ** 
+#> ---
+#> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+#> 
+#> Residual standard error: 1.769 on 72 degrees of freedom
+#> Multiple R-squared:  0.1144, Adjusted R-squared:  0.1021 
+#> F-statistic: 9.298 on 1 and 72 DF,  p-value: 0.003208
+```
+
+##### Graph
+
+``` r
+totals_df %>%
+  ggplot(aes(x = SampleType, y = log_neggramstain_ratio)) +
+  geom_boxplot()
+```
+
+<img src="man/figures/README-unnamed-chunk-12-1.png" width="100%" />
+
+### Differences in antibiotic resistance
+
+Here, we will look at how antibiotic resistance might differ between the
+types of liver disease. Namely, alcohol related and non-alcohol related.
+There might be differences between sample types so that variable will be
+looked at as well. We will limit ourselves to the top 10 antibiotics as
+ranked by the number of species tested. These are:
+
+``` r
+abx_subset <- bacdive_susceptibility %>%
+  count(antibiotic) %>%
+  slice_max(order_by = n, n = 10) 
+
+abx_subset %>%
+  pander()
+```
+
+|   antibiotic    |  n  |
+|:---------------:|:---:|
+|   ampicillin    | 684 |
+| chloramphenicol | 678 |
+|    kanamycin    | 652 |
+|  tetracycline   | 648 |
+|   gentamicin    | 564 |
+|  streptomycin   | 548 |
+|  erythromycin   | 469 |
+|    neomycin     | 403 |
+|  penicillin g   | 397 |
+|   vancomycin    | 394 |
+
+``` r
+my_df <- Shen2021 %>%
+  left_join(bacdive_susceptibility %>% filter(antibiotic %in% abx_subset$antibiotic, value %in% "resistant"), by = "taxon") %>%
+  mutate(prop = count / read_counts) %>%
+  group_by(SampleID, antibiotic) %>%
+  filter(count > 0, !is.na(antibiotic)) %>%
+  summarise(n = n(), weighted_n = sum(prop) * n(), .groups = "drop") %>%
+  ungroup()
+
+sort_order <- my_df %>%
+  group_by(SampleID) %>%
+  mutate(prop = weighted_n / sum(weighted_n)) %>%
+  filter(antibiotic %in% "ampicillin") %>%
+  arrange(prop) %>%
+  pull(SampleID)
+
+my_df %>%
+  left_join(Shen2021 %>% select(SampleID, ETOH_etiology, SampleType) %>% unique(), by = "SampleID") %>%
+  mutate(SampleID = fct_relevel(SampleID, sort_order)) %>%
+  
+  ggplot(aes(x = SampleID, y = weighted_n, fill = antibiotic)) +
+  geom_bar(stat = "identity", position = "fill", color = "white", size = 0.2) +
+  theme_bw() +
+  theme(strip.text.x = element_text(size = 8),
+        strip.background = element_blank(),
+        axis.text.x = element_blank()) +
+  facet_wrap(SampleType~ETOH_etiology, scales = "free") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_brewer(palette = "Paired") +
+  labs(y = "Proportion of bacteria resistant to antibiotic\nweighted by abundance", x = "", fill = "Antibiotic", caption = "Each column represents an individual sample")
+```
+
+<img src="man/figures/README-unnamed-chunk-14-1.png" width="100%" />
+
+#### Is Vancomycin restistance different?
+
+``` r
+totals_df <- my_df %>%
+  filter(antibiotic %in% "vancomycin") %>%
+  pivot_wider(-n, names_from = "antibiotic", values_from = "weighted_n") %>%
+  left_join(Shen2021 %>% select(SampleID, ETOH_etiology, SampleType) %>% unique(), by = "SampleID") %>%
+  mutate(SubjectID = str_remove(SampleID, "\\.RS|\\.F"))
+
+my_lm <- nlme::lme(vancomycin ~ SampleType + ETOH_etiology, data = totals_df, random = ~ 1 | SubjectID)
+
+summary(my_lm)
+#> Linear mixed-effects model fit by REML
+#>   Data: totals_df 
+#>        AIC      BIC    logLik
+#>   371.3999 382.7133 -180.6999
+#> 
+#> Random effects:
+#>  Formula: ~1 | SubjectID
+#>         (Intercept) Residual
+#> StdDev:    3.052803 1.629672
+#> 
+#> Fixed effects:  vancomycin ~ SampleType + ETOH_etiology 
+#>                            Value Std.Error DF   t-value p-value
+#> (Intercept)            1.4262399 0.7620842 43  1.871499  0.0681
+#> SampleTypeRectal swab -0.2717585 0.4157413 28 -0.653672  0.5187
+#> ETOH_etiologynon-ETOH  2.2845574 0.9967657 43  2.291970  0.0269
+#>  Correlation: 
+#>                       (Intr) SmpTRs
+#> SampleTypeRectal swab -0.260       
+#> ETOH_etiologynon-ETOH -0.716  0.014
+#> 
+#> Standardized Within-Group Residuals:
+#>         Min          Q1         Med          Q3         Max 
+#> -1.65883129 -0.21923644 -0.08607503  0.08930212  2.44201090 
+#> 
+#> Number of Observations: 74
+#> Number of Groups: 45
+```
+
+##### Graph
+
+``` r
+totals_df %>%
+  ggplot(aes(x = SampleType, y = vancomycin, color = ETOH_etiology)) +
+  geom_boxplot() +
+  labs(y = "Number of vancomycin resistant bacteria\nweighted by relative abundance")
+```
+
+<img src="man/figures/README-unnamed-chunk-16-1.png" width="100%" />
+
+### Differences in Urease utilization
+
+``` r
+my_df <- Shen2021 %>%
+  left_join(bacdive_enzymes %>% filter(value %in% "urease"), by = "taxon") %>%
+  rename(enzyme = value) %>%
+  mutate(prop = count / read_counts) %>%
+  group_by(SampleID, enzyme, activity) %>%
+  filter(count > 0, !is.na(enzyme)) %>%
+  summarise(n = n(), weighted_n = sum(prop) * n(), .groups = "drop") %>%
+  ungroup()
+
+sort_order <- my_df %>%
+  group_by(SampleID) %>%
+  mutate(prop = weighted_n / sum(weighted_n)) %>%
+  filter(activity %in% "+") %>%
+  arrange(prop) %>%
+  pull(SampleID)
+
+my_df %>%
+  left_join(Shen2021 %>% select(SampleID, ETOH_etiology, SampleType) %>% unique(), by = "SampleID") %>%
+  mutate(SampleID = fct_relevel(SampleID, sort_order)) %>%
+  
+  ggplot(aes(x = SampleID, y = weighted_n, fill = activity)) +
+  geom_bar(stat = "identity", position = "fill", color = "white", size = 0.2) +
+  theme_bw() +
+  theme(strip.text.x = element_text(size = 8),
+        strip.background = element_blank(),
+        axis.text.x = element_blank()) +
+  facet_wrap(SampleType~ETOH_etiology, scales = "free") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(y = "Proportion of urease utilization\nweighted by abundance", x = "", fill = "Activity", caption = "Each column represents an individual sample")
+```
+
+<img src="man/figures/README-unnamed-chunk-17-1.png" width="100%" />
+
+#### Is urease utilization significantly different?
+
+``` r
+totals_df <- my_df %>%
+  pivot_wider(-n, names_from = "activity", values_from = "weighted_n") %>%
+  mutate(log_activity_ratio = log(`+` / `-`)) %>%
+  left_join(Shen2021 %>% select(SampleID, ETOH_etiology, SampleType) %>% unique(), by = "SampleID") %>%
+  mutate(SubjectID = str_remove(SampleID, "\\.RS|\\.F"))
+
+my_lm <- nlme::lme(log_activity_ratio ~ SampleType + ETOH_etiology, data = totals_df, random = ~ 1 | SubjectID)
+
+summary(my_lm)
+#> Linear mixed-effects model fit by REML
+#>   Data: totals_df 
+#>        AIC      BIC   logLik
+#>   255.4301 266.7435 -122.715
+#> 
+#> Random effects:
+#>  Formula: ~1 | SubjectID
+#>         (Intercept) Residual
+#> StdDev:   0.8600627 1.003659
+#> 
+#> Fixed effects:  log_activity_ratio ~ SampleType + ETOH_etiology 
+#>                            Value Std.Error DF   t-value p-value
+#> (Intercept)           -2.3246075 0.2809085 43 -8.275319  0.0000
+#> SampleTypeRectal swab -0.3541499 0.2451776 28 -1.444462  0.1597
+#> ETOH_etiologynon-ETOH -0.3763743 0.3514892 43 -1.070799  0.2902
+#>  Correlation: 
+#>                       (Intr) SmpTRs
+#> SampleTypeRectal swab -0.420       
+#> ETOH_etiologynon-ETOH -0.667  0.022
+#> 
+#> Standardized Within-Group Residuals:
+#>         Min          Q1         Med          Q3         Max 
+#> -1.82597652 -0.70784099  0.04795309  0.52324781  1.62791950 
+#> 
+#> Number of Observations: 74
+#> Number of Groups: 45
+```
+
+#### Graph
+
+``` r
+totals_df %>%
+  ggplot(aes(x = SampleType, y = log_activity_ratio, color = ETOH_etiology)) +
+  geom_boxplot() +
+  labs(y = "Ratio of positive to negative urease activity for bacteria\nweighted by abundance")
+```
+
+<img src="man/figures/README-unnamed-chunk-19-1.png" width="100%" />
+
+# References
 
 When using BacDive for research please consider citing the following
 paper:

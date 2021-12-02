@@ -33,6 +33,12 @@ install_github(repo = "scottdaniel/bacphene")
 install.packages("BacDive", repos="http://R-Forge.R-project.org")
 ```
 
+If you want to follow along with the demo, you will also need the following package(s):
+
+``` r
+install.packages("nlme")
+```
+
 After this, you may register at bacdive.org [here](https://api.bacdive.dsmz.de/login).
 
 ### Recommended
@@ -62,7 +68,7 @@ head(bacdive_enzymes)
 
 Our test data-set is from Shen et al. 2021 and contains taxonomic counts from metagenomic shotgun alignments. See `?Shen2021` for a full description of the columns. With our test data and bacdive we can ask a few questions:
 
-### Do the rectal swabs contain more oxygen tolerant organisms?
+### Differences in aerobic status
 
 ```{r}
 
@@ -89,7 +95,7 @@ my_df %>%
   mutate(aerobic_status = fct_relevel(aerobic_status, "anaerobe", "aerobe")) %>%
   
   ggplot(aes(x = SampleID, y = weighted_n, fill = aerobic_status)) +
-  geom_bar(stat = "identity", position = "fill") +
+  geom_bar(stat = "identity", position = "fill", color = "white", size = 0.2) +
   theme_bw() +
   theme(strip.text.x = element_text(size = 8),
         strip.background = element_blank(),
@@ -189,7 +195,7 @@ my_df %>%
   mutate(gram_stain = fct_relevel(gram_stain, "negative", "positive")) %>%
   
   ggplot(aes(x = SampleID, y = weighted_n, fill = gram_stain)) +
-  geom_bar(stat = "identity", position = "fill") +
+  geom_bar(stat = "identity", position = "fill", color = "white", size = 0.2) +
   theme_bw() +
   theme(strip.text.x = element_text(size = 8),
         strip.background = element_blank(),
@@ -201,8 +207,174 @@ my_df %>%
 
 ```
 
+#### Is the gram-stain status significantly different?
 
-## References
+```{r}
+
+totals_df <- my_df %>%
+  pivot_wider(-n, names_from = "gram_stain", values_from = "weighted_n") %>%
+  mutate(log_neggramstain_ratio = log(negative / positive)) %>%
+  left_join(Shen2021 %>% select(SampleID, SampleType) %>% unique(), by = "SampleID")
+
+my_lm <- lm(log_neggramstain_ratio ~ SampleType, data = totals_df)
+
+summary(my_lm)
+
+```
+
+##### Graph
+
+```{r}
+
+totals_df %>%
+  ggplot(aes(x = SampleType, y = log_neggramstain_ratio)) +
+  geom_boxplot()
+
+```
+
+### Differences in antibiotic resistance
+
+Here, we will look at how antibiotic resistance might differ between the types of liver disease. Namely, alcohol related and non-alcohol related. There might be differences between sample types so that variable will be looked at as well. We will limit ourselves to the top 10 antibiotics as ranked by the number of species tested. These are:
+
+```{r}
+
+abx_subset <- bacdive_susceptibility %>%
+  count(antibiotic) %>%
+  slice_max(order_by = n, n = 10) 
+
+abx_subset %>%
+  pander()
+
+```
+
+
+```{r}
+
+my_df <- Shen2021 %>%
+  left_join(bacdive_susceptibility %>% filter(antibiotic %in% abx_subset$antibiotic, value %in% "resistant"), by = "taxon") %>%
+  mutate(prop = count / read_counts) %>%
+  group_by(SampleID, antibiotic) %>%
+  filter(count > 0, !is.na(antibiotic)) %>%
+  summarise(n = n(), weighted_n = sum(prop) * n(), .groups = "drop") %>%
+  ungroup()
+
+sort_order <- my_df %>%
+  group_by(SampleID) %>%
+  mutate(prop = weighted_n / sum(weighted_n)) %>%
+  filter(antibiotic %in% "ampicillin") %>%
+  arrange(prop) %>%
+  pull(SampleID)
+
+my_df %>%
+  left_join(Shen2021 %>% select(SampleID, ETOH_etiology, SampleType) %>% unique(), by = "SampleID") %>%
+  mutate(SampleID = fct_relevel(SampleID, sort_order)) %>%
+  
+  ggplot(aes(x = SampleID, y = weighted_n, fill = antibiotic)) +
+  geom_bar(stat = "identity", position = "fill", color = "white", size = 0.2) +
+  theme_bw() +
+  theme(strip.text.x = element_text(size = 8),
+        strip.background = element_blank(),
+        axis.text.x = element_blank()) +
+  facet_wrap(SampleType~ETOH_etiology, scales = "free") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_brewer(palette = "Paired") +
+  labs(y = "Proportion of bacteria resistant to antibiotic\nweighted by abundance", x = "", fill = "Antibiotic", caption = "Each column represents an individual sample")
+
+```
+
+#### Is Vancomycin restistance different?
+
+```{r}
+
+totals_df <- my_df %>%
+  filter(antibiotic %in% "vancomycin") %>%
+  pivot_wider(-n, names_from = "antibiotic", values_from = "weighted_n") %>%
+  left_join(Shen2021 %>% select(SampleID, ETOH_etiology, SampleType) %>% unique(), by = "SampleID") %>%
+  mutate(SubjectID = str_remove(SampleID, "\\.RS|\\.F"))
+
+my_lm <- nlme::lme(vancomycin ~ SampleType + ETOH_etiology, data = totals_df, random = ~ 1 | SubjectID)
+
+summary(my_lm)
+
+```
+
+##### Graph
+
+```{r}
+
+totals_df %>%
+  ggplot(aes(x = SampleType, y = vancomycin, color = ETOH_etiology)) +
+  geom_boxplot() +
+  labs(y = "Number of vancomycin resistant bacteria\nweighted by relative abundance")
+
+```
+
+### Differences in Urease utilization
+
+```{r}
+
+my_df <- Shen2021 %>%
+  left_join(bacdive_enzymes %>% filter(value %in% "urease"), by = "taxon") %>%
+  rename(enzyme = value) %>%
+  mutate(prop = count / read_counts) %>%
+  group_by(SampleID, enzyme, activity) %>%
+  filter(count > 0, !is.na(enzyme)) %>%
+  summarise(n = n(), weighted_n = sum(prop) * n(), .groups = "drop") %>%
+  ungroup()
+
+sort_order <- my_df %>%
+  group_by(SampleID) %>%
+  mutate(prop = weighted_n / sum(weighted_n)) %>%
+  filter(activity %in% "+") %>%
+  arrange(prop) %>%
+  pull(SampleID)
+
+my_df %>%
+  left_join(Shen2021 %>% select(SampleID, ETOH_etiology, SampleType) %>% unique(), by = "SampleID") %>%
+  mutate(SampleID = fct_relevel(SampleID, sort_order)) %>%
+  
+  ggplot(aes(x = SampleID, y = weighted_n, fill = activity)) +
+  geom_bar(stat = "identity", position = "fill", color = "white", size = 0.2) +
+  theme_bw() +
+  theme(strip.text.x = element_text(size = 8),
+        strip.background = element_blank(),
+        axis.text.x = element_blank()) +
+  facet_wrap(SampleType~ETOH_etiology, scales = "free") +
+  scale_y_continuous(labels = scales::percent) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(y = "Proportion of urease utilization\nweighted by abundance", x = "", fill = "Activity", caption = "Each column represents an individual sample")
+
+```
+
+#### Is urease utilization significantly different?
+
+```{r}
+
+totals_df <- my_df %>%
+  pivot_wider(-n, names_from = "activity", values_from = "weighted_n") %>%
+  mutate(log_activity_ratio = log(`+` / `-`)) %>%
+  left_join(Shen2021 %>% select(SampleID, ETOH_etiology, SampleType) %>% unique(), by = "SampleID") %>%
+  mutate(SubjectID = str_remove(SampleID, "\\.RS|\\.F"))
+
+my_lm <- nlme::lme(log_activity_ratio ~ SampleType + ETOH_etiology, data = totals_df, random = ~ 1 | SubjectID)
+
+summary(my_lm)
+
+```
+
+#### Graph
+
+```{r}
+
+totals_df %>%
+  ggplot(aes(x = SampleType, y = log_activity_ratio, color = ETOH_etiology)) +
+  geom_boxplot() +
+  labs(y = "Ratio of positive to negative urease activity for bacteria\nweighted by abundance")
+
+```
+
+
+# References
 
 When using BacDive for research please consider citing the following paper:
 
