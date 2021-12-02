@@ -1,4 +1,20 @@
-#bacdive_morphology
+
+test_that("getMorphologySingle", {
+
+  test_list <- list(Reference = list(list(`@id` = 66716L, `doi/url` = "10.1099/ijsem.0.002999")),
+                    Morphology = list(`cell morphology` = list(`@ref` = 66716L, `gram stain` = "negative", `cell length` = "1.7-1.9 µm",`cell width` = "0.4-0.6 µm", `cell shape` = "rod-shaped",motility = "yes", `flagellum arrangement` = "polar")),
+                    General = list(`BacDive-ID` = 159837L),
+                    `Name and taxonomic classification` = list(species = "Abyssibacter profundi", `type strain` = "yes"))
+
+  result_df <- getMorphologySingle(test_list)
+
+  expect_equal(result_df, structure(list(`@ref` = 66716L, `gram stain` = "negative", `cell length` = "1.7-1.9 µm",
+                                         `cell width` = "0.4-0.6 µm", `cell shape` = "rod-shaped",
+                                         motility = "yes", `flagellum arrangement` = "polar", ID = 159837L,
+                                         taxon = "Abyssibacter profundi", rank = "Species", type_strain = "yes",
+                                         `doi/url` = "10.1099/ijsem.0.002999"), row.names = c(NA, -1L), class = c("tbl_df", "tbl", "data.frame")))
+
+})
 
 test_that("getMorphology", {
 
