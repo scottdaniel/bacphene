@@ -1,12 +1,12 @@
 
 test_that("getMorphologySingle", {
 
-  test_list <- list(Reference = list(list(`@id` = 66716L, `doi/url` = "10.1099/ijsem.0.002999")),
+  test_bacteria <- list(Reference = list(list(`@id` = 66716L, `doi/url` = "10.1099/ijsem.0.002999")),
                     Morphology = list(`cell morphology` = list(`@ref` = 66716L, `gram stain` = "negative", `cell length` = "1.7-1.9 µm",`cell width` = "0.4-0.6 µm", `cell shape` = "rod-shaped",motility = "yes", `flagellum arrangement` = "polar")),
                     General = list(`BacDive-ID` = 159837L),
                     `Name and taxonomic classification` = list(species = "Abyssibacter profundi", `type strain` = "yes"))
 
-  result_df <- getMorphologySingle(test_list)
+  result_df <- getMorphologySingle(test_bacteria)
 
   expect_equal(result_df, structure(list(`@ref` = 66716L, `gram stain` = "negative", `cell length` = "1.7-1.9 µm",
                                          `cell width` = "0.4-0.6 µm", `cell shape` = "rod-shaped",
@@ -25,6 +25,20 @@ test_that("getMorphology", {
   morphology_df <- getMorphology(list_holder = test_list)
 
   expect_named(morphology_df, c('@ref', 'cell length', 'cell shape', 'cell width', 'doi/url', 'flagellum arrangement', 'gram stain', 'ID', 'motility', 'rank', 'taxon', 'type_strain'), ignore.order = T)
+
+})
+
+test_that("getOxygenSingle", {
+
+  test_bacteria <- list(Reference = list(list(`@id` = 8685L, `doi/url` = "https://www.dsmz.de/collection/catalogue/details/culture/DSM-20278")),
+                        `Physiology and metabolism` = list(
+                          `oxygen tolerance` = list(`@ref` = 8685L, `oxygen tolerance` = "anaerobe")),
+                        General = list(`BacDive-ID` = 12649L),
+                    `Name and taxonomic classification` = list(species = "Acidipropionibacterium jensenii", `type strain` = "no"))
+
+  result_df <- getOxygenSingle(test_bacteria)
+
+  expect_equal(result_df, structure(list(`@ref` = 8685L, `oxygen tolerance` = "anaerobe", ID = 12649L, taxon = "Acidipropionibacterium jensenii", rank = "Species", type_strain = "no", `doi/url` = "https://www.dsmz.de/collection/catalogue/details/culture/DSM-20278"), row.names = c(NA, -1L), class = c("tbl_df", "tbl", "data.frame")))
 
 })
 

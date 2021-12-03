@@ -59,7 +59,6 @@ getStrainLocal <- function(list = NULL, rda = "data-raw/strain_large_list.rda", 
 #' @export
 #'
 #' @importFrom dplyr bind_rows mutate left_join select
-#' @importFrom tibble tibble
 #'
 #' @examples
 #' \dontrun{
@@ -143,6 +142,38 @@ getMorphologyOld <- function(list_holder = list_holder) {
   return(bacdive_morphology)
 }
 
+#' Extracts oxygen tolerance data from a single entry in a bacdive structured list
+#'
+#' @param bacdive_entry A single entry representing a strain within a bacdive list.
+#'
+#' @return A dataframe of oxygen tolerance information about the strain.
+#' @export
+#'
+#' @importFrom dplyr bind_rows mutate left_join select
+#'
+#' @examples
+#' \dontrun{
+#' morphology_df <- bind_rows(lapply(list_holder, getOxygenSingle))
+#' # OR
+#' single_strain <- getOxygenSingle(list_holder[[1]])
+#' }
+#' @note Used in \code{\link{getOxygen}}.
+getOxygenSingle <- function(bacdive_entry) {
+    if (!is.null(bacdive_entry$`Physiology and metabolism`$`oxygen tolerance`)) {
+      ref_df <-
+        dplyr::bind_rows(bacdive_entry$Reference) %>% dplyr::select(`@id`, `doi/url`)
+      oxygen_df <-
+        dplyr::bind_rows(bacdive_entry$`Physiology and metabolism`$`oxygen tolerance`) %>%
+        dplyr::mutate(
+          ID = bacdive_entry$General$`BacDive-ID`,
+          taxon = bacdive_entry$`Name and taxonomic classification`$species,
+          rank = "Species",
+          type_strain = bacdive_entry$`Name and taxonomic classification`$`type strain`
+        ) %>%
+        dplyr::left_join(ref_df, by = c("@ref" = "@id"))
+  }
+}
+
 #' Extracts oxygen tolerance data from a bacdive list
 #'
 #' @param list_holder A list object containing strain information already present in the R environment.
@@ -158,24 +189,7 @@ getMorphologyOld <- function(list_holder = list_holder) {
 #' oxygen_df <- getOxygen(list_holder)
 #' }
 getOxygen <- function(list_holder = list_holder) {
-  bacdive_oxygen <- tibble::tibble()
-  for (i in 1:length(list_holder)) {
-    if (!is.null(list_holder[[i]]$`Physiology and metabolism`$`oxygen tolerance`)) {
-      ref_df <-
-        dplyr::bind_rows(list_holder[[i]]$Reference) %>% dplyr::select(`@id`, `doi/url`)
-      oxygen_df <-
-        dplyr::bind_rows(list_holder[[i]]$`Physiology and metabolism`$`oxygen tolerance`) %>%
-        dplyr::mutate(
-          ID = list_holder[[i]]$General$`BacDive-ID`,
-          taxon = list_holder[[i]]$`Name and taxonomic classification`$species,
-          rank = "Species",
-          type_strain = list_holder[[i]]$`Name and taxonomic classification`$`type strain`
-        ) %>%
-        dplyr::left_join(ref_df, by = c("@ref" = "@id"))
-      bacdive_oxygen <-
-        dplyr::bind_rows(bacdive_oxygen, oxygen_df)
-    }
-  }
+  bacdive_oxygen <- bind_rows(lapply(list_holder, getOxygenSingle))
   attr(bacdive_oxygen, "date_downloaded") <-
     attr(list_holder, "date_downloaded")
   return(bacdive_oxygen)

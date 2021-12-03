@@ -66,8 +66,6 @@ bacdive_morphology <- getMorphology(list_holder)
 
 usethis::use_data(bacdive_morphology, overwrite = TRUE)
 
-
-
 ```
 
 ## bacdive_oxygen
