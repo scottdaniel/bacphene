@@ -98,7 +98,7 @@ getMorphologySingle <- function(bacdive_entry) {
 #' }
 #' @note Essentially a wrapper for applying \code{\link{getMorphologySingle}} to a list and turning the result into a dataframe. Also adds the "date_downloaded" attribute from the list to the dataframe.
 getMorphology <- function(list_holder = list_holder) {
-  bacdive_morphology <- bind_rows(lapply(list_holder, getMorphologySingle))
+  bacdive_morphology <- dplyr::bind_rows(lapply(list_holder, getMorphologySingle))
   attr(bacdive_morphology, "date_downloaded") <-
     attr(list_holder, "date_downloaded")
   return(bacdive_morphology)
@@ -181,15 +181,14 @@ getOxygenSingle <- function(bacdive_entry) {
 #' @return A dataframe of oxygen tolerance information about taxa in the list.
 #' @export
 #'
-#' @importFrom dplyr bind_rows mutate left_join select
-#' @importFrom tibble tibble
+#' @importFrom dplyr bind_rows
 #'
 #' @examples
 #' \dontrun{
 #' oxygen_df <- getOxygen(list_holder)
 #' }
 getOxygen <- function(list_holder = list_holder) {
-  bacdive_oxygen <- bind_rows(lapply(list_holder, getOxygenSingle))
+  bacdive_oxygen <- dplyr::bind_rows(lapply(list_holder, getOxygenSingle))
   attr(bacdive_oxygen, "date_downloaded") <-
     attr(list_holder, "date_downloaded")
   return(bacdive_oxygen)
@@ -254,6 +253,8 @@ getPhenotypes <- function(morphology_df, oxygen_df) {
 #' @importFrom here here
 #' @importFrom readr read_rds read_csv write_rds
 #' @importFrom magrittr %<>%
+#' @importFrom BacDive fetch
+#' @importFrom dplyr filter
 #'
 #' @examples
 #' \dontrun{
@@ -278,20 +279,19 @@ getStrains <- function(strain_list = "data-raw/full_list_of_bacteria_from_bacdiv
     # full_list_of_bacteria_from_bacdive_20211027.csv was downloaded here: https://bacdive.dsmz.de/advsearch?filter-group%5B1%5D%5Bgroup-condition%5D=OR&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield%5D=Domain&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-option%5D=contains&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-value%5D=Bacteria&filter-group%5B1%5D%5Bfilters%5D%5B1%5D%5Bfield-validation%5D=strains-domain-1
     if (typestrain_only) {
       my_list %<>%
-        filter(is_type_strain_header == 1)
+        dplyr::filter(is_type_strain_header == 1)
     }
     # If you try to download more than 100 you get warnings and errors like this one:
     # Warning message:
     #   In download_json_with_retry(url, object) :
     #   [API] title: BacDive API error; code: 400; message: You exceeded the maximum amount of 100 ids per request.
+    # so we have to chunk the ID's into blocks of 100 (or less) which is what this function does:
+
+    chunk <- function(x, n) (mapply(function(a, b) (x[a:b]), seq.int(from=1, to=length(x), by=n), pmin(seq.int(from=1, to=length(x), by=n)+(n-1), length(x)), SIMPLIFY=FALSE)) #https://stackoverflow.com/a/27626007/408202
+    my_indices <- chunk(my_list$ID, 100)
     list_holder <- list()
-    for (i in seq(1, length(my_list$ID), 100)) {
-      if (i + 99 > length(my_list$ID)) {
-        k = length(my_list$ID) #since the last block would include NA's otherwise
-      } else {
-        k = i + 99
-      }
-      temp_list <- fetch(bacdive_keycloak, my_list$ID[i:k])
+    for (i in my_indices) {
+      temp_list <- BacDive::fetch(bacdive_keycloak, i)
       list_holder <- c(list_holder, temp_list$results)
     }
     attr(list_holder, "date_downloaded") <- Sys.Date() # have this so we know when the data was downloaded
