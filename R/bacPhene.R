@@ -3,7 +3,6 @@
 #' @param credentials Your login credentials for bacdive.org. Defaults to DSMZ_API_USER and DSMZ_API_PASSWORD in your Renviron file. Supplied as a character vector c("username", "password").
 #'
 #' @return A 'dsmz_keycloak' object that allows access to the BacDive API. See also \code{\link[BacDive]{open_bacdive}}.
-#' @export
 #'
 #' @importFrom BacDive open_bacdive
 #'
@@ -25,7 +24,6 @@ getBacDiveAccess <- function(credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_A
 #' @param typestrain_only Whether to filter down to typestrains only.
 #'
 #' @return A list containing information on the strain of a species.
-#' @export
 #'
 #' @importFrom rlist list.filter
 #'
@@ -33,7 +31,7 @@ getBacDiveAccess <- function(credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_A
 #' \dontrun{
 #' abyss <- getStrainLocal(query = "Abyssibacter profundi")
 #' }
-#' @note If you give typestrain_only = T and your BacDive-ID query is not a typestrain you will get zero results.
+#' @details If you give typestrain_only = T and your BacDive-ID query is not a typestrain you will get zero results.
 getStrainLocal <- function(list = NULL, rda = "data-raw/strain_large_list.rda", query, typestrain_only = F) {
 
   if (is.null(list)) {
@@ -56,7 +54,6 @@ getStrainLocal <- function(list = NULL, rda = "data-raw/strain_large_list.rda", 
 #' @param bacdive_entry A single entry representing a strain within a bacdive list.
 #'
 #' @return A dataframe of cell morphology information about the strain.
-#' @export
 #'
 #' @importFrom dplyr bind_rows mutate left_join select
 #'
@@ -66,7 +63,7 @@ getStrainLocal <- function(list = NULL, rda = "data-raw/strain_large_list.rda", 
 #' # OR
 #' single_strain <- getMorphologySingle(list_holder[[1]])
 #' }
-#' @note Used in \code{\link{getMorphology}}.
+#' @details Used in \code{\link{getMorphology}}.
 getMorphologySingle <- function(bacdive_entry) {
   if (!is.null(bacdive_entry$Morphology$`cell morphology`)) {
     ref_df <-
@@ -88,7 +85,6 @@ getMorphologySingle <- function(bacdive_entry) {
 #' @param list_holder A list object containing strain information already present in the R environment.
 #'
 #' @return A dataframe of cell morphology information about taxa in the list.
-#' @export
 #'
 #' @importFrom dplyr bind_rows
 #'
@@ -96,7 +92,7 @@ getMorphologySingle <- function(bacdive_entry) {
 #' \dontrun{
 #' morphology_df <- getMorphology(list_holder)
 #' }
-#' @note Essentially a wrapper for applying \code{\link{getMorphologySingle}} to a list and turning the result into a dataframe. Also adds the "date_downloaded" attribute from the list to the dataframe.
+#' @details Essentially a wrapper for applying \code{\link{getMorphologySingle}} to a list and turning the result into a dataframe. Also adds the "date_downloaded" attribute from the list to the dataframe.
 getMorphology <- function(list_holder = list_holder) {
   bacdive_morphology <- dplyr::bind_rows(lapply(list_holder, getMorphologySingle))
   attr(bacdive_morphology, "date_downloaded") <-
@@ -109,7 +105,6 @@ getMorphology <- function(list_holder = list_holder) {
 #' @param list_holder A list object containing strain information already present in the R environment.
 #'
 #' @return A dataframe of cell morphology information about taxa in the list.
-#' @export
 #'
 #' @importFrom dplyr bind_rows mutate left_join select
 #' @importFrom tibble tibble
@@ -147,7 +142,6 @@ getMorphologyOld <- function(list_holder = list_holder) {
 #' @param bacdive_entry A single entry representing a strain within a bacdive list.
 #'
 #' @return A dataframe of oxygen tolerance information about the strain.
-#' @export
 #'
 #' @importFrom dplyr bind_rows mutate left_join select
 #'
@@ -157,7 +151,7 @@ getMorphologyOld <- function(list_holder = list_holder) {
 #' # OR
 #' single_strain <- getOxygenSingle(list_holder[[1]])
 #' }
-#' @note Used in \code{\link{getOxygen}}.
+#' @details Used in \code{\link{getOxygen}}.
 getOxygenSingle <- function(bacdive_entry) {
     if (!is.null(bacdive_entry$`Physiology and metabolism`$`oxygen tolerance`)) {
       ref_df <-
@@ -179,7 +173,6 @@ getOxygenSingle <- function(bacdive_entry) {
 #' @param list_holder A list object containing strain information already present in the R environment.
 #'
 #' @return A dataframe of oxygen tolerance information about taxa in the list.
-#' @export
 #'
 #' @importFrom dplyr bind_rows
 #'
@@ -200,7 +193,6 @@ getOxygen <- function(list_holder = list_holder) {
 #' @param oxygen_df A dataframe from \code{\link{getOxygen}}.
 #'
 #' @return A dataframe of oxygen tolerance and gram stain information about taxa in the list.
-#' @export
 #'
 #' @importFrom dplyr select full_join filter group_by count ungroup
 #' @importFrom magrittr %<>%
@@ -248,7 +240,6 @@ getPhenotypes <- function(morphology_df, oxygen_df) {
 #' @param save_rda If this is being run for the first time, the list of strains will be saved to the specificed RData file. Otherwise, the function will load strains from the specified data file.
 #'
 #' @return A list object of strain information. If running for the first time, saves an RData file of the list.
-#' @export
 #'
 #' @importFrom here here
 #' @importFrom readr read_rds read_csv write_rds
@@ -300,80 +291,122 @@ getStrains <- function(strain_list = "data-raw/full_list_of_bacteria_from_bacdiv
   return(list_holder)
 }
 
-#' Get full antibiotic susceptibility / resistance information
+#' Get the regular antibiotic susceptibility / resistance information from a single bacdive entry
 #'
-#' @param list_holder A list object containing strain information already present in the R environment.
+#' @param bacdive_entry A single entry representing a strain within a bacdive list.
 #'
-#' @return A dataframe of antibiotic susceptibility / resistance information about taxa in the list.
+#' @return A dataframe of antibiotic susceptibility / resistance information for a single bacdive entry.
 #'
-#' @importFrom dplyr bind_rows mutate left_join select all_of
-#' @importFrom tibble tibble
+#' @importFrom dplyr bind_rows mutate left_join select
 #' @importFrom magrittr %<>%
-#' @importFrom tidyr pivot_longer
 #'
-#' @return
-#' @export
-#'
+#' @details Some antibiotic information is encoded as an antibiogram, see \code{\link{getAntibiogramSingle}}
 #' @examples
 #' \dontrun{
-#' bacdive_abx <- getAbx(list_holder)
+#' abx_df <- bind_rows(lapply(list_holder, getAbxSingle))
+#' # OR
+#' single_strain <- getAbxSingle(list_holder[[1]])
 #' }
-getAbx <- function(list_holder = list_holder) {
-  bacdive_abx <- tibble::tibble()
-  for (i in 1:length(list_holder)) {
-    if (!is.null(list_holder[[i]]$`Physiology and metabolism`$`antibiotic resistance`)) {
+getAbxSingle <- function(bacdive_entry) {
+    if (!is.null(bacdive_entry$`Physiology and metabolism`$`antibiotic resistance`)) {
       ref_df <-
-        dplyr::bind_rows(list_holder[[i]]$Reference)
+        dplyr::bind_rows(bacdive_entry$Reference)
 
       if ("doi/url" %in% names(ref_df)) {
         ref_df %<>% dplyr::select(`@id`, `doi/url`)
       } else {
         ref_df %<>% dplyr::select(`@id`) %>% mutate(`doi/url` = "Unknown")
       }
-
       abx_df <-
-        dplyr::bind_rows(list_holder[[i]]$`Physiology and metabolism`$`antibiotic resistance`) %>%
+        dplyr::bind_rows(bacdive_entry$`Physiology and metabolism`$`antibiotic resistance`) %>%
         dplyr::mutate(
-          ID = list_holder[[i]]$General$`BacDive-ID`,
-          taxon = list_holder[[i]]$`Name and taxonomic classification`$species,
+          ID = bacdive_entry$General$`BacDive-ID`,
+          taxon = bacdive_entry$`Name and taxonomic classification`$species,
           rank = "Species",
-          type_strain = list_holder[[i]]$`Name and taxonomic classification`$`type strain`
+          type_strain = bacdive_entry$`Name and taxonomic classification`$`type strain`
         ) %>%
         dplyr::left_join(ref_df, by = c("@ref" = "@id"))
-      bacdive_abx <-
-        dplyr::bind_rows(bacdive_abx, abx_df)
-    } else if (!is.null(list_holder[[i]]$`Physiology and metabolism`$antibiogram)) {
-
-      ref_df <-
-        dplyr::bind_rows(list_holder[[i]]$Reference)
-
-      if ("doi/url" %in% names(ref_df)) {
-        ref_df %<>% dplyr::select(`@id`, `doi/url`)
-      } else {
-        ref_df %<>% dplyr::select(`@id`) %>% dplyr::mutate(`doi/url` = "Unknown")
-      }
-
-      abx_df <-
-        dplyr::bind_rows(list_holder[[i]]$`Physiology and metabolism`$antibiogram)
-
-      contains_columns <- intersect(names(abx_df), c("@ref", "medium", "incubation temperature", "oxygen condition", "incubation time"))
-
-      abx_df %<>%
-        tidyr::pivot_longer(cols = -c(dplyr::all_of(contains_columns)), names_to = "metabolite", values_to = "diameter") %>%
-      dplyr::mutate(
-        ID = list_holder[[i]]$General$`BacDive-ID`,
-        taxon = list_holder[[i]]$`Name and taxonomic classification`$species,
-        rank = "Species",
-        type_strain = list_holder[[i]]$`Name and taxonomic classification`$`type strain`
-      ) %>%
-        dplyr::left_join(ref_df, by = c("@ref" = "@id"))
-      bacdive_abx <-
-        dplyr::bind_rows(bacdive_abx, abx_df)
     }
-  }
+}
+
+#' Get the regular antibiotic susceptibility / resistance information from a list of bacdive entries
+#'
+#' @param list_holder A list object containing strain information already present in the R environment.
+#'
+#' @return A dataframe of antibiotic susceptibility / resistance information about taxa in the list.
+#'
+#' @importFrom dplyr bind_rows
+#'
+#' @examples
+#' \dontrun{
+#' abx_df <- getAbx(list_holder)
+#' }
+getAbx <- function(list_holder = list_holder) {
+  bacdive_abx <- dplyr::bind_rows(lapply(list_holder, getAbxSingle))
   attr(bacdive_abx, "date_downloaded") <-
     attr(list_holder, "date_downloaded")
   return(bacdive_abx)
+}
+
+#' Get the antibiogram susceptibility / resistance information for a single entry
+#'
+#' @param bacdive_entry A single entry representing a strain within a bacdive list.
+#'
+#' @return A dataframe of antibiogram susceptibility / resistance information for a single bacdive entry.
+#'
+#' @importFrom dplyr bind_rows mutate left_join select all_of
+#' @importFrom magrittr %<>%
+#' @importFrom tidyr pivot_longer
+#'
+#' @details This is similar information from what is gotten from \code{\link{getAbxSingle}} but uses a standardized format called the antibiogram
+#' @examples
+#' \dontrun{
+#' antibiogram_df <- bind_rows(lapply(list_holder, getAntibiogramSingle))
+#' # OR
+#' single_strain <- getAntibiogramSingle(list_holder[[1]])
+#' }
+getAntibiogramSingle <- function(bacdive_entry) {
+  if (!is.null(bacdive_entry$`Physiology and metabolism`$antibiogram)) {
+    ref_df <-
+      dplyr::bind_rows(bacdive_entry$Reference)
+
+    if ("doi/url" %in% names(ref_df)) {
+      ref_df %<>% dplyr::select(`@id`, `doi/url`)
+    } else {
+      ref_df %<>% dplyr::select(`@id`) %>% dplyr::mutate(`doi/url` = "Unknown")
+    }
+    abx_df <-
+      dplyr::bind_rows(bacdive_entry$`Physiology and metabolism`$antibiogram)
+    contains_columns <- intersect(names(abx_df), c("@ref", "medium", "incubation temperature", "oxygen condition", "incubation time"))
+    abx_df %<>%
+      tidyr::pivot_longer(cols = -c(dplyr::all_of(contains_columns)), names_to = "metabolite", values_to = "diameter") %>%
+      dplyr::mutate(
+        ID = bacdive_entry$General$`BacDive-ID`,
+        taxon = bacdive_entry$`Name and taxonomic classification`$species,
+        rank = "Species",
+        type_strain = bacdive_entry$`Name and taxonomic classification`$`type strain`
+      ) %>%
+      dplyr::left_join(ref_df, by = c("@ref" = "@id"))
+  }
+}
+
+#' Get the antibiogram susceptibility / resistance information from a list of bacdive entries
+#'
+#' @param list_holder A list object containing strain information already present in the R environment.
+#'
+#' @return A dataframe of antibiogram susceptibility / resistance information about taxa in the list.
+#'
+#' @importFrom dplyr bind_rows
+#'
+#' @examples
+#' \dontrun{
+#' antibiogram_df <- getAntibiogram(list_holder)
+#' }
+getAntibiogram <- function(list_holder = list_holder) {
+  bacdive_antibiogram <- dplyr::bind_rows(lapply(list_holder, getAntibiogramSingle))
+  attr(bacdive_antibiogram, "date_downloaded") <-
+    attr(list_holder, "date_downloaded")
+  return(bacdive_antibiogram)
 }
 
 #' Simplify the full antibiotic susceptibility / resistance information
@@ -389,8 +422,6 @@ getAbx <- function(list_holder = list_holder) {
 #' @importFrom stringr str_to_lower
 #' @importFrom magrittr %<>%
 #' @importFrom tidyr pivot_longer
-#'
-#' @export
 #'
 #' @examples
 #' \dontrun{
@@ -439,6 +470,36 @@ getSimplifiedAbx <- function(data = bacdive_abx, extra_info = F, most_common = T
 
 }
 
+#' Extracts enzyme data from a bacdive entry
+#'
+#' @param bacdive_entry A single entry representing a strain within a bacdive list.
+#'
+#' @return A dataframe of enzyme information for a single bacdive entry.
+#'
+#' @importFrom dplyr bind_rows mutate left_join select
+#'
+#' @examples
+#' \dontrun{
+#' enzymes_df <- bind_rows(lapply(list_holder, getEnzymesSingle))
+#' # OR
+#' single_strain <- getEnzymesSingle(list_holder[[1]])
+#' }
+getEnzymesSingle <- function(bacdive_entry) {
+  if (!is.null(bacdive_entry$`Physiology and metabolism`$enzymes)) {
+    ref_df <-
+      dplyr::bind_rows(bacdive_entry$Reference) %>% dplyr::select(`@id`, `doi/url`)
+    enzyme_df <-
+      dplyr::bind_rows(bacdive_entry$`Physiology and metabolism`$enzymes) %>%
+      dplyr::mutate(
+        ID = bacdive_entry$General$`BacDive-ID`,
+        taxon = bacdive_entry$`Name and taxonomic classification`$species,
+        rank = "Species"
+      ) %>%
+      dplyr::left_join(ref_df, by = c("@ref" = "@id"))
+    bacdive_enzymes <- dplyr::bind_rows(bacdive_enzymes, enzyme_df)
+  }
+}
+
 #' Extracts enzyme data from a bacdive list
 #'
 #' @param list_holder A list object containing strain information already present in the R environment.
@@ -446,10 +507,8 @@ getSimplifiedAbx <- function(data = bacdive_abx, extra_info = F, most_common = T
 #' @param remove_unknown Remove enzyme activity entries where the value is NA.
 #'
 #' @return A dataframe of enzyme information about taxa in the list.
-#' @export
 #'
-#' @importFrom dplyr bind_rows mutate left_join select
-#' @importFrom tibble tibble
+#' @importFrom dplyr bind_rows
 #'
 #' @examples
 #' \dontrun{
@@ -457,23 +516,7 @@ getSimplifiedAbx <- function(data = bacdive_abx, extra_info = F, most_common = T
 #' }
 #' @details Staphylococcus aureus has 31 strains with positive catalase activity and 2 strains with negative catalase activity. With `most_common = T`, the function will return a dataframe denoting that S. aureus is most commonly positive for catalase activity.
 getEnzymes <- function(list_holder = list_holder, most_common = T, remove_unknown = T) {
-  bacdive_enzymes <- tibble()
-  for (i in 1:length(list_holder)) {
-    if (!is.null(list_holder[[i]]$`Physiology and metabolism`$enzymes)) {
-      ref_df <-
-        dplyr::bind_rows(list_holder[[i]]$Reference) %>% dplyr::select(`@id`, `doi/url`)
-      enzyme_df <-
-        dplyr::bind_rows(list_holder[[i]]$`Physiology and metabolism`$enzymes) %>%
-        dplyr::mutate(
-          ID = list_holder[[i]]$General$`BacDive-ID`,
-          taxon = list_holder[[i]]$`Name and taxonomic classification`$species,
-          rank = "Species"
-        ) %>%
-        dplyr::left_join(ref_df, by = c("@ref" = "@id"))
-      bacdive_enzymes <- dplyr::bind_rows(bacdive_enzymes, enzyme_df)
-    }
-  }
-
+  bacdive_enzymes <- dplyr::bind_rows(lapply(list_holder, getEnzymesSingle))
   if (most_common) {
     bacdive_enzymes %<>%
       dplyr::group_by(taxon, rank, value, ec) %>%
@@ -482,12 +525,10 @@ getEnzymes <- function(list_holder = list_holder, most_common = T, remove_unknow
       dplyr::ungroup() %>%
       dplyr::select(-n)
   }
-
   if (remove_unknown) {
     bacdive_enzymes %<>%
       dplyr::filter(!is.na(activity))
   }
-
   attr(bacdive_enzymes, "date_downloaded") <-
     attr(list_holder, "date_downloaded")
   return(bacdive_enzymes)
