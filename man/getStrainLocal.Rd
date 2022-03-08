@@ -26,7 +26,7 @@ A list containing information on the strain of a species.
 \description{
 Gets a single strain of a species
 }
-\note{
+\details{
 If you give typestrain_only = T and your BacDive-ID query is not a typestrain you will get zero results.
 }
 \examples{

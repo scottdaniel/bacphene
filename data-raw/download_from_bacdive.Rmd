@@ -113,6 +113,7 @@ usethis::use_data(bacdive_phenotypes, overwrite = TRUE)
 ```{r}
 
 bacdive_abx <- getAbx(list_holder)
+bacdive_antibiogram <- getAntibiogram(list_holder)
 
 bacdive_susceptibility <- getSimplifiedAbx(data = bacdive_abx, extra_info = F, most_common = T, remove_unknown = T)
 

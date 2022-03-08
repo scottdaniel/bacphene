@@ -15,7 +15,7 @@ A dataframe of oxygen tolerance information about the strain.
 \description{
 Extracts oxygen tolerance data from a single entry in a bacdive structured list
 }
-\note{
+\details{
 Used in \code{\link{getOxygen}}.
 }
 \examples{

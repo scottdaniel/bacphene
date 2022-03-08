@@ -15,7 +15,7 @@ A dataframe of cell morphology information about taxa in the list.
 \description{
 Extracts cell morphology data from a bacdive list
 }
-\note{
+\details{
 Essentially a wrapper for applying \code{\link{getMorphologySingle}} to a list and turning the result into a dataframe. Also adds the "date_downloaded" attribute from the list to the dataframe.
 }
 \examples{

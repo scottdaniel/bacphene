@@ -19,6 +19,10 @@ Imports:
     BacDive,
     magrittr,
     tibble,
-    dplyr
+    dplyr,
+    here,
+    readr,
+    stringr,
+    tidyr
 Depends: 
     R (>= 2.10)

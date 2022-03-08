@@ -2,7 +2,7 @@
 % Please edit documentation in R/bacPhene.R
 \name{getAbx}
 \alias{getAbx}
-\title{Get full antibiotic susceptibility / resistance information}
+\title{Get the regular antibiotic susceptibility / resistance information from a list of bacdive entries}
 \usage{
 getAbx(list_holder = list_holder)
 }
@@ -11,14 +11,12 @@ getAbx(list_holder = list_holder)
 }
 \value{
 A dataframe of antibiotic susceptibility / resistance information about taxa in the list.
-
-
 }
 \description{
-Get full antibiotic susceptibility / resistance information
+Get the regular antibiotic susceptibility / resistance information from a list of bacdive entries
 }
 \examples{
 \dontrun{
-bacdive_abx <- getAbx(list_holder)
+abx_df <- getAbx(list_holder)
 }
 }

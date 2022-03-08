@@ -15,7 +15,7 @@ A dataframe of cell morphology information about the strain.
 \description{
 Extracts cell morphology data from a single entry in a bacdive structured list
 }
-\note{
+\details{
 Used in \code{\link{getMorphology}}.
 }
 \examples{
