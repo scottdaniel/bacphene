@@ -3,7 +3,7 @@
 #' @param credentials Your login credentials for bacdive.org. Defaults to DSMZ_API_USER and DSMZ_API_PASSWORD in your Renviron file. Supplied as a character vector c("username", "password").
 #'
 #' @return A 'dsmz_keycloak' object that allows access to the BacDive API. See also \code{\link[BacDive]{open_bacdive}}.
-#'
+#' @export
 #' @importFrom BacDive open_bacdive
 #'
 #' @examples
@@ -24,7 +24,7 @@ getBacDiveAccess <- function(credentials = Sys.getenv(c("DSMZ_API_USER", "DSMZ_A
 #' @param typestrain_only Whether to filter down to typestrains only.
 #'
 #' @return A list containing information on the strain of a species.
-#'
+#' @export
 #' @importFrom rlist list.filter
 #'
 #' @examples
@@ -54,7 +54,7 @@ getStrainLocal <- function(list = NULL, rda = "data-raw/strain_large_list.rda", 
 #' @param bacdive_entry A single entry representing a strain within a bacdive list.
 #'
 #' @return A dataframe of cell morphology information about the strain.
-#'
+#' @export
 #' @importFrom dplyr bind_rows mutate left_join select
 #'
 #' @examples
@@ -85,7 +85,7 @@ getMorphologySingle <- function(bacdive_entry) {
 #' @param list_holder A list object containing strain information already present in the R environment.
 #'
 #' @return A dataframe of cell morphology information about taxa in the list.
-#'
+#' @export
 #' @importFrom dplyr bind_rows
 #'
 #' @examples
@@ -105,7 +105,7 @@ getMorphology <- function(list_holder = list_holder) {
 #' @param list_holder A list object containing strain information already present in the R environment.
 #'
 #' @return A dataframe of cell morphology information about taxa in the list.
-#'
+#' @export
 #' @importFrom dplyr bind_rows mutate left_join select
 #' @importFrom tibble tibble
 #'
@@ -142,7 +142,7 @@ getMorphologyOld <- function(list_holder = list_holder) {
 #' @param bacdive_entry A single entry representing a strain within a bacdive list.
 #'
 #' @return A dataframe of oxygen tolerance information about the strain.
-#'
+#' @export
 #' @importFrom dplyr bind_rows mutate left_join select
 #'
 #' @examples
@@ -173,7 +173,7 @@ getOxygenSingle <- function(bacdive_entry) {
 #' @param list_holder A list object containing strain information already present in the R environment.
 #'
 #' @return A dataframe of oxygen tolerance information about taxa in the list.
-#'
+#' @export
 #' @importFrom dplyr bind_rows
 #'
 #' @examples
@@ -193,7 +193,7 @@ getOxygen <- function(list_holder = list_holder) {
 #' @param oxygen_df A dataframe from \code{\link{getOxygen}}.
 #'
 #' @return A dataframe of oxygen tolerance and gram stain information about taxa in the list.
-#'
+#' @export
 #' @importFrom dplyr select full_join filter group_by count ungroup
 #' @importFrom magrittr %<>%
 #'
@@ -240,7 +240,7 @@ getPhenotypes <- function(morphology_df, oxygen_df) {
 #' @param save_rda If this is being run for the first time, the list of strains will be saved to the specificed RData file. Otherwise, the function will load strains from the specified data file.
 #'
 #' @return A list object of strain information. If running for the first time, saves an RData file of the list.
-#'
+#' @export
 #' @importFrom here here
 #' @importFrom readr read_rds read_csv write_rds
 #' @importFrom magrittr %<>%
@@ -296,7 +296,7 @@ getStrains <- function(strain_list = "data-raw/full_list_of_bacteria_from_bacdiv
 #' @param bacdive_entry A single entry representing a strain within a bacdive list.
 #'
 #' @return A dataframe of antibiotic susceptibility / resistance information for a single bacdive entry.
-#'
+#' @export
 #' @importFrom dplyr bind_rows mutate left_join select
 #' @importFrom magrittr %<>%
 #'
@@ -334,7 +334,7 @@ getAbxSingle <- function(bacdive_entry) {
 #' @param list_holder A list object containing strain information already present in the R environment.
 #'
 #' @return A dataframe of antibiotic susceptibility / resistance information about taxa in the list.
-#'
+#' @export
 #' @importFrom dplyr bind_rows
 #'
 #' @examples
@@ -353,7 +353,7 @@ getAbx <- function(list_holder = list_holder) {
 #' @param bacdive_entry A single entry representing a strain within a bacdive list.
 #'
 #' @return A dataframe of antibiogram susceptibility / resistance information for a single bacdive entry.
-#'
+#' @export
 #' @importFrom dplyr bind_rows mutate left_join select all_of
 #' @importFrom magrittr %<>%
 #' @importFrom tidyr pivot_longer
@@ -395,7 +395,7 @@ getAntibiogramSingle <- function(bacdive_entry) {
 #' @param list_holder A list object containing strain information already present in the R environment.
 #'
 #' @return A dataframe of antibiogram susceptibility / resistance information about taxa in the list.
-#'
+#' @export
 #' @importFrom dplyr bind_rows
 #'
 #' @examples
@@ -417,7 +417,7 @@ getAntibiogram <- function(list_holder = list_holder) {
 #' @param remove_unknown Remove antibiotic / species combinations where the resistance / sensitivity information is unknown or variable.
 #'
 #' @return A simplified dataframe of antibiotic susceptibility / resistance information.
-#'
+#' @export
 #' @importFrom dplyr bind_rows mutate left_join select all_of
 #' @importFrom stringr str_to_lower
 #' @importFrom magrittr %<>%
@@ -475,7 +475,7 @@ getSimplifiedAbx <- function(data = bacdive_abx, extra_info = F, most_common = T
 #' @param bacdive_entry A single entry representing a strain within a bacdive list.
 #'
 #' @return A dataframe of enzyme information for a single bacdive entry.
-#'
+#' @export
 #' @importFrom dplyr bind_rows mutate left_join select
 #'
 #' @examples
@@ -507,7 +507,7 @@ getEnzymesSingle <- function(bacdive_entry) {
 #' @param remove_unknown Remove enzyme activity entries where the value is NA.
 #'
 #' @return A dataframe of enzyme information about taxa in the list.
-#'
+#' @export
 #' @importFrom dplyr bind_rows
 #'
 #' @examples
