@@ -115,9 +115,19 @@ usethis::use_data(bacdive_phenotypes, overwrite = TRUE)
 bacdive_abx <- getAbx(list_holder)
 bacdive_antibiogram <- getAntibiogram(list_holder)
 
-bacdive_susceptibility <- getSimplifiedAbx(data = bacdive_abx, extra_info = F, most_common = T, remove_unknown = T)
+# strains_with_abx <- bacdive_abx %>% 
+#   select(ID, taxon, rank, type_strain) %>%
+#   bind_rows(bacdive_antibiogram %>% select(ID, taxon, rank, type_strain)) %>%
+#   distinct() %>%
+#   mutate(abx_info = if_else(ID %in% bacdive_abx$ID, T, F)) %>%
+#   mutate(antibiogram = if_else(ID %in% bacdive_antibiogram$ID, T, F))
+
+bacdive_combined_abx <- bind_rows(bacdive_abx, bacdive_antibiogram)
+
+bacdive_susceptibility <- getSimplifiedAbx(data = bacdive_combined_abx, extra_info = F, most_common = T, remove_unknown = T)
 
 usethis::use_data(bacdive_abx, overwrite = TRUE)
+usethis::use_data(bacdive_antibiogram, overwrite = TRUE)
 usethis::use_data(bacdive_susceptibility, overwrite = TRUE)
 
 ```
