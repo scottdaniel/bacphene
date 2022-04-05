@@ -8,7 +8,7 @@
 A data frame with the following columns:
 \describe{
   \item{`@ref`}{The literature reference in the bacdive database.}
-  \item{ChEBI}{\href{https://www.ebi.ac.uk/chebi/}ChEBI (Chemical entities of biological interest) identifier.}
+  \item{ChEBI}{\href{https://www.ebi.ac.uk/chebi/}{ChEBI (Chemical entities of biological interest) identifier.}}
   \item{metabolite}{Common name of the antibiotic.}
   \item{`is antibiotic`}{Should all be "yes" values.}
   \item{`is sensitive`}{Whether or not strain is sensitive to this antibiotic.

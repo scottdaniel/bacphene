@@ -2,7 +2,7 @@
 #' @format A data frame with the following columns:
 #' \describe{
 #'   \item{`@ref`}{The literature reference in the bacdive database.}
-#'   \item{ChEBI}{\href{https://www.ebi.ac.uk/chebi/}ChEBI (Chemical entities of biological interest) identifier.}
+#'   \item{ChEBI}{\href{https://www.ebi.ac.uk/chebi/}{ChEBI (Chemical entities of biological interest) identifier.}}
 #'   \item{metabolite}{Common name of the antibiotic.}
 #'   \item{`is antibiotic`}{Should all be "yes" values.}
 #'   \item{`is sensitive`}{Whether or not strain is sensitive to this antibiotic.
@@ -24,7 +24,7 @@
 #' @note Data frame also has the attribute "date_downloaded" for when the data was downloaded from bacdive.org.
 "bacdive_abx"
 
-#' Antibiotics data from bacdive.org that is in the \href{https://bacdive.dsmz.de/help/what-are-antibiotic-susceptibi.htm}antibiogram format. Produced by \code{\link{getAntibiogram}}.
+#' Antibiotics data from bacdive.org that is in the \href{https://bacdive.dsmz.de/help/what-are-antibiotic-susceptibi.htm}{antibiogram format.} Produced by \code{\link{getAntibiogram}}.
 #' @format A data frame with the following columns:
 #' \describe{
 #'   \item{`@ref`}{The literature reference in the bacdive database.}

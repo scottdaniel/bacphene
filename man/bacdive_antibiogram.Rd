@@ -3,7 +3,7 @@
 \docType{data}
 \name{bacdive_antibiogram}
 \alias{bacdive_antibiogram}
-\title{Antibiotics data from bacdive.org that is in the \href{https://bacdive.dsmz.de/help/what-are-antibiotic-susceptibi.htm}antibiogram format. Produced by \code{\link{getAntibiogram}}.}
+\title{Antibiotics data from bacdive.org that is in the \href{https://bacdive.dsmz.de/help/what-are-antibiotic-susceptibi.htm}{antibiogram format.} Produced by \code{\link{getAntibiogram}}.}
 \format{
 A data frame with the following columns:
 \describe{
@@ -25,7 +25,7 @@ A data frame with the following columns:
 bacdive_antibiogram
 }
 \description{
-Antibiotics data from bacdive.org that is in the \href{https://bacdive.dsmz.de/help/what-are-antibiotic-susceptibi.htm}antibiogram format. Produced by \code{\link{getAntibiogram}}.
+Antibiotics data from bacdive.org that is in the \href{https://bacdive.dsmz.de/help/what-are-antibiotic-susceptibi.htm}{antibiogram format.} Produced by \code{\link{getAntibiogram}}.
 }
 \note{
 Data frame also has the attribute "date_downloaded" for when the data was downloaded from bacdive.org.
