@@ -3,24 +3,26 @@
 \docType{data}
 \name{bacdive_susceptibility}
 \alias{bacdive_susceptibility}
-\title{Antibiotic susceptibility data from bacdive.org}
+\title{Antibiotic susceptibility data from bacdive that combines and simplifies information from \code{\link{bacdive_abx}} and \code{\link{bacdive_antibiogram}}. Produced by \code{\link{getSimplifiedAbx}}.}
 \format{
 A data frame with the following columns:
 \describe{
-  \item{ID}{The BacDive ID.}
   \item{taxon}{The name of the taxon.}
   \item{rank}{The rank of the taxon.}
-  \item{antibiotic}{The antibiotic or antibiotic class.}
-  \item{value}{
-    The susceptibility of the taxon to the antibiotic, one of "susceptible"
-    or "resistant".}
+  \item{antibiotic}{Common name of the antibiotic.}
+  \item{value}{Whether or not species is resistant or sensitive to antibiotic.
+  By default, NA values are removed and the most common value is shown for a given species
+  if it has multiple strains.}
 }
 }
 \usage{
 bacdive_susceptibility
 }
 \description{
-Antibiotic susceptibility data from bacdive.org
+Antibiotic susceptibility data from bacdive that combines and simplifies information from \code{\link{bacdive_abx}} and \code{\link{bacdive_antibiogram}}. Produced by \code{\link{getSimplifiedAbx}}.
+}
+\details{
+See `data-raw/download_from_bacdive.Rmd` for code to create this.
 }
 \note{
 Data frame also has the attribute "date_downloaded" for when the data was downloaded from bacdive.org.

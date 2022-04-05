@@ -3,26 +3,24 @@
 \docType{data}
 \name{bacdive_phenotypes}
 \alias{bacdive_phenotypes}
-\title{Phenotype data of bacterial type strains from bacdive.org}
+\title{Phenotype data of bacterial type strains from bacdive.org.  Produced by \code{\link{getPhenotypes}}.}
 \format{
 A data frame with the following columns:
 \describe{
-  \item{ID}{The BacDive ID.}
   \item{taxon}{The name of the taxon.}
   \item{rank}{The rank of the taxon.}
-  \item{aerobic_status}{
-    The aerobic status. Multiple values including "aerobe", "facultative anaerobe", and
-    "obligate anaerobe".}
-  \item{gram_stain}{
-    How the taxon appears when Gram-stained. One of "positive" or
-    "negative".}
+  \item{aerobic_status}{The aerobic status.
+  Multiple values including "aerobe", "facultative anaerobe", and
+    "obligate anaerobe", etc. NA means the status is unknown or variable.}
+  \item{gram_stain}{How the taxon appears when Gram-stained.
+  Multiple values including "positive", "negative" or "variable". NA means the status is unknown.}
 }
 }
 \usage{
 bacdive_phenotypes
 }
 \description{
-Phenotype data of bacterial type strains from bacdive.org
+Phenotype data of bacterial type strains from bacdive.org.  Produced by \code{\link{getPhenotypes}}.
 }
 \note{
 Data frame also has the attribute "date_downloaded" for when the data was downloaded from bacdive.org.

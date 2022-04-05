@@ -3,24 +3,26 @@
 \docType{data}
 \name{bacdive_enzymes}
 \alias{bacdive_enzymes}
-\title{Enzyme activity data from bacdive.org}
+\title{Enzyme activity data from bacdive.org. Produced by \code{\link{getEnzymes}}.}
 \format{
 A data frame with the following columns:
 \describe{
-  \item{ID}{The BacDive ID.}
   \item{taxon}{The name of the taxon.}
   \item{rank}{The rank of the taxon.}
-  \item{activity}{Whether the enzyme is active or not with '+' being active, '-' being non-active, and '+/-' being variable.}
   \item{value}{The enzyme name.}
   \item{ec}{\href{https://en.wikipedia.org/wiki/Enzyme_Commission_number}{The Enzyme Commission number.}}
-  \item{doi}{Digital object identifier for the literature that supports the evidence of activity.}
-}
+  \item{activity}{Whether the enzyme is active or not with '+' being active, '-' being non-active, and '+/-' being variable. By default, NA values are removed and the most common value is shown for a given species
+  if it has multiple strains.}
+  }
 }
 \usage{
 bacdive_enzymes
 }
 \description{
-Enzyme activity data from bacdive.org
+Enzyme activity data from bacdive.org. Produced by \code{\link{getEnzymes}}.
+}
+\details{
+See `data-raw/download_from_bacdive.Rmd` for code to create this.
 }
 \note{
 Data frame also has the attribute "date_downloaded" for when the data was downloaded from bacdive.org.
