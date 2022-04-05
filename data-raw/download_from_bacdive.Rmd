@@ -108,7 +108,7 @@ usethis::use_data(bacdive_phenotypes, overwrite = TRUE)
 
 ## bacdive_susceptibility
 
-`bacdive_abx` contains all the information from bacdive, including multiple strains and details for antibiotic sensitivity / resistance. `bacdive_susceptibility` contains a simplified version that gets the most common values for each taxon that is compatible with the [abxidx package](https://github.com/PennChopMicrobiomeProgram/abxidx).
+`bacdive_abx` contains antibiotics information from bacdive, including multiple strains and details for antibiotic sensitivity / resistance. Antibiotics information that is in the "antibiogram" format is in the `bacdive_antibiogram` data frame. `bacdive_susceptibility` combines the preceding two data frames and contains a simplified version that gets the most common values for each taxon. `bacdive_susceptibility` is compatible with the [abxidx package](https://github.com/PennChopMicrobiomeProgram/abxidx).
 
 ```{r}
 
