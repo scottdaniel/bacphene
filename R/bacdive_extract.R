@@ -351,7 +351,6 @@ getEnzymesSingle <- function(bacdive_entry) {
         rank = "Species"
       ) %>%
       dplyr::left_join(ref_df, by = c("@ref" = "@id"))
-    bacdive_enzymes <- dplyr::bind_rows(bacdive_enzymes, enzyme_df)
   }
 }
 
