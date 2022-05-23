@@ -135,3 +135,35 @@
 #' }
 #' @note Data obtained from the following study: Shen, T.-C. D. et al. (2021) ‘The Mucosally-Adherent Rectal Microbiota Contains Features Unique to Alcohol-Related Cirrhosis’, Gut microbes, 13(1), p. 1987781. \url{https://www.ncbi.nlm.nih.gov/pubmed/34747331}.
 "Shen2021"
+
+#' Species data obtained through manual literature search by Celeste Gaughan.
+#' @format A data frame with the following columns:
+#' \describe{
+#'   \item{taxon}{The name of the taxon.}
+#'   \item{rank}{The rank of the taxon.}
+#'   \item{doi}{DOI (Digital Object Identifier) for the reference.}
+#'   \item{aerobic_status}{The aerobic status.
+#'   Multiple values including "aerobe", "facultative anaerobe", and
+#'     "obligate anaerobe", etc. NA means the status is unknown or variable.}
+#'   \item{gram_stain}{How the taxon appears when Gram-stained.
+#'   Multiple values including "positive", "negative" or "variable". NA means the status is unknown.}
+#' }
+#' @details See `data-raw/download_from_bacdive.Rmd` for code to create this.
+#' @note Data frame also has the attribute "date_downloaded" for when the data was downloaded from bacdive.org.
+"manual_curation_species"
+
+#' Genera data obtained through manual literature search by Celeste Gaughan.
+#' @format A data frame with the following columns:
+#' \describe{
+#'   \item{taxon}{The name of the taxon.}
+#'   \item{rank}{The rank of the taxon.}
+#'   \item{doi}{DOI (Digital Object Identifier) for the reference.}
+#'   \item{aerobic_status}{The aerobic status.
+#'   Multiple values including "aerobe", "facultative anaerobe", and
+#'     "obligate anaerobe", etc. NA means the status is unknown or variable.}
+#'   \item{gram_stain}{How the taxon appears when Gram-stained.
+#'   Multiple values including "positive", "negative" or "variable". NA means the status is unknown.}
+#' }
+#' @details See `data-raw/download_from_bacdive.Rmd` for code to create this.
+#' @note Data frame also has the attribute "date_downloaded" for when the data was downloaded from bacdive.org.
+"manual_curation_genera"

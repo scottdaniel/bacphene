@@ -42,3 +42,20 @@ ijsem$Salt_optimum<-as.character(ijsem$Salt_optimum)
 #values that are not numeric are transformed to NAs
 ijsem$Salt_optimum<-sapply(ijsem$Salt_optimum, simplify=T, function(x){mean(as.numeric(unlist(strsplit(x, split="-", fixed=T))))})
 #there are some formatting issues that should be solved
+
+#Original column names:
+ [1] "Habitat"                                                   "IJSEM year"
+ [3] "article doi"                                               "16S rDNA accession number"
+ [5] "DNA GC content (mol%)"                                     "oxygen preference"
+ [7] "mean length (microns)"                                     "mean width (microns)"
+ [9] "motility"                                                  "spore production"
+[11] "Metabolism assays"                                         "Genus name"
+[13] "species name"                                              "strain name"
+[15] "pH optimum for growth"                                     "pH range at which growth occurred"
+[17] "temperature optimum for growth (degC)"                     "temperature range at which growth occurred (degC)"
+[19] "optimal NaCl concentration for growth (%)"                 "NaCl concentration range at which growth occurred (%)"
+[21] "pigment production"                                        "cell shape"
+[23] "cell aggregation"                                          "article first page"
+[25] "culture collection codes"                                  "Sole carbon substrate use"
+[27] "genome accession number"                                   "gram status"
+[29] "If 'other' was chosen above, please enter a habitat below" "The paper included Biolog results"
