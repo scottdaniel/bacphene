@@ -29,7 +29,7 @@ for (i in random_set) {
   test_list <- list.append(test_list, list_holder[[i]])
 }
 test_list <- list.append(test_list, getStrainLocal(list_holder, query = "Acidicapsa dinghuensis", typestrain_only = T)[[1]]) #for testing getAbx
-test_list <- list.append(test_list, getStrainLocal(list_holder, query = "Acinetobacter calcoaceticus", typestrain_only = T)[[2]]) #for testing getAbx (antibiogram)
+test_list <- list.append(test_list, getStrainLocal(list_holder, query = "Acinetobacter calcoaceticus", typestrain_only = T)[[1]]) #for testing getAbx (antibiogram)
 test_list <- list.append(test_list, getStrainLocal(list_holder, query = 21374, typestrain_only = F)[[1]]) #for testing getAbx
 test_list <- list.append(test_list, getStrainLocal(list_holder, query = 280, typestrain_only = F)[[1]]) #for testing getAbx
 test_list <- list.append(test_list, getStrainLocal(list_holder, query = 8094, typestrain_only = F)[[1]]) #for testing getAbx

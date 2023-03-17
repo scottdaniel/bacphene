@@ -29,8 +29,8 @@ You can install bacphene from the [github repo]. You also need to install the Ba
 
 ``` r
 library(devtools)
-install_github(repo = "scottdaniel/bacphene")
 install.packages("BacDive", repos="http://R-Forge.R-project.org")
+install_github(repo = "scottdaniel/bacphene")
 ```
 
 If you want to follow along with the demo, you will also need the following package(s):
