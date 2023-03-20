@@ -1,3 +1,4 @@
+#####Testing functions with dummy data#####
 
 test_that("getMorphologySingle", {
 
@@ -16,6 +17,64 @@ test_that("getMorphologySingle", {
 
 })
 
+test_that("getOxygenSingle", {
+
+  test_bacteria <- list(Reference = list(list(`@id` = 8685L, `doi/url` = "https://www.dsmz.de/collection/catalogue/details/culture/DSM-20278")),
+                        `Physiology and metabolism` = list(
+                          `oxygen tolerance` = list(`@ref` = 8685L, `oxygen tolerance` = "anaerobe")),
+                        General = list(`BacDive-ID` = 12649L),
+                        `Name and taxonomic classification` = list(species = "Acidipropionibacterium jensenii", `type strain` = "no"))
+
+  result_df <- getOxygenSingle(test_bacteria)
+
+  expect_equal(result_df, structure(list(`@ref` = 8685L, `oxygen tolerance` = "anaerobe", ID = 12649L, taxon = "Acidipropionibacterium jensenii", rank = "Species", type_strain = "no", `doi/url` = "https://www.dsmz.de/collection/catalogue/details/culture/DSM-20278"), row.names = c(NA, -1L), class = c("tbl_df", "tbl", "data.frame")))
+
+})
+
+test_that("getAbxSingle", {
+
+  #entry is truncated from real data
+  test_bacteria <- list(Reference = list(list(`@id` = 66598L, `doi/url` = "10.1099/ijsem.0.002846")),
+                        `Physiology and metabolism` = list(`antibiotic resistance` = list(`@ref` = 66598L, ChEBI = 2637L, metabolite = "Amikacin",`is antibiotic` = "yes", `is resistant` = "yes", `resistance conc.` = "30 µg (disc)")),
+                        General = list(`BacDive-ID` = 159709L),
+                        `Name and taxonomic classification` = list(species = "Acidicapsa dinghuensis", `type strain` = "yes"))
+
+  result_df <- getAbxSingle(test_bacteria)
+
+  expect_equal(result_df, structure(list(`@ref` = 66598L, ChEBI = 2637L, metabolite = "Amikacin",`is antibiotic` = "yes", `is resistant` = "yes", `resistance conc.` = "30 µg (disc)",ID = 159709L, taxon = "Acidicapsa dinghuensis", rank = "Species",type_strain = "yes", `doi/url` = "10.1099/ijsem.0.002846"), row.names = c(NA,-1L), class = c("tbl_df", "tbl", "data.frame")))
+
+})
+
+test_that("getAntibiogramSingle", {
+
+  #entry is truncated from real data
+  test_bacteria <- list(Reference = list(list(`@id` = 23391L, `doi/url` = "https://www.dsmz.de/collection/catalogue/details/culture/DSM-102930")),
+                        `Physiology and metabolism` = list(`antibiogram` = list(`@ref` = 23391L, medium = "Mueller-Hinton Agar", `incubation temperature` = 30L,`oxygen condition` = "aerob", `Penicillin G` = "0")),
+                        General = list(`BacDive-ID` = 131595L),
+                        `Name and taxonomic classification` = list(species = "Acinetobacter baumannii", `type strain` = "no"))
+
+  result_df <- getAntibiogramSingle(test_bacteria)
+
+  expect_equal(result_df, structure(list(`@ref` = 23391L, medium = "Mueller-Hinton Agar", `incubation temperature` = 30L, `oxygen condition` = "aerob", metabolite = "Penicillin G", diameter = "0", ID = 131595L, taxon = "Acinetobacter baumannii", rank = "Species", type_strain = "no", `doi/url` = "https://www.dsmz.de/collection/catalogue/details/culture/DSM-102930"), row.names = c(NA, -1L), class = c("tbl_df", "tbl", "data.frame")))
+
+})
+
+test_that("getEnzymeSingle", {
+
+  #entry is truncated from real data
+  test_bacteria <- list(Reference = list(list(`@id` = 66716L, `doi/url` = "10.1099/ijsem.0.002999")),
+                        `Physiology and metabolism` = list(`enzymes` = list(`@ref` = 66716L, value = "acid phosphatase", activity = "-", ec = "3.1.3.2")),
+                        General = list(`BacDive-ID` = 159837L),
+                        `Name and taxonomic classification` = list(species = "Abyssibacter profundi", `type strain` = "yes"))
+
+  result_df <- getEnzymesSingle(test_bacteria)
+
+  expect_equal(result_df, structure(list(`@ref` = 66716L, value = "acid phosphatase", activity = "-", ec = "3.1.3.2", ID = 159837L, taxon = "Abyssibacter profundi", rank = "Species", `doi/url` = "10.1099/ijsem.0.002999"), row.names = c(NA, -1L), class = c("tbl_df", "tbl", "data.frame")))
+
+})
+
+#####Testing downloaded bacdive data#####
+
 test_that("getMorphology", {
 
   # structure of list object gotten from bacdive
@@ -25,20 +84,6 @@ test_that("getMorphology", {
   morphology_df <- getMorphology(list_holder = test_list)
 
   expect_named(morphology_df, c('@ref', 'cell length', 'cell shape', 'cell width', 'doi/url', 'flagellum arrangement', 'gram stain', 'ID', 'motility', 'rank', 'taxon', 'type_strain'), ignore.order = T)
-
-})
-
-test_that("getOxygenSingle", {
-
-  test_bacteria <- list(Reference = list(list(`@id` = 8685L, `doi/url` = "https://www.dsmz.de/collection/catalogue/details/culture/DSM-20278")),
-                        `Physiology and metabolism` = list(
-                          `oxygen tolerance` = list(`@ref` = 8685L, `oxygen tolerance` = "anaerobe")),
-                        General = list(`BacDive-ID` = 12649L),
-                    `Name and taxonomic classification` = list(species = "Acidipropionibacterium jensenii", `type strain` = "no"))
-
-  result_df <- getOxygenSingle(test_bacteria)
-
-  expect_equal(result_df, structure(list(`@ref` = 8685L, `oxygen tolerance` = "anaerobe", ID = 12649L, taxon = "Acidipropionibacterium jensenii", rank = "Species", type_strain = "no", `doi/url` = "https://www.dsmz.de/collection/catalogue/details/culture/DSM-20278"), row.names = c(NA, -1L), class = c("tbl_df", "tbl", "data.frame")))
 
 })
 
@@ -84,34 +129,6 @@ test_that("only get type strain", {
 
 })
 
-test_that("getAbxSingle", {
-
-  #entry is truncated from real data
-  test_bacteria <- list(Reference = list(list(`@id` = 66598L, `doi/url` = "10.1099/ijsem.0.002846")),
-                        `Physiology and metabolism` = list(`antibiotic resistance` = list(`@ref` = 66598L, ChEBI = 2637L, metabolite = "Amikacin",`is antibiotic` = "yes", `is resistant` = "yes", `resistance conc.` = "30 µg (disc)")),
-                        General = list(`BacDive-ID` = 159709L),
-                        `Name and taxonomic classification` = list(species = "Acidicapsa dinghuensis", `type strain` = "yes"))
-
-  result_df <- getAbxSingle(test_bacteria)
-
-  expect_equal(result_df, structure(list(`@ref` = 66598L, ChEBI = 2637L, metabolite = "Amikacin",`is antibiotic` = "yes", `is resistant` = "yes", `resistance conc.` = "30 µg (disc)",ID = 159709L, taxon = "Acidicapsa dinghuensis", rank = "Species",type_strain = "yes", `doi/url` = "10.1099/ijsem.0.002846"), row.names = c(NA,-1L), class = c("tbl_df", "tbl", "data.frame")))
-
-})
-
-test_that("getAntibiogramSingle", {
-
-  #entry is truncated from real data
-  test_bacteria <- list(Reference = list(list(`@id` = 23391L, `doi/url` = "https://www.dsmz.de/collection/catalogue/details/culture/DSM-102930")),
-                        `Physiology and metabolism` = list(`antibiogram` = list(`@ref` = 23391L, medium = "Mueller-Hinton Agar", `incubation temperature` = 30L,`oxygen condition` = "aerob", `Penicillin G` = "0")),
-                        General = list(`BacDive-ID` = 131595L),
-                        `Name and taxonomic classification` = list(species = "Acinetobacter baumannii", `type strain` = "no"))
-
-  result_df <- getAntibiogramSingle(test_bacteria)
-
-  expect_equal(result_df, structure(list(`@ref` = 23391L, medium = "Mueller-Hinton Agar", `incubation temperature` = 30L, `oxygen condition` = "aerob", metabolite = "Penicillin G", diameter = "0", ID = 131595L, taxon = "Acinetobacter baumannii", rank = "Species", type_strain = "no", `doi/url` = "https://www.dsmz.de/collection/catalogue/details/culture/DSM-102930"), row.names = c(NA, -1L), class = c("tbl_df", "tbl", "data.frame")))
-
-})
-
 test_that("getAbx", {
 
   test_list <- readr::read_rds(file = "test_data.rda")
@@ -138,7 +155,10 @@ test_that("getAntibiogram", {
 })
 
 test_that("consistent bacdive susceptibility", {
-
+  # this tests that there aren't any conflicts
+  # between the regular abx info and the antibiogram
+  # note that if the data changes at bacdive
+  # this might also change
   test_list <- readr::read_rds(file = "test_data.rda")
 
   abx_df <- getAbx(test_list)
@@ -146,32 +166,15 @@ test_that("consistent bacdive susceptibility", {
 
   suscept_df <-getSimplifiedAbx(data = bind_rows(abx_df, antibiogram_df), extra_info = T, most_common = F, remove_unknown = F)
 
-  expect_equal(unique(suscept_df[suscept_df$`is sensitive` %in% "yes",]$value), c("sensitive", "unknown"))
-
-  # or like this?
-  # suscept_df %>% filter(`is sensitive` %in% "yes") %>% pull(value) %>% unique()
-
-  expect_equal(unique(suscept_df[suscept_df$`is resistant` %in% "yes",]$value), c("resistant", "unknown"))
+  expect_equal(unique(suscept_df[suscept_df$`is sensitive` %in% "yes",]$value), c("sensitive"))
+  expect_equal(unique(suscept_df[suscept_df$`is resistant` %in% "yes",]$value), c("resistant"))
   expect_equal(unique(suscept_df[suscept_df$diameter %in% "0",]$value), c("resistant"))
   expect_equal(unique(suscept_df[suscept_df$diameter %in% "n.d.",]$value), c("unknown"))
-
-  expect_equal(unique(suscept_df[is.na(suscept_df$diameter),]$value), c("resistant", "sensitive", "unknown"))
-
-})
-
-test_that("getEnzymeSingle", {
-
-  #entry is truncated from real data
-  test_bacteria <- list(Reference = list(list(`@id` = 66716L, `doi/url` = "10.1099/ijsem.0.002999")),
-                        `Physiology and metabolism` = list(`enzymes` = list(`@ref` = 66716L, value = "acid phosphatase", activity = "-", ec = "3.1.3.2")),
-                        General = list(`BacDive-ID` = 159837L),
-                        `Name and taxonomic classification` = list(species = "Abyssibacter profundi", `type strain` = "yes"))
-
-  result_df <- getEnzymesSingle(test_bacteria)
-
-  expect_equal(result_df, structure(list(`@ref` = 66716L, value = "acid phosphatase", activity = "-", ec = "3.1.3.2", ID = 159837L, taxon = "Abyssibacter profundi", rank = "Species", `doi/url` = "10.1099/ijsem.0.002999"), row.names = c(NA, -1L), class = c("tbl_df", "tbl", "data.frame")))
+  expect_equal(sort(unique(suscept_df[is.na(suscept_df$diameter),]$value)), c("resistant", "sensitive", "unknown"))
 
 })
+
+
 
 test_that("getEnzymes", {
 
@@ -183,7 +186,8 @@ test_that("getEnzymes", {
 
 })
 
-# More like notes for future tests:
+######notes for future tests#####
+
 test_that("annotate microbiome data", {
 
   my_df <- data.frame(Taxa = c('E. coli', 'B. fragilis'),
